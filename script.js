@@ -52,6 +52,39 @@ if(themeToggle){
 
 }
 
+/* =====================================================
+   INTERACTIVE LOGIC VARIABLES
+===================================================== */
+
+
+const viewer =
+document.querySelector(".exhibition-viewer");
+
+
+const viewerImage =
+document.querySelector(".viewer-artwork img");
+
+
+const viewerTitle =
+document.querySelector(".viewer-title");
+
+
+const viewerMedium =
+document.querySelector(".viewer-medium");
+
+
+const viewerDescription =
+document.querySelector(".viewer-description");
+
+
+const artworks =
+[
+...document.querySelectorAll(".artwork-card")
+];
+
+
+let currentArtwork = 0;
+
 
 
 
@@ -452,3 +485,97 @@ target.scrollIntoView({
 
 
 });
+
+
+/* =====================================================
+  GALLERY ROOM EXHIBITION VIEWER BEHAVIOR
+===================================================== */
+
+document.querySelectorAll(".observe-work")
+.forEach((button, index)+>{
+
+    button.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        openViewer(index);
+    });
+});
+
+function openViewer(index) {
+    currentArtwork=index;
+
+    const artwork =
+    artwork[index];
+
+    viewerImage.src = artwork.dataset.image;
+
+    viewerImage.alt = artwork.dataset.title;
+
+    viewerTitle.textContent = artwork.dataset.title;
+
+    viewerMedium.textContent = artwork.dataset.title;
+
+    viewwerMedium.textContent =
+    `${artwork.dataset.medium} ' $artwork.dataset.year]`;
+
+    viewerDescription.textContent = artwork.dataset.description;
+
+    viewer.classList.add("active");
+
+    viewer.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    function closeViewer() {
+        viewer.classList.remove("active");
+        viewer.setAttribute(
+            "arria-hidden",
+            "true"
+        );
+    }
+
+    function nextArtwork() {
+        currentArtwork++;
+
+        if(currentArtwork >= artworks.length){
+            currentArtwork = 0;
+        }
+
+        openViewer(currentArtwork);
+    }
+
+    function previousArtwork() {
+
+        currentArtwork --;
+
+        if(currentArtwork < 0) {
+
+            currentArtwork = artworks.length-1;
+        }
+
+        openViewer(currentArtwork);
+
+    }
+
+    document.querySelector(".viewer-close").addEventListener("click", closeViewer);
+
+    document.querySelector(".viewer-next").addEventListener("click", nextArtwork);
+
+    document.querySelector(".viewer-prev").addEventListener("click", previousArtwork);
+
+    document.addEventListener("keydown", (e) => {
+
+        if(e.key === "Eecape")
+        closeViewer();
+
+        if(e.key === "ArrowRight")
+        nextArtwork();
+
+        if(e.key === "ArrowLeft")
+        previousArtwork();
+});
+
+
+}
