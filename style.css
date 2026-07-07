@@ -1,0 +1,1039 @@
+/* =====================================================
+   ARTISTIC SHAM
+   Natural Light Atelier
+   Main Stylesheet
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    /* Colors */
+
+    --bg: #edede9;
+    --surface: #f5ebe0;
+    --surface-alt: #e3d5ca;
+
+    --text: #31263e;
+    --text-light: #6b625d;
+    --heading: #221e22;
+
+    --accent: #d5bdaf;
+    --accent-hover: #b89d8d;
+
+    --border: #d6ccc2;
+
+
+    /* Typography */
+
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+
+
+    /* Layout */
+
+    --container: 1280px;
+
+
+    /* Spacing */
+
+    --space-xs: .5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+
+    /* Motion */
+
+    --transition: 400ms ease;
+
+
+    /* Shadows */
+
+    --shadow-soft:
+        0 10px 30px rgba(34,30,34,.08);
+
+}
+
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+[data-theme="dark"] {
+
+    --bg:#221e22;
+
+    --surface:#31263e;
+
+    --surface-alt:#44355b;
+
+
+    --text:#f5ebe0;
+
+    --text-light:#d6ccc2;
+
+    --heading:#ffffff;
+
+
+    --accent:#eca72c;
+
+    --accent-hover:#ee5622;
+
+
+    --border:#44355b;
+
+
+    --shadow-soft:
+        0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+
+*,
+*::before,
+*::after {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+body {
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:var(--font-body);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+
+img {
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+
+
+a {
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+
+button,
+input,
+textarea {
+
+    font:inherit;
+
+}
+
+
+
+
+ul {
+
+    list-style:none;
+
+}
+
+
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+
+h1,
+h2,
+h3 {
+
+    font-family:var(--font-heading);
+
+    color:var(--heading);
+
+    font-weight:500;
+
+    line-height:1.1;
+
+}
+
+
+
+h1 {
+
+    font-size:clamp(4rem,9vw,7rem);
+
+}
+
+
+
+h2 {
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+}
+
+
+
+h3 {
+
+    font-size:2rem;
+
+}
+
+
+
+p {
+
+    max-width:65ch;
+
+}
+
+
+
+.eyebrow {
+
+    text-transform:uppercase;
+
+    letter-spacing:.35rem;
+
+    font-size:.75rem;
+
+    color:var(--accent);
+
+    margin-bottom:1.5rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+
+.container {
+
+    width:min(
+        calc(100% - 3rem),
+        var(--container)
+    );
+
+    margin-inline:auto;
+
+}
+
+
+
+section {
+
+    padding:var(--space-xl) 0;
+
+}
+
+
+
+.section-header {
+
+    margin-bottom:5rem;
+
+}
+
+
+
+.section-header p {
+
+    color:var(--text-light);
+
+}
+
+
+
+
+
+.split-layout {
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:6rem;
+
+    align-items:center;
+
+}
+
+
+
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+
+.site-header {
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:
+
+    color-mix(
+        in srgb,
+        var(--bg) 85%,
+        transparent
+    );
+
+    backdrop-filter:blur(12px);
+
+}
+
+
+
+.navigation {
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.logo {
+
+    font-family:var(--font-heading);
+
+    font-size:2rem;
+
+}
+
+
+
+.nav-links {
+
+    display:flex;
+
+    gap:3rem;
+
+}
+
+
+
+.nav-links a {
+
+    color:var(--text-light);
+
+    position:relative;
+
+}
+
+
+
+.nav-links a::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:0;
+
+    width:0;
+
+    height:1px;
+
+    background:var(--accent);
+
+    transition:var(--transition);
+
+}
+
+
+
+.nav-links a:hover::after {
+
+    width:100%;
+
+}
+
+
+
+.menu-toggle {
+
+    display:none;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   ARRIVAL / HERO
+===================================================== */
+
+
+.arrival {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+.arrival-content {
+
+    padding-top:5rem;
+
+}
+
+
+
+.intro {
+
+    margin:2rem 0 3rem;
+
+    color:var(--text-light);
+
+    font-size:1.2rem;
+
+}
+
+
+
+
+
+.text-link {
+
+    display:inline-flex;
+
+    gap:.5rem;
+
+    border-bottom:
+
+        1px solid var(--accent);
+
+    padding-bottom:.4rem;
+
+    transition:var(--transition);
+
+}
+
+
+
+.text-link:hover {
+
+    color:var(--accent);
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   EXHIBITION
+===================================================== */
+
+
+.exhibition {
+
+    border-top:
+
+        1px solid var(--border);
+
+}
+
+
+
+.exhibition-details {
+
+    display:flex;
+
+    gap:4rem;
+
+    margin-top:4rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.exhibition-details dt {
+
+    text-transform:uppercase;
+
+    font-size:.7rem;
+
+    letter-spacing:.2rem;
+
+    color:var(--accent);
+
+}
+
+
+
+.exhibition-details dd {
+
+    margin-top:.5rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   FEATURED ARTWORK
+===================================================== */
+
+
+.featured-piece {
+
+    display:grid;
+
+    grid-template-columns:
+
+        1.2fr .8fr;
+
+    gap:5rem;
+
+    align-items:center;
+
+}
+
+
+
+.artwork-image {
+
+    overflow:hidden;
+
+}
+
+
+
+.artwork-image img {
+
+    transition:
+
+        transform 900ms ease;
+
+}
+
+
+
+.artwork-image:hover img {
+
+    transform:scale(1.03);
+
+}
+
+
+
+.catalog-number {
+
+    color:var(--accent);
+
+    letter-spacing:.25rem;
+
+}
+
+
+
+.medium,
+.dimensions {
+
+    color:var(--text-light);
+
+}
+
+
+
+.artist-statement {
+
+    margin:3rem 0;
+
+    padding-left:2rem;
+
+    border-left:
+
+        1px solid var(--border);
+
+}
+
+
+
+.artist-statement h3 {
+
+    font-size:1.5rem;
+
+    margin-bottom:1rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   COLLECTION
+===================================================== */
+
+
+.collection-grid {
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(12,1fr);
+
+    gap:2rem;
+
+}
+
+
+
+.artwork-card {
+
+    grid-column:
+
+        span 4;
+
+}
+
+
+
+.artwork-card figure {
+
+    overflow:hidden;
+
+}
+
+
+
+.artwork-card img {
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:
+
+        transform 800ms ease;
+
+}
+
+
+
+.artwork-card:hover img {
+
+    transform:scale(1.04);
+
+}
+
+
+
+.artwork-card figcaption {
+
+    padding-top:1.5rem;
+
+}
+
+
+
+.artwork-card h3 {
+
+    margin:.75rem 0;
+
+}
+
+
+
+.artwork-card p {
+
+    color:var(--text-light);
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   ATELIER
+===================================================== */
+
+
+.atelier figure {
+
+    overflow:hidden;
+
+}
+
+
+
+.atelier img {
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   PRACTICE
+===================================================== */
+
+
+.practice-list {
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:2rem;
+
+}
+
+
+
+.practice-list li {
+
+    padding:2rem;
+
+    border-top:
+
+        1px solid var(--border);
+
+    font-family:
+
+        var(--font-heading);
+
+    font-size:1.8rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   JOURNAL
+===================================================== */
+
+
+.journal-grid {
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+    gap:3rem;
+
+}
+
+
+
+.journal-grid article {
+
+    border-top:
+
+        1px solid var(--border);
+
+    padding-top:2rem;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+
+.contact-form {
+
+    max-width:700px;
+
+    display:grid;
+
+    gap:2rem;
+
+}
+
+
+
+.contact-form label {
+
+    display:grid;
+
+    gap:.5rem;
+
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+    background:transparent;
+
+    border:none;
+
+    border-bottom:
+
+        1px solid var(--border);
+
+    padding:1rem 0;
+
+    color:var(--text);
+
+}
+
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    outline:none;
+
+    border-color:var(--accent);
+
+}
+
+
+
+.contact-form button {
+
+    width:max-content;
+
+    background:var(--heading);
+
+    color:var(--bg);
+
+    padding:1rem 2rem;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+
+.site-footer {
+
+    border-top:
+
+        1px solid var(--border);
+
+    padding:4rem 0;
+
+}
+
+
+
+.site-footer p {
+
+    color:var(--text-light);
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+    .nav-links {
+
+        display:none;
+
+    }
+
+
+    .menu-toggle {
+
+        display:block;
+
+    }
+
+
+
+    .featured-piece,
+    .split-layout {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .collection-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .artwork-card {
+
+        grid-column:auto;
+
+    }
+
+
+
+    .practice-list {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .journal-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    section {
+
+        padding:5rem 0;
+
+    }
+
+
+    .container {
+
+        width:
+
+        calc(100% - 2rem);
+
+    }
+
+
+    h1 {
+
+        font-size:3.5rem;
+
+    }
+
+
+}

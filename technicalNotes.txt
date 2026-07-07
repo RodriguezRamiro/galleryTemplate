@@ -1,0 +1,190 @@
+### Technical Notes
+
+HTMl Structure
+
+<body>
+
+<header>
+
+Arrival
+
+</header>
+
+<main>
+
+Current Exhibition
+
+Featured Work
+
+Collection
+
+Atelier
+
+Practice
+
+Journal
+
+Inquiry
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+
+
+
+### Sections
+
+
+1 Arrival
+
+This is no longer a Hero.
+
+It's an arrival.
+
+ARTISTIC SHAM
+
+Natural Light Atelier
+
+Light.
+Shadow.
+Meaning.
+
+↓
+
+Enter Exhibition
+
+Nothing else.
+
+No clutter.
+
+2 Current Exhibition
+Current Exhibition
+
+The Weight of Time
+
+An exploration of memory,
+erosion and permanence.
+
+Observe Exhibition
+
+This changes whenever you release a new body of work.
+
+3 Featured Work
+
+A single oversized painting.
+
+Museum style.
+
+Painting
+
+Title
+
+Medium
+
+Dimensions
+
+Year
+
+Artist Statement
+
+Observe
+
+One painting.
+
+Lots of whitespace.
+
+4 Collection
+
+This becomes the masonry gallery.
+
+Every artwork gets
+
+001
+
+Painting
+
+Title
+
+Medium
+
+Year
+
+Observe →
+5 Atelier
+
+Instead of
+
+"About Me"
+
+The Atelier
+
+Light enters first.
+
+Paint follows.
+
+The work begins in silence...
+
+Alongside
+
+Studio photograph.
+
+6 Practice
+
+Small elegant cards.
+
+Oil Painting
+
+Chiaroscuro
+
+Symbolism
+
+Classical Studies
+7 Journal
+
+Not blogs.
+
+Studio Notes.
+
+On Light
+
+On Memory
+
+On Composition
+8 Inquiry
+
+Extremely quiet.
+
+Begin a Conversation
+
+Name
+
+Email
+
+Message
+
+Send Inquiry
+Footer
+
+Instead of
+
+©2026
+
+I'd rather finish with something like
+
+Artistic Sham
+
+Natural Light Atelier
+
+Current Exhibition
+
+Journal
+
+Inquiry
+
+—
+
+Created with intention.
