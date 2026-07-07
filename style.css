@@ -731,7 +731,83 @@ section {
 
 
 
+/* =====================================================
+   GALLERY ROOM
+===================================================== */
 
+.exhibition-viewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0d0b0d;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:3rem;
+
+    }
+
+
+
+    .exhibition-viewer.active{
+
+    display:flex;
+
+    }
+
+
+
+    .viewer-artwork{
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:white;
+
+    }
+
+
+
+    .viewer-artwork img{
+
+    max-height:75vh;
+
+    object-fit:contain;
+
+    }
+
+
+
+    .viewer-artwork figcaption{
+
+    margin-top:2rem;
+
+    }
+
+
+
+    .viewer-title{
+
+    color:white;
+
+    }
+
+
+
+    .viewer-medium{
+
+    color:#d6ccc2;
+
+    }
 
 
 /* =====================================================
