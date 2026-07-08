@@ -77,6 +77,14 @@ const viewerDescription =
 document.querySelector(".viewer-description");
 
 
+const viewerNext = document.querySelector(".viewer-close").addEventListener("click", closeViewer);
+
+const viewerPrev = document.querySelector(".viewer-next").addEventListener("click", nextArtwork);
+
+const viewerClose = document.querySelector(".viewer-prev").addEventListener("click", previousArtwork);
+
+
+
 const artworks =
 [
 ...document.querySelectorAll(".artwork-card")
@@ -572,12 +580,5 @@ function openViewer(index) {
         if(e.key === "ArrowLeft")
         previousArtwork();
 });
-
-    document.querySelector(".viewer-close").addEventListener("click", closeViewer);
-
-    document.querySelector(".viewer-next").addEventListener("click", nextArtwork);
-
-    document.querySelector(".viewer-prev").addEventListener("click", previousArtwork);
-
 
 }
