@@ -19,6 +19,9 @@ if(savedTheme){
 
     document.documentElement.dataset.theme = savedTheme;
 
+} else {
+    document.documentElement.dataset.theme = "light";
+    
 }
 
 
