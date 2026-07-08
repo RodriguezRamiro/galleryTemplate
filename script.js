@@ -495,7 +495,7 @@ target.scrollIntoView({
   GALLERY ROOM EXHIBITION VIEWER BEHAVIOR
 ===================================================== */
 
-ocument.querySelectorAll(".observe-work").forEach((button, index) => {
+document.querySelectorAll(".observe-work").forEach((button, index) => {
 
     button.addEventListener("click", (e) => {
 
@@ -515,17 +515,17 @@ function openViewer(index){
 
     const artwork = artworks[index];
 
-    viewerImage.src = artwork.dataset.image || "";
+    if(
+        !viewer ||
+        !viewerImage ||
+        !viewerTitle ||
+        !viewerMedium ||
+        !viewerDescription
+    ){
+        return;
+    }
 
-    viewerImage.alt = artwork.dataset.title || "";
-
-    viewerTitle.textContent = artwork.dataset.title || "";
-
-    viewerMedium.textContent =
-        `${artwork.dataset.medium || ""} · ${artwork.dataset.year || ""}`;
-
-    viewerDescription.textContent =
-        artwork.dataset.description || "";
+    if(!artworks[index]) return;
 
     viewer.classList.add("active");
 
@@ -591,6 +591,8 @@ viewerPrev?.addEventListener(
 );
 
 document.addEventListener("keydown", (e) => {
+
+    if(!viewer) return;
 
     if(!viewer.classList.contains("active")) return;
 
