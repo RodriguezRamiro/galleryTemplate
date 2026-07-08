@@ -528,7 +528,7 @@ function openViewer(index) {
     function closeViewer() {
         viewer.classList.remove("active");
         viewer.setAttribute(
-            "arria-hidden",
+            "aria-hidden",
             "true"
         );
     }
@@ -536,7 +536,7 @@ function openViewer(index) {
     function closeViewer() {
         viewer.classList.remove("active");
         viewer.setAttribute(
-            "arria-hidden",
+            "aria-hidden",
             "true"
         );
     }
@@ -568,7 +568,7 @@ function openViewer(index) {
 
     document.addEventListener("keydown", (e) => {
 
-        if(e.key === "Eecape")
+        if(e.key === "Escape")
         closeViewer();
 
         if(e.key === "ArrowRight")
