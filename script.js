@@ -282,12 +282,6 @@ document.querySelectorAll(
 
 
 
-const artworks =
-document.querySelectorAll(
-    ".artwork-card"
-);
-
-
 
 if(filterButtons.length){
 
@@ -492,7 +486,7 @@ target.scrollIntoView({
 ===================================================== */
 
 document.querySelectorAll(".observe-work")
-.forEach((button, index)+>{
+.forEach((button, index) => {
 
     button.addEventListener("click", (e) => {
 
@@ -506,7 +500,7 @@ function openViewer(index) {
     currentArtwork=index;
 
     const artwork =
-    artwork[index];
+    artworks[index];
 
     viewerImage.src = artwork.dataset.image;
 
@@ -514,10 +508,8 @@ function openViewer(index) {
 
     viewerTitle.textContent = artwork.dataset.title;
 
-    viewerMedium.textContent = artwork.dataset.title;
-
-    viewwerMedium.textContent =
-    `${artwork.dataset.medium} ' $artwork.dataset.year]`;
+    viewerMedium.textContent =
+    `${artwork.dataset.medium} · ${artwork.dataset.year}`;
 
     viewerDescription.textContent = artwork.dataset.description;
 
@@ -527,6 +519,19 @@ function openViewer(index) {
         "aria-hidden",
         "false"
     );
+
+
+        openViewer(currentArtwork);
+
+    }
+
+    function closeViewer() {
+        viewer.classList.remove("active");
+        viewer.setAttribute(
+            "arria-hidden",
+            "true"
+        );
+    }
 
     function closeViewer() {
         viewer.classList.remove("active");
@@ -554,10 +559,6 @@ function openViewer(index) {
 
             currentArtwork = artworks.length-1;
         }
-
-        openViewer(currentArtwork);
-
-    }
 
     document.querySelector(".viewer-close").addEventListener("click", closeViewer);
 
