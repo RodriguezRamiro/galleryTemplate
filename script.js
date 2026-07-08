@@ -139,6 +139,8 @@ if(menuToggle && nav){
 
             nav.classList.remove("open");
 
+            menuToggle.classList.remove("active");
+
 
         });
 
