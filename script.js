@@ -21,7 +21,7 @@ if(savedTheme){
 
 } else {
     document.documentElement.dataset.theme = "light";
-    
+
 }
 
 
