@@ -910,33 +910,77 @@ Send Inquiry
 ================================================== -->
 
 
-<footer class="site-footer">
+<!-- Footer -->
+
+<footer className="footer" aria-label="Footer">
+
+    <div className="footer-inner">
+
+      {/* Left */}
+      <div className="footer-left">
+
+        <span className="footer-kicker">
+          RodriguezTech Studios
+        </span>
+
+        <h3 className="footer-logo">
+          {/*Pending Logo */}
+        </h3>
+
+        <p className="footer-copy">
+          © {currentYear} RamTech LLC ·
+          IVI Creative Engineering
+        </p>
+        <p className="footer-license">
+        Selected systems available for licensing and deployment.
+        </p>
+
+      </div>
+
+      {/* Right */}
+      <div className="footer-right">
+
+        <a
+          href="https://github.com/RodriguezRamiro/DevsLanding"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub Repository"
+        >
+          <FaGithub size={18} />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/ramiro-rodriguez-3a287a328"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
+        >
+          <FaLinkedin size={18} />
+        </a>
+
+        <a
+          href="https://www.instagram.com/rodrigueztechstudios"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram size={18} />
+        </a>
 
 
-<div class="container">
+      </div>
 
+    </div>
 
-<p>
+    {/* Bottom Bar */}
+    <div className="footer-bottom">
 
-Artistic Sham
-<br>
-Natural Light Atelier
+      <span className="footer-version">
+        Version {version}
+      </span>
+    </div>
 
-</p>
-
-
-<p>
-
-© 2026 Artistic Sham. Created with intention.
-
-</p>
-
-
-</div>
-
-
-</footer>
-
+  </footer>
 
 
 
