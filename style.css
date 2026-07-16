@@ -84,6 +84,34 @@
     /* Gallery Frame */
     --border: #d6ccc2;
 
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+
+    --font-heading:
+        "Cormorant Garamond",
+        serif;
+
+    --font-body:
+        "Inter",
+        sans-serif;
+
+
+    /*
+        Modular Type Scale
+
+        Calm hierarchy.
+        
+    */
+
+    --fs-xs: .875rem;
+    --fs-sm: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 2.5rem;
+    --fs-display: clamp(3.5rem, 8vw, 6.5rem);
+
 }
 
 
