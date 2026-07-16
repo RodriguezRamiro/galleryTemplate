@@ -125,6 +125,34 @@
     --space-xl: 8rem;
     --space-xxl: 12rem;
 
+    /* ==========================================
+       LAYOUT
+    ========================================== */
+
+    --container: 1280px;
+
+    --content-width: 760px;
+
+    --reading-width: 68ch;
+
+
+
+    /* ==========================================
+       MOTION
+
+       Movement should feel patient.
+       Never hurried.
+    ========================================== */
+
+    --transition-fast: 250ms ease;
+
+    --transition:
+        400ms ease;
+
+    --transition-slow:
+        700ms ease;
+
+
 }
 
 
