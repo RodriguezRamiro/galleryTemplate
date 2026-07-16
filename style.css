@@ -152,6 +152,21 @@
     --transition-slow:
         700ms ease;
 
+        /* ==========================================
+       ELEVATION
+
+       Paintings possess weight.
+       Shadows remain restrained.
+    ========================================== */
+
+    --shadow-soft:
+    0 10px 30px
+    rgba(34,30,34,.08);
+
+--shadow-gallery:
+    0 20px 60px
+    rgba(34,30,34,.10);
+
 
 }
 
