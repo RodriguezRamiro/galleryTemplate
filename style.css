@@ -1,8 +1,48 @@
 /* =====================================================
+
+    CRAFTMANCER STUDIOS
+    Digital Exhibition Stylesheet
+    Version 2.0
+
+    ----------------------------------------------------
+
+    Every visual decision should support the artwork.
+
+    Nothing should compete for attention.
+
+    Light guides the eye.
+    Shadow creates depth.
+    Space encourages reflection.
+
+    The visitor should leave with the same feeling
+    as quietly exiting a gallery.
+
+    Crafted by
+
+    IVI Creative Engineering
+
+===================================================== */
+
+/* =====================================================
+    {kept for tempalte usage}
    ARTISTIC SHAM
    Natural Light Atelier
    Main Stylesheet
 ===================================================== */
+
+
+/* =====================================================
+   FOUNDATIONS
+
+   The visual language draws inspiration from
+   museum walls, natural linen, aged paper,
+   charcoal, and classical oil paintings
+   illuminated by soft daylight.
+
+   These variables establish the atmosphere
+   carried throughout the exhibition.
+===================================================== */
+
 
 
 /* =====================================================
@@ -11,51 +51,38 @@
 
 :root {
 
+    /* ==========================================
+       MATERIAL PALETTE
+    ========================================== */
+
     /* Colors */
 
+    /* Museum Wall */
     --bg: #edede9;
+
+    /* Natural Linen */
     --surface: #f5ebe0;
+
+    /* Gallery Stone */
     --surface-alt: #e3d5ca;
 
+    /* Charcoal Ink */
     --text: #31263e;
+
+    /* Soft Graphite */
     --text-light: #6b625d;
+
+    /* Oil Pigment */
     --heading: #221e22;
 
+    /* Burnished Gold */
     --accent: #d5bdaf;
+
+    /* Warm Bronze */
     --accent-hover: #b89d8d;
 
+    /* Gallery Frame */
     --border: #d6ccc2;
-
-
-    /* Typography */
-
-    --font-heading: "Cormorant Garamond", serif;
-    --font-body: "Inter", sans-serif;
-
-
-    /* Layout */
-
-    --container: 1280px;
-
-
-    /* Spacing */
-
-    --space-xs: .5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --space-lg: 4rem;
-    --space-xl: 8rem;
-
-
-    /* Motion */
-
-    --transition: 400ms ease;
-
-
-    /* Shadows */
-
-    --shadow-soft:
-        0 10px 30px rgba(34,30,34,.08);
 
 }
 
@@ -808,26 +835,6 @@ color:#d6ccc2;
 /* =====================================================
    GALLERY ROOM
 ===================================================== */
-
-.exhibition-viewer{
-
-    position:fixed;
-
-    inset:0;
-
-    background:#0d0b0d;
-
-    z-index:2000;
-
-    display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:3rem;
-
-    }
 
 
 
