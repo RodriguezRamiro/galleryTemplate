@@ -242,85 +242,116 @@
 
 
 
-
 /* =====================================================
    RESET
-===================================================== */
 
+   Establish a predictable Foundaiton before the exhibit
+   begins.
+
+   Remove browser inconsistencies while preserving
+   accesibility and natural document flow.
+===================================================== */
 
 *,
 *::before,
 *::after {
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
 
 }
-
 
 html {
 
-    scroll-behavior:smooth;
+    scroll-behavior: smotth;
+    -webkit-text-size-adjust: 100%;
 
 }
-
 
 body {
 
-    background:var(--bg);
+    min-height: 100vh;
 
-    color:var(--text);
+    background: var(--bg);
 
-    font-family:var(--font-body);
+    color: var(--text);
 
-    line-height:1.7;
+    font-family: var(--font-body);
 
-    overflow-x:hidden;
+    font-size: var(--fs-sm);
 
-}
+    line-height: 1.7;
 
+    text-rendering: optimizeLegibility;
 
+    -webkit-font-smoothing: antialiased;
 
-img {
+    -moz-osx-font-smoothing: grayscale;
 
-    display:block;
-
-    width:100%;
-
-    height:auto;
+    overflow-x: hidden;
 
 }
 
+img,
+picture {
+    display: block;
 
+    max-width: 100%;
+
+    height: auto;
+}
+
+svg {
+
+    display: block;
+}
 
 a {
+    color: inherit;
 
-    color:inherit;
-
-    text-decoration:none;
-
+    text-decoration: none;
 }
-
-
 
 button,
 input,
+select,
 textarea {
 
-    font:inherit;
+    font: inherit;
+
+    color: inherit;
+
+    background: none;
+
+    border: none;
 
 }
 
+button {
 
-
-
-ul {
-
-    list-style:none;
+    cursor: pointer;
 
 }
 
+textarea {
+
+    resize: vertical;
+}
+
+ul,
+ol {
+
+    list-style: none;
+}
+
+table {
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+}
 
 
 
