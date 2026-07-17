@@ -180,37 +180,62 @@
 }
 
 
-
 /* =====================================================
-   DARK MODE
+   EVENING EXHIBITION aka DARK THEME
+
+   The gallery after sunset.
+
+   Preserve the warmth of the collection while
+   allowing the artwork to emerge from deeper,
+   quieter surroundings.
+
+   Dark mode should never feel synthetic.
 ===================================================== */
 
 [data-theme="dark"] {
 
-    --bg:#221e22;
+    /* ==============================================
+        MATERIAL PALETTE
+    ================================================*/
 
-    --surface:#31263e;
+    /* Gallery Interior */
+    --bg: #1d1a20;
 
-    --surface-alt:#44355b;
+    /* Charcoal Canvas */
+    --surface: #2a2431;
 
+    /* Weathered Walnu */
+    --surface-alt: #3b3245;
 
-    --text:#f5ebe0;
+    /* Soft Linen */
+    --text: #f3ede6;
 
-    --text-light:#d6ccc2;
+    /* Aged Paper */
+    --text-light: #cfc4b9;
 
-    --heading:#ffffff;
+    /* Ivory */
+    --heading: #ffffff;
 
+    /* Antique Gold */
+    --accent: #d8b25c;
 
-    --accent:#eca72c;
+    /* Burnished Copper */
+    --accent-hover: #bf8752;
 
-    --accent-hover:#ee5622;
+    /* Dark Frame */
+    --border: #453a52;
 
-
-    --border:#44355b;
-
+    /* ==========================================
+       ELEVATION
+    ========================================== */
 
     --shadow-soft:
-        0 15px 40px rgba(0,0,0,.35);
+    0 15px 40px
+    rgba(0,0,0,.30);
+
+    --shadow-gallery:
+    0 30px 80px
+    rgba(0,0,0,.45);
 
 }
 
