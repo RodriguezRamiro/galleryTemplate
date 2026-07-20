@@ -472,7 +472,38 @@ small {
 
 }
 
+/* ==========================================
+   LINKS
+========================================== */
 
+a {
+
+    transition:
+
+        color var(--transition),
+
+        opacity var(--transition);
+
+}
+
+a:hover {
+
+    color: var(--accent);
+}
+
+
+
+
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection {
+    background: var(--accent);
+
+    color: var(--heading);
+}
 
 
 
