@@ -357,12 +357,21 @@ table {
 
 /* =====================================================
    TYPOGRAPHY
+
+   Typography establishes the rhythem of the exhibition.
+
+   Classical serif headings provide elegance and
+   permanance, while restrained sans-serif body copy
+   offers clarity without competing for attention.
+
+   Every line should encourage the visitor to slow down.
 ===================================================== */
 
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 
     font-family:var(--font-heading);
 
