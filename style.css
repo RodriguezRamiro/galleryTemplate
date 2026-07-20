@@ -373,13 +373,17 @@ h2,
 h3,
 h4 {
 
-    font-family:var(--font-heading);
+    font-family: var(--font-heading);
 
-    color:var(--heading);
+    color: var(--heading);
 
-    font-weight:500;
+    font-weight: 500;
 
-    line-height:1.1;
+    line-height: 1.05;
+
+    letter-spacing: -.02em;
+
+    text-wrap: balance;
 
 }
 
@@ -387,7 +391,9 @@ h4 {
 
 h1 {
 
-    font-size:clamp(4rem,9vw,7rem);
+    font-size: var(--fs-display);
+
+    max-width: 10ch;
 
 }
 
@@ -395,7 +401,9 @@ h1 {
 
 h2 {
 
-    font-size:clamp(2.5rem,5vw,4rem);
+    font-size: var(--fs-xl);
+
+    margin-bottom: var(--space-sm);
 
 }
 
@@ -403,31 +411,64 @@ h2 {
 
 h3 {
 
-    font-size:2rem;
+    font-size: var(--fs-lg);
 
 }
 
+
+/* ==========================================
+   BODY COPY
+========================================== */
 
 
 p {
 
-    max-width:65ch;
+    max-width: var(--reading-width);
+
+    color: var(--text-light);
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.9;
+
+}
+
+
+/* ==========================================
+   SMALL TEXT
+========================================== */
+
+small {
+
+    font-size: var(--fs-xs);
+
+    color: var(--text-light);
 
 }
 
 
 
+/* ==========================================
+   EXHIBITION LABELS
+========================================== */
+
 .eyebrow {
 
-    text-transform:uppercase;
+    display: inline-block;
 
-    letter-spacing:.35rem;
-
-    font-size:.75rem;
+    margin-bottom: var(--space-sm);
 
     color:var(--accent);
 
+    font-weight: 600;
+
+    letter-spacing:.35rem;
+
+    font-size: var(--fs-xs);
+
     margin-bottom:1.5rem;
+
+    text-transform: uppercase;
 
 }
 
