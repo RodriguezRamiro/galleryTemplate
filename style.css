@@ -506,6 +506,27 @@ a:hover {
 }
 
 
+/* ==========================================
+   CATALOG DETAILS
+
+   Quiet supporting information inspired by
+   museum placards.
+========================================== */
+
+.catalog-number,
+.medium,
+.dimensions,
+.viewer-medium {
+
+    font-size: var(--fs-xs);
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    color: var(--text-light);
+
+}
 
 
 
