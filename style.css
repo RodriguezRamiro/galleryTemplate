@@ -528,6 +528,17 @@ a:hover {
 
 }
 
+.artist-statement {
+
+    font-style: italic;
+
+    color: var(--text);
+
+    border-left: 2px solid var(--border);
+
+    padding-left: var(--space-md);
+}
+
 
 
 /* =====================================================
