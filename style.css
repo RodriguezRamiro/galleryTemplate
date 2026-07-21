@@ -609,6 +609,14 @@ dissolve into the end of the page.
 
 */
 
+.site-footer {
+    
+    padding: var(--space-xl)
+    0
+    var(--space-lg);
+
+}
+
 
 
 .section-header {
