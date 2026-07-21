@@ -543,8 +543,23 @@ a:hover {
 
 /* =====================================================
    LAYOUT
+
+   Establish the physcial rythem of the exhibition.
+
+   Generous spacing, restrained widths, and
+   thoughtful aligment allow each section to
+   breathe without competing for attention.
+
+   The layout should feel architectural rather
+   than decorative.
 ===================================================== */
 
+
+/* ==========================================
+   CONTAINER
+
+   Every exhibition shares the same visual frame.
+========================================== */
 
 .container {
 
@@ -553,17 +568,46 @@ a:hover {
         var(--container)
     );
 
-    margin-inline:auto;
+    margin-inline: auto;
 
 }
 
 
+
+/* ==========================================
+   SECTION RHYTHM
+
+   Space is part of the exhibition.
+   Every section deserves room to breathe.
+========================================== */
 
 section {
 
-    padding:var(--space-xl) 0;
+    position: relative;
+
+    padding: var(--space-xl) 0;
 
 }
+
+/*
+
+Certain sections deserve additional breathing room.
+
+*/
+
+.arrival,
+.inquiry {
+
+    padding-block: var(--space-xxl)
+}
+
+
+/*
+
+The Disclosing signature should quietly
+dissolve into the end of the page.
+
+*/
 
 
 
