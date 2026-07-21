@@ -645,6 +645,25 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   READING WIDTH
+
+   Long-form text should remain comfortable
+   regardless of screen size.
+========================================== */
+
+.intro,
+.artist-statement p,
+.journal p,
+.contact-subtext {
+
+    max-width: var(--reading-width);
+
+}
+
+
+
+
 
 
 
