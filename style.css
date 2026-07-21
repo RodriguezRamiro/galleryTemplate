@@ -662,10 +662,12 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   SPLIT LAYOUT
 
-
-
-
+   Used where artwork and narrative exist
+   together in equal conversation.
+========================================== */
 
 .split-layout {
 
@@ -673,11 +675,15 @@ margin-bottom: var(--space-sm);
 
     grid-template-columns:
 
-        repeat(2,1fr);
+        repeat(2, minmax(0,1fr));
 
-    gap:6rem;
+    gap: clamp(
+        3rem,
+        6vw,
+        8rem
+    );
 
-    align-items:center;
+    align-items: center;
 
 }
 
