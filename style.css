@@ -610,7 +610,7 @@ dissolve into the end of the page.
 */
 
 .site-footer {
-    
+
     padding: var(--space-xl)
     0
     var(--space-lg);
@@ -618,16 +618,27 @@ dissolve into the end of the page.
 }
 
 
+/* ==========================================
+   SECTION HEADERS
+========================================== */
 
 .section-header {
 
-    margin-bottom:5rem;
+    margin-bottom: var(--space-lg);
+
+    max-width: 42rem;
+
+}
+
+.section-header h2 {
+
+margin-bottom: var(--space-sm);
 
 }
 
 
-
 .section-header p {
+
 
     color:var(--text-light);
 
