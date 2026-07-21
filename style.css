@@ -689,6 +689,33 @@ margin-bottom: var(--space-sm);
 
 
 
+/* ==========================================
+   GRID HELPERS
+========================================== */
+
+.collection-grid,
+.journal-grid {
+
+    display: grid;
+
+    gap: var(--space-lg);
+}
+
+
+/* ==========================================
+   CONTENT FLOW
+
+   Consistent vertical rhythm throughout
+   the exhibition.
+========================================== */
+
+.container > * + * {
+
+    margin-top: var(--space-md);
+}
+
+
+
 
 
 /* =====================================================
