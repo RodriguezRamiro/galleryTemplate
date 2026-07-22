@@ -825,12 +825,21 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   PRIMARY NAVIGATION
+========================================== */
 
 .nav-links {
 
     display:flex;
 
-    gap:3rem;
+    align-items: center;
+
+    gap: clamp(
+        2rem,
+        4vw,
+        3.5rem
+    );
 
 }
 
@@ -838,13 +847,34 @@ margin-bottom: var(--space-sm);
 
 .nav-links a {
 
-    color:var(--text-light);
+    position: relative;
 
-    position:relative;
+    color: var(--text-light);
+
+    font-size: .95rem;
+
+    transition:
+
+        color var(--transition),
+
+        opacity var(--transition);
 
 }
 
 
+.nav-links a:hover {
+
+    color: var(--heading);
+
+}
+
+
+
+/*
+    A restrained udnderline inspired by
+    gallery labels.
+
+*/
 
 .nav-links a::after {
 
@@ -852,9 +882,7 @@ margin-bottom: var(--space-sm);
 
     position:absolute;
 
-    bottom:-8px;
-
-    left:0;
+    bottom: -.5rem;
 
     width:0;
 
@@ -868,7 +896,8 @@ margin-bottom: var(--space-sm);
 
 
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
 
     width:100%;
 
