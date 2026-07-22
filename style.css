@@ -957,26 +957,43 @@ margin-bottom: var(--space-sm);
 
 }
 
+/*
+    Offset the fixed navigatoin while
+    preserving the feeling of openess.
+
+*/
 
 
 .arrival-content {
 
-    padding-top:5rem;
+    max-width: 52rem;
+
+    padding-top:6rem;
 
 }
 
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
 
 
 .intro {
 
-    margin:2rem 0 3rem;
+    margin:
+        var(--space-md)
+        0
+        var(--space-lg);
 
-    color:var(--text-light);
+    max-width: 38rem;
 
-    font-size:1.2rem;
+    color: var(--text-light);
+
+    font-size: var(--fs-md);
+
+    line-height: 1.9;
 
 }
-
 
 
 
