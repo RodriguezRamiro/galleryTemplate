@@ -778,25 +778,49 @@ margin-bottom: var(--space-sm);
 }
 
 
+
+/* ==========================================
+   NAVIGATION CONTAINER
+========================================== */
+
 .navigation {
 
-    height:90px;
+    display: flex;
 
-    display:flex;
+    justify-content: space-between;
 
-    justify-content:space-between;
+    min-height: 90px;
 
     align-items:center;
 
 }
 
 
+/* ==========================================
+   BRAND SIGNATURE
+========================================== */
 
 .logo {
 
-    font-family:var(--font-heading);
+    font-family: var(--font-heading);
 
-    font-size:2rem;
+    font-size: clamp(
+        1.8rem,
+        2vw,
+        2.3rem
+    );
+
+    font-weight: 500;
+
+    letter-spacing: -.02em;
+
+    transition: color var(--transition);
+
+}
+
+.logo:hover {
+
+    color: var(--accent);
 
 }
 
