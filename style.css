@@ -720,30 +720,43 @@ margin-bottom: var(--space-sm);
 
 /* =====================================================
    NAVIGATION
+
+   Quiet guidance.
+
+   The navigation remains present without
+   competing for the exhibition itself.
+
+   It should feel archetectural rather than
+   decorative. Always available never demanding.
 ===================================================== */
 
+
+
+
+/* ==========================================
+   SITE HEADER
+========================================== */
 
 .site-header {
 
     position:fixed;
 
-    top:0;
-
-    width:100%;
+    inset: 0 0 auto 0;
 
     z-index:1000;
 
-    background:
+    transition:
 
-    color-mix(
-        in srgb,
-        var(--bg) 85%,
-        transparent
-    );
+    background-color var(--transition),
 
-    backdrop-filter:blur(12px);
+    border-color var(--transition),
+
+    backdrop-filter var(--transition),
+
+    padding var(--transition);
 
 }
+
 
 
 
