@@ -996,22 +996,44 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   EXHIBITION INVITATION
 
+   A restrained call forward rather than
+   a traditional call-to-action.
+========================================== */
 
 .text-link {
 
-    display:inline-flex;
+    display: inline-flex;
 
-    gap:.5rem;
+    align-items: center;
+
+    gap:.75rem;
+
+    padding-bottom: .4rem;
 
     border-bottom:
 
         1px solid var(--accent);
 
-    padding-bottom:.4rem;
+    color: var(--heading);
 
-    transition:var(--transition);
 
+    transition:
+        gap var(--transition),
+
+        color var(--transition),
+
+        border-color var(--transition);
+
+}
+
+.text-link:hover {
+
+    gap: 1rem;
+
+    color: var(--accent);
 }
 
 
