@@ -905,10 +905,18 @@ margin-bottom: var(--space-sm);
 
 
 
+/* ==========================================
+   MOBILE TOGGLE
+
+   Hidden until smaller viewports.
+========================================== */
+
 .menu-toggle {
+    display: none;
 
-    display:none;
+    font-size: 1.5rem;
 
+    color: var(--heading);
 }
 
 
