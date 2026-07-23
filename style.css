@@ -1268,11 +1268,15 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   ARTWORK PRESENTATION
+========================================== */
 
 .artwork-image {
 
     overflow:hidden;
 
+    background: var(--surface);
 }
 
 
@@ -1281,7 +1285,9 @@ color:#d6ccc2;
 
     transition:
 
-        transform 900ms ease;
+        transform 900ms ease,
+
+        filter var(--transition-slow);
 
 }
 
