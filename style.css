@@ -1306,11 +1306,25 @@ color:#d6ccc2;
 
 
 
+/* ==========================================
+   EXHIBITION LABELS
+========================================== */
+
 .catalog-number {
+
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
 
     color:var(--accent);
 
-    letter-spacing:.25rem;
+    font-size: var(--fs-xs);
+
+    font-weight: 600;
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
 
 }
 
