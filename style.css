@@ -1036,23 +1036,33 @@ margin-bottom: var(--space-sm);
     color: var(--accent);
 }
 
+.text-link:hover::after {
 
+    transform:
 
-.text-link:hover {
-
-    color:var(--accent);
+        translateX(.35rem);
 
 }
 
 
 
-
-
-
-
 /* =====================================================
-   EXHIBITION
+   CURRENT EXHIBITION
+
+   The visitor has entered the first gallery.
+
+   Establish context before presenting inddividual
+   works. Infromation is displayed with the quiet
+   confidence of a museum placard.
+
+   Every detail suppourts the artwork without
+   competing for it.
 ===================================================== */
+
+
+/* ==========================================
+   EXHIBITION
+========================================== */
 
 
 .exhibition {
@@ -1064,16 +1074,26 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   EXHIBITION DETAILS
+
+   Museum-style catalog information.
+========================================== */
 
 .exhibition-details {
 
     display:flex;
 
-    gap:4rem;
-
-    margin-top:4rem;
-
     flex-wrap:wrap;
+
+    gap: clamp(
+        2rem,
+        5vw,
+        5rem
+    );
+
+    margin-top: var(--space-lg);
+
 
 }
 
