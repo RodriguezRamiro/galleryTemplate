@@ -1098,20 +1098,24 @@ margin-bottom: var(--space-sm);
 }
 
 .exhibition-details div {
-    min-width: 12 rem;
+    min-width: 12rem;
 
 }
 
 
 .exhibition-details dt {
 
-    text-transform:uppercase;
+    margin-bottom: .5rem;
 
-    font-size:.7rem;
+    color: var(--accent);
 
-    letter-spacing:.2rem;
+    font-size: var(--fs-xs);
 
-    color:var(--accent);
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .2em;
 
 }
 
