@@ -1293,9 +1293,14 @@ color:#d6ccc2;
 
 
 
+/*
+    The painting should feel alive,
+    never animated.
+*/
+
 .artwork-image:hover img {
 
-    transform:scale(1.03);
+    transform: scale(1.02);
 
 }
 
