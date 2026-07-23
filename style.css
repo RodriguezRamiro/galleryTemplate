@@ -1335,15 +1335,31 @@ color:#d6ccc2;
 
     color:var(--text-light);
 
+    font-size: var(--fs-sm);
+
+}
+
+.medium {
+
+    margin-bottom: .35rem;
 }
 
 
 
+/* ==========================================
+   ARTIST STATEMENT
+
+   Inspired by museum catalogue essays.
+========================================== */
+
+
 .artist-statement {
 
-    margin:3rem 0;
+    margin: var(--space-lg)
+    0;
 
-    padding-left:2rem;
+    padding-left:
+        var(--space-md);
 
     border-left:
 
@@ -1355,9 +1371,22 @@ color:#d6ccc2;
 
 .artist-statement h3 {
 
-    font-size:1.5rem;
+    margin-bottom:
 
-    margin-bottom:1rem;
+        var(--space-sm);
+
+    font-size:
+
+        1.35rem;
+
+}
+
+
+.artist-statement p {
+
+    font-style: italic;
+
+    color: var(--text);
 
 }
 
