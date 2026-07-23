@@ -1123,9 +1123,16 @@ margin-bottom: var(--space-sm);
 
 .exhibition-details dd {
 
-    margin-top:.5rem;
+    color: var(--heading);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-lg);
 
 }
+
+
+/* Exhibition Viewer left for later
 
 .exhibition-viewer{
 
@@ -1202,7 +1209,7 @@ color:#d6ccc2;
 }
 
 
-
+*/
 
 
 
