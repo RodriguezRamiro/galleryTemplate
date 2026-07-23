@@ -1097,6 +1097,10 @@ margin-bottom: var(--space-sm);
 
 }
 
+.exhibition-details div {
+    min-width: 12 rem;
+
+}
 
 
 .exhibition-details dt {
