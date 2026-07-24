@@ -1570,26 +1570,81 @@ color:#d6ccc2;
    VIEWER CONTAINER
 ========================================== */
 
+.exhibition-viewer {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: clamp(
+        2rem,
+        5vw,
+        4rem
+    );
+
+    background:
+        rgba(18,16,20,.96);
+
+        backdrop-filter: blur(12px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+
+            opacity var(--transition-slow),
+
+            visibility var(--transition-slow);
+}
+
+/*
+    The gallery quietly dissapers.
+
+*/
 
 
     .exhibition-viewer.active{
 
-    display:flex;
+        opacity: 1;
+
+        visibility: visibe;
+
+        pointer-events: auto;
 
     }
 
 
+/* ==========================================
+   ARTWORK
+========================================== */
 
-    .viewer-artwork{
 
-    max-width:900px;
+    .viewer-artwork {
 
-    text-align:center;
+    max-width: min(
+        100%,
+        960px
+    );
 
-    color:white;
+    text-align: center;
 
     }
 
+
+/* ==========================================
+   PAINTING
+========================================== */
 
 
     .viewer-artwork img{
