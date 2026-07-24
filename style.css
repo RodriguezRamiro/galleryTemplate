@@ -1508,10 +1508,14 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   CATALOG INFORMATION
+========================================== */
+
 
 .artwork-card figcaption {
 
-    padding-top:1.5rem;
+    padding-top: var(--space-md);
 
 }
 
@@ -1519,7 +1523,7 @@ color:#d6ccc2;
 
 .artwork-card h3 {
 
-    margin:.75rem 0;
+    margin: .75rem 0 .5rem;
 
 }
 
@@ -1527,7 +1531,7 @@ color:#d6ccc2;
 
 .artwork-card p {
 
-    color:var(--text-light);
+    color: var(--text-light);
 
 }
 
