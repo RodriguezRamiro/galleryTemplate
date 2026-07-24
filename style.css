@@ -1468,7 +1468,9 @@ color:#d6ccc2;
 
 .artwork-card figure {
 
-    overflow:hidden;
+    overflow: hidden;
+
+    background: var(--surface);
 
 }
 
@@ -1476,13 +1478,19 @@ color:#d6ccc2;
 
 .artwork-card img {
 
-    aspect-ratio:4/5;
+    display: block;
 
-    object-fit:cover;
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
 
     transition:
 
-        transform 800ms ease;
+        transform 900ms ease,
+
+        filter var(--transition-slow);
 
 }
 
