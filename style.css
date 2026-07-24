@@ -1409,7 +1409,19 @@ color:#d6ccc2;
 
 /* =====================================================
    COLLECTION
+
+   Every work deserves equal consideration.
+
+   The grid Exists only to organize the exhibition,
+   never to compete with it.
+
+   Consistent spacing and restrained interaction
+   ecourage exporation at the visitors own pace.
 ===================================================== */
+
+/* ==========================================
+   COLLECTION GRID
+========================================== */
 
 
 .collection-grid {
@@ -1418,13 +1430,24 @@ color:#d6ccc2;
 
     grid-template-columns:
 
-        repeat(12,1fr);
+        repeat(12,minmax(0,1fr));
 
-    gap:2rem;
+    gap: clamp(
+        2rem,
+        3vw,
+        3rem
+    );
 
 }
 
 
+
+/* ==========================================
+   ARTWORK CARD
+
+   Each card represents a single work.
+   Nothing should distract from the painting.
+========================================== */
 
 .artwork-card {
 
