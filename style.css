@@ -1536,6 +1536,19 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   EXHIBITION LINK
+========================================== */
+
+.artwork-card .text-link,
+.artwork-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: var(--space-sm);
+}
 
 
 /* =====================================================
