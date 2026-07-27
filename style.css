@@ -2197,7 +2197,20 @@ color:#d6ccc2;
 }
 
 
+.contact-submit:hover {
 
+    background: var(--heading);
+
+    color: var(--bg);
+}
+
+.contact-form input[readonly]{
+
+    color:var(--accent);
+
+    cursor:default;
+
+}
 
 /* =====================================================
    FOOTER
