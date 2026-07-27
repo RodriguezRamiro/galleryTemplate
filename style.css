@@ -1936,7 +1936,10 @@ color:#d6ccc2;
 
 .practice-list li {
 
-    padding:2rem;
+    padding:
+    var(--space-md)
+    0;
+
 
     border-top:
 
@@ -1946,11 +1949,28 @@ color:#d6ccc2;
 
         var(--font-heading);
 
-    font-size:1.8rem;
+    font-size:
+    clamp(
+        1.5rem,
+        2vw,
+        2rem
+        );
+
+    color:
+
+        var(--heading);
+
+        transition:
+            color var(--transition),
+            padding-left var(--transition);
 
 }
 
+/*
+    The discipline quietly responds
+    to attention.
 
+*/
 
 
 
