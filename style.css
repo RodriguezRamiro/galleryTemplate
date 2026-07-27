@@ -1702,9 +1702,80 @@ color:#d6ccc2;
     max-width: 42rem;
 
     color: rgba(255,255,255, .82);
+
 }
 
 
+
+/* ==========================================
+   VIEWER CONTROLS
+
+   Present only when needed.
+
+   Quiet navigation between works.
+========================================== */
+
+.viewer-prev,
+.viewer-next,
+.viewer-close {
+
+    position: absolute;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 3rem;
+
+    aspect-ratio: 1;
+
+    color: rgba(255,255,255,.75);
+
+    transition:
+
+        color var(--transition),
+
+        transform var(--transition);
+
+}
+
+
+
+.viewer-close {
+
+    top: 2rem;
+
+    right: 2rem;
+
+    font-size: 2rem;
+
+}
+
+
+
+.viewer-prev {
+
+    left: 2rem;
+
+}
+
+
+
+.viewer-next {
+
+    right: 2rem;
+
+}
+
+
+
+.viewer-prev:hover,
+.viewer-next:hover,
+.viewer-close:hover {
+
+    color: white;
+
+}
 
 
 /* =====================================================
