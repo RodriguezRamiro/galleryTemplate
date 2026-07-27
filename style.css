@@ -2120,13 +2120,48 @@ color:#d6ccc2;
         color: var(--text);
 
         transition:
-        
+
         border-color var(--transition);
 
 
 }
 
 
+.contact-form textarea {
+
+    resize: vertical;
+
+    min-height: 180px;
+
+}
+
+
+/* ==========================================
+   PLACEHOLDERS
+========================================== */
+
+.contact-form ::placeholder {
+
+    color: var(--text-light);
+
+    opacity: .65;
+
+}
+
+
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+
+    outline: none;
+
+    border-color: var(--accent);
+}
 
 /* =====================================================
    FOOTER
