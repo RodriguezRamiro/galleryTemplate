@@ -1778,6 +1778,37 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   PRIVATE INQUIRY
+
+   Revealed only after the visitor has had
+   time to observe the work.
+========================================== */
+
+.viewer-inquery {
+
+    margin-top: var(--spaxe-xl);
+
+    opacity: 0;
+
+    transform: translateY(.5rem);
+
+    transition:
+
+        opacity 600ms ease,
+
+        transform 600ms ease;
+}
+
+.viewer-inquery.visible {
+
+    opacity: 1;
+
+    Transform: translateY(0);
+
+}
+
+
 /* =====================================================
    ATELIER
 ===================================================== */
