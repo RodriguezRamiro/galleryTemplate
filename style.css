@@ -1663,9 +1663,14 @@ color:#d6ccc2;
 
 
 
-    .viewer-artwork figcaption{
+/* ==========================================
+   CATALOG
+========================================== */
 
-    margin-top:2rem;
+
+.viewer-artwork figcaption{
+
+    margin-top: var(--space-lg);
 
     }
 
