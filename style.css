@@ -2062,6 +2062,22 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   LABELS
+========================================== */
+
+.form-group label {
+
+    font-size: var(--fs-xs);
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--text-light);
+}
+
+
 
 /* ==========================================
    FORM ROWS
@@ -2076,17 +2092,6 @@ color:#d6ccc2;
         repeat(2, 1fr);
 
     gap: var(--space-md);
-}
-
-
-
-
-.contact-form label {
-
-    display:grid;
-
-    gap:.5rem;
-
 }
 
 
