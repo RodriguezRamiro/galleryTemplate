@@ -1972,6 +1972,14 @@ color:#d6ccc2;
 
 */
 
+.practice-list li:hover {
+
+    color: var(--accent);
+
+    padding-left: .5rem;
+
+}
+
 
 
 
@@ -2008,24 +2016,58 @@ color:#d6ccc2;
 
 
 
-
-
-
 /* =====================================================
-   FORM
+   INQUIRY FORM
+
+   Every conversation begins with a genuine intrest.
+
+   The form is intentioanally quiet, allowing the
+   visitor's words to become the primary focus.
+
+   Like the exhibition itself, nothing competes
+   for attention.
+
+   The atailer listens before it speaks.
 ===================================================== */
+
+
+/* ==========================================
+   FORM LAYOUT
+========================================== */
 
 
 .contact-form {
 
-    max-width:700px;
+    width: min(
+        100%,
+        760px
+    );
 
-    display:grid;
+    display: grid;
 
-    gap:2rem;
+    gap: var(--space-lg);
 
 }
 
+/* ==========================================
+   FORM ROWS
+========================================== */
+
+.form-rows {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(2, 1fr);
+
+    gap: var(--space-md);
+}
+
+
+/* ==========================================
+   FORM GROUP
+========================================== */
 
 
 .contact-form label {
