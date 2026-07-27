@@ -188,3 +188,15 @@ Inquiry
 —
 
 Created with intention.
+
+
+
+
+7-26-26
+small addition to add.
+create a gallery object were grouped
+paintigns go together.
+the fornt end displays the category changing
+all the paintings in the murals.
+render artwork via object endpoints
+rememebr to add the mural sort by murals?
