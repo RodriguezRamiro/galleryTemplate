@@ -2095,54 +2095,36 @@ color:#d6ccc2;
 }
 
 
+/* ==========================================
+   INPUTS
+========================================== */
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
 
-    background:transparent;
+    width: 100%;
 
-    border:none;
+    background: transparent;
+
+    border: none;
 
     border-bottom:
 
         1px solid var(--border);
 
-    padding:1rem 0;
+    padding:
 
-    color:var(--text);
+        .9rem 0;
+
+        color: var(--text);
+
+        transition:
+        
+        border-color var(--transition);
+
 
 }
-
-
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-
-    outline:none;
-
-    border-color:var(--accent);
-
-}
-
-
-
-.contact-form button {
-
-    width:max-content;
-
-    background:var(--heading);
-
-    color:var(--bg);
-
-    padding:1rem 2rem;
-
-    cursor:pointer;
-
-}
-
-
-
-
 
 
 
