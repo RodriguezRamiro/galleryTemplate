@@ -2163,6 +2163,42 @@ color:#d6ccc2;
     border-color: var(--accent);
 }
 
+
+/* ==========================================
+   SUBMIT
+========================================== */
+
+.contact-submit {
+
+    width: fit-content;
+
+    padding:0%
+
+        1rem
+        2rem;
+
+    border:#1d1a20
+
+        1px solid var(--heading);
+
+    background: transparent;
+
+    color: var(--heading);
+
+    cursor: pointer;
+
+    transition:
+
+        background var(--transition),
+
+        color var(--transition),
+
+        border-color var(--transition);
+}
+
+
+
+
 /* =====================================================
    FOOTER
 ===================================================== */
