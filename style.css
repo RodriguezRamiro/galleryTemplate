@@ -1866,6 +1866,33 @@ color:#d6ccc2;
     transform: scale(1.02);
 }
 
+/* ==========================================
+   ATELIER TEXT
+========================================== */
+
+.atelier .eyebrow {
+
+    margin-bottom: var(--space-sm);
+
+}
+
+
+
+.atelier h2 {
+
+    margin-bottom: var(--space-md);
+
+}
+
+
+
+.atelier p {
+
+    color: var(--text-light);
+
+    max-width: 42rem;
+
+}
 
 
 
@@ -1875,18 +1902,33 @@ color:#d6ccc2;
 
 /* =====================================================
    PRACTICE
+
+   Every finished work resets upon years of observation,
+   repetition, and discipline.
+
+   These are not services.
+
+   They are the foundations of the atailer.
 ===================================================== */
 
 
+/* ==========================================
+   DISCIPLINES
+========================================== */
+
 .practice-list {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
 
-        repeat(4,1fr);
+        repeat(4, 1fr);
 
-    gap:2rem;
+    gap: clamp(
+        1.5rem,
+        3vw,
+        3rem
+    );
 
 }
 
