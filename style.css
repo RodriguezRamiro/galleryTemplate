@@ -1811,12 +1811,29 @@ color:#d6ccc2;
 
 /* =====================================================
    ATELIER
+
+   BEhind every finished work is a place of patience,
+   observation, and quiet descipline.
+
+   This section offers a glimpse into the enviroment
+   where the exhibition begins.
+
+   It is not a biography.
+   It is an Atmosphere.
+
 ===================================================== */
 
 
+
+/* ==========================================
+   ATELIER IMAGE
+========================================== */
+
 .atelier figure {
 
-    overflow:hidden;
+    overflow: hidden;
+
+    background: var(--surface);
 
 }
 
@@ -1824,11 +1841,31 @@ color:#d6ccc2;
 
 .atelier img {
 
-    aspect-ratio:4/5;
+    display: block;
 
-    object-fit:cover;
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    transition:
+
+        transaform 1200ms ease;
 
 }
+
+/*
+
+    The studio feels alive,
+    but never aniated.
+*/
+
+.atiler:hover img {
+
+    transform: scale(1.02);
+}
+
 
 
 
