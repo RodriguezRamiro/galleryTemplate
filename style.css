@@ -1676,19 +1676,35 @@ color:#d6ccc2;
 
 
 
-    .viewer-title{
+.viewer-title{
 
-    color:white;
+    color: white;
 
-    }
-
-
-
-    .viewer-medium{
-
-    color:#d6ccc2;
+    margin-bottom: .75rem;
 
     }
+
+
+
+.viewer-medium{
+
+    color: rgba(255,255,255, .75);
+
+    margin-bottom: var(--space-sm);
+
+}
+
+
+.viewer-description {
+
+    margin-inline: auto;
+
+    max-width: 42rem;
+
+    color: rgba(255,255,255, .82);
+}
+
+
 
 
 /* =====================================================
