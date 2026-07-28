@@ -2445,12 +2445,31 @@ color:#d6ccc2;
 
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
+
+   The exhibition adapts to its enviroment
+   without compromising its character.
+
+   As space becomes more intimate, the layout
+   simplifies, typography breathes, and the
+   visitors attention remains focused on the work.
+
+   Nothing is removed.
+
+   Everything is reconsidedred.
 ===================================================== */
 
 
+/* ==========================================
+   TABLETS
+========================================== */
+
 @media(max-width:900px){
 
+
+    /* ------------------------------
+       Navigation
+    ------------------------------ */
 
     .nav-links {
 
@@ -2466,11 +2485,17 @@ color:#d6ccc2;
     }
 
 
+    /* ------------------------------
+       Layout
+    ------------------------------ */
+
 
     .featured-piece,
     .split-layout {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+
+        gap: var(--space-lg);
 
     }
 
@@ -2478,7 +2503,9 @@ color:#d6ccc2;
 
     .collection-grid {
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+
+            repeat(2, 1fr);
 
     }
 
@@ -2494,7 +2521,9 @@ color:#d6ccc2;
 
     .practice-list {
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+
+            repeat(2, 1fr);
 
     }
 
@@ -2506,17 +2535,38 @@ color:#d6ccc2;
 
     }
 
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    /* ------------------------------
+       Viewer
+    ------------------------------ */
+
+    .viewer-prev,
+    .viewer-next {
+
+        display: none;
+    }
 
 }
 
 
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
 
-@media(max-width:600px){
+@media(max-width: 640px){
 
 
     section {
 
-        padding:5rem 0;
+        padding:
+
+            var(--space-lg)
+            0;
 
     }
 
@@ -2525,10 +2575,17 @@ color:#d6ccc2;
 
         width:
 
-        calc(100% - 2rem);
+        min(
+            calc(100% - 2rem),
+            var(--container)
+        );
 
     }
 
+
+    /* ------------------------------
+       Typography
+    ------------------------------ */
 
     h1 {
 
@@ -2536,5 +2593,72 @@ color:#d6ccc2;
 
     }
 
+    h1 {
+
+        font-size:
+
+            clamp(
+                3rem,
+                12vw,
+                4.5rem
+            );
+
+    }
+
+    h2 {
+
+        font-size:
+
+            clamp(
+                2rem,
+                7vw,
+                3rem
+            );
+
+    }
+
+    h3 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+
+    .eyebrow {
+
+        letter-spacing: .22em;
+
+    }
+
+
+
+    /* ------------------------------
+       Collection
+    ------------------------------ */
+
+    .collection-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .practice-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    /* ------------------------------
+       Footer
+    ------------------------------ */
+
+    .footer-content {
+
+        text-align: center;
+
+    }
 
 }
