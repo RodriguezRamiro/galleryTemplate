@@ -2214,30 +2214,73 @@ color:#d6ccc2;
 
 /* =====================================================
    FOOTER
+
+   The final signature.
+
+   A quiet acknoladgement that evvery detail has
+   been considered.
+
+   The exhibition ends here.
+
+   Nothing asks for attention.
+
+   Nothing competes with the work.
+
+
+   A craftman's signature remains.
 ===================================================== */
 
 
+/* ==========================================
+   FOOTER
+========================================== */
+
 .footer {
 
-    position: relative;
+    padding:
 
-    margin-top: 120px;
+        calc(var(--space-xl) * 1.25)
+        0
+        var(--space-lg);
 
-    padding: 60px 40px 30px;
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.footer hr {
+
+    border: none;
 
     border-top:
-      1px solid var(--border-color);
 
-    background:
-      linear-gradient(
-        to bottom,
-        transparent,
-        rgba(0,0,0,0.02)
-      );
+        1px solid var(--border);
 
-    overflow: hidden;
-  }
+}
 
+/* ==========================================
+   CONTENT
+========================================== */
+
+.footer-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: var(--space-sm);
+
+    padding:
+
+        var(--space-xl)
+        0;
+
+}
 
 
   /* Inner Layout */
@@ -2279,199 +2322,124 @@ color:#d6ccc2;
     opacity: 0.8;
   }
 
-  .footer-logo {
+/* ==========================================
+   LOGO
+========================================== */
 
-    font-size: 32px;
+.footer-logo {
 
-    font-weight: 700;
+    font-family:
 
-    letter-spacing: -1px;
+        var(--font-heading);
 
-    color: var(--heading-color);
+    font-size:
 
-    margin: 0;
-  }
+        2rem;
 
-  .footer-copy {
+    font-weight: 500;
 
-    max-width: 520px;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-    color: var(--subtext-color);
-
-    margin: 0;
-  }
-
-  .footer-license {
-    margin-top: 0.5rem;
-
-    font-size: 0.8rem;
-
-    opacity: 0.65;
-
-    letter-spacing: 0.05em;
-
-    max-width: 28ch;
-  }
+}
 
 
-  /* Right */
+/* ==========================================
+   INVITATION
+========================================== */
 
-  .footer-right {
+.footer-cta {
 
-    display: flex;
+    color: var(--text-light);
 
-    align-items: center;
+    max-width: 22rem;
 
-    gap: 18px;
-  }
+}
 
-  .footer-right a {
 
-    width: 48px;
-    height: 48px;
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+/* ==========================================
+   CONTACT
+========================================== */
 
-    border-radius: 16px;
+.footer-email {
 
-    background: var(--surface-glass);
-
-    border:
-      1px solid var(--border-color);
-
-    color: var(--link-color);
+    color: var(--heading);
 
     transition:
-      transform var(--transition-medium),
-      border-color var(--transition-medium),
-      background var(--transition-medium),
-      color var(--transition-medium),
-      box-shadow var(--transition-medium);
-  }
 
-  .footer-right a:hover {
+        color var(--transition);
 
-    transform:
-      translateY(-4px);
+}
+
+
+
+.footer-email:hover {
+
+    color: var(--accent);
+
+}
+
+
+
+/* ==========================================
+   SOCIAL
+========================================== */
+
+.footer-social {
+
+    margin-top: var(--space-sm);
+
+}
+
+
+
+.footer-social a {
+
+    color: var(--text-light);
+
+    transition:
+
+        color var(--transition);
+
+}
+
+
+
+.footer-social a:hover {
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================
+   SIGNATURE
+========================================== */
+
+.footer-signature {
+
+    margin-top:
+
+        var(--space-sm);
+
+    font-size:
+
+        .1rem;
+
+    letter-spacing:
+
+        .18em;
+
+    text-transform:
+
+        uppercase;
 
     color:
-      var(--hover-text);
 
-    border-color:
-      var(--card-hover-border-color);
+        var(--text-light);
 
-    background:
-      var(--card-hover-gradient);
-
-    box-shadow:
-      var(--shadow-soft);
-  }
-
-
-  /* Bottom */
-
-  .footer-bottom {
-
-    max-width: 1200px;
-
-    margin: 50px auto 0;
-
-    padding-top: 24px;
-
-    border-top:
-      1px solid var(--border-color);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 20px;
-  }
-
-  .footer-version,
-  .footer-status {
-
-    font-size: 13px;
-
-    letter-spacing: 1px;
-
-    color: var(--subtext-color);
-
-    opacity: 0.7;
-  }
-
-
-  /* Responsive */
-
-  @media (max-width: 768px) {
-
-    .footer {
-
-      padding: 50px 24px 24px;
-    }
-
-    .footer-inner,
-    .footer-bottom {
-
-      flex-direction: column;
-
-      align-items: flex-start;
-
-      gap: 24px;
-    }
-
-    .footer-logo {
-
-      font-size: 26px;
-    }
-
-    .footer-copy {
-
-      font-size: 14px;
-    }
-
-    .footer-right {
-
-      gap: 14px;
-    }
-
-    .footer-right a {
-
-      width: 44px;
-      height: 44px;
-    }
-  }
-
-
-.site-footer {
-
-    border-top:
-
-        1px solid var(--border);
-
-    padding:4rem 0;
+    opacity: .75;
 
 }
-
-
-
-.site-footer p {
-
-    color:var(--text-light);
-
-}
-
-
-
 
 
 
