@@ -85,3 +85,16 @@ const UI = {
     messageField:
         document.querySelector("#message")
 };
+
+const Gallery = {
+
+    artwork:
+    [...document.querySelector(".artwork-card")],
+
+    current: 0,
+
+    largestTrigger: null,
+
+    inquiryTimer: null
+};
+
