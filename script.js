@@ -47,16 +47,41 @@ const UI = {
         document.querySelector(".site-header"),
 
     navigation:
+        document.querySelector(".nav-links"),
+
     menuToggle:
+        document.querySelector(".menu-toggle"),
+
     themeToggle:
+        document.querySelector(".theme-toggle"),
+
     viewer:
+        document.querySelector(".exhibition-viewer"),
+
     viewerImage:
+        document.querySelector(".viewer-artwork img"),
+
     viewerTitle:
+        document.querySelector(".viewer-title"),
+
     viewerMedium:
+        document.querySelector(".viewer-medium"),
+
     viewerDescription:
+        document.querySelector(".viewer-description"),
+
     viewerClose:
+        document.querySelector(".viewer-close"),
+
     viewerNext:
+        document.querySelector(".viewer-next"),
+
     viewerPrev:
+        document.querySelector(".viewer-prev"),
+
     artworkField:
+        document.querySelector("#artwork"),
+
     messageField:
-}
+        document.querySelector("#message")
+};
