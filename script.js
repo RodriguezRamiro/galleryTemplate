@@ -152,3 +152,26 @@ function toggleTheme(){
         next
     );
 }
+
+
+function applyTheme(theme) {
+    UI.document.dataset.theme = theme;
+
+    if(!UI.themeToggle) return;
+
+    UI.themeToggle.textContent =
+    theme === "dark"
+    ? "*"
+    : "🌙";
+
+    UI.themeToggle.setAttribute(
+        "arial-label",
+
+        theme === "dark"
+
+        ? "Switch to light mode"
+
+        : "Switch to dark mode"
+
+    );
+}
