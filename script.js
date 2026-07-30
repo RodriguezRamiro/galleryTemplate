@@ -121,4 +121,17 @@ const Motion = {
 
 function initializedTheme() {
     if(!UI.themeToggle) return;
+
+    const savedTheme =
+    localStorage.getItem(
+        Preferences.themeKey
+    );
+
+    const theme =
+    savedTheme || "light";
+
+    applyTheme(theme);
+
+    UI.themeToggle.addEventListener("click", toggleTheme);
 }
+
