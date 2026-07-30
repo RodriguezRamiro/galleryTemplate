@@ -175,3 +175,43 @@ function applyTheme(theme) {
 
     );
 }
+
+
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+
+   Handles responsive navigation behavior.
+===================================================== */
+
+function initializeNavigation() {
+
+    if(
+        !UI.menuToggle ||
+        !UI.navigation
+    ) {
+        return;
+    }
+
+    UI.menuToggle.addEventListener(
+
+        "click",
+
+        toggleNavigation
+    );
+
+    UI.navigation
+        .querySelectorAll("a")
+        .forEach(link=>{
+
+            link.addEventListener(
+
+                "click",
+
+                closeNavigation
+            );
+        });
+
+
+}
