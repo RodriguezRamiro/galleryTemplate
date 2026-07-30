@@ -98,3 +98,27 @@ const Gallery = {
     inquiryTimer: null
 };
 
+const Preferences = {
+
+    themeKey:"ateiler-theme"
+};
+
+const Motion = {
+
+    reduced:
+
+        qindow.matchMedia(
+            "(preferes-reduced-mption: reduce)"
+        ).matches
+};
+
+
+/* =====================================================
+   THEME SYSTEM
+
+   Handles persistent visitor theme preference.
+===================================================== */
+
+function initializedTheme() {
+    if(!UI.themeToggle) return;
+}
