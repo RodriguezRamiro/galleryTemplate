@@ -135,3 +135,20 @@ function initializedTheme() {
     UI.themeToggle.addEventListener("click", toggleTheme);
 }
 
+function toggleTheme(){
+
+    const current =
+    UI.document.dataset.theme;
+
+    const next =
+    current === "dark"
+    ? "light"
+    : "dark";
+
+    applyTheme(next);
+
+    localStorage.setItem(
+        Preferences.themeKey,
+        next
+    );
+}
