@@ -328,5 +328,30 @@ function intiializeReveal() {
             return;
         }
 
-        
+        elements.forEach(element=> {
+
+            element.classList.add(
+                "reveal"
+            );
+
+        });
+
+        const obeserver =
+
+            new IntersactionObserver(
+
+                revealEntries,
+
+                {
+                    threshold: .15,
+
+                    rootMargin:
+                    "0px 0px -80px 0px"
+                }
+            );
+
+    elements.forEach(element=>{
+
+        obeserver.observe(element);
+    });
 }
