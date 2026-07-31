@@ -213,5 +213,33 @@ function initializeNavigation() {
             );
         });
 
+}
 
+function toggleNavigation() {
+
+    const expanded =
+
+    UI.menuToggle
+    .getAttribute("aria-expanded")
+
+    === "true";
+
+    UI.menuToggle.setAttribute(
+        "aria-expanded",
+
+        !expanded
+
+        );
+
+    UI.menuToggle.classList.toggle(
+        "active"
+    );
+
+    UI.menuToggle.classList.toggle(
+        "active"
+    );
+
+    UI.navigation.classList.toggle(
+        "open"
+    );
 }
