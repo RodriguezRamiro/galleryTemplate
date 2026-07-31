@@ -243,3 +243,19 @@ function toggleNavigation() {
         "open"
     );
 }
+
+function closeNavigation() {
+
+    UI.navigation.classList.remove(
+        "open"
+    );
+
+    UI.menuToggle.classList.remove(
+        "active"
+    );
+
+    UI.menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+}
