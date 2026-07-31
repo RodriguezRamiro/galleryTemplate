@@ -284,3 +284,13 @@ function initializedHeader() {
         }
     );
 }
+
+function updateHeader(){
+
+    UI.header.classList.toggle(
+
+        "scrolled",
+
+        window.scrollY > 60
+    );
+}
