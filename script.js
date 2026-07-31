@@ -259,3 +259,28 @@ function closeNavigation() {
         "false"
     );
 }
+
+/* =====================================================
+   HEADER BEHAVIOR
+
+   Adds subtle visual separation once the
+   visitor begins scrolling.
+===================================================== */
+
+function initializedHeader() {
+
+    if(!UI.header) return;
+
+    updateHeader();
+
+    window.addEventListener(
+
+        "scroll",
+
+        updateHeader,
+
+        {
+            passive:true
+        }
+    );
+}
