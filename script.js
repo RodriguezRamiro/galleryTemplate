@@ -294,3 +294,39 @@ function updateHeader(){
         window.scrollY > 60
     );
 }
+
+/* =====================================================
+   SCROLL REVEAL
+
+   Reveals sections only once as they enter
+   the viewport.
+
+   Visitors preferring reduced motion
+   receive immediate visibility.
+===================================================== */
+
+function intiializeReveal() {
+
+    const elements =
+
+        document.querySelectorAll(
+
+            `section,
+            .featured-piece,
+            .artwork-card,
+            .journal article`
+        );
+
+        if(Motion.reduced) {
+            elements.forEach(element=> {
+
+                element.classList.add(
+                    "visible"
+                );
+            });
+
+            return;
+        }
+
+        
+}
