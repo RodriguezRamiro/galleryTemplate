@@ -141,7 +141,21 @@ const Exhibition = {
         this.startInqueryTimer();
     },
 
-    close() {},
+    close() {
+
+        this.stopInqueryTimer();
+
+        UI.viewer.classList.remove(
+            "active"
+        );
+
+        UI.viewer.setAttribute(
+
+            "aria-hidden",
+
+            "true"
+        );
+    },
 
     next() {
 
