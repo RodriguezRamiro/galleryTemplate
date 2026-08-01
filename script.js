@@ -376,3 +376,32 @@ function revealEntries(entries, observer){
 
     });
 }
+
+
+/* =====================================================
+   SMOOTH SCROLL
+
+   Internal navigation between sections.
+===================================================== */
+
+function intializeSmoothScroll() {
+
+    document
+
+    .querySelectorAll(
+        'a[href^="#]'
+    )
+
+    .forEach(anchor => {
+
+        anchor.addEventListener(
+
+            "click",
+
+            smoothScroll
+
+            );
+    });
+
+}
+
