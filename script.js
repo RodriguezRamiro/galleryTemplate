@@ -125,7 +125,21 @@ const Exhibition = {
 
     inqueryTimer: null,
 
-    open(index) {},
+    open(index) {
+
+        this.current=index;
+
+        this.populate();
+
+        UI.viewer.classList.add("active");
+
+        UI.viewer.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        this.startInqueryTimer();
+    },
 
     close() {},
 
@@ -475,6 +489,35 @@ function smoothScroll(event){
 }
 
 
+
+
+/* =====================================================
+Viewer Initializer
+===================================================== */
+
+
+function initializeViewer() {
+
+    document
+
+    .querySelectorAll(".observe-work")
+
+    .forEach((button, index) => {
+
+        button.addEventListener(
+
+            "click",
+
+            event=>{
+
+                event.preventDefault();
+
+                Exhibition.open(index);
+            }
+        );
+    });
+}
+
 /* =====================================================
    INITIALIZATION
 ===================================================== */
@@ -490,6 +533,8 @@ function initializeExperience() {
     intiializeReveal();
 
     intializeSmoothScroll();
+
+    initializeViewer();
 
 }
 
