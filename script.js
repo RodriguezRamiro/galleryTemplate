@@ -147,7 +147,37 @@ const Exhibition = {
 
     previous() {},
 
-    populate() {},
+    populate() {
+
+        const artwork =
+            Gallery.artwork[this.current];
+
+        if(!artwork) return;
+
+        const image =
+            artwork.querySelector("image");
+
+        UI.viewerImage.src =
+            image.src;
+
+        UI.viewerImage.alt =
+            image.alt;
+
+        UI.viewerTitle.textContent =
+            artwork.dataset.title;
+
+        UI.viewerMedium.textContent =
+            artwork.dataset.title;
+
+        UI.viewerMedium.textContent =
+
+            `${artwork.dataset.medium}
+            •
+            ${artwork.dataset.year}`;
+
+        UI.viewerDescription.textContent =
+            artwork.dataset.description;
+    },
 
     startInqueryTimer() {},
 
