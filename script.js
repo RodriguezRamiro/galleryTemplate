@@ -88,8 +88,8 @@ const UI = {
 
 const Gallery = {
 
-    artwork:
-    [...document.querySelector(".artwork-card")],
+    artworks:
+    [...document.querySelectorAll(".artwork-card")],
 
     current: 0,
 
@@ -100,14 +100,14 @@ const Gallery = {
 
 const Preferences = {
 
-    themeKey:"ateiler-theme"
+    themeKey:"atelier-theme"
 };
 
 const Motion = {
 
     reduced:
 
-        qindow.matchMedia(
+        window.matchMedia(
             "(preferes-reduced-mption: reduce)"
         ).matches
 };
@@ -123,7 +123,7 @@ const Exhibition = {
 
     current: 0,
 
-    inqueryTimer: null,
+    inquiryTimer: null,
 
     open(index) {
 
@@ -138,12 +138,12 @@ const Exhibition = {
             "false"
         );
 
-        this.startInqueryTimer();
+        this.startInquiryTimer();
     },
 
     close() {
 
-        this.stopInqueryTimer();
+        this.stopInquiryTimer();
 
         UI.viewer.classList.remove(
             "active"
@@ -193,9 +193,9 @@ const Exhibition = {
         if(!artwork) return;
 
         const image =
-            artwork.querySelector("image");
+            artwork.querySelector("img");
 
-        UI.viewerImage.src =
+        UI.viewerImage.src =x
             image.src;
 
         UI.viewerImage.alt =
@@ -217,9 +217,9 @@ const Exhibition = {
             artwork.dataset.description;
     },
 
-    startInqueryTimer() {},
+    startInquiryTimer() {},
 
-    stopInqueryTimer() {}
+    stopInquiryTimer() {}
 
 };
 
@@ -276,7 +276,7 @@ function applyTheme(theme) {
     : "🌙";
 
     UI.themeToggle.setAttribute(
-        "arial-label",
+        "aria-label",
 
         theme === "dark"
 
@@ -378,7 +378,7 @@ function closeNavigation() {
    visitor begins scrolling.
 ===================================================== */
 
-function initializedHeader() {
+function initializeHeader() {
 
     if(!UI.header) return;
 
@@ -416,7 +416,7 @@ function updateHeader(){
    receive immediate visibility.
 ===================================================== */
 
-function intiializeReveal() {
+function initializeReveal() {
 
     const elements =
 
@@ -447,9 +447,9 @@ function intiializeReveal() {
 
         });
 
-        const obeserver =
+        const observer =
 
-            new IntersactionObserver(
+            new IntersectionObserver(
 
                 revealEntries,
 
@@ -463,7 +463,7 @@ function intiializeReveal() {
 
     elements.forEach(element=>{
 
-        obeserver.observe(element);
+        observer.observe(element);
     });
 }
 
@@ -500,7 +500,7 @@ function intializeSmoothScroll() {
     document
 
     .querySelectorAll(
-        'a[href^="#]'
+        ''a[href^="#"]'
     )
 
     .forEach(anchor => {
@@ -588,7 +588,7 @@ function initializeViewer() {
 
 document.addEventListener(
 
-    "keyDown",
+    "keydown",
 
     event=>{
 
@@ -609,7 +609,7 @@ document.addEventListener(
 
                 break;
 
-            case "ArrowRigth":
+            case "ArrowRight":
 
                 Exhibition.next();
 
