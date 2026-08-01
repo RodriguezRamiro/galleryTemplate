@@ -405,3 +405,42 @@ function intializeSmoothScroll() {
 
 }
 
+function smotthScroll(event){
+
+    const href =
+
+        event.currentTarget.getAttribute(
+            "href"
+        );
+
+        if(
+            !href ||
+            href === "#"
+        ){
+            return;
+        }
+
+        const target =
+            document.querySelector(href);
+
+            if(!target){
+
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior:
+
+                    Motion.reduced
+
+                    ? "auto"
+
+                    : "smooth",
+
+                block: "start"
+
+            });
+}
