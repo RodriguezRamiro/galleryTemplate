@@ -113,6 +113,35 @@ const Motion = {
 };
 
 
+
+/* =====================================================
+   EXHIBITION VIEWER
+===================================================== */
+
+
+const Exhibition = {
+
+    current: 0,
+
+    inqueryTimer: null,
+
+    open(index) {},
+
+    close() {},
+
+    next() {},
+
+    previous() {},
+
+    populate() {},
+
+    startInqueryTimer() {},
+
+    stopInqueryTimer() {}
+
+};
+
+
 /* =====================================================
    THEME SYSTEM
 
