@@ -586,6 +586,44 @@ function initializeViewer() {
     });
 }
 
+document.addEventListener(
+
+    "keyDown",
+
+    event=>{
+
+        if(
+
+            !UI.viewer.classList.contains(
+                "active"
+            )
+        ){
+            return;
+        }
+
+        switch(event.key){
+
+            case "Escape":
+
+                Exhibition.close();
+
+                break;
+
+            case "ArrowRigth":
+
+                Exhibition.next();
+
+                break;
+
+            case "ArrowLeft":
+
+                Exhibition.previous();
+
+                break;
+        }
+    }
+)
+
 /* =====================================================
    INITIALIZATION
 ===================================================== */
