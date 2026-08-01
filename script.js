@@ -153,7 +153,23 @@ const Exhibition = {
         this.populate
     },
 
-    previous() {},
+    previous() {
+
+        this.current =
+        (
+                this.current
+                -
+                1
+                +
+                Gallery.artwork.length
+        )
+
+        %
+
+        Gallery.artwork.length;
+
+        this.populate();
+    },
 
     populate() {
 
