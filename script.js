@@ -119,7 +119,7 @@ const Motion = {
    Handles persistent visitor theme preference.
 ===================================================== */
 
-function initializedTheme() {
+function initializeTheme() {
     if(!UI.themeToggle) return;
 
     const savedTheme =
@@ -405,7 +405,7 @@ function intializeSmoothScroll() {
 
 }
 
-function smotthScroll(event){
+function smoothScroll(event){
 
     const href =
 
@@ -443,4 +443,23 @@ function smotthScroll(event){
                 block: "start"
 
             });
+}
+
+
+/* =====================================================
+   INITIALIZATION
+===================================================== */
+
+function initializeExperience() {
+
+    initializeTheme();
+
+    initializeNavigation();
+
+    initializedHeader();
+
+    intiializeReveal();
+
+    intializeSmoothScroll();
+
 }
