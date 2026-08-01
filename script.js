@@ -143,7 +143,15 @@ const Exhibition = {
 
     close() {},
 
-    next() {},
+    next() {
+
+        this.current =
+        (this.current + 1)
+        %
+        Gallery.artwork.length;
+
+        this.populate
+    },
 
     previous() {},
 
