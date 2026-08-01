@@ -153,6 +153,12 @@ const Exhibition = {
 
     close() {
 
+        this.fadeOut();
+
+        this.unlcokScroll();
+
+        this.restoreFocus();
+
         this.stopInquiryTimer();
 
         UI.viewer.classList.remove(
