@@ -131,6 +131,16 @@ const Exhibition = {
 
         this.populate();
 
+        this.rememberFocus();
+
+        this.lockScroll();
+
+        this.populate()
+
+        this.fadeIn();
+
+        this.preloadADjacentImages();
+
         UI.viewer.classList.add("active");
 
         UI.viewer.setAttribute(
