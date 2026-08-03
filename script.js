@@ -133,7 +133,11 @@ const Exhibition = {
 
         this.rememberFocus();
 
-        this.lockScroll();
+        this.lockScroll(){
+            document.body.classList.add(
+                "viewer-open"
+            );
+        };
 
         this.populate()
 
@@ -182,7 +186,11 @@ const Exhibition = {
 
         this.fadeOut();
 
-        this.unlcokScroll();
+        this.unlcokScroll() {
+            document.body.classList.remove(
+                "viewer-open"
+            );
+        };
 
         this.restoreFocus();
 
