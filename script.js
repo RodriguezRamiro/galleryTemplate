@@ -230,17 +230,13 @@ const Exhibition = {
         UI.viewerImage.alt =
             image.alt;
 
-        UI.viewerTitle.textContent =
-            artwork.dataset.title;
-
-        UI.viewerMedium.textContent =
-            artwork.dataset.title;
+        UI.viewerTitle.textContent = title;
 
         UI.viewerMedium.textContent =
 
-            `${artwork.dataset.medium}
+            `${medium}
             •
-            ${artwork.dataset.year}`;
+            ${year}`;
 
         UI.viewerDescription.textContent =
             artwork.dataset.description;
