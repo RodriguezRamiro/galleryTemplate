@@ -139,7 +139,34 @@ const Exhibition = {
 
         this.fadeIn();
 
-        this.preloadADjacentImages();
+        this.preloadADjacentImages(){
+
+            const next =
+                (this.current + 1)
+                %
+                Gallery.artwork.length;
+
+                const previous =
+                (
+                    this.current
+                    -
+                    1
+                    +
+                    Gallery.artwork.length
+                )
+                %
+                Gallery.artwork.length;
+
+            [next, previous].forEach(index=>{
+
+                const image = new Image();
+
+                image.src =
+                Gallery.artwork[index]
+                    .querySelector("img")
+                    .src;
+            });
+        };
 
         UI.viewer.classList.add("active");
 
