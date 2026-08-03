@@ -131,7 +131,10 @@ const Exhibition = {
 
         this.populate();
 
-        this.rememberFocus();
+        this.rememberFocus(){
+            this.lastFocused =
+                document.activeElement;
+        };
 
         this.lockScroll(){
             document.body.classList.add(
@@ -192,7 +195,9 @@ const Exhibition = {
             );
         };
 
-        this.restoreFocus();
+        this.restoreFocus(){
+            this.lastFocused?.focus();
+        };
 
         this.stopInquiryTimer();
 
