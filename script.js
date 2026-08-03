@@ -203,6 +203,19 @@ const Exhibition = {
 
     populate() {
 
+        const {
+
+            title,
+
+            medium,
+
+            year,
+
+            size,
+
+            description
+        } = artwork.dataset;
+
         const artwork =
             Gallery.artwork[this.current];
 
