@@ -144,7 +144,17 @@ const Exhibition = {
 
         this.populate()
 
-        this.fadeIn();
+        this.fadeIn(){
+
+            UI.viewer.classList.add(
+                "active"
+            );
+
+            UI.viewer.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+        };
 
         this.preloadADjacentImages(){
 
