@@ -197,7 +197,17 @@ const Exhibition = {
 
     close() {
 
-        this.fadeOut();
+        this.fadeOut(){
+
+            UI.viewer.classList.remove(
+                "active"
+            );
+
+            UI.viewer.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+        };
 
         this.unlcokScroll() {
             document.body.classList.remove(
