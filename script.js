@@ -43,6 +43,8 @@
 const UI = {
     document: document.documentElement,
 
+    body: document.body,
+
     header:
         document.querySelector(".site-header"),
 
