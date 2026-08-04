@@ -115,12 +115,17 @@ const Preferences = {
     themeKey:"atelier-theme"
 };
 
+
+/* =====================================================
+   MOTION PREFERENCES
+===================================================== */
+
 const Motion = {
 
     reduced:
 
         window.matchMedia(
-            "(preferes-reduced-mption: reduce)"
+            "(preferes-reduced-motion: reduce)"
         ).matches
 };
 
