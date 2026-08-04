@@ -140,78 +140,33 @@ const Exhibition = {
 
     current: 0,
 
-    inquiryTimer: null,
+    lastFocused: null,
 
     open(index) {
 
-        this.current=index;
+        if (!UI.viewer) return;
+
+        this.current = index;
+        this.lastFocused = document.activeElement;
 
         this.populate();
 
-        this.rememberFocus(){
-            this.lastFocused =
-                document.activeElement;
-        };
-
-        this.lockScroll(){
-            document.body.classList.add(
-                "viewer-open"
-            );
-        };
-
-        this.populate()
-
-        this.fadeIn(){
-
-            UI.viewer.classList.add(
-                "active"
-            );
-
-            UI.viewer.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-        };
-
-        this.preloadADjacentImages(){
-
-            const next =
-                (this.current + 1)
-                %
-                Gallery.artwork.length;
-
-                const previous =
-                (
-                    this.current
-                    -
-                    1
-                    +
-                    Gallery.artwork.length
-                )
-                %
-                Gallery.artwork.length;
-
-            [next, previous].forEach(index=>{
-
-                const image = new Image();
-
-                image.src =
-                Gallery.artwork[index]
-                    .querySelector("img")
-                    .src;
-            });
-        };
+        UI.body.classList.add("viewer-open");
 
         UI.viewer.classList.add("active");
-
         UI.viewer.setAttribute(
             "aria-hidden",
             "false"
         );
 
-        this.startInquiryTimer();
-    },
+        UI.viewerClose?.focus();
 
+        this.preloadAdjacentImages();
+
+        this.startInqueryTimer();
+
+    };
+    
     close() {
 
         this.fadeOut(){
