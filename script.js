@@ -88,6 +88,11 @@ const UI = {
         document.querySelector("#message")
 };
 
+
+/* =====================================================
+   GALLERY STATE
+===================================================== */
+
 const Gallery = {
 
     artworks:
@@ -99,6 +104,8 @@ const Gallery = {
 
     inquiryTimer: null
 };
+
+
 
 const Preferences = {
 
