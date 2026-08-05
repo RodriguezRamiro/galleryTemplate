@@ -208,18 +208,20 @@ const Exhibition = {
 
     previous() {
 
+        if (!Gallery.artworks.length) return;
+
         this.current =
         (
                 this.current
                 -
                 1
                 +
-                Gallery.artwork.length
+                Gallery.artworks.length
         )
 
         %
 
-        Gallery.artwork.length;
+        Gallery.artworks.length;
 
         this.populate();
     },
