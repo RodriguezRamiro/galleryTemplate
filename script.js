@@ -328,7 +328,17 @@ const Exhibition = {
             }, 3000);
     },
 
-    stopInquiryTimer() {}
+    stopInquiryTimer() {
+
+        if (this.inqueryTimer) {
+
+            clearTimeout(
+                this.inqueryTimer
+            );
+
+            this.inqueryTimer = null;
+        }
+    }
 
 };
 
