@@ -306,9 +306,27 @@ const Exhibition = {
 
                 preload.src = image.src;
             });
-    }
+    },
 
-    startInquiryTimer() {},
+    startInquiryTimer() {
+
+        this.stopInqueryTimer();
+
+        this.inqueryTimer =
+            window.setTimeout(() => {
+
+                if (
+                    UI.artworkField &&
+                    Gallery.artworks[this.current]
+                ) {
+
+                    UI.artworkField.value =
+                        Gallery.artworks[
+                            this.current
+                        ].dataset.title || "";
+                }
+            }, 3000);
+    },
 
     stopInquiryTimer() {}
 
