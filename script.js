@@ -166,20 +166,33 @@ const Exhibition = {
         this.startInqueryTimer();
 
     };
-    
+
     close() {
 
-        this.fadeOut(){
+        if (!UI.viewer) return;
 
-            UI.viewer.classList.remove(
-                "active"
-            );
+        this.stopInqueryTimer();
 
-            UI.viewer.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-        };
+        UI.viewer.classList.remove(
+            "active"
+        );
+
+        UI.viewer.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        UI.body.classList.remove(
+            "viewer-open"
+        );
+
+        UI.body.classList.remove(
+            "viewer-open"
+        );
+
+        this.lastFocused?.focus();
+
+    },
 
         this.unlcokScroll() {
             document.body.classList.remove(
