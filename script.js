@@ -194,38 +194,16 @@ const Exhibition = {
 
     },
 
-        this.unlcokScroll() {
-            document.body.classList.remove(
-                "viewer-open"
-            );
-        };
-
-        this.restoreFocus(){
-            this.lastFocused?.focus();
-        };
-
-        this.stopInquiryTimer();
-
-        UI.viewer.classList.remove(
-            "active"
-        );
-
-        UI.viewer.setAttribute(
-
-            "aria-hidden",
-
-            "true"
-        );
-    },
-
     next() {
 
-        this.current =
-        (this.current + 1)
-        %
-        Gallery.artwork.length;
+        if (!Gallery.artworks.length) return;
 
-        this.populate
+        this.current =
+            (this.current + 1)
+        %
+        Gallery.artworks.length;
+
+        this.populate();
     },
 
     previous() {
