@@ -228,43 +228,48 @@ const Exhibition = {
 
     populate() {
 
-        const {
-
-            title,
-
-            medium,
-
-            year,
-
-            size,
-
-            description
-        } = artwork.dataset;
-
         const artwork =
-            Gallery.artwork[this.current];
+            Gallery.artworks[this.current];
 
         if(!artwork) return;
 
         const image =
             artwork.querySelector("img");
 
-        UI.viewerImage.src =x
+        const {
+
+            title = "",
+
+            medium = "",
+
+            year = "",
+
+            size = "",
+
+            description = ""
+
+        } = artwork.dataset;
+
+        if(image) {
+
+        UI.viewerImage.src =
             image.src;
 
         UI.viewerImage.alt =
             image.alt;
+    }
 
-        UI.viewerTitle.textContent = title;
+        UI.viewerTitle.textContent =
+            title;
 
         UI.viewerMedium.textContent =
 
-            `${medium}
-            •
-            ${year}`;
+            [medium, year]
+            .filter(boolean)
+            .join(" • ");
 
         UI.viewerDescription.textContent =
-            artwork.dataset.description;
+            description;
     },
 
     startInquiryTimer() {},
