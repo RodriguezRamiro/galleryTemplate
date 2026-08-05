@@ -272,6 +272,42 @@ const Exhibition = {
             description;
     },
 
+    preloadAdjacentImages() {
+
+        if (Gallery.artworks.length < 2)
+            return;
+
+        const total =
+            (this.current + 1)
+            %
+            total;
+
+            const previous =
+            (
+                this.current
+                -
+                1
+                +
+                total
+            )
+            %
+            total;
+
+            [next, previous].forEach(index => {
+
+                const image =
+                    GAllery.artwork[index]
+                    ?.querySelector("img");
+
+                if (!image) return;
+
+                const preload =
+                    new Image();
+
+                preload.src = image.src;
+            });
+    }
+
     startInquiryTimer() {},
 
     stopInquiryTimer() {}
