@@ -517,7 +517,7 @@ function initializeHeader() {
         updateHeader,
 
         {
-            passive:true
+            passive: true
         }
     );
 }
