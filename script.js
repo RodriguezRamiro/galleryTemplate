@@ -428,11 +428,12 @@ function initializeNavigation() {
         "click",
 
         toggleNavigation
+
     );
 
     UI.navigation
         .querySelectorAll("a")
-        .forEach(link=>{
+        .forEach(link => {
 
             link.addEventListener(
 
@@ -449,14 +450,13 @@ function toggleNavigation() {
     const expanded =
 
     UI.menuToggle
-    .getAttribute("aria-expanded")
-
-    === "true";
+    .getAttribute("aria-expanded"
+      )  === "true";
 
     UI.menuToggle.setAttribute(
         "aria-expanded",
 
-        !expanded
+        String(!expanded)
 
         );
 
@@ -465,7 +465,7 @@ function toggleNavigation() {
     );
 
     UI.menuToggle.classList.toggle(
-        "active"
+        "open"
     );
 
     UI.navigation.classList.toggle(
