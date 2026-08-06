@@ -475,13 +475,21 @@ function toggleNavigation() {
 
 function closeNavigation() {
 
-    UI.navigation.classList.remove(
-        "open"
-    );
+    if (
+        !UI.menuToggle ||
+        !UI.navigation
+    ) {
+        return;
+    }
 
     UI.menuToggle.classList.remove(
         "active"
     );
+
+    UI.navigation.classList.remove(
+        "open"
+    );
+
 
     UI.menuToggle.setAttribute(
         "aria-expanded",
