@@ -554,8 +554,11 @@ function initializeReveal() {
             .journal article`
         );
 
+        if (!elements.length) return;
+
         if(Motion.reduced) {
-            elements.forEach(element=> {
+
+            elements.forEach(element => {
 
                 element.classList.add(
                     "visible"
@@ -565,7 +568,7 @@ function initializeReveal() {
             return;
         }
 
-        elements.forEach(element=> {
+        elements.forEach(element => {
 
             element.classList.add(
                 "reveal"
@@ -580,14 +583,13 @@ function initializeReveal() {
                 revealEntries,
 
                 {
-                    threshold: .15,
-
+                    threshold: 0.15,
                     rootMargin:
                     "0px 0px -80px 0px"
                 }
             );
 
-    elements.forEach(element=>{
+    elements.forEach(element => {
 
         observer.observe(element);
     });
