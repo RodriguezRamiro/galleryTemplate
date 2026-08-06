@@ -363,23 +363,21 @@ function initializeTheme() {
     applyTheme(theme);
 
     UI.themeToggle.addEventListener("click", toggleTheme);
-}
+};
+
 
 function toggleTheme(){
 
-    const current =
-    UI.document.dataset.theme;
-
-    const next =
-    current === "dark"
+    const nextTheme =
+    UI.document.dataset.theme === "dark"
     ? "light"
     : "dark";
 
-    applyTheme(next);
+    applyTheme(nextTheme);
 
     localStorage.setItem(
         Preferences.themeKey,
-        next
+        nextTheme
     );
 }
 
