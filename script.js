@@ -682,11 +682,15 @@ function smoothScroll(event){
 
 
 /* =====================================================
-Viewer Initializer
+    Viewer Initializer
+
+    Binds artwork controls and keyboard navigation.
 ===================================================== */
 
 
 function initializeViewer() {
+
+    if (!UI.viewer) return;
 
     document
 
@@ -698,7 +702,7 @@ function initializeViewer() {
 
             "click",
 
-            event=>{
+            event => {
 
                 event.preventDefault();
 
