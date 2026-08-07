@@ -761,7 +761,42 @@ document.addEventListener(
 );
 
 }
-  
+
+/* =====================================================
+   KEYBOARD CONTROLS
+===================================================== */
+
+function handleViewerKeyboard(event) {
+
+    if (
+        !UI.viewer ||
+        !UI.viewer.classList.contains("active")
+    ) {
+        return;
+    }
+
+    switch ( event.key) {
+
+        case "Escape":
+
+            Exhibition.close();
+
+            break;
+
+        case "ArrowRight":
+
+            Exhibition.next();
+
+            break;
+
+        case "ArrowLeft":
+
+            Exhibition.previous();
+
+            break;
+    }
+}
+
 /* =====================================================
    INITIALIZATION
 ===================================================== */
