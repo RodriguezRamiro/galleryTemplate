@@ -710,7 +710,6 @@ function initializeViewer() {
             }
         );
     });
-}
 
 UI.viewerClose?.addEventListener(
 
@@ -752,45 +751,17 @@ UI.viewer.addEventListener(
 
     );
 
-    
+
 document.addEventListener(
 
     "keydown",
 
-    event=>{
+    handleViewerKeyboard
 
-        if(
+);
 
-            !UI.viewer.classList.contains(
-                "active"
-            )
-        ){
-            return;
-        }
-
-        switch(event.key){
-
-            case "Escape":
-
-                Exhibition.close();
-
-                break;
-
-            case "ArrowRight":
-
-                Exhibition.next();
-
-                break;
-
-            case "ArrowLeft":
-
-                Exhibition.previous();
-
-                break;
-        }
-    }
-)
-
+}
+  
 /* =====================================================
    INITIALIZATION
 ===================================================== */
