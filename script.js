@@ -712,6 +712,47 @@ function initializeViewer() {
     });
 }
 
+UI.viewerClose?.addEventListener(
+
+    "click",
+
+    () => Exhibition.close()
+
+);
+
+UI.viewerNext?.addEventListener(
+
+    "click",
+
+    () => Exhibition.next()
+
+);
+
+UI.viewerPrev?.addEventListener(
+
+    "click",
+
+    () => Exhibition.previous()
+
+);
+
+UI.viewer.addEventListener(
+
+    "click",
+
+    event => {
+
+        if (event.target === UI.viewer) {
+
+            Exhibition.close();
+
+        }
+
+    }
+
+    );
+
+    
 document.addEventListener(
 
     "keydown",
