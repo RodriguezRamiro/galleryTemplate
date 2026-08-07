@@ -598,12 +598,9 @@ function initializeReveal() {
 
 function revealEntries(entries, observer){
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
-        if(!entry.isIntersecting){
-
-            return;
-        }
+        if (!entry.isIntersecting) return
 
         entry.target.classList.add(
             "visible"
