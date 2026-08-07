@@ -652,17 +652,14 @@ function smoothScroll(event){
         if(
             !href ||
             href === "#"
-        ){
+        ) {
             return;
         }
 
         const target =
             document.querySelector(href);
 
-            if(!target){
-
-                return;
-            }
+            if (!target) return;
 
             event.preventDefault();
 
