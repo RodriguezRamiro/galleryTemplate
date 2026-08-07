@@ -625,7 +625,7 @@ function intializeSmoothScroll() {
     document
 
     .querySelectorAll(
-        ''a[href^="#"]'
+        'a[href^="#"]'
     )
 
     .forEach(anchor => {
