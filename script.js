@@ -798,9 +798,31 @@ function handleViewerKeyboard(event) {
 }
 
 /* =====================================================
-   INITIALIZATION
+   INQUIRY EXPERIENCE
+
+   Pre-fills the inquiery form with the selected artwork.
 ===================================================== */
 
+function populateInqueryForm() {
+
+    if (
+
+        !UI.artworkField ||
+        !Gallery.artworks.length
+    ) {
+        return;
+    }
+
+    const artwork =
+        Gallery.artworks[Exhibition.current];
+
+    if (!artwork) return;
+
+    UI.artworkField.value =
+        artwork.dataset.title || "";
+}
+
+/
 function initializeExperience() {
 
     initializeTheme();
