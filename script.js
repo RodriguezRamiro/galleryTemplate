@@ -922,4 +922,16 @@ function initializeExperience() {
 
 }
 
-initializeExperience();
+if (document.readyState === "loading") {
+
+    document.addEventListener(
+
+        "DOMContentLoaded",
+
+        initializeExperience
+    );
+
+} else {
+
+    initializeExperience();
+}
