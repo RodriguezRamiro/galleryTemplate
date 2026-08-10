@@ -822,7 +822,60 @@ function populateInqueryForm() {
         artwork.dataset.title || "";
 }
 
-/
+/* =====================================================
+   CONTACT EXPERIENCE
+
+   Enhances the contact form experience.
+===================================================== */
+
+
+function initiailizeContactForm() {
+
+    const form = document.querySelector(".contact-form");
+
+    if (!form) return;
+
+    form.addEventListener(
+
+        "submit",
+
+        () => {
+
+            Exhibition.stopInquiryTimer();
+        }
+    );
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+
+   Small enhancements for keyboard users.
+===================================================== */
+
+function initializeAccessibility() {
+
+    document.addEventListener(
+
+        "keydown",
+
+        event => {
+
+            if (
+
+                event.key === "Escape" &&
+                UI.navigation?.classList.contains("open")
+            ) {
+
+                closeNavigation();
+
+            }
+        }
+    );
+}
+
+
+
 function initializeExperience() {
 
     initializeTheme();
