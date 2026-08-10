@@ -895,9 +895,12 @@ function debounce(callback, delay = 100) {
     };
 }
 
-/* 
 
+/* =====================================================
+   INITIALIZATION
 
+   Starts the exhibition experience.
+===================================================== */
 
 function initializeExperience() {
 
@@ -905,13 +908,17 @@ function initializeExperience() {
 
     initializeNavigation();
 
-    initializedHeader();
+    initializeHeader();
 
-    intiializeReveal();
+    initializeReveal();
 
     intializeSmoothScroll();
 
     initializeViewer();
+
+    initiailizeContactForm();
+
+    initializeAccessibility();
 
 }
 
