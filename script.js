@@ -288,6 +288,192 @@ function closeNavigation() {
 
 
 
+/* =====================================================
+   HEADER BEHAVIOR
+
+   Adds subtle visual separation once the
+   visitor begins scrolling.
+===================================================== */
+
+function initializeHeader() {
+
+    if(!UI.header) return;
+
+    updateHeader();
+
+    window.addEventListener(
+
+        "scroll",
+
+        updateHeader,
+
+        {
+            passive: true
+        }
+    );
+}
+
+function updateHeader(){
+
+    UI.header.classList.toggle(
+
+        "scrolled",
+
+        window.scrollY > 60
+    );
+}
+
+/* =====================================================
+   SCROLL REVEAL
+
+   Reveals sections only once as they enter
+   the viewport.
+
+   Visitors preferring reduced motion
+   receive immediate visibility.
+===================================================== */
+
+function initializeReveal() {
+
+    const elements =
+
+        document.querySelectorAll(
+
+            `section,
+            .featured-piece,
+            .artwork-card,
+            .journal article`
+        );
+
+        if (!elements.length) return;
+
+        if(Motion.reduced) {
+
+            elements.forEach(element => {
+
+                element.classList.add(
+                    "visible"
+                );
+            });
+
+            return;
+        }
+
+        elements.forEach(element => {
+
+            element.classList.add(
+                "reveal"
+            );
+
+        });
+
+        const observer =
+
+            new IntersectionObserver(
+
+                revealEntries,
+
+                {
+                    threshold: 0.15,
+                    rootMargin:
+                    "0px 0px -80px 0px"
+                }
+            );
+
+    elements.forEach(element => {
+
+        observer.observe(element);
+    });
+}
+
+
+function revealEntries(entries, observer){
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return
+
+        entry.target.classList.add(
+            "visible"
+        );
+
+        observer.unobserve(
+            entry.target
+        );
+
+    });
+}
+
+
+/* =====================================================
+   SMOOTH SCROLL
+
+   Internal navigation between sections.
+===================================================== */
+
+function intializeSmoothScroll() {
+
+    document
+
+    .querySelectorAll(
+        'a[href^="#"]'
+    )
+
+    .forEach(anchor => {
+
+        anchor.addEventListener(
+
+            "click",
+
+            smoothScroll
+
+            );
+    });
+
+}
+
+function smoothScroll(event){
+
+    const href =
+
+        event.currentTarget.getAttribute(
+            "href"
+        );
+
+        if(
+            !href ||
+            href === "#"
+        ) {
+            return;
+        }
+
+        const target =
+            document.querySelector(href);
+
+            if (!target) return;
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior:
+
+                    Motion.reduced
+
+                    ? "auto"
+
+                    : "smooth",
+
+                block: "start"
+
+            });
+}
+
+
+
+
+
+
 
 /* =====================================================
    EXHIBITION VIEWER
@@ -501,190 +687,6 @@ const Exhibition = {
     }
 
 };
-
-
-
-/* =====================================================
-   HEADER BEHAVIOR
-
-   Adds subtle visual separation once the
-   visitor begins scrolling.
-===================================================== */
-
-function initializeHeader() {
-
-    if(!UI.header) return;
-
-    updateHeader();
-
-    window.addEventListener(
-
-        "scroll",
-
-        updateHeader,
-
-        {
-            passive: true
-        }
-    );
-}
-
-function updateHeader(){
-
-    UI.header.classList.toggle(
-
-        "scrolled",
-
-        window.scrollY > 60
-    );
-}
-
-/* =====================================================
-   SCROLL REVEAL
-
-   Reveals sections only once as they enter
-   the viewport.
-
-   Visitors preferring reduced motion
-   receive immediate visibility.
-===================================================== */
-
-function initializeReveal() {
-
-    const elements =
-
-        document.querySelectorAll(
-
-            `section,
-            .featured-piece,
-            .artwork-card,
-            .journal article`
-        );
-
-        if (!elements.length) return;
-
-        if(Motion.reduced) {
-
-            elements.forEach(element => {
-
-                element.classList.add(
-                    "visible"
-                );
-            });
-
-            return;
-        }
-
-        elements.forEach(element => {
-
-            element.classList.add(
-                "reveal"
-            );
-
-        });
-
-        const observer =
-
-            new IntersectionObserver(
-
-                revealEntries,
-
-                {
-                    threshold: 0.15,
-                    rootMargin:
-                    "0px 0px -80px 0px"
-                }
-            );
-
-    elements.forEach(element => {
-
-        observer.observe(element);
-    });
-}
-
-
-function revealEntries(entries, observer){
-
-    entries.forEach(entry => {
-
-        if (!entry.isIntersecting) return
-
-        entry.target.classList.add(
-            "visible"
-        );
-
-        observer.unobserve(
-            entry.target
-        );
-
-    });
-}
-
-
-/* =====================================================
-   SMOOTH SCROLL
-
-   Internal navigation between sections.
-===================================================== */
-
-function intializeSmoothScroll() {
-
-    document
-
-    .querySelectorAll(
-        'a[href^="#"]'
-    )
-
-    .forEach(anchor => {
-
-        anchor.addEventListener(
-
-            "click",
-
-            smoothScroll
-
-            );
-    });
-
-}
-
-function smoothScroll(event){
-
-    const href =
-
-        event.currentTarget.getAttribute(
-            "href"
-        );
-
-        if(
-            !href ||
-            href === "#"
-        ) {
-            return;
-        }
-
-        const target =
-            document.querySelector(href);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-
-                behavior:
-
-                    Motion.reduced
-
-                    ? "auto"
-
-                    : "smooth",
-
-                block: "start"
-
-            });
-}
-
 
 
 
