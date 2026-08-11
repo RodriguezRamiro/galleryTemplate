@@ -99,10 +99,6 @@ const Gallery = {
     [...document.querySelectorAll(".artwork-card")],
 
     current: 0,
-
-    largestTrigger: null,
-
-    inquiryTimer: null
 };
 
 
