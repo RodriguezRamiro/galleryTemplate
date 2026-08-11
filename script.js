@@ -163,7 +163,9 @@ const Exhibition = {
 
         this.preloadAdjacentImages();
 
-        this.startInqueryTimer();
+        populateInqueryForm();
+
+        this.startInquiryTimer();
 
     };
 
