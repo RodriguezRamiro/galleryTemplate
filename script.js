@@ -108,7 +108,7 @@ const Gallery = {
 
 const Preferences = {
 
-    themeKey:"atelier-theme"
+    themeKey: "atelier-theme"
 };
 
 
@@ -124,6 +124,70 @@ const Motion = {
             "(preferes-reduced-motion: reduce)"
         ).matches
 };
+
+
+/* =====================================================
+   THEME SYSTEM
+
+   Handles persistent visitor theme preference.
+===================================================== */
+
+function initializeTheme() {
+    if(!UI.themeToggle) return;
+
+    const savedTheme =
+    localStorage.getItem(
+        Preferences.themeKey
+    );
+
+    const theme =
+    savedTheme || "light";
+
+    applyTheme(theme);
+
+    UI.themeToggle.addEventListener("click", toggleTheme);
+};
+
+
+function toggleTheme(){
+
+    const nextTheme =
+    UI.document.dataset.theme === "dark"
+    ? "light"
+    : "dark";
+
+    applyTheme(nextTheme);
+
+    localStorage.setItem(
+        Preferences.themeKey,
+        nextTheme
+    );
+}
+
+
+function applyTheme(theme) {
+
+    UI.document.dataset.theme = theme;
+
+    if (!UI.themeToggle) return;
+
+    UI.themeToggle.textContent =
+    theme === "dark"
+    ? "*"
+    : "🌙";
+
+    UI.themeToggle.setAttribute(
+        "aria-label",
+
+        theme === "dark"
+
+        ? "Switch to light mode"
+
+        : "Switch to dark mode"
+
+    );
+}
+
 
 
 
@@ -339,70 +403,6 @@ const Exhibition = {
     }
 
 };
-
-
-/* =====================================================
-   THEME SYSTEM
-
-   Handles persistent visitor theme preference.
-===================================================== */
-
-function initializeTheme() {
-    if(!UI.themeToggle) return;
-
-    const savedTheme =
-    localStorage.getItem(
-        Preferences.themeKey
-    );
-
-    const theme =
-    savedTheme || "light";
-
-    applyTheme(theme);
-
-    UI.themeToggle.addEventListener("click", toggleTheme);
-};
-
-
-function toggleTheme(){
-
-    const nextTheme =
-    UI.document.dataset.theme === "dark"
-    ? "light"
-    : "dark";
-
-    applyTheme(nextTheme);
-
-    localStorage.setItem(
-        Preferences.themeKey,
-        nextTheme
-    );
-}
-
-
-function applyTheme(theme) {
-
-    UI.document.dataset.theme = theme;
-
-    if (!UI.themeToggle) return;
-
-    UI.themeToggle.textContent =
-    theme === "dark"
-    ? "*"
-    : "🌙";
-
-    UI.themeToggle.setAttribute(
-        "aria-label",
-
-        theme === "dark"
-
-        ? "Switch to light mode"
-
-        : "Switch to dark mode"
-
-    );
-}
-
 
 
 
