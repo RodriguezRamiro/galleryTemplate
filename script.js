@@ -245,15 +245,18 @@ function toggleNavigation() {
         );
 
     UI.menuToggle.classList.toggle(
-        "active"
+        "active",
+        !expanded
     );
 
     UI.menuToggle.classList.toggle(
-        "open"
+        "open",
+        !expanded
     );
 
     UI.navigation.classList.toggle(
-        "open"
+        "open",
+        !expanded
     );
 }
 
@@ -267,7 +270,8 @@ function closeNavigation() {
     }
 
     UI.menuToggle.classList.remove(
-        "active"
+        "active",
+        "open"
     );
 
     UI.navigation.classList.remove(
