@@ -400,7 +400,9 @@ function initializeReveal() {
     elements.forEach(element => {
 
         observer.observe(element);
+
     });
+
 }
 
 
@@ -408,7 +410,9 @@ function revealEntries(entries, observer){
 
     entries.forEach(entry => {
 
-        if (!entry.isIntersecting) return
+        if (!entry.isIntersecting) {
+            return;
+        }
 
         entry.target.classList.add(
             "visible"
@@ -457,15 +461,24 @@ function smoothScroll(event){
             "href"
         );
 
-        if(
+        if (
             !href ||
             href === "#"
         ) {
             return;
         }
 
-        const target =
+        let target =
+
+        try {
+
+            target =
             document.querySelector(href);
+
+        } catch (error) {
+
+            return
+        }
 
             if (!target) return;
 
