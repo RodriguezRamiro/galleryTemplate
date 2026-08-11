@@ -359,13 +359,30 @@ function initializeReveal() {
             return;
         }
 
-        elements.forEach(element => {
+        if (
+
+            typeof IntersectionObserver ===
+            "undefined"
+        ) {
+
+            elements.forEach(element => {
 
             element.classList.add(
-                "reveal"
+                "visible"
             );
 
         });
+
+        return
+    }
+
+    elements.forEach(element => {
+
+        element.classList.add(
+            "reveal"
+        );
+
+    });
 
         const observer =
 
