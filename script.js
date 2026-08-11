@@ -468,7 +468,7 @@ function smoothScroll(event){
             return;
         }
 
-        let target =
+        let target;
 
         try {
 
