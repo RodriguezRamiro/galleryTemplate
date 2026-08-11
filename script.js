@@ -477,7 +477,7 @@ function smoothScroll(event){
 
         } catch (error) {
 
-            return
+            return;
         }
 
             if (!target) return;
@@ -500,13 +500,21 @@ function smoothScroll(event){
 }
 
 
-
-
-
-
-
 /* =====================================================
    EXHIBITION VIEWER
+
+   Provides a quiet, immersive artwork viewer.
+
+   Supports:
+
+   • Opening artwork
+   • Closing artwork
+   • Previous / next navigation
+   • Keyboard navigation
+   • Focus restoration
+   • Scroll locking
+   • Adjacent image preloading
+
 ===================================================== */
 
 
@@ -515,6 +523,8 @@ const Exhibition = {
     current: 0,
 
     lastFocused: null,
+
+    inqueryTimer: null
 
     open(index) {
 
