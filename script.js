@@ -524,7 +524,7 @@ const Exhibition = {
 
     lastFocused: null,
 
-    inqueryTimer: null
+    inqueryTimer: null,
 
     open(index) {
 
