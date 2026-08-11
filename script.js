@@ -141,7 +141,10 @@ function initializeTheme() {
     );
 
     const theme =
-    savedTheme || "light";
+    savedTheme === "dark" ||
+    savedTheme === "light"
+        ? savedTheme
+        : "light";
 
     applyTheme(theme);
 
@@ -187,6 +190,97 @@ function applyTheme(theme) {
 
     );
 }
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+
+   Handles responsive navigation behavior.
+===================================================== */
+
+function initializeNavigation() {
+
+    if(
+        !UI.menuToggle ||
+        !UI.navigation
+    ) {
+        return;
+    }
+
+    UI.menuToggle.addEventListener(
+
+        "click",
+
+        toggleNavigation
+
+    );
+
+    UI.navigation
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener(
+
+                "click",
+
+                closeNavigation
+            );
+        });
+
+}
+
+function toggleNavigation() {
+
+    const expanded =
+
+    UI.menuToggle
+    .getAttribute("aria-expanded"
+      )  === "true";
+
+    UI.menuToggle.setAttribute(
+        "aria-expanded",
+
+        String(!expanded)
+
+        );
+
+    UI.menuToggle.classList.toggle(
+        "active"
+    );
+
+    UI.menuToggle.classList.toggle(
+        "open"
+    );
+
+    UI.navigation.classList.toggle(
+        "open"
+    );
+}
+
+function closeNavigation() {
+
+    if (
+        !UI.menuToggle ||
+        !UI.navigation
+    ) {
+        return;
+    }
+
+    UI.menuToggle.classList.remove(
+        "active"
+    );
+
+    UI.navigation.classList.remove(
+        "open"
+    );
+
+
+    UI.menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+}
+
 
 
 
@@ -405,95 +499,6 @@ const Exhibition = {
 };
 
 
-
-/* =====================================================
-   MOBILE NAVIGATION
-
-   Handles responsive navigation behavior.
-===================================================== */
-
-function initializeNavigation() {
-
-    if(
-        !UI.menuToggle ||
-        !UI.navigation
-    ) {
-        return;
-    }
-
-    UI.menuToggle.addEventListener(
-
-        "click",
-
-        toggleNavigation
-
-    );
-
-    UI.navigation
-        .querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener(
-
-                "click",
-
-                closeNavigation
-            );
-        });
-
-}
-
-function toggleNavigation() {
-
-    const expanded =
-
-    UI.menuToggle
-    .getAttribute("aria-expanded"
-      )  === "true";
-
-    UI.menuToggle.setAttribute(
-        "aria-expanded",
-
-        String(!expanded)
-
-        );
-
-    UI.menuToggle.classList.toggle(
-        "active"
-    );
-
-    UI.menuToggle.classList.toggle(
-        "open"
-    );
-
-    UI.navigation.classList.toggle(
-        "open"
-    );
-}
-
-function closeNavigation() {
-
-    if (
-        !UI.menuToggle ||
-        !UI.navigation
-    ) {
-        return;
-    }
-
-    UI.menuToggle.classList.remove(
-        "active"
-    );
-
-    UI.navigation.classList.remove(
-        "open"
-    );
-
-
-    UI.menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
-}
 
 /* =====================================================
    HEADER BEHAVIOR
