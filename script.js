@@ -923,16 +923,19 @@ function handleViewerKeyboard(event) {
 /* =====================================================
    INQUIRY EXPERIENCE
 
-   Pre-fills the inquiery form with the selected artwork.
+  Automatically associates the selected artwork
+  with the inquery form.
+
+  tThe experience remains subtle and non-intrusive.
 ===================================================== */
 
 function populateInquiryForm() {
 
     if (
 
-        !UI.artworkField ||
-        !Gallery.artworks.length
-    ) {
+        !UI.artworkField
+    )
+    {
         return;
     }
 
