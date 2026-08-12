@@ -788,11 +788,14 @@ function initializeViewer() {
 
     if (!UI.viewer) return;
 
+    const viewerTriggers =
+
     document
 
-    .querySelectorAll(".observe-work")
+    .querySelectorAll(".observe-work");
 
-    .forEach((button, index) => {
+    viewerTriggers.forEach(
+        (button, index) => {
 
         button.addEventListener(
 
@@ -802,10 +805,25 @@ function initializeViewer() {
 
                 event.preventDefault();
 
-                Exhibition.open(index);
+                const artwork =
+                button.closest(
+                    ".artwork-card"
+                );
+
+                const artworkIndex =
+                    artwork
+                    ? Gallery.artworks.indexOf(
+                        artwork
+                    )
+
+                    : index
+
+                Exhibition.open(artworkIndex);
             }
         );
-    });
+    }
+
+    );
 
 UI.viewerClose?.addEventListener(
 
