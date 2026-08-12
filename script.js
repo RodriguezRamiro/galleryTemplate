@@ -665,26 +665,41 @@ const Exhibition = {
 
         } = artwork.dataset;
 
-        if(image) {
+        if( image &&
+            UI.viewerImage ) {
 
         UI.viewerImage.src =
+            image.currentSrc ||
             image.src;
 
         UI.viewerImage.alt =
-            image.alt;
+            image.alt ||
+            title;
     }
+
+        if (UI.viewer.Title) {
 
         UI.viewerTitle.textContent =
             title;
 
+        }
+
+        if (UI.viewerMedium) {
+
         UI.viewerMedium.textContent =
 
-            [medium, year]
+            [medium, size, year]
             .filter(boolean)
             .join(" • ");
 
+        }
+
+        if (UI.viewerDescription) {
+
         UI.viewerDescription.textContent =
             description;
+
+        }
     },
 
     preloadAdjacentImages() {
