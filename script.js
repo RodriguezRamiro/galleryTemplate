@@ -590,12 +590,15 @@ const Exhibition = {
             "viewer-open"
         );
 
-        UI.body.classList.remove(
-            "viewer-open"
-        );
+        if (
+        this.lastFocused &&
+        typeof this.lastFocused.focus === "function"
 
-        this.lastFocused?.focus();
+        ) {
+            this.lastFocused.focus();
+        }
 
+        this.lastFocused = null;
     },
 
     next() {
