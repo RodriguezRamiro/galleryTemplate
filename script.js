@@ -635,6 +635,10 @@ const Exhibition = {
         Gallery.artworks.length;
 
         this.populate();
+
+        populateInquiryForm();
+
+        this.preloadAdjacentImages();
     },
 
     populate() {
