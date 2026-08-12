@@ -704,13 +704,20 @@ const Exhibition = {
 
     preloadAdjacentImages() {
 
-        if (Gallery.artworks.length < 2)
-            return;
-
         const total =
-            (this.current + 1)
-            %
-            total;
+            Gallery.artworks.length;
+
+            if (total < 2 ) {
+                return;
+
+            }
+
+            const next =
+                (
+                    this.current + 1
+                ) %
+                total;
+
 
             const previous =
             (
@@ -734,7 +741,9 @@ const Exhibition = {
                 const preload =
                     new Image();
 
-                preload.src = image.src;
+                preload.src =
+                    image.currentSrc ||
+                    image.src;
             });
     },
 
