@@ -530,7 +530,20 @@ const Exhibition = {
 
         if (!UI.viewer) return;
 
+        if (!Gallery.artworks.length) {
+            return;
+        }
+
+        if (
+
+            index < 0 ||
+            index >= Gallery.artworks.length
+        ) {
+            return;
+        }
+
         this.current = index;
+
         this.lastFocused = document.activeElement;
 
         this.populate();
@@ -538,20 +551,25 @@ const Exhibition = {
         UI.body.classList.add("viewer-open");
 
         UI.viewer.classList.add("active");
+
         UI.viewer.setAttribute(
             "aria-hidden",
             "false"
         );
 
-        UI.viewerClose?.focus();
+        populateInqueryForm();
 
         this.preloadAdjacentImages();
 
-        populateInqueryForm();
-
         this.startInquiryTimer();
 
-    };
+        requestAnimationFrame(() => {
+
+            UI.viewerClose?.focus();
+
+        });
+
+    },
 
     close() {
 
