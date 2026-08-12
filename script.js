@@ -754,17 +754,9 @@ const Exhibition = {
         this.inquiryTimer =
             window.setTimeout(() => {
 
-                if (
-                    UI.artworkField &&
-                    Gallery.artworks[this.current]
-                ) {
+               populateInquiryForm();
 
-                    UI.artworkField.value =
-                        Gallery.artworks[
-                            this.current
-                        ].dataset.title || "";
-                }
-            }, 3000);
+            }, 30000);
     },
 
     stopInquiryTimer() {
