@@ -951,7 +951,8 @@ function populateInquiryForm() {
 /* =====================================================
    CONTACT EXPERIENCE
 
-   Enhances the contact form experience.
+   Keeps the inquery experience synchronized with the
+   contact form.
 ===================================================== */
 
 
