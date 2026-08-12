@@ -763,15 +763,17 @@ const Exhibition = {
 
         if (this.inquiryTimer) {
 
+            return
+
+        }
+
             clearTimeout(
                 this.inquiryTimer
             );
 
             this.inquiryTimer = null;
         }
-    }
-
-};
+    };
 
 
 
