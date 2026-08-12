@@ -524,7 +524,7 @@ const Exhibition = {
 
     lastFocused: null,
 
-    inqueryTimer: null,
+    inquiryTimer: null,
 
     open(index) {
 
@@ -557,7 +557,7 @@ const Exhibition = {
             "false"
         );
 
-        populateInqueryForm();
+        populateInquiryForm();
 
         this.preloadAdjacentImages();
 
@@ -575,7 +575,7 @@ const Exhibition = {
 
         if (!UI.viewer) return;
 
-        this.stopInqueryTimer();
+        this.stopInquiryTimer();
 
         UI.viewer.classList.remove(
             "active"
@@ -611,6 +611,10 @@ const Exhibition = {
         Gallery.artworks.length;
 
         this.populate();
+
+        populateInquiryForm();
+
+        this.preloadAdjacentImages();
     },
 
     previous() {
@@ -717,9 +721,9 @@ const Exhibition = {
 
     startInquiryTimer() {
 
-        this.stopInqueryTimer();
+        this.stopInquiryTimer();
 
-        this.inqueryTimer =
+        this.inquiryTimer =
             window.setTimeout(() => {
 
                 if (
@@ -737,13 +741,13 @@ const Exhibition = {
 
     stopInquiryTimer() {
 
-        if (this.inqueryTimer) {
+        if (this.inquiryTimer) {
 
             clearTimeout(
-                this.inqueryTimer
+                this.inquiryTimer
             );
 
-            this.inqueryTimer = null;
+            this.inquiryTimer = null;
         }
     }
 
@@ -873,7 +877,7 @@ function handleViewerKeyboard(event) {
    Pre-fills the inquiery form with the selected artwork.
 ===================================================== */
 
-function populateInqueryForm() {
+function populateInquiryForm() {
 
     if (
 
