@@ -726,7 +726,7 @@ const Exhibition = {
             [next, previous].forEach(index => {
 
                 const image =
-                    GAllery.artwork[index]
+                    Gallery.artworks[index]
                     ?.querySelector("img");
 
                 if (!image) return;
