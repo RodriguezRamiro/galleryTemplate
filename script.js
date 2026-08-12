@@ -878,6 +878,9 @@ document.addEventListener(
 
 /* =====================================================
    KEYBOARD CONTROLS
+
+   Keyboard controls remain active only while
+   the exhibition viewer is open.
 ===================================================== */
 
 function handleViewerKeyboard(event) {
@@ -889,9 +892,11 @@ function handleViewerKeyboard(event) {
         return;
     }
 
-    switch ( event.key) {
+    switch (event.key) {
 
         case "Escape":
+
+            event.preventDefault();
 
             Exhibition.close();
 
@@ -899,11 +904,15 @@ function handleViewerKeyboard(event) {
 
         case "ArrowRight":
 
+            event.preventDefault();
+
             Exhibition.next();
 
             break;
 
         case "ArrowLeft":
+
+            event.preventDefault();
 
             Exhibition.previous();
 
