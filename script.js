@@ -1050,13 +1050,21 @@ function initializeExperience() {
 
 }
 
+
+/* =====================================================
+START EXPERIENCE
+===================================================== */
+
 if (document.readyState === "loading") {
 
     document.addEventListener(
 
         "DOMContentLoaded",
 
-        initializeExperience
+        initializeExperience,
+        {
+            once: true
+        }
     );
 
 } else {
