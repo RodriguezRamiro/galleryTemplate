@@ -977,7 +977,8 @@ function initiailizeContactForm() {
 /* =====================================================
    ACCESSIBILITY
 
-   Small enhancements for keyboard users.
+   Small keyboard-oriented enhancements
+   without interfeering with the visual experience.
 ===================================================== */
 
 function initializeAccessibility() {
@@ -1014,7 +1015,7 @@ function debounce(callback, delay = 100) {
 
         clearTimeout(timeout);
 
-        timeout = setTimeout(() => {
+        timeout = window.setTimeout(() => {
 
             callback(...args);
 
