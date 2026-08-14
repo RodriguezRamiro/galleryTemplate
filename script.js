@@ -761,9 +761,9 @@ const Exhibition = {
 
     stopInquiryTimer() {
 
-        if (this.inquiryTimer) {
+        if (!this.inquiryTimer) {
 
-            return
+            return;
 
         }
 
