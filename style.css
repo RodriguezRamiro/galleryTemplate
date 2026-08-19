@@ -633,12 +633,11 @@ margin-bottom: var(--space-sm);
 
 }
 
+.intro,
+.artist-statement p,
+.journal p {
 
-.section-header p {
-
-
-    color:var(--text-light);
-
+    max-width: var(--reading-width);
 }
 
 
