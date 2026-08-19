@@ -294,6 +294,11 @@ body {
 
 }
 
+body.viewer-open {
+
+    overflow: hidden;
+}
+
 img,
 picture {
     display: block;
