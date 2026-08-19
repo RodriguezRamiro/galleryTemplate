@@ -633,12 +633,6 @@ margin-bottom: var(--space-sm);
 
 }
 
-.intro,
-.artist-statement p,
-.journal p {
-
-    max-width: var(--reading-width);
-}
 
 
 /* ==========================================
