@@ -867,6 +867,8 @@ margin-bottom: var(--space-sm);
 
     position:absolute;
 
+    left: 0;
+
     bottom: -.5rem;
 
     width:0;
