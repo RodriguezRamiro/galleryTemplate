@@ -890,6 +890,14 @@ margin-bottom: var(--space-sm);
 
 }
 
+.navigation-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .75rem;
+}
 
 
 /* ==========================================
