@@ -906,12 +906,23 @@ margin-bottom: var(--space-sm);
    Hidden until smaller viewports.
 ========================================== */
 
-.menu-toggle {
-    display: none;
+.menu-toggle,
+.theme-toggle {
+    display: grid;
 
-    font-size: 1.5rem;
+    place-items: center;
+
+    width: 2.5rem;
+    height: 2.75rem;
 
     color: var(--heading);
+
+    border: 1px solid transparent;
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        background-color var(--transition);
+
 }
 
 
