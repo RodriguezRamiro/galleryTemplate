@@ -1335,6 +1335,8 @@ margin-bottom: var(--space-sm);
 
         var(--space-md);
 
+        color: var(--text);
+
 }
 
 
