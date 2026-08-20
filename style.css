@@ -1256,6 +1256,15 @@ margin-bottom: var(--space-sm);
 
 }
 
+.artwork-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .5rem 1rem;
+}
+
 
 
 .medium,
