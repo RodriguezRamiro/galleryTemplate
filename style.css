@@ -1155,103 +1155,6 @@ margin-bottom: var(--space-sm);
 }
 
 
-/* Exhibition Viewer left for later
-
-/* =====================================================
-   DIGITAL EXHIBITION VIEWER
-
-   The visitor has stepped away from the gallery wall.
-
-   One artwork.
-
-   No distractions.
-
-   Remove everything that does not deepen the
-   conversation between observer and painting.
-
-   Attention is the rarest form of generosity.
-=====================================================
-
-.exhibition-viewer{
-
-position:fixed;
-
-inset:0;
-
-background:#0d0b0d;
-
-z-index:2000;
-
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-padding:3rem;
-
-}
-
-
-
-.exhibition-viewer.active{
-
-display:flex;
-
-}
-
-
-
-.viewer-artwork{
-
-max-width:900px;
-
-text-align:center;
-
-color:white;
-
-}
-
-
-
-.viewer-artwork img{
-
-max-height:75vh;
-
-object-fit:contain;
-
-}
-
-
-
-.viewer-artwork figcaption{
-
-margin-top:2rem;
-
-}
-
-
-
-.viewer-title{
-
-color:white;
-
-}
-
-
-
-.viewer-medium{
-
-color:#d6ccc2;
-
-}
-
-
-*/
-
-
-
-
 /* =====================================================
    FEATURED ARTWORK
 
@@ -1305,6 +1208,8 @@ color:#d6ccc2;
 
 
 .artwork-image img {
+
+    width: 100%;
 
     transition:
 
