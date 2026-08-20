@@ -1276,12 +1276,14 @@ margin-bottom: var(--space-sm);
 
 }
 
-.medium {
+.medium,
+.dimensions {
 
-    margin-bottom: .35rem;
+    color: var(--text-light);
+
+    font-size: var(--fs-sm);
+
 }
-
-
 
 /* ==========================================
    ARTIST STATEMENT
