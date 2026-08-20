@@ -937,6 +937,14 @@ margin-bottom: var(--space-sm);
     font-size: 1rem;
 }
 
+.menu-toggle:hover,
+.theme-toggle:hover {
+
+    color: var(--accent);
+
+    border-color: var(--border);
+}
+
 
 
 
