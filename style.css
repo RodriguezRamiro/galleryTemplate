@@ -1609,7 +1609,7 @@ margin-bottom: var(--space-sm);
 
 .viewer-title{
 
-    color: white;
+    color: #ffffff;
 
     margin-bottom: .75rem;
 
@@ -1658,9 +1658,9 @@ margin-bottom: var(--space-sm);
 
     width: 3rem;
 
-    aspect-ratio: 1;
+    height: 3rem;
 
-    color: rgba(255,255,255,.75);
+    color: rgba(255,255,255, .75);
 
     transition:
 
@@ -1704,7 +1704,7 @@ margin-bottom: var(--space-sm);
 .viewer-next:hover,
 .viewer-close:hover {
 
-    color: white;
+    color: #ffffff;
 
 }
 
