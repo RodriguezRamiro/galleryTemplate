@@ -1474,12 +1474,7 @@ margin-bottom: var(--space-sm);
    EXHIBITION LINK
 ========================================== */
 
-.artwork-card .text-link,
-.artwork-card a {
-
-    display: inline-flex;
-
-    align-items: center;
+.artwork-card .text-link {
 
     margin-top: var(--space-sm);
 }
@@ -1570,6 +1565,8 @@ margin-bottom: var(--space-sm);
         100%,
         960px
     );
+
+    max-height: calc(100vh - 5rem);
 
     text-align: center;
 
