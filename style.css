@@ -1750,6 +1750,11 @@ margin-bottom: var(--space-sm);
 }
 
 
+.viewer-inquiry .text-link:hover {
+
+    color: var(--accent);
+
+}
 /* =====================================================
    ATELIER
 
