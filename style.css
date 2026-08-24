@@ -2368,7 +2368,8 @@ margin-bottom: var(--space-sm);
 
 
 
-.footer-email:hover {
+.footer-email:hover,
+.footer-social:hover  {
 
     color: var(--accent);
 
