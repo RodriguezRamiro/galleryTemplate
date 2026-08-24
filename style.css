@@ -2220,6 +2220,14 @@ margin-bottom: var(--space-sm);
 
 }
 
+.footer-main {
+    display: flex;
+
+    flex-direction: columns;
+
+    gap: .75rem;
+}
+
 /* ==========================================
    DIVIDER
 ========================================== */
@@ -2315,6 +2323,19 @@ margin-bottom: var(--space-sm);
 
 }
 
+.footer-copy {
+
+    color: var(--text-light);
+}
+
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .5rem;
+}
 
 /* ==========================================
    INVITATION
@@ -2351,6 +2372,12 @@ margin-bottom: var(--space-sm);
 
     color: var(--accent);
 
+}
+
+.footer-email,
+.footer-soial {
+
+    color: var(--heading);
 }
 
 
