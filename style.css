@@ -2420,17 +2420,19 @@ margin-bottom: var(--space-sm);
 
 .footer-signature {
 
+    text-align: right;
+
     margin-top:
 
         var(--space-sm);
 
     font-size:
 
-        .1rem;
+        .7rem;
 
     letter-spacing:
 
-        .18em;
+        .18rem;
 
     text-transform:
 
