@@ -1772,7 +1772,7 @@ margin-bottom: var(--space-sm);
 /* =====================================================
    ATELIER
 
-   BEhind every finished work is a place of patience,
+   Behind every finished work is a place of patience,
    observation, and quiet descipline.
 
    This section offers a glimpse into the enviroment
@@ -2043,13 +2043,13 @@ margin-bottom: var(--space-sm);
    FORM ROWS
 ========================================== */
 
-.form-rows {
+.form-row {
 
     display: grid;
 
     grid-template-columns:
 
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
 
     gap: var(--space-md);
 }
