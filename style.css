@@ -608,9 +608,9 @@ dissolve into the end of the page.
 
 .site-footer {
 
-    padding: var(--space-xl)
+    padding: var(--space-sm)
     0
-    var(--space-lg);
+    var(--space-sm);
 
 }
 
@@ -2559,7 +2559,7 @@ margin-bottom: var(--space-sm);
 
         pointer-events: none;
 
-        transofrm: translateY(-10px);
+        transform: translateY(-10px);
 
         transition:
             opacity var(--transition),
