@@ -2442,6 +2442,20 @@ margin-bottom: var(--space-sm);
 
 }
 
+.footer-signature p {
+
+    font-size: inherit;
+
+    color: inherit;
+
+    line-height: 1.6;
+}
+
+
+.engineering {
+
+        margin-bottom: .25rem;
+}
 
 
 
