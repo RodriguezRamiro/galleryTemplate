@@ -2474,6 +2474,16 @@ margin-bottom: var(--space-sm);
                 transform 800ms ease;
 }
 
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+
 /* =====================================================
    RESPONSIVE DESIGN
 
