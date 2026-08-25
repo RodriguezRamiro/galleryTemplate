@@ -2459,6 +2459,21 @@ margin-bottom: var(--space-sm);
 
 
 
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(24px);
+
+    transition: opacity 800ms ease,
+                transform 800ms ease;
+}
+
 /* =====================================================
    RESPONSIVE DESIGN
 
