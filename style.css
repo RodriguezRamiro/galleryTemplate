@@ -2525,7 +2525,46 @@ margin-bottom: var(--space-sm);
 
     .nav-links {
 
-        display:none;
+        position: absolute;
+
+        top: 90px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 1.5rem
+                 1.5rem
+                 2rem;
+
+        background: color-mix(
+            in srgb,
+            var(--bg) 96%,
+            transparent
+        );
+
+        backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid var(--border);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transofrm: translateY(-10px);
+
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transofrm var(--transition);
 
     }
 
