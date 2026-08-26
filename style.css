@@ -2838,6 +2838,21 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .viewer-description {
+
+        font-size: .9rem;
+
+    }
+
+
+    .viewer-close {
+
+        top: 1rem;
+        right: 1rem;
+
+    }
+
+
     .footer-content {
 
         text-align: center;
