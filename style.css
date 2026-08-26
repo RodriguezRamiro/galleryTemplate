@@ -2679,7 +2679,7 @@ margin-bottom: var(--space-sm);
 
 .footer-signature {
 
-    grid-columns: 1 / -1;
+    grid-column: 1 / -1;
 
     text-align: left;
 }
@@ -2696,6 +2696,14 @@ margin-bottom: var(--space-sm);
 
             var(--space-lg)
             0;
+
+    }
+
+    .arrival,
+    .inquiry {
+
+        padding-block:
+            calc(var(--space-xl) * 1.15);
 
     }
 
