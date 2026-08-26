@@ -2826,6 +2826,18 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .viewer-artwork img {
+
+        max-height: 58vh;
+
+    }
+
+    .viewer-artwork figcaption {
+
+        margin-top: var(--space-md);
+
+    }
+
     .footer-content {
 
         text-align: center;
