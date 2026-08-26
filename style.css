@@ -2719,6 +2719,19 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .navigation {
+
+        min-height: 76px;
+
+    }
+
+
+    .nav-links {
+
+        top: 76px;
+
+    }
+
 
     /* ------------------------------
        Typography
