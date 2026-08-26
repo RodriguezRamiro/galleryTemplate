@@ -2799,12 +2799,20 @@ margin-bottom: var(--space-sm);
 
     }
 
-    
+
 
 
     /* ------------------------------
        Footer
     ------------------------------ */
+
+    .footer-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-md);
+
+    }
 
     .footer-content {
 
