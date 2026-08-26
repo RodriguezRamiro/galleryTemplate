@@ -2820,6 +2820,12 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .viewer-artwork {
+
+        max-height: calc(100vh - 3rem);
+
+    }
+
     .footer-content {
 
         text-align: center;
