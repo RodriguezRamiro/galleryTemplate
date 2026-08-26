@@ -2739,12 +2739,6 @@ margin-bottom: var(--space-sm);
 
     h1 {
 
-        font-size:3.5rem;
-
-    }
-
-    h1 {
-
         font-size:
 
             clamp(
@@ -2799,6 +2793,13 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
 
 
     /* ------------------------------
