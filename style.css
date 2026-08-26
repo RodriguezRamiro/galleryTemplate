@@ -2814,6 +2814,12 @@ margin-bottom: var(--space-sm);
 
     }
 
+    .footer-signature {
+
+        grid-column: auto;
+
+    }
+
     .footer-content {
 
         text-align: center;
