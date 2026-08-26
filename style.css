@@ -2676,6 +2676,13 @@ margin-bottom: var(--space-sm);
     grid-template-columns: 1fr 1fr;
 }
 
+
+.footer-signature {
+
+    grid-columns: 1 / -1;
+
+    text-align: left;
+}
 /* ==========================================
    MOBILE DEVICES
 ========================================== */
