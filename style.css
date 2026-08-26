@@ -2587,8 +2587,13 @@ margin-bottom: var(--space-sm);
     .nav-links a {
 
         display: block;
-        
+
         padding: .8rem 0;
+    }
+
+    .nav-links a::after {
+
+        display: none;
     }
 
     .menu-toggle {
