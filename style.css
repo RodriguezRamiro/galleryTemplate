@@ -2671,6 +2671,10 @@ margin-bottom: var(--space-sm);
 
 }
 
+.footer-inner {
+
+    grid-template-columns: 1fr 1fr;
+}
 
 /* ==========================================
    MOBILE DEVICES
