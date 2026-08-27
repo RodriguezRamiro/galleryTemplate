@@ -248,6 +248,13 @@ function initializeNavigation() {
 
 function toggleNavigation() {
 
+    if (
+        !UI.menuToggle ||
+        !UI.navigation
+    ) {
+        return;
+    }
+
     const expanded =
 
     UI.menuToggle
