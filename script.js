@@ -142,7 +142,10 @@ const Motion = {
 ===================================================== */
 
 function initializeTheme() {
-    if(!UI.themeToggle) return;
+
+    if(!UI.themeToggle) {
+        return;
+    }
 
     const savedTheme =
     localStorage.getItem(
@@ -163,10 +166,13 @@ function initializeTheme() {
 
 function toggleTheme(){
 
+    const currentTheme =
+        UI.document.dataset.theme;
+
     const nextTheme =
-    UI.document.dataset.theme === "dark"
-    ? "light"
-    : "dark";
+        currentTheme == "dark"
+            ? "light"
+            : "dark";
 
     applyTheme(nextTheme);
 
