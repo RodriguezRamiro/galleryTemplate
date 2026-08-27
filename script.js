@@ -279,20 +279,21 @@ function toggleNavigation() {
 
     UI.menuToggle.classList.toggle(
         "active",
-        !expanded
+        nextState
     );
 
     UI.menuToggle.classList.toggle(
         "open",
-        !expanded
+        nextState
     );
 
     UI.navigation.classList.toggle(
         "open",
-        !expanded
+        nextState
     );
 }
 
+----------------------------????
 function closeNavigation() {
 
     if (
