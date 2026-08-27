@@ -105,7 +105,7 @@ const UI = {
 const Gallery = {
 
     artworks:
-    [...document.querySelectorAll(".artwork-card")],
+    [...document.querySelectorAll(".artwork-entry")],
 
     current: 0,
 };
