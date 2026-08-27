@@ -270,6 +270,13 @@ function toggleNavigation() {
 
         );
 
+    UI.menuToggle.setAttribute(
+        "aria-label",
+        nextState
+            ? "Close navigation Menu"
+            : "open navigation menu"
+    );
+
     UI.menuToggle.classList.toggle(
         "active",
         !expanded
