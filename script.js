@@ -259,12 +259,14 @@ function toggleNavigation() {
 
     UI.menuToggle
     .getAttribute("aria-expanded"
-      )  === "true";
+      ) === "true";
+
+      const nextState = !expanded;
 
     UI.menuToggle.setAttribute(
         "aria-expanded",
 
-        String(!expanded)
+        String(nextState)
 
         );
 
