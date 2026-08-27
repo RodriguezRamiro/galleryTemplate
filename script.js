@@ -1,6 +1,8 @@
 /* =====================================================
-   ARTISTIC SHAM
-   Natural Light Atelier
+    Natural Light Atelier
+
+    Digital Exhibition Experience Engine
+    Version_3.0
 
    EXPERIENCE ENGINE
 
@@ -41,9 +43,11 @@
 ===================================================== */
 
 const UI = {
-    document: document.documentElement,
+    document:
+        document.documentElement,
 
-    body: document.body,
+    body:
+        document.body,
 
     header:
         document.querySelector(".site-header"),
@@ -80,6 +84,11 @@ const UI = {
 
     viewerPrev:
         document.querySelector(".viewer-prev"),
+
+    viewerInquiry:
+        document.querySelector(
+            "exhibition-viewer .viewwer-inquiry"
+        ),
 
     artworkField:
         document.querySelector("#artwork"),
