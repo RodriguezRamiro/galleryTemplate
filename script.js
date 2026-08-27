@@ -187,7 +187,9 @@ function applyTheme(theme) {
 
     UI.document.dataset.theme = theme;
 
-    if (!UI.themeToggle) return;
+    if (!UI.themeToggle) {
+        return;
+    }
 
     UI.themeToggle.textContent =
     theme === "dark"
