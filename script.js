@@ -603,7 +603,7 @@ const Exhibition = {
             "false"
         );
 
-        populateInquiryForm();
+        this.updateInquiry();
 
         this.preloadAdjacentImages();
 
