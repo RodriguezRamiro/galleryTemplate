@@ -619,7 +619,9 @@ const Exhibition = {
 
     close() {
 
-        if (!UI.viewer) return;
+        if (!UI.viewer) {
+            return;
+        }
 
         this.stopInquiryTimer();
 
