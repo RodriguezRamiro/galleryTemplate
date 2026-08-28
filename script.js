@@ -293,7 +293,6 @@ function toggleNavigation() {
     );
 }
 
-----------------------------????
 function closeNavigation() {
 
     if (
@@ -317,6 +316,11 @@ function closeNavigation() {
         "aria-expanded",
         "false"
     );
+
+    UI.menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    )
 }
 
 
