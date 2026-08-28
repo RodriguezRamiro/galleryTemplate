@@ -335,7 +335,9 @@ function closeNavigation() {
 
 function initializeHeader() {
 
-    if(!UI.header) return;
+    if(!UI.header) {
+        return;
+    }
 
     updateHeader();
 
