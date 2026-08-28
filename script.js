@@ -638,6 +638,8 @@ const Exhibition = {
             "viewer-open"
         );
 
+        hideViewerInquiry();
+
         if (
         this.lastFocused &&
         typeof this.lastFocused.focus === "function"
