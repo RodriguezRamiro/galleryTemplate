@@ -528,6 +528,8 @@ function smoothScroll(event){
 
             event.preventDefault();
 
+            closeNavigatoin();
+
             target.scrollIntoView({
 
                 behavior:
