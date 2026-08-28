@@ -355,6 +355,10 @@ function initializeHeader() {
 
 function updateHeader(){
 
+    if (!UI.header) {
+        return;
+    }
+
     UI.header.classList.toggle(
 
         "scrolled",
