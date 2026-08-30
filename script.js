@@ -1090,7 +1090,7 @@ function initiailizeContactForm() {
             }
         );
     });
-    
+
 }
 
 
@@ -1122,26 +1122,6 @@ function initializeAccessibility() {
     );
 }
 
-
-/* =====================================================
-   UTILITIES
-===================================================== */
-
-function debounce(callback, delay = 100) {
-
-    let timeout;
-
-    return (...args) => {
-
-        clearTimeout(timeout);
-
-        timeout = window.setTimeout(() => {
-
-            callback(...args);
-
-        }, delay);
-    };
-}
 
 
 /* =====================================================
