@@ -87,7 +87,7 @@ const UI = {
 
     viewerInquiry:
         document.querySelector(
-            ".exhibition-viewer .viewwer-inquiry"
+            ".exhibition-viewer .viewer-inquiry"
         ),
 
     artworkField:
@@ -718,7 +718,7 @@ const Exhibition = {
 
             year = "",
 
-            size = "",
+            dimensions = "",
 
             description = ""
 
@@ -747,7 +747,7 @@ const Exhibition = {
 
         UI.viewerMedium.textContent =
 
-            [medium, size, year]
+            [medium, dimensions, year]
             .filter(Boolean)
             .join(" • ");
 
@@ -906,7 +906,7 @@ function initializeViewer() {
 
                 const artwork =
                 trigger.closest(
-                    ".artwork-card .featured-piece"
+                    ".artwork-entry"
                 );
 
                 if (!artwork) {

@@ -764,7 +764,7 @@ margin-bottom: var(--space-sm);
 
         backdrop-filter: blur(18px);
 
-        border-bottom: 1px sold var(--border);
+        border-bottom: 1px solid var(--border);
 }
 
 
@@ -1547,7 +1547,7 @@ margin-bottom: var(--space-sm);
 
         opacity: 1;
 
-        visibility: visibe;
+        visibility: visible;
 
         pointer-events: auto;
 
@@ -1821,7 +1821,7 @@ margin-bottom: var(--space-sm);
     but never aniated.
 */
 
-.atiler:hover img {
+.ateiler:hover img {
 
     transform: scale(1.02);
 }
