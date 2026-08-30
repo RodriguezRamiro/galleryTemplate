@@ -2828,7 +2828,15 @@ margin-bottom: var(--space-sm);
 
     .viewer-artwork img {
 
-        max-height: 58vh;
+        width: auto;
+
+        max-width: 90vw;
+
+        max-height: 72vh;
+
+        margin-inline: auto;
+
+        object-fit: contain;
 
     }
 
