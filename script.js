@@ -1048,7 +1048,7 @@ function populateInquiryForm() {
     if (!artwork) {
         return;
     }
-    
+
     UI.artworkField.value =
         artwork.dataset.title || "";
 }
@@ -1076,6 +1076,21 @@ function initiailizeContactForm() {
             Exhibition.stopInquiryTimer();
         }
     );
+
+    document.querySelectorAll(
+        ".inquiry-link"
+    )
+    .forEach(link => {
+
+        link.addEventListener(
+            "click", () => {
+
+                Exhibition.stopInquiryTimer();
+
+            }
+        );
+    });
+    
 }
 
 
