@@ -673,8 +673,10 @@ const Exhibition = {
 
     previous() {
 
-        if (!Gallery.artworks.length) return;
-
+        if (!Gallery.artworks.length) {
+            return;
+        }
+        
         this.current =
         (
                 this.current
