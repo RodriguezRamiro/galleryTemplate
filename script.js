@@ -888,14 +888,14 @@ function initializeViewer() {
 
     const viewerTriggers =
 
-    document
-
-    .querySelectorAll(".observe-work");
+    document.querySelectorAll(
+        ".observe-work"
+    );
 
     viewerTriggers.forEach(
-        (button, index) => {
+        trigger => {
 
-        button.addEventListener(
+        trigger.addEventListener(
 
             "click",
 
