@@ -1735,7 +1735,7 @@ margin-bottom: var(--space-sm);
 
     opacity: 1;
 
-    Transform: translateY(0);
+    transform: translateY(0);
 
 }
 
