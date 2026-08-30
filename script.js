@@ -844,6 +844,25 @@ const Exhibition = {
     };
 
 
+/* =====================================================
+   VIEWER INQUIRY
+===================================================== */
+
+function showViewerInquery() {
+
+    if(!UI.viewerInquiry) {
+        return;
+    }
+
+    UI.viewerInquiry.classList.add(
+        "visible"
+    );
+
+    Exhibition.inquiryTimer = null;
+}
+
+
+
 
 /* =====================================================
     Viewer Initializer
@@ -854,7 +873,9 @@ const Exhibition = {
 
 function initializeViewer() {
 
-    if (!UI.viewer) return;
+    if (!UI.viewer) {
+        return;
+    }
 
     const viewerTriggers =
 
