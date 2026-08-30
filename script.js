@@ -653,7 +653,9 @@ const Exhibition = {
 
     next() {
 
-        if (!Gallery.artworks.length) return;
+        if (!Gallery.artworks.length) {
+            return;
+        }
 
         this.current =
             (this.current + 1)
@@ -662,9 +664,11 @@ const Exhibition = {
 
         this.populate();
 
-        populateInquiryForm();
+        this.updateInquiry();
 
         this.preloadAdjacentImages();
+
+        this.startInquiryTimer();
     },
 
     previous() {
