@@ -861,7 +861,16 @@ function showViewerInquery() {
     Exhibition.inquiryTimer = null;
 }
 
+function hideViewerInquiry() {
 
+    if (!UI.viewerInquiry) {
+        return;
+    }
+
+    UI.viewerInquiry.classList.remove(
+        "visible"
+        );
+}
 
 
 /* =====================================================
