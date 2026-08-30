@@ -735,7 +735,7 @@ const Exhibition = {
             title;
     }
 
-        if (UI.viewer.Title) {
+        if (UI.viewerTitle) {
 
         UI.viewerTitle.textContent =
             title;
@@ -758,6 +758,14 @@ const Exhibition = {
             description;
 
         }
+    },
+
+    updateInquiry() {
+
+        hideViewerInquiry();
+
+        populateInquiryForm();
+
     },
 
     preloadAdjacentImages() {
