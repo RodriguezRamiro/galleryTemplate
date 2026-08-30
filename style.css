@@ -1716,7 +1716,7 @@ margin-bottom: var(--space-sm);
    time to observe the work.
 ========================================== */
 
-.viewer-inquery {
+.viewer-inquiry {
 
     margin-top: var(--space-xl);
 
@@ -1731,7 +1731,7 @@ margin-bottom: var(--space-sm);
         transform 600ms ease;
 }
 
-.viewer-inquery.visible {
+.viewer-inquiry.visible {
 
     opacity: 1;
 
