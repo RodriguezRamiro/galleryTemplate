@@ -805,7 +805,7 @@ const Exhibition = {
                 if (!image) {
                     return;
                 }
-                
+
                 const preload =
                     new Image();
 
@@ -822,7 +822,7 @@ const Exhibition = {
         this.inquiryTimer =
             window.setTimeout(() => {
 
-               populateInquiryForm();
+                showViewerInquiry();
 
             }, 30000);
     },
