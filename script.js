@@ -913,13 +913,14 @@ function initializeViewer() {
                 }
 
                 const artworkIndex =
-                    artwork
-                    ? Gallery.artworks.indexOf(
+                    Gallery.artworks.indexOf(
                         artwork
-                    )
+                    );
 
-                    : index
-
+                if (artworkIndex === -1) {
+                    return;
+                }
+                
                 Exhibition.open(artworkIndex);
             }
         );
