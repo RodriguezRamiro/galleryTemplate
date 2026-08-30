@@ -2564,7 +2564,7 @@ margin-bottom: var(--space-sm);
         transition:
             opacity var(--transition),
             visibility var(--transition),
-            transofrm var(--transition);
+            transform var(--transition);
 
     }
 
