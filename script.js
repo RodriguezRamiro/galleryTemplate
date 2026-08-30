@@ -802,8 +802,10 @@ const Exhibition = {
                     Gallery.artworks[index]
                     ?.querySelector("img");
 
-                if (!image) return;
-
+                if (!image) {
+                    return;
+                }
+                
                 const preload =
                     new Image();
 
