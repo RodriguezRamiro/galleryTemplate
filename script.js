@@ -87,7 +87,7 @@ const UI = {
 
     viewerInquiry:
         document.querySelector(
-            "exhibition-viewer .viewwer-inquiry"
+            ".exhibition-viewer .viewwer-inquiry"
         ),
 
     artworkField:
@@ -105,7 +105,8 @@ const UI = {
 const Gallery = {
 
     artworks:
-    [...document.querySelectorAll(".artwork-entry")],
+    [...document.querySelectorAll(".artwork-card, .featured-piece"
+    )],
 
     current: 0,
 };
@@ -130,7 +131,7 @@ const Motion = {
     reduced:
 
         window.matchMedia(
-            "(preferes-reduced-motion: reduce)"
+            "(prefers-reduced-motion: reduce)"
         ).matches
 };
 
@@ -528,7 +529,7 @@ function smoothScroll(event){
 
             event.preventDefault();
 
-            closeNavigatoin();
+            closeNavigation();
 
             target.scrollIntoView({
 
@@ -747,7 +748,7 @@ const Exhibition = {
         UI.viewerMedium.textContent =
 
             [medium, size, year]
-            .filter(boolean)
+            .filter(Boolean)
             .join(" • ");
 
         }
@@ -848,7 +849,7 @@ const Exhibition = {
    VIEWER INQUIRY
 ===================================================== */
 
-function showViewerInquery() {
+function showViewerInquiry() {
 
     if(!UI.viewerInquiry) {
         return;
@@ -904,8 +905,8 @@ function initializeViewer() {
                 event.preventDefault();
 
                 const artwork =
-                button.closest(
-                    ".artwork-entry"
+                trigger.closest(
+                    ".artwork-card .featured-piece"
                 );
 
                 if (!artwork) {
@@ -1027,7 +1028,7 @@ function handleViewerKeyboard(event) {
    INQUIRY EXPERIENCE
 
   Automatically associates the selected artwork
-  with the inquery form.
+  with the inquiry form.
 
   tThe experience remains subtle and non-intrusive.
 ===================================================== */
