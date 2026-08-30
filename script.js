@@ -905,8 +905,12 @@ function initializeViewer() {
 
                 const artwork =
                 button.closest(
-                    ".artwork-card"
+                    ".artwork-entry"
                 );
+
+                if (!artwork) {
+                    return;
+                }
 
                 const artworkIndex =
                     artwork
