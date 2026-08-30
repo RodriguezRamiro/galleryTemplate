@@ -920,7 +920,7 @@ function initializeViewer() {
                 if (artworkIndex === -1) {
                     return;
                 }
-                
+
                 Exhibition.open(artworkIndex);
             }
         );
@@ -1045,8 +1045,10 @@ function populateInquiryForm() {
     const artwork =
         Gallery.artworks[Exhibition.current];
 
-    if (!artwork) return;
-
+    if (!artwork) {
+        return;
+    }
+    
     UI.artworkField.value =
         artwork.dataset.title || "";
 }
