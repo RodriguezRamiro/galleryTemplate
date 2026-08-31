@@ -2906,3 +2906,18 @@ margin-bottom: var(--space-sm);
 }
 
 }
+
+
+/* =====================================================
+   MOBILE EXHIBITION VIEWER
+===================================================== */
+
+
+@media (max-width: 640px) {
+
+    .exhibition-viewer {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    
