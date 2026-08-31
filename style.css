@@ -2943,3 +2943,13 @@ margin-bottom: var(--space-sm);
         margin-top: 1rem;
         padding-inline: .5rem;
     }
+
+    .viewer-title {
+        font-size: 1.5rem;
+    }
+
+    .viewer-medium {
+        font-size: .75rem;
+    }
+
+    
