@@ -2938,3 +2938,8 @@ margin-bottom: var(--space-sm);
         -webkit-user-select: none;
         -webkit-user-drag: none;
     }
+
+    .viewer-artwork figcaption {
+        margin-top: 1rem;
+        padding-inline: .5rem;
+    }
