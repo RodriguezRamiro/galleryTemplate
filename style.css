@@ -2926,3 +2926,15 @@ margin-bottom: var(--space-sm);
         max-height: 100%;
     }
 
+    .viewer-artwork img {
+        width: auto;
+        max-width: 92vw;
+        max-height: 68vh;
+        object-fit: contain;
+
+        /* Important for touch interaction */
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
