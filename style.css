@@ -2952,4 +2952,8 @@ margin-bottom: var(--space-sm);
         font-size: .75rem;
     }
 
-    
+    .viewer-description {
+        font-size: .875rem;
+        line-height: 1.7;
+        max-width: 34rem;
+    }
