@@ -1009,7 +1009,28 @@ function handleViewerKeyboard(event) {
 
         const minimumSwipe = 50;
 
-    })
+
+        /* Ignoring most Vertical gestures */
+
+        if (
+            Math.abs(deltaX) < minimumSwipe ||
+            Math.abs(deltaX) < Math.abs(deltaY)
+        ) {
+
+            return;
+        }
+
+        if (deltaX < 0) {
+
+            // Swipe Left -> next artwork
+            showNextArtwork();
+        } else {
+
+            // Swipe right -> previous artwork
+            showPreviousArtwork()
+        }
+
+    }, { passive: true });
 
     if (
         !UI.viewer ||
