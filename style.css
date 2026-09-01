@@ -2957,3 +2957,16 @@ margin-bottom: var(--space-sm);
         line-height: 1.7;
         max-width: 34rem;
     }
+
+    .viewer-close {
+        top: .75rem;
+        right: .75rem;
+
+        width: 2.75rem;
+        height: 2.75rem;
+
+        font-size: 1.75rem;
+        z-index: 10;
+    }
+
+}
