@@ -989,6 +989,28 @@ document.addEventListener(
 
 function handleViewerKeyboard(event) {
 
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    viewer.addEventListener('touchstart', (event) => {
+
+        touchStartX = event.changedTouches[0].screenX;
+        touchStartY = event.changedTouches[0].screenY;
+    }, {passive: true });
+
+    viewer.addEventListener('touched', (event) => {
+
+
+        const touchEndX = event.changedTouches[0].screenX;
+        const touchEndY = event.changedTouches[0].screenY;
+
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        const minimumSwipe = 50;
+
+    })
+
     if (
         !UI.viewer ||
         !UI.viewer.classList.contains("active")
