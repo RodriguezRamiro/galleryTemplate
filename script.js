@@ -1063,23 +1063,6 @@ function handleViewerTouchEnd(event) {
 
     const minimumSwipe = 50;
 
-
-
-    viewer.addEventListener('touchstart', (event) => {
-    }, {passive: true });
-
-    viewer.addEventListener('touchend', (event) => {
-
-
-        const touchEndX = event.changedTouches[0].screenX;
-        const touchEndY = event.changedTouches[0].screenY;
-
-        const deltaX = touchEndX - touchStartX;
-        const deltaY = touchEndY - touchStartY;
-
-        const minimumSwipe = 50;
-
-
         /* Ignoring most Vertical gestures */
 
         if (
@@ -1090,18 +1073,18 @@ function handleViewerTouchEnd(event) {
             return;
         }
 
+        // Swipe Left -> next artwork
         if (deltaX < 0) {
 
-            // Swipe Left -> next artwork
-            showNextArtwork();
-        } else {
+            Exhibition.next();
+        }
+       // Swipe right -> previous artwork
+         else {
 
-            // Swipe right -> previous artwork
-            showPreviousArtwork()
+            Exhibition.previous()
         }
 
-    }, { passive: true });
-}
+    }
 /* =====================================================
    INQUIRY EXPERIENCE
 
