@@ -1045,10 +1045,15 @@ function handleViewerTouchStart(event) {
         return;
     }
 
-    viewer.addEventListener('touchstart', (event) => {
+            touchStartX = event.changedTouches[0].screenX;
+            touchStartY = event.changedTouches[0].screenY;
+}
 
-        touchStartX = event.changedTouches[0].screenX;
-        touchStartY = event.changedTouches[0].screenY;
+function handleViewerTouchEnd(event) {
+
+    
+
+    viewer.addEventListener('touchstart', (event) => {
     }, {passive: true });
 
     viewer.addEventListener('touchend', (event) => {
