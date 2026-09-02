@@ -1025,10 +1025,18 @@ function handleViewerKeyboard(event) {
 }
 
 
-function handleViewerSwipe(event) {
+/* =====================================================
+   MOBILE SWIPE CONTROLS
+
+   Touch gestures remain active only while
+   the exhibition viewer is open.
+===================================================== */
+
 
     let touchStartX = 0;
     let touchStartY = 0;
+    
+function handleViewerSwipe(event) {
 
     viewer.addEventListener('touchstart', (event) => {
 
