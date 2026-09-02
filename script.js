@@ -1038,7 +1038,12 @@ function handleViewerKeyboard(event) {
 
 function handleViewerTouchStart(event) {
 
-    
+    if (
+        !UI.viewer ||
+        !UI.viewer.classList.contains("active")
+    ) {
+        return;
+    }
 
     viewer.addEventListener('touchstart', (event) => {
 
