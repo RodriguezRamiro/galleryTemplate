@@ -1058,8 +1058,12 @@ function handleViewerTouchEnd(event) {
         return;
     }
 
-    const touchEndX = event.changedTouches[0].screenX
-    const touchEndY = event.changedTouches[0].screenY
+    const touchEndX = event.changedTouches[0].screenX;
+    const touchEndY = event.changedTouches[0].screenY;
+
+    const minimumSwipe = 50;
+
+
 
     viewer.addEventListener('touchstart', (event) => {
     }, {passive: true });
