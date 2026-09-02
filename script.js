@@ -984,6 +984,12 @@ UI.viewer.addEventListener(
     {passive: true }
 );
 
+UI.viewer.addEventListener(
+    "touchend",
+    handleTouchEnd,
+    { passive: true }
+);
+
 }
 
 /* =====================================================
