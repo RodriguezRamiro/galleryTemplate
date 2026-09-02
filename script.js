@@ -1025,8 +1025,8 @@ function handleViewerKeyboard(event) {
 }
 
 
-function handleViwerSwipe(event) {
-    
+function handleViewerSwipe(event) {
+
     let touchStartX = 0;
     let touchStartY = 0;
 
