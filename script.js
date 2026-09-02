@@ -1051,7 +1051,15 @@ function handleViewerTouchStart(event) {
 
 function handleViewerTouchEnd(event) {
 
-    
+    if(
+        !UI.viewer ||
+        !UI.viewer.classList.contains("active")
+    ) {
+        return;
+    }
+
+    const touchEndX = event.changedTouches[0].screenX
+    const touchEndY = event.changedTouches[0].screenY
 
     viewer.addEventListener('touchstart', (event) => {
     }, {passive: true });
