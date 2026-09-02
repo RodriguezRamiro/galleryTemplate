@@ -978,6 +978,12 @@ document.addEventListener(
 
 );
 
+UI.viewer.addEventListener(
+    "touchstart",
+    handleViewerTouchStart,
+    {passive: true }
+);
+
 }
 
 /* =====================================================
