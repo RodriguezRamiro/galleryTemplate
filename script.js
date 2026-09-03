@@ -929,6 +929,21 @@ function initializeViewer() {
 
     );
 
+/* ------------------------------------------
+       MOBILE / IMAGE TAP
+
+       Uses the exact same viewer-opening
+       function as Observe.
+------------------------------------------ */
+
+Gallery.artworks.forEach(
+    (artwork, index) => {
+
+        const image =
+            arwork.querySelector('img');
+    }
+)
+
 UI.viewerClose?.addEventListener(
 
     "click",
