@@ -956,6 +956,11 @@ Gallery.artworks.forEach(
     }
 )
 
+/* ------------------------------------------
+       VIEWER CONTROLS
+------------------------------------------ */
+
+
 UI.viewerClose?.addEventListener(
 
     "click",
