@@ -940,11 +940,19 @@ Gallery.artworks.forEach(
     (artwork, index) => {
 
         const image =
-            arwork.querySelector('img');
+            arwork.querySelector("img");
 
         if (!image) {
             return;
         }
+
+        image.addEventListener("click",
+            event => {
+
+                event.preventDefault();
+
+                Exhibition.open(index);
+            })
     }
 )
 
