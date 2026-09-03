@@ -985,6 +985,10 @@ UI.viewerPrev?.addEventListener(
 
 );
 
+/* ------------------------------------------
+       CLICK OUTSIDE ARTWORK TO CLOSE
+------------------------------------------ */
+
 UI.viewer.addEventListener(
 
     "click",
