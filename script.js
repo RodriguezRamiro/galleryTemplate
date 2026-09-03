@@ -941,6 +941,10 @@ Gallery.artworks.forEach(
 
         const image =
             arwork.querySelector('img');
+
+        if (!image) {
+            return;
+        }
     }
 )
 
