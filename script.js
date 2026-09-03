@@ -1005,6 +1005,10 @@ UI.viewer.addEventListener(
 
     );
 
+/* ------------------------------------------
+       KEYBOARD
+------------------------------------------ */
+
 
 document.addEventListener(
 
@@ -1013,6 +1017,10 @@ document.addEventListener(
     handleViewerKeyboard
 
 );
+
+/* ------------------------------------------
+       MOBILE SWIPE
+------------------------------------------ */
 
 UI.viewer.addEventListener(
     "touchstart",
