@@ -1030,7 +1030,7 @@ UI.viewer.addEventListener(
 
 UI.viewer.addEventListener(
     "touchend",
-    handleTouchEnd,
+    handleViewerTouchEnd,
     { passive: true }
 );
 
