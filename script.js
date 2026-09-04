@@ -1107,7 +1107,7 @@ function handleViewerTouchStart(event) {
 
 function handleViewerTouchEnd(event) {
 
-    if(
+    if (
         !UI.viewer ||
         !UI.viewer.classList.contains("active")
     ) {
@@ -1116,6 +1116,9 @@ function handleViewerTouchEnd(event) {
 
     const touchEndX = event.changedTouches[0].screenX;
     const touchEndY = event.changedTouches[0].screenY;
+
+    const deltaY = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
 
     const minimumSwipe = 50;
 
