@@ -940,7 +940,7 @@ Gallery.artworks.forEach(
     (artwork, index) => {
 
         const image =
-            arwork.querySelector("img");
+            artwork.querySelector("img");
 
         if (!image) {
             return;
