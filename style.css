@@ -453,8 +453,6 @@ small {
 
     display: inline-block;
 
-    margin-bottom: var(--space-sm);
-
     color:var(--accent);
 
     font-weight: 600;
@@ -741,9 +739,7 @@ margin-bottom: var(--space-sm);
 
     border-color var(--transition),
 
-    backdrop-filter var(--transition),
-
-
+    backdrop-filter var(--transition);
 
 }
 
@@ -2253,7 +2249,7 @@ margin-bottom: var(--space-sm);
 .footer-main {
     display: flex;
 
-    flex-direction: columns;
+    flex-direction: column;
 
     gap: .75rem;
 }
@@ -2330,7 +2326,7 @@ margin-bottom: var(--space-sm);
 
     letter-spacing: 2px;
 
-    color: var(--active);
+    color: var(--accent);
 
     opacity: 0.8;
   }
