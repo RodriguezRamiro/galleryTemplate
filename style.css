@@ -1265,17 +1265,6 @@ margin-bottom: var(--space-sm);
     gap: .5rem 1rem;
 }
 
-
-
-.medium,
-.dimensions {
-
-    color:var(--text-light);
-
-    font-size: var(--fs-sm);
-
-}
-
 .medium,
 .dimensions {
 
@@ -1495,7 +1484,7 @@ margin-bottom: var(--space-sm);
     letter-spacing: -.01em;
 
     line-height: 1.1;
-    
+
     margin: .4rem 0 .6rem;
 
 }
