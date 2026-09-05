@@ -1431,9 +1431,9 @@ margin-bottom: var(--space-sm);
 
     transition:
 
-        transform 900ms ease,
+        transform 1100ms cubic-bezier(.22, .61, .36, 1),
 
-        filter var(--transition-slow);
+        filter 900ms ease;
 
 }
 
@@ -1447,7 +1447,7 @@ margin-bottom: var(--space-sm);
 .artwork-card:hover img {
 
     transform: scale(1.018);
-    
+
     filter: brightness(.97);
 }
 
