@@ -2225,27 +2225,6 @@ margin-bottom: var(--space-sm);
     border-top: 1px solid var(--border);
 }
 
-.footer-inner {
-
-    display: grid;
-
-    grid-template-columns:
-    1.5fr
-    1fr
-    auto;
-
-    align-items: end;
-
-    gap: var(--space-lg);
-
-    padding:
-
-        calc(var(--space-xl) * 1.25)
-        0
-        var(--space-lg);
-
-}
-
 .footer-main {
     display: flex;
 
