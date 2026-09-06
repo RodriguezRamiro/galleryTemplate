@@ -104,11 +104,13 @@ const UI = {
 
 const Gallery = {
 
-    artworks:
-    [...document.querySelectorAll(".artwork-card, .featured-piece"
-    )],
+    artworks: [
+        ...document.querySelectorAll(
+            ".artwork-card, .featured-piece"
+        )
+    ],
 
-    current: 0,
+    current: 0
 };
 
 
@@ -1150,7 +1152,7 @@ function handleViewerTouchEnd(event) {
   Automatically associates the selected artwork
   with the inquiry form.
 
-  tThe experience remains subtle and non-intrusive.
+  The experience remains subtle and non-intrusive.
 ===================================================== */
 
 function populateInquiryForm() {
@@ -1177,7 +1179,7 @@ function populateInquiryForm() {
 /* =====================================================
    CONTACT EXPERIENCE
 
-   Keeps the inquery experience synchronized with the
+   Keeps the inquiry experience synchronized with the
    contact form.
 ===================================================== */
 
@@ -1219,7 +1221,7 @@ function initializeContactForm() {
    ACCESSIBILITY
 
    Small keyboard-oriented enhancements
-   without interfeering with the visual experience.
+   without interfering with the visual experience.
 ===================================================== */
 
 function initializeAccessibility() {
