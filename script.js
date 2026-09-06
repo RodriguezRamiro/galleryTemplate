@@ -955,6 +955,7 @@ Gallery.artworks.forEach(
             event => {
 
                 event.preventDefault();
+                event.stopPropagation();
 
                 Exhibition.open(index);
             })
