@@ -638,6 +638,8 @@ const Exhibition = {
             "true"
         );
 
+        document.body.style.overflow = "";
+
         UI.body.classList.remove(
             "viewer-open"
         );
