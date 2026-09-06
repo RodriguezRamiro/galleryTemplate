@@ -200,7 +200,15 @@ const Gallery = {
 
     artworks: ArtworkData,
 
-    current: 0
+    current: 0,
+
+    get latest() {
+        return this.artworks[this.artworks.length -1] || null;
+    },
+
+    get collection() {
+        return [...this.artwork].reverse().slice(1);
+    }
 
 };
 
