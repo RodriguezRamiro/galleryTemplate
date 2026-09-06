@@ -225,6 +225,8 @@ function renderFeaturedArwork() {
     if (!featured || !artwork) {
         return;
     }
+
+    // Rendering will be added here.
 }
 
 /* =====================================================
@@ -1434,6 +1436,8 @@ function initializeExperience() {
     initializeContactForm();
 
     initializeAccessibility();
+
+    renderFeaturedArwork();
 
 }
 
