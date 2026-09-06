@@ -171,7 +171,7 @@ function toggleTheme(){
         UI.document.dataset.theme;
 
     const nextTheme =
-        currentTheme == "dark"
+        currentTheme === "dark"
             ? "light"
             : "dark";
 
@@ -274,7 +274,7 @@ function toggleNavigation() {
     UI.menuToggle.setAttribute(
         "aria-label",
         nextState
-            ? "Close navigation Menu"
+            ? "Close navigation menu"
             : "Open navigation menu"
     );
 
