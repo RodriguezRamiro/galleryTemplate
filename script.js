@@ -477,7 +477,7 @@ function revealEntries(entries, observer){
    Internal navigation between sections.
 ===================================================== */
 
-function intializeSmoothScroll() {
+function initializeSmoothScroll() {
 
     document
 
@@ -1182,7 +1182,7 @@ function populateInquiryForm() {
 ===================================================== */
 
 
-function initiailizeContactForm() {
+function initializeContactForm() {
 
     const form = document.querySelector(".contact-form");
 
@@ -1265,7 +1265,7 @@ function initializeExperience() {
 
     initializeViewer();
 
-    initiailizeContactForm();
+    initializeContactForm();
 
     initializeAccessibility();
 
