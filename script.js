@@ -605,6 +605,8 @@ const Exhibition = {
             "false"
         );
 
+        document.body.style.overflow = "hidden";
+
         this.updateInquiry();
 
         this.preloadAdjacentImages();
