@@ -130,11 +130,10 @@ const Preferences = {
 
 const Motion = {
 
-    reduced:
+    reduced: window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
 
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
 };
 
 
@@ -1050,7 +1049,50 @@ function handleViewerKeyboard(event) {
     if (
         !UI.viewer ||
         !UI.viewer.classList.contains("active")
-    ) {
+        ) {
+            return;
+        }
+
+    /* Focus Trap */
+
+    if (event.key === "Tab") {
+
+        const focusableElements =
+            UI.viewer.querySelectorAll(
+                'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), selecte:not([disabled])'
+            );
+
+        if (!focusableElements.length) {
+            return;
+        }
+
+        const firstElement =
+            focusableElements[0];
+
+        const lastElement =
+            focusableElements[
+                focusableElements.length -1
+            ];
+
+        if (
+            event.shiftKey &&
+            document.activeElement === firstElement
+        ) {
+
+            event.preventDefault();
+
+            lastElement.focus();
+
+        } else if (
+            !event.shiftKey &&
+            document.activeelemnt === lastElement
+        ) {
+
+            event.preventDefault();
+
+            firstElement.focus();
+        }
+
         return;
     }
 
