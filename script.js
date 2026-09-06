@@ -226,8 +226,39 @@ function renderFeaturedArwork() {
         return;
     }
 
-    // Rendering will be added here.
+    featured.dataset.catalog = artwork.catalog;
+    featured.dataset.title = artwork.title;
+    featured.dataset.medium = artwork.medium;
+    featured.dataset.year = artwork.year;
+    featured.dataset.dimensions = artwork.dimensions;
+    featured.dataset.description = artwork.description;
+
+    const image = featured.querySelector("img");
+
+    if (image) {
+        image.src = artwork.image;
+        image.alt = `${artwork.title} - symbolic oil painting`;
+    }
+
+    const title = featured.querySelector("h2");
+
+    if(title) {
+        title.textContent = artwork.title;
+    }
+
+    const dimensions = featured.querySelector(".dimensions");
+
+    if (dimensions) {
+        dimensions.textContent = artwork.dimensions;
+    }
+
+    const description = featured.querySelector(".artwork-description");
+
+    if (description) {
+        description.textContent = artwork.description;
+    }
 }
+
 
 /* =====================================================
    USER PREFERENCES
