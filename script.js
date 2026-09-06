@@ -1102,6 +1102,10 @@ function handleViewerKeyboard(event) {
 
     switch (event.key) {
 
+        case " ":
+            event.preventDefault();
+            break;
+
         case "Escape":
 
             event.preventDefault();
