@@ -162,7 +162,7 @@ function initializeTheme() {
     applyTheme(theme);
 
     UI.themeToggle.addEventListener("click", toggleTheme);
-};
+}
 
 
 function toggleTheme(){
@@ -841,8 +841,8 @@ const Exhibition = {
             );
 
             this.inquiryTimer = null;
-        }
-    };
+    }
+}
 
 
 /* =====================================================
