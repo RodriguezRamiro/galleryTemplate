@@ -214,6 +214,20 @@ const Gallery = {
 
 
 /* =====================================================
+   ARTWORK RENDERING
+===================================================== */
+
+function renderFeaturedArwork() {
+
+    const featured = document.querySelector("#featured-artwork");
+    const artwork = Gallery.latest;
+
+    if (!featured || !artwork) {
+        return;
+    }
+}
+
+/* =====================================================
    USER PREFERENCES
 ===================================================== */
 
