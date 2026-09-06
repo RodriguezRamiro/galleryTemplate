@@ -1064,7 +1064,7 @@ function handleViewerKeyboard(event) {
 
         const focusableElements =
             UI.viewer.querySelectorAll(
-                'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), selecte:not([disabled])'
+                'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled])'
             );
 
         if (!focusableElements.length) {
@@ -1090,7 +1090,7 @@ function handleViewerKeyboard(event) {
 
         } else if (
             !event.shiftKey &&
-            document.activeelemnt === lastElement
+            document.activeElemnt === lastElement
         ) {
 
             event.preventDefault();
