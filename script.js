@@ -114,14 +114,14 @@ const UI = {
 const ArtworkData = [
 
     {
-        catolog: "001",
-        title: "enough",
+        catalog: "001",
+        title: "Enough",
         image: "./assets/images/20260516_163259.jpg",
         medium: "Oil On Canvas",
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A meditation on memory, decay, and the invidisble marks left by time. the compostion explores the balance between what remains and what dissapears."
+            "A meditation on memory, decay, and the invisble marks left by time. the composition explores the balance between what remains and what disapears."
     },
 
     {
@@ -207,7 +207,7 @@ const Gallery = {
     },
 
     get collection() {
-        return [...this.artwork].reverse().slice(1);
+        return [...this.artworks].reverse().slice(1);
     }
 
 };
