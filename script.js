@@ -99,18 +99,109 @@ const UI = {
 
 
 /* =====================================================
+   ARTWORK DATA
+
+   The artwork catalog is the source of truth.
+
+   Keep artwork in chronological order:
+   oldest → newest
+
+   The newest artwork is automatically used
+   as the Arrival / Featured work.
+===================================================== */
+
+
+const ArtworkData = [
+
+    {
+        catolog: "001",
+        title: "enough",
+        image: "./assets/images/20260516_163259.jpg",
+        medium: "Oil On Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description:
+            "A meditation on memory, decay, and the invidisble marks left by time. the compostion explores the balance between what remains and what dissapears."
+    },
+
+    {
+        catalog: "002",
+        title: "Tension",
+        image: "./assets/images/20260516_163213.jpg",
+        medium: "Oil on Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description: "Oil Paint Description Here"
+
+    },
+
+    {
+        catalog: "003",
+        title: "Becoming",
+        image: "./assets/images/20260516_163121.jpg",
+        medium: "Oil on Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description:
+            "A description of the painting here"
+    },
+
+    {
+        catalog: "004",
+        title: "Corridor",
+        image: "./assets/images/20260516_163019.jpg",
+        medium: "Oil on Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description:
+            "A description of painting here"
+    },
+
+    {
+        catalog: "005",
+        title: "Witness",
+        image: "./assets/images/20260516_162927.jpg",
+        medium: "Oil on Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description:
+            "A description of painting here"
+    },
+
+    {
+        catalog: "006",
+        title: "Emergence",
+        image: "./assets/images/20260516_162844.jpg",
+        medium: "Oil on Canvas",
+        year: "2026",
+        dimensions: "16 x 20 inches",
+        description:
+            "A description of painting here"
+    },
+
+    {
+        catalog: "000",
+        title: "Title",
+        image: "Asset",
+        medium: "Medium",
+        year: "Year",
+        dimensions: "Dimensions",
+        description:
+            "A description of painting here"
+    },
+
+];
+
+/* =====================================================
    GALLERY STATE
 ===================================================== */
 
 const Gallery = {
 
-    artworks: [
-        ...document.querySelectorAll(
-            ".artwork-card, .featured-piece"
-        )
-    ],
+    artworks: ArtworkData,
 
     current: 0
+
 };
 
 
