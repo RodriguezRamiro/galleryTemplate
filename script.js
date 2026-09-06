@@ -1261,7 +1261,7 @@ function initializeExperience() {
 
     initializeReveal();
 
-    intializeSmoothScroll();
+    initializeSmoothScroll();
 
     initializeViewer();
 
