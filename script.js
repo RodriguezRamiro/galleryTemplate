@@ -246,6 +246,12 @@ function renderFeaturedArwork() {
         image.alt = `${artwork.title} - symbolic oil painting`;
     }
 
+    const catalog = featured.querySelector(".catalog-number");
+
+    if (catalog) {
+        catalog.textContetnt = artwork.catalog;
+    }
+
     const title = featured.querySelector("h2");
 
     if(title) {
