@@ -289,6 +289,13 @@ function renderFeaturedArtwork() {
     }
 }
 
+/* =====================================================
+   Collections Rendering
+===================================================== */
+
+function renderCollection() {
+
+}
 
 /* =====================================================
    USER PREFERENCES
