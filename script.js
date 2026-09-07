@@ -258,6 +258,14 @@ function renderFeaturedArwork() {
         title.textContent = artwork.title;
     }
 
+    const medium = featured.querySelector(".medium");
+
+    if (medium) {
+        medium.textContent = artwork.medium;
+    }
+
+    
+
     const dimensions = featured.querySelector(".dimensions");
 
     if (dimensions) {
