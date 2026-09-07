@@ -317,7 +317,59 @@ function renderCollection() {
             card.dataset.year = artwork.year;
             card.dataset.dimensions = artwork.dimensions;
             card.dataset.description = artwork.description;
-        })
+
+            card.innerHTML = `
+            <figure>
+            <span class="catalog-number">${artwork.catalog}</span>
+
+            <img
+                src="${artwork.image}"
+                alt="${artwork.title} - symbolic oil painting"
+                loading="lazy"
+                >
+            </figure>
+
+            <div class="artwork-caption">
+
+            <h3>${artwork.title}</h3>
+            <p class="medium">${artwork.medium}</p>
+
+            <p class="year">${artwork.year}</p>
+
+            <p class="dimensions">${artwork.dimensions}</p>
+
+            <div class="artwork-actions">
+
+            <button
+                type="button"
+                class="text-link observe-work"
+            >
+
+            Observe →
+            </button>
+
+            <a
+                href="https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
+                class="text-link purchase-link"
+            >
+            Purchase →
+
+            </a>
+
+        </div>
+
+        <div class="viewer-inquery">
+        <a href="#inquiry" class="text-link inquiry-link">
+        Own This Piece
+        </a>
+        </div>
+
+        </div>
+        `;
+
+        grid.appendChild(card);
+
+        });
 }
 
 /* =====================================================
@@ -1529,6 +1581,8 @@ function initializeExperience() {
     initializeAccessibility();
 
     renderFeaturedArtwork();
+
+    renderCollection();
 
 }
 
