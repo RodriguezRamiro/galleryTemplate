@@ -208,6 +208,12 @@ const Gallery = {
 
     current: 0,
 
+    get published() {
+        return this.artworks.filter(
+            artwork => artwork.catalog !== "000"
+        );
+    },
+
     get latest() {
         return this.artworks[this.artworks.length -1] || null;
     },
@@ -223,7 +229,7 @@ const Gallery = {
    ARTWORK RENDERING
 ===================================================== */
 
-function renderFeaturedArwork() {
+function renderFeaturedArtwork() {
 
     const featured = document.querySelector("#featured-artwork");
     const artwork = Gallery.latest;
@@ -249,7 +255,7 @@ function renderFeaturedArwork() {
     const catalog = featured.querySelector(".catalog-number");
 
     if (catalog) {
-        catalog.textContetnt = artwork.catalog;
+        catalog.textContent = artwork.catalog;
     }
 
     const title = featured.querySelector("h2");
@@ -267,7 +273,7 @@ function renderFeaturedArwork() {
     const year = featured.querySelector(".year");
 
     if (year) {
-        year.textcontent = artwork.year;
+        year.textContent = artwork.year;
     }
 
     const dimensions = featured.querySelector(".dimensions");
@@ -276,7 +282,7 @@ function renderFeaturedArwork() {
         dimensions.textContent = artwork.dimensions;
     }
 
-    const description = featured.querySelector(".artwork-description");
+    const description = featured.querySelector(".artist-statement p");
 
     if (description) {
         description.textContent = artwork.description;
@@ -1492,7 +1498,7 @@ function initializeExperience() {
 
     initializeAccessibility();
 
-    renderFeaturedArwork();
+    renderFeaturedArtwork();
 
 }
 
