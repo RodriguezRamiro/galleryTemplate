@@ -264,7 +264,11 @@ function renderFeaturedArwork() {
         medium.textContent = artwork.medium;
     }
 
-    
+    const year = featured.querySelector(".year");
+
+    if (year) {
+        year.textcontent = artwork.year;
+    }
 
     const dimensions = featured.querySelector(".dimensions");
 
