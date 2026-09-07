@@ -90,6 +90,12 @@ const UI = {
             ".exhibition-viewer .viewer-inquiry"
         ),
 
+    featuredArtwork:
+        document.querySelector("#featured-artwork"),
+
+    collectionGrid:
+        document.querySelector(".collection-grid"),
+
     artworkField:
         document.querySelector("#artwork"),
 
