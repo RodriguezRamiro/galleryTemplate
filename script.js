@@ -300,6 +300,15 @@ function renderCollection() {
         if(!grid) {
             return;
         }
+
+        const artworks = Gallery.collection;
+
+        grid.innerHTML = "";
+
+        artworks.forEach(artwork => {
+
+            const card = document.createElement("article");
+        })
 }
 
 /* =====================================================
