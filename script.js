@@ -295,6 +295,11 @@ function renderFeaturedArtwork() {
 
 function renderCollection() {
 
+        const grid = document.querySelector(".collection-grid");
+
+        if(!grid) {
+            return;
+        }
 }
 
 /* =====================================================
