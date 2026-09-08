@@ -980,9 +980,14 @@ const Exhibition = {
         UI.viewerMedium.textContent =
             `${artwork.medium} · ${artwork.year}`;
 
-        
+        UI.viewerDescription.textContent =
+            artwork.description;
 
+        if (UI.viewerInquiry) {
+            UI.viewerInquiry.classList.remove("visible");
+        }
 
+        this.startInquiryTimer();
     },
 
     updateInquiry() {
