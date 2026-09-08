@@ -216,8 +216,9 @@ const Gallery = {
 
     get latest() {
         const published = this.published;
-        return this.artworks[this.artworks.length -1] || null;
+        return published[published.length - 1] || null;
     },
+
 
     get collection() {
         return [...this.publish].reverse().slice(1);
@@ -359,7 +360,7 @@ function renderCollection() {
 
         </div>
 
-        <div class="viewer-inquery">
+        <div class="viewer-inquiry">
         <a href="#inquiry" class="text-link inquiry-link">
         Own This Piece
         </a>
@@ -1110,180 +1111,153 @@ function hideViewerInquiry() {
     Binds artwork controls and keyboard navigation.
 ===================================================== */
 
-
 function initializeViewer() {
 
     if (!UI.viewer) {
         return;
     }
 
-    const viewerTriggers =
+    document
+        .querySelectorAll(".observe-work")
+        .forEach(trigger => {
 
-    document.querySelectorAll(
-        ".observe-work"
-    );
+            trigger.addEventListener(
+                "click",
+                event => {
 
-    viewerTriggers.forEach(
-        trigger => {
+                    event.preventDefault();
+                    event.stopPropagation();
 
-        trigger.addEventListener(
+                    const artworkElement =
+                        trigger.closest(".artwork-entry");
 
-            "click",
+                    if (!artworkElement) {
+                        return;
+                    }
 
-            event => {
+                    const catalog =
+                        artworkElement.dataset.catalog;
 
-                event.preventDefault();
+                    const artworkIndex =
+                        Gallery.published.findIndex(
+                            artwork =>
+                                artwork.catalog === catalog
+                        );
 
-                const artworkElement =
-                trigger.closest(
-                    ".artwork-entry"
-                );
-
-                if (!artworkElement) {
-                    return;
-                }
-
-                const catalog = artworkElement.dataset.catalog;
-
-                const artworkIndex =
-                    Gallery.published.findIndex(
-                        artwork =>
-                        artwork.catalog === catalog
-                    );
-
-                    if(artworkIndex === -1) {
+                    if (artworkIndex === -1) {
                         return;
                     }
 
                     Exhibition.open(artworkIndex);
-            }
-        );
-    }
+                }
+            );
+        });
 
+
+    /* ------------------------------------------
+       IMAGE TAP
+    ------------------------------------------ */
+
+    document
+        .querySelectorAll(".artwork-entry img")
+        .forEach(image => {
+
+            image.addEventListener(
+                "click",
+                event => {
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const artworkElement =
+                        image.closest(".artwork-entry");
+
+                    if (!artworkElement) {
+                        return;
+                    }
+
+                    const catalog =
+                        artworkElement.dataset.catalog;
+
+                    const artworkIndex =
+                        Gallery.published.findIndex(
+                            artwork =>
+                                artwork.catalog === catalog
+                        );
+
+                    if (artworkIndex === -1) {
+                        return;
+                    }
+
+                    Exhibition.open(artworkIndex);
+                }
+            );
+        });
+
+
+    /* ------------------------------------------
+       VIEWER CONTROLS
+    ------------------------------------------ */
+
+    UI.viewerClose?.addEventListener(
+        "click",
+        () => Exhibition.close()
     );
 
-/* ------------------------------------------
-       MOBILE / IMAGE TAP
+    UI.viewerNext?.addEventListener(
+        "click",
+        () => Exhibition.next()
+    );
 
-       Uses the exact same viewer-opening
-       function as Observe.
------------------------------------------- */
+    UI.viewerPrev?.addEventListener(
+        "click",
+        () => Exhibition.previous()
+    );
 
-document
-    .querySelectorAll(".arrtwork-entry img")
-    .forEach(image => {
 
-        image.addEventListener(
-            "click",
-            event => {
+    /* ------------------------------------------
+       BACKDROP CLOSE
+    ------------------------------------------ */
 
-                event.preventDefault();
-                event.stopPropagation();
+    UI.viewer.addEventListener(
+        "click",
+        event => {
 
-                const artworkElement =
-                    image.closest(".arwork-entry");
-
-                if (!artworkElement) {
-                    return;
-                }
-
-                const catalog = artworkElement.dataset.catalog;
-
-                const artworkIndex =
-                    Gallery.published.findIndex(
-                        artwork =>
-                            artwork.catalog === catalog
-                    );
-
-                if (artworkIndex === -1) {
-                    return;
-                }
-
-                Exhibition.open(artworkIndex);
+            if (event.target === UI.viewer) {
+                Exhibition.close();
             }
-        )
-    })
-
-/* ------------------------------------------
-       VIEWER CONTROLS
------------------------------------------- */
-
-
-UI.viewerClose?.addEventListener(
-
-    "click",
-
-    () => Exhibition.close()
-
-);
-
-UI.viewerNext?.addEventListener(
-
-    "click",
-
-    () => Exhibition.next()
-
-);
-
-UI.viewerPrev?.addEventListener(
-
-    "click",
-
-    () => Exhibition.previous()
-
-);
-
-/* ------------------------------------------
-       CLICK OUTSIDE ARTWORK TO CLOSE
------------------------------------------- */
-
-UI.viewer.addEventListener(
-
-    "click",
-
-    event => {
-
-        if (event.target === UI.viewer) {
-
-            Exhibition.close();
 
         }
-
-    }
-
     );
 
-/* ------------------------------------------
+
+    /* ------------------------------------------
        KEYBOARD
------------------------------------------- */
+    ------------------------------------------ */
+
+    document.addEventListener(
+        "keydown",
+        handleViewerKeyboard
+    );
 
 
-document.addEventListener(
-
-    "keydown",
-
-    handleViewerKeyboard
-
-);
-
-/* ------------------------------------------
+    /* ------------------------------------------
        MOBILE SWIPE
------------------------------------------- */
+    ------------------------------------------ */
 
-UI.viewer.addEventListener(
-    "touchstart",
-    handleViewerTouchStart,
-    {passive: true }
-);
+    UI.viewer.addEventListener(
+        "touchstart",
+        handleViewerTouchStart,
+        { passive: true }
+    );
 
-UI.viewer.addEventListener(
-    "touchend",
-    handleViewerTouchEnd,
-    { passive: true }
-);
+    UI.viewer.addEventListener(
+        "touchend",
+        handleViewerTouchEnd,
+        { passive: true }
+    );
 
 }
-
 /* =====================================================
    KEYBOARD CONTROLS
 
@@ -1561,7 +1535,7 @@ function initializeExperience() {
     renderFeaturedArtwork();
 
     renderCollection();
-    
+
     initializeViewer();
 
     initializeContactForm();
