@@ -966,9 +966,12 @@ const Exhibition = {
     populate() {
 
         const artwork =
-            Gallery.artworks[this.current];
+            Gallery.published[this.current];
 
-        if(!artwork) return;
+        if (!artwork) {
+            return;
+
+        }
 
         const image =
             artwork.querySelector("img");
