@@ -1139,7 +1139,7 @@ function initializeViewer() {
                     ".artwork-entry"
                 );
 
-                if (!artwork) {
+                if (!artworkElement) {
                     return;
                 }
 
