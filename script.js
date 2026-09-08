@@ -973,58 +973,10 @@ const Exhibition = {
 
         }
 
-        const image =
-            artwork.querySelector("img");
+        UI.viewerImage.src = artwork.image;
+        UI.viewerImage.alt = `${artwork.title} - symbolic oil painting`;
 
-        const {
-
-            title = "",
-
-            medium = "",
-
-            year = "",
-
-            dimensions = "",
-
-            description = ""
-
-        } = artwork.dataset;
-
-        if( image &&
-            UI.viewerImage ) {
-
-        UI.viewerImage.src =
-            image.currentSrc ||
-            image.src;
-
-        UI.viewerImage.alt =
-            image.alt ||
-            title;
-    }
-
-        if (UI.viewerTitle) {
-
-        UI.viewerTitle.textContent =
-            title;
-
-        }
-
-        if (UI.viewerMedium) {
-
-        UI.viewerMedium.textContent =
-
-            [medium, dimensions, year]
-            .filter(Boolean)
-            .join(" • ");
-
-        }
-
-        if (UI.viewerDescription) {
-
-        UI.viewerDescription.textContent =
-            description;
-
-        }
+        
     },
 
     updateInquiry() {
