@@ -1558,15 +1558,17 @@ function initializeExperience() {
 
     initializeSmoothScroll();
 
+    renderFeaturedArtwork();
+
+    renderCollection();
+    
     initializeViewer();
 
     initializeContactForm();
 
     initializeAccessibility();
 
-    renderFeaturedArtwork();
 
-    renderCollection();
 
 }
 
