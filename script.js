@@ -1134,7 +1134,7 @@ function initializeViewer() {
 
                 event.preventDefault();
 
-                const artwork =
+                const artworkElement =
                 trigger.closest(
                     ".artwork-entry"
                 );
