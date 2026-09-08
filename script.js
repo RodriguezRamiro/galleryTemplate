@@ -215,11 +215,12 @@ const Gallery = {
     },
 
     get latest() {
+        const published = this.published;
         return this.artworks[this.artworks.length -1] || null;
     },
 
     get collection() {
-        return [...this.artworks].reverse().slice(1);
+        return [...this.publish].reverse().slice(1);
     }
 
 };
