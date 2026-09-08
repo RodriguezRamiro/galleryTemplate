@@ -1144,6 +1144,12 @@ function initializeViewer() {
                 }
 
                 const catalog = artworkElement.dataset.catalog;
+
+                const arworkIndex =
+                    Gallery.published.findIndex(
+                        artwork =>
+                        artwork.catalog === catalog
+                    );
             }
         );
     }
