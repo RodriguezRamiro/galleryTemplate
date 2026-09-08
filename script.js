@@ -1193,9 +1193,13 @@ document
                     Gallery.published.findIndex(
                         artwork =>
                             artwork.catalog === catalog
-                    )
+                    );
 
+                if (artworkIndex === -1) {
+                    return;
+                }
 
+                Exhibition.open(artworkIndex);
             }
         )
     })
