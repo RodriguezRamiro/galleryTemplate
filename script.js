@@ -976,7 +976,13 @@ const Exhibition = {
         UI.viewerImage.src = artwork.image;
         UI.viewerImage.alt = `${artwork.title} - symbolic oil painting`;
 
+        UI.viewerTitle.textContent = artwork.title;
+        UI.viewerMedium.textContent =
+            `${artwork.medium} · ${artwork.year}`;
+
         
+
+
     },
 
     updateInquiry() {
