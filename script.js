@@ -1187,7 +1187,13 @@ document
                     return;
                 }
 
-                
+                const catalog = artworkElement.dataset.catalog;
+
+                const artworkIndex =
+                    Gallery.published.findIndex(
+                        artwork =>
+                            artwork.catalog === catalog
+                    )
 
 
             }
