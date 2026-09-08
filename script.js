@@ -1145,11 +1145,17 @@ function initializeViewer() {
 
                 const catalog = artworkElement.dataset.catalog;
 
-                const arworkIndex =
+                const artworkIndex =
                     Gallery.published.findIndex(
                         artwork =>
                         artwork.catalog === catalog
                     );
+
+                    if(artworkIndex === -1) {
+                        return;
+                    }
+
+                    Exhibition.open(artworkIndex);
             }
         );
     }
