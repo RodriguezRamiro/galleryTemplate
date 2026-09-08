@@ -1183,7 +1183,13 @@ document
                 const artworkElement =
                     image.closest(".arwork-entry");
 
+                if (!artworkElement) {
+                    return;
+                }
+
                 
+
+
             }
         )
     })
