@@ -1143,16 +1143,7 @@ function initializeViewer() {
                     return;
                 }
 
-                const artworkIndex =
-                    Gallery.artworks.indexOf(
-                        artwork
-                    );
-
-                if (artworkIndex === -1) {
-                    return;
-                }
-
-                Exhibition.open(artworkIndex);
+                const catalog = artworkElement.dataset.catalog;
             }
         );
     }
