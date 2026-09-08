@@ -1169,26 +1169,24 @@ function initializeViewer() {
        function as Observe.
 ------------------------------------------ */
 
-Gallery.artworks.forEach(
-    (artwork, index) => {
+document
+    .querySelectorAll(".arrtwork-entry img")
+    .forEach(image => {
 
-        const image =
-            artwork.querySelector("img");
-
-        if (!image) {
-            return;
-        }
-
-        image.addEventListener("click",
+        image.addEventListener(
+            "click",
             event => {
 
                 event.preventDefault();
                 event.stopPropagation();
 
-                Exhibition.open(index);
-            })
-    }
-)
+                const artworkElement =
+                    image.closest(".arwork-entry");
+
+                
+            }
+        )
+    })
 
 /* ------------------------------------------
        VIEWER CONTROLS
