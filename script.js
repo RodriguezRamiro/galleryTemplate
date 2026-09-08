@@ -221,7 +221,7 @@ const Gallery = {
 
 
     get collection() {
-        return [...this.publish].reverse().slice(1);
+        return [...this.published].reverse().slice(1);
     }
 
 };
