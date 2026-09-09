@@ -164,7 +164,7 @@ const ArtworkData = [
         dimensions: "16 x 20 inches",
         description:
             "A description of painting here",
-            purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -358,11 +358,12 @@ function renderCollection() {
             </button>
 
             <a
-                href="https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
+                href="${artwork.purchaseUrl}"
                 class="text-link purchase-link"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-            Purchase →
-
+                Purchase →
             </a>
 
         </div>
