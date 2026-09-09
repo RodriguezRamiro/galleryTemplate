@@ -358,13 +358,13 @@ function renderCollection() {
             </button>
 
             <a
-                href="${artwork.purchaseUrl}"
-                class="text-link purchase-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Purchase →
-            </a>
+            href="${artwork.purchaseUrl}"
+            class="text-link purchase-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Purchase →
+        </a>
 
         </div>
 
