@@ -127,7 +127,8 @@ const ArtworkData = [
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A meditation on memory, decay, and the invisble marks left by time. the composition explores the balance between what remains and what disapears."
+            "A meditation on memory, decay, and the invisble marks left by time. the composition explores the balance between what remains and what disapears.",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -137,7 +138,8 @@ const ArtworkData = [
         medium: "Oil on Canvas",
         year: "2026",
         dimensions: "16 x 20 inches",
-        description: "Oil Paint Description Here"
+        description: "Oil Paint Description Here",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
 
     },
 
@@ -149,7 +151,8 @@ const ArtworkData = [
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A description of the painting here"
+            "A description of the painting here",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -160,7 +163,8 @@ const ArtworkData = [
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A description of painting here"
+            "A description of painting here",
+            purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -171,7 +175,8 @@ const ArtworkData = [
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A description of painting here"
+            "A description of painting here",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -182,7 +187,8 @@ const ArtworkData = [
         year: "2026",
         dimensions: "16 x 20 inches",
         description:
-            "A description of painting here"
+            "A description of painting here",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
     {
@@ -193,7 +199,8 @@ const ArtworkData = [
         year: "Year",
         dimensions: "Dimensions",
         description:
-            "A description of painting here"
+            "A description of painting here",
+        purchaseUrl: "https://www.etsy.com/shop/CraftmancerStudios?ref=lp_mys_mfts"
     },
 
 ];
