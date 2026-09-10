@@ -90,6 +90,9 @@ const UI = {
             ".exhibition-viewer .viewer-inquiry"
         ),
 
+    viewerPurchase:
+            document.querySelector(".viewer-purchase"),
+
     featuredArtwork:
         document.querySelector("#featured-artwork"),
 
