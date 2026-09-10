@@ -1000,6 +1000,10 @@ const Exhibition = {
             UI.viewerInquiry.classList.remove("visible");
         }
 
+        if (UI.viewerPurchase) {
+            UI.viewerPurchase.href = artwork.purchaseUrl || "#";
+        }
+
         this.startInquiryTimer();
     },
 
