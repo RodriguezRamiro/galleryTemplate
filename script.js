@@ -1321,7 +1321,7 @@ function handleViewerKeyboard(event) {
 
         } else if (
             !event.shiftKey &&
-            document.activeElemnt === lastElement
+            document.activeElement === lastElement
         ) {
 
             event.preventDefault();
