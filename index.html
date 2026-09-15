@@ -534,7 +534,188 @@
 
         </section>
 
-</main>
+        <!-- Contact / Inquiry -->
 
+        <section id="inquiry" class="inquiry" aria-labelledby="inquiry-title" >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        Continue the Experience
+                    </p>
+
+                    <h2 id="inquiry-title">
+                        If a piece has stayed with you,
+                        or you'd like to discuss a commission,
+                        I'd be delighted to hear from you.
+                    </h2>
+
+                </header>
+
+
+                <form
+                    class="contact-form"
+                    action="https://formspree.io/f/xdabpana"
+                    method="POST"
+                >
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Inquiry — Craftmancer Studios"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_language"
+                        value="en"
+                    >
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="inquiry-type">
+                                Inquiry Type
+                            </label>
+
+                            <select
+                                id="inquiry-type"
+                                name="Inquiry Type"
+                                required
+                            >
+
+                                <option value="">
+                                    Select an inquiry
+                                </option>
+
+                                <option value="Commission Request">
+                                    Commission Request
+                                </option>
+
+                                <option value="Gallery Exhibition">
+                                    Gallery Exhibition
+                                </option>
+
+                                <option value="Collaboration">
+                                    Collaboration
+                                </option>
+
+                                <option value="General Inquiry">
+                                    General Inquiry
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="organization">
+                                Gallery / Organization
+                            </label>
+
+                            <input
+                                type="text"
+                                id="organization"
+                                name="organization"
+                                placeholder="Optional"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="artwork">
+                            Artwork of Interest
+                        </label>
+
+                        <input
+                            type="text"
+                            id="artwork"
+                            name="artwork"
+                            placeholder="Example"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            placeholder="If a piece speaks to you, or if you'd like to discuss a commission, I'd be glad to hear from you."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                    >
+                        Send Inquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+</main>
 </body>
 </html>
