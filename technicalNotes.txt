@@ -200,3 +200,14 @@ the fornt end displays the category changing
 all the paintings in the murals.
 render artwork via object endpoints
 rememebr to add the mural sort by murals?
+
+
+09-18-2026
+Current status
+
+Craftmancer Studios
+→ Vercel
+→ Supabase: supabase-amber-plank
+→ PostgreSQL database
+→ Supabase Storage later for painting images
+→ Supabase Auth later for your private artist/admin area
