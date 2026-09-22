@@ -108,6 +108,13 @@ const UI = {
 
 
 /* =====================================================
+   SUPABASE Data Connection
+===================================================== */
+
+const SupabaseGallery = {}
+
+
+/* =====================================================
    ARTWORK DATA
 
    The artwork catalog is the source of truth.
