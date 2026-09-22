@@ -211,3 +211,18 @@ Craftmancer Studios
 → PostgreSQL database
 → Supabase Storage later for painting images
 → Supabase Auth later for your private artist/admin area
+
+
+9-22-2026
+successfully completed the database foundation:
+
+✅ Supabase connected to Vercel
+✅ exhibitions table
+✅ artworks table
+✅ artworks linked to exhibitions
+✅ artworks RLS enabled
+✅ exhibitions RLS enabled
+✅ Public read policy for published artworks
+✅ Public read policy for published exhibitions
+✅ artworks Storage bucket
+✅ Private Supabase Auth user
