@@ -111,7 +111,33 @@ const UI = {
    SUPABASE Data Connection
 ===================================================== */
 
-const SupabaseGallery = {}
+const SupabaseGallery = {
+
+        async loadArtworks() {
+
+            const { data, error } = await supabaseClient
+                .from("artworks")
+                .select(`
+                id,
+                catalog_number,
+                title,
+                image_url,
+                medium,
+                year,
+                dimensions,
+                exhibition,
+                exhibition_id,
+                srot_order,
+                published,
+                featured
+                `)
+                .eq("published", true)
+                .order("sort_order", { ascending: true });
+
+                
+        }
+    }
+}
 
 
 /* =====================================================
