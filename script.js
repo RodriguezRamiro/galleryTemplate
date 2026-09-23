@@ -134,10 +134,18 @@ const SupabaseGallery = {
                 .eq("published", true)
                 .order("sort_order", { ascending: true });
 
-                
+                if (error) {
+                    console.log("supabase artwork load failed:", error);
+                    return [];
+                }
+
+                console.log("gallery artworks loaded from Supabase:", data);
+
+                return data;
+
+
         }
     }
-}
 
 
 /* =====================================================
