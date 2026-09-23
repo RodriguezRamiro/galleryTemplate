@@ -4,7 +4,7 @@ const SUPABASE_URL =
 const SUPABASE_ANON_KEY =
     "sb_publishable_AxfG5N0Ottos-nLjkXMmHA_iRN10Sqf";
 
-const supabaseClient = window.supabase.createClient(
+window.supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_ANON_KEY
 );
