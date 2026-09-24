@@ -135,16 +135,24 @@ const SupabaseGallery = {
 
                 if (error) {
                     console.log("supabase artwork load failed:", error);
-                    return [];
+                    return null;
                 }
 
                 console.log("gallery artworks loaded from Supabase:", data);
 
-                return data;
+                return data.map(artwork => ({
 
-
+                    catalog: artwork.catalog_number,
+                    title: artwork.title,
+                    image: artwork.image_url,
+                    medium: artwork.medium,
+                    year: String(artwork.year),
+                    dimensions: artwork.dimensions,
+                    description: artwork.description,
+                    purchaseUrl: "#"
+                }));
         }
-    }
+    };
 
 
 /* =====================================================
