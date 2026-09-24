@@ -126,7 +126,7 @@ const SupabaseGallery = {
                 year,
                 dimensions,
                 exhibition_id,
-                srot_order,
+                sort_order,
                 published,
                 featured
                 `)
