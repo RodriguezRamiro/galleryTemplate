@@ -226,3 +226,20 @@ successfully completed the database foundation:
 ✅ Public read policy for published exhibitions
 ✅ artworks Storage bucket
 ✅ Private Supabase Auth user
+
+
+09-24-2026
+index.html
+   ↓
+Supabase JS
+   ↓
+supabase-test.js
+   └── creates shared Supabase client
+
+script.js
+   ↓
+SupabaseGallery.loadArtworks()
+   ↓
+Supabase
+   ↓
+001 — Enough
