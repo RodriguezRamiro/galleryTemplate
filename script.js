@@ -115,7 +115,7 @@ const SupabaseGallery = {
 
         async loadArtworks() {
 
-            const { data, error } = await supabaseClient
+            const { data, error } = await window.supabaseClient
                 .from("artworks")
                 .select(`
                 id,
@@ -125,7 +125,6 @@ const SupabaseGallery = {
                 medium,
                 year,
                 dimensions,
-                exhibition,
                 exhibition_id,
                 srot_order,
                 published,
