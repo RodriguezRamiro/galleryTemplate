@@ -1575,7 +1575,7 @@ function initializeAccessibility() {
    Starts the exhibition experience.
 ===================================================== */
 
-function initializeExperience() {
+async function initializeExperience() {
 
     initializeTheme();
 
@@ -1596,6 +1596,8 @@ function initializeExperience() {
     initializeContactForm();
 
     initializeAccessibility();
+
+    await SupabaseGallery.loadArtworks();
 
 
 
