@@ -24,4 +24,3 @@ async function testSupabase() {
     console.log("Artwork retrieved from Supabase:", data);
 }
 
-testSupabase();
