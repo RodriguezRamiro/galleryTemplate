@@ -1605,7 +1605,19 @@ async function initializeExperience() {
 
     initializeAccessibility();
 
-    await SupabaseGallery.loadArtworks();
+    const databaseArtworks =
+        await SupabaseGallery.loadArtworks();
+
+    if (databaseArtworks) {
+
+        Gallery.artworks = databaseArtworks;
+
+        renderFeaturedArtwork();
+
+        renderCollection();
+
+
+    }
 
 
 
