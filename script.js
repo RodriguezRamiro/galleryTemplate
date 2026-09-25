@@ -274,7 +274,9 @@ const Gallery = {
 
     get latest() {
         const published = this.published;
-        return published[published.length - 1] || null;
+        return published.find(
+            artwork => artwork.featured
+        ) || published[published.length - 1] || null;
     },
 
 
