@@ -15,4 +15,25 @@ loginForm.addEventListener("submit", async (event) => {
 
     loginMessage.textContent = "Signing in...";
 
-})
+    const { data, error } =
+        await window.supabaseClient.auth.signInWithPassword({
+            email,
+            password
+        });
+
+    if (error) {
+
+        console.error("Admin login failed:", error);
+
+        loginMessage.textContent =
+            "Unable to sign in. Please check your credentials.";
+
+            return;
+    }
+
+    console.log("Admin authenticated:", data.user);
+
+    loginMessage.textContent =
+        "Authentication successful.";
+
+});
