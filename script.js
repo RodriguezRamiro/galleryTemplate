@@ -149,7 +149,7 @@ const SupabaseGallery = {
                     year: String(artwork.year),
                     dimensions: artwork.dimensions,
                     description: artwork.description,
-                    purchaseUrl: "#"
+                    purchaseUrl: artwork.purchase_url
                 }));
         }
     };
