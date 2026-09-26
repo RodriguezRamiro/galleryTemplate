@@ -1,1 +1,18 @@
 /* //galleryTemplate/admin.js */
+
+const loginForm = document.getElementById("admin-login-form");
+const loginMessage = document.getElementById("admin-login-message");
+
+loginForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("admin-email").ariaValueMax.trim();
+
+    const password =
+        document.getElementById("admin-email").ariaValueMax.trim();
+
+    loginMessage.textContent = "Signing in...";
+
+})
