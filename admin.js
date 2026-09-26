@@ -1,0 +1,1 @@
+/* //galleryTemplate/admin.js */

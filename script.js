@@ -1,3 +1,5 @@
+/* //galleryTemplate/script.js */
+
 /* =====================================================
     Natural Light Atelier
 
