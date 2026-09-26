@@ -243,3 +243,24 @@ SupabaseGallery.loadArtworks()
 Supabase
    ↓
 001 — Enough
+
+
+
+09-26-2026
+The core gallery migration is working:
+
+Supabase
+→ six Rubedo artworks
+→ published status
+→ featured status
+→ image URLs
+→ artwork metadata
+
+Frontend
+→ retrieves the data
+→ maps it into the existing Gallery system
+→ Enough remains featured
+→ the collection renders from the database
+→ existing viewer/gallery behavior continues working
+
+next major phase is the Artist Admin
