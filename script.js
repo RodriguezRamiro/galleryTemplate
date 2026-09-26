@@ -281,7 +281,12 @@ const Gallery = {
 
 
     get collection() {
-        return [...this.published].reverse().slice(1);
+
+        const featured = this.latest;
+
+        return [...this.published]
+        .filter(artwork => artwork !== featured)
+        .sort((a, b) => b.sort_order - a.sort_order);
     }
 
 };
