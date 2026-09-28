@@ -8,34 +8,48 @@ const dashboardMessage =
    Dashboard Authentication Check
 ===================================================== */
 
-const {
-    data: { session },
-    error
-} = await window.supabaseClient.auth.getSession();
+async function verifyDashboardSession() {
 
-
-if (error) {
-
-    console.error(
-        "Unable to verify authentication session:",
+    const {
+        data: { session },
         error
-    );
+    } = await window.supabaseClient.auth.getSession();
 
-    window.location.href = "./admin.html";
 
-} else if (!session) {
+    if (error) {
 
-    console.log(
-        "No authenticated session found. Redirecting to admin login."
-    );
+        console.error(
+            "Unable to verify authentication session:",
+            error
+        );
 
-    window.location.href = "./admin.html";
+        window.location.href = "./admin.html";
 
-} else {
+        return;
+    }
+
+
+    if (!session) {
+
+        console.log(
+            "No authenticated session found. Redirecting to admin login."
+        );
+
+        window.location.href = "./admin.html";
+
+        return;
+    }
+
 
     console.log(
         "Authenticated dashboard session:",
         session.user
     );
-
 }
+
+
+/* =====================================================
+   Initialize Dashboard
+===================================================== */
+
+verifyDashboardSession();
