@@ -4,8 +4,6 @@ const resetForm = document.getElementById("reset-password-form");
 
 const resetMessage = document.getElementById("reset-message");
 
-let recoverySessionReady = false;
-
 /* =====================================================
   Password Recovery Session
 ===================================================== */
@@ -14,14 +12,13 @@ window.supabaseClient.auth.onAuthStateChange((event, session) => {
 
     console.log("Auth event:", event);
 
-    if(event === "PASSWPRD_RECOVERY" && session) {
+    if(event === "PASSWORD_RECOVERY" && session) {
 
-        recoverySessionReady = true;
 
         console.log("Password recovery session established.");
 
         resetMessage.textContent =
-            "Recovery session ready. Enter your password.";
+            "Recovery session ready. Enter your new password.";
     }
 });
 
@@ -42,18 +39,10 @@ resetForm.addEventListener("submit", async (event) => {
     if(password !== confirmPassword) {
 
         resetMessage.textContent =
-            "Password do no match.";
+            "Password do not match.";
 
         return;
 
-    }
-
-    if (!recoverySessionReady) {
-
-        resetMessage.textContent =
-            "Your recovery session is not ready. Please use a fresh reset link.";
-
-            return;
     }
 
     resetMessage.textContent =
@@ -74,9 +63,9 @@ resetForm.addEventListener("submit", async (event) => {
         return;
     }
 
-    console.log("password update successfully.");
+    console.log("Password updated successfully.");
 
     resetMessage.textContent =
-        "Password updated successfully. you can now return to the Artist Admin.";
+        "Password updated successfully. You can now return to the Artist Admin.";
 
 });
