@@ -8,10 +8,10 @@ loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const email =
-        document.getElementById("admin-email").ariaValueMax.trim();
+        document.getElementById("admin-email").value.trim();
 
     const password =
-        document.getElementById("admin-email").ariaValueMax.trim();
+        document.getElementById("admin-email").value;
 
     loginMessage.textContent = "Signing in...";
 
