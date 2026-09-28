@@ -36,7 +36,7 @@ loginForm.addEventListener("submit", async (event) => {
     loginMessage.textContent =
         "Authentication successful.";
 
-    window.location.href = "./admin-dashboard.htnl";
+    window.location.href = "./admin-dashboard.html";
 
 
     });
