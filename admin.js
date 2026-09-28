@@ -36,44 +36,45 @@ loginForm.addEventListener("submit", async (event) => {
     loginMessage.textContent =
         "Authentication successful.";
 
-        /* Password Reset Redirect */
 
-    const forgotPasswordLink =
-        document.getElementById("admin-forgot-password");
-
-    forgotPasswordLink.addEventListener("click", async (event) => {
-        event.preventDefault();
-
-        const email =
-            document.getElementById("admin-email").value.trim();
-
-        if (!email) {
-            loginMessage.textContent =
-                "Enter your email address first.";
-            return;
-        }
-
-        loginMessage.textContent =
-            "Sending password recovery email...";
-
-        const { error } =
-            await window.suabaseClient.auth.resetPasswordForEmail(
-                email,
-                {
-                    redirectTo:
-                        `${window.location.origin}/reset-password.html`
-                }
-            );
-
-        if (error) {
-            console.error("password recovery failed:", error);
-            loginMessage.textContent =
-                "Unable to send recovery email. Please try again.";
-            return;
-        }
-
-        loginMessage.textContent =
-            "Password recovery email sent. Check your inbox.";
     });
 
+    /* Password Reset Redirect */
+
+const forgotPasswordLink =
+    document.getElementById("admin-forgot-password");
+
+forgotPasswordLink.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const email =
+        document.getElementById("admin-email").value.trim();
+
+    if (!email) {
+        loginMessage.textContent =
+            "Enter your email address first.";
+        return;
+    }
+
+    loginMessage.textContent =
+        "Sending password recovery email...";
+
+    const { error } =
+        await window.supabaseClient.auth.resetPasswordForEmail(
+            email,
+            {
+                redirectTo:
+                    `${window.location.origin}/reset-password.html`
+            }
+        );
+
+    if (error) {
+        console.error("password recovery failed:", error);
+        loginMessage.textContent =
+            "Unable to send recovery email. Please try again.";
+        return;
+    }
+
+    loginMessage.textContent =
+        "Password recovery email sent. Check your inbox.";
 });
