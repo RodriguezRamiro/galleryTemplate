@@ -275,3 +275,17 @@ Recovery API call ✅
 Correct Vercel redirect ✅
 Reset page destination ✅
 Only blocker: email rate limit ⏳ 2 hours minimum hold.
+
+After some Time...
+
+We have working
+
+Artist Admin
+→ Forgot password
+→ Supabase sends recovery email
+→ Recovery link
+→ reset-password.html
+→ Recovery session
+→ New password
+→ updateUser()
+→ Password successfully changed

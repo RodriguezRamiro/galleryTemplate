@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", async (event) => {
         document.getElementById("admin-email").value.trim();
 
     const password =
-        document.getElementById("admin-email").value;
+        document.getElementById("admin-password").value;
 
     loginMessage.textContent = "Signing in...";
 
