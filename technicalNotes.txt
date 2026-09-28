@@ -264,3 +264,14 @@ Frontend
 → existing viewer/gallery behavior continues working
 
 next major phase is the Artist Admin
+
+09-28-26
+Established:
+
+Admin page ✅
+Forgot password link ✅
+Supabase client ✅
+Recovery API call ✅
+Correct Vercel redirect ✅
+Reset page destination ✅
+Only blocker: email rate limit ⏳ 2 hours minimum hold.
