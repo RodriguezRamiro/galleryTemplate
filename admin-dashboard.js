@@ -55,6 +55,63 @@ async function verifyDashboardSession() {
     await loadDashboardArtworks();
 }
 
+/* =====================================================
+   Load Artwork Data
+===================================================== */
+
+async function loadDashboardArtworks() {
+
+    const { data, error } =
+        await window.supabaseClient
+            .form("artworks")
+            .select(`
+            id,
+            catalog_number,
+            title,
+            image_url,
+            medium,
+            dimensions,
+            description,
+            exhibition_id,
+            sort_order,
+            published,
+            featured,
+            purchase_url
+        `)
+        .order("sort_order", {
+            ascending: true
+        });
+
+    if (error) {
+
+        console.error (
+            "Unable to load dashboard artworks:",
+            error
+        );
+
+        dashboardMessage.textContent =
+            "Unable to load artwork collection.";
+
+        return;
+    }
+
+    console.log(
+        "Dashboard artworks loaded:",
+        data
+    );
+
+    artworkoCount.textCount =
+        data.length;
+
+    featuredCount.textContent =
+        data.filter(
+            artwork => artwork.featuredCount
+        ).length;
+
+    renderDashboardArtworks(data);
+
+}
+
 
 /* =====================================================
    Initialize Dashboard
