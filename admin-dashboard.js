@@ -114,6 +114,69 @@ async function loadDashboardArtworks() {
 
 
 /* =====================================================
+   Render Artwork List
+===================================================== */
+
+function renderDashboardArtworks(arworks) {
+
+    if (!artworkList.length) {
+
+        artworkList.innerHtml = `
+            <p class="admin-message">
+                No artworks found.
+            </p>
+            `;
+
+            return;
+    }
+
+    artworkList.innerHTML =
+        artworks.map(artwork => `
+
+            <article class="admin-artwork-item">
+
+                <div class="admin-artwork-image">
+
+                    <img
+                        src="${artwork.image_url || ""}"
+                        alt="${artwork.title}"
+                    >
+
+                </div>
+
+
+                <div class="admin-artwork-details">
+
+                    <p class="admin-eyebrow">
+                        ${artwork.catalog_number}
+                    </p>
+
+                    <h3>
+                        ${artwork.title}
+                    </h3>
+
+                    <p>
+                        ${artwork.medium || "Medium not specified"}
+                        ${artwork.year ? ` · ${artwork.year}` : ""}
+                    </p>
+
+                    <p>
+                        ${artwork.published
+                            ? "Published"
+                            : "Draft"}
+                        ${artwork.featured
+                            ? " · Featured"
+                            : ""}
+                    </p>
+
+                </div>
+
+            </article>
+
+        `).join("");
+}
+
+/* =====================================================
    Initialize Dashboard
 ===================================================== */
 
