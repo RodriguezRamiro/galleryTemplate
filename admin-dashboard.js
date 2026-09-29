@@ -3,6 +3,12 @@
 const dashboardMessage =
     document.querySelector(".admin-message");
 
+const artworkList = document.querySelector("#admin-artwork-list");
+
+const artworkoCount = document.querySelector("artwork-count");
+
+const featuredCount = document.querySelector("#featured-count");
+
 
 /* =====================================================
    Dashboard Authentication Check
@@ -45,6 +51,8 @@ async function verifyDashboardSession() {
         "Authenticated dashboard session:",
         session.user
     );
+
+    await loadDashboardArtworks();
 }
 
 
