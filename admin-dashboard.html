@@ -1,44 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Craftmancer Studios — Dashboard</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./style.css">
+    <title>Craftmancer Studios — Artist Dashboard</title>
+
+    <link rel="stylesheet"
+        href="./style.css">
+
 </head>
+
 
 <body>
 
-    <main class="admin-page">
+    <main class="admin-dashboard">
 
-        <section class="admin-login" aria-labelledby="dashboard-title">
+        <!-- =================================================
+             Dashboard Header
+        ================================================== -->
 
-            <p class="admin-eyebrow">
-                Craftmancer Studios
-            </p>
+        <header class="admin-dashboard-header">
 
-            <h1 id="dashboard-title">
-                Artist Dashboard
-            </h1>
+            <div>
 
-            <p class="admin-intro">
-                Studio administration.
-            </p>
+                <p class="admin-eyebrow">
+                    Craftmancer Studios
+                </p>
 
-            <p class="admin-message">
-                You are successfully authenticated.
-            </p>
+                <h1>
+                    Artist Dashboard
+                </h1>
+
+                <p class="admin-intro">
+                    Studio administration.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="admin-sign-out"
+                class="admin-submit">
+
+                Sign Out
+
+            </button>
+
+        </header>
+
+
+        <!-- =================================================
+             Overview
+        ================================================== -->
+
+        <section
+            class="admin-overview"
+            aria-labelledby="overview-title">
+
+            <h2 id="overview-title">
+                Overview
+            </h2>
+
+
+            <div class="admin-overview-grid">
+
+                <article class="admin-stat">
+
+                    <span
+                        id="artwork-count"
+                        class="admin-stat-number">
+
+                        —
+
+                    </span>
+
+                    <span class="admin-stat-label">
+                        Artworks
+                    </span>
+
+                </article>
+
+
+                <article class="admin-stat">
+
+                    <span
+                        id="exhibition-count"
+                        class="admin-stat-number">
+
+                        —
+
+                    </span>
+
+                    <span class="admin-stat-label">
+                        Exhibitions
+                    </span>
+
+                </article>
+
+
+                <article class="admin-stat">
+
+                    <span
+                        id="featured-count"
+                        class="admin-stat-number">
+
+                        —
+
+                    </span>
+
+                    <span class="admin-stat-label">
+                        Featured
+                    </span>
+
+                </article>
+
+            </div>
 
         </section>
+
+
+        <!-- =================================================
+             Artwork Collection
+        ================================================== -->
+
+        <section
+            class="admin-section"
+            aria-labelledby="artworks-title">
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        Collection
+                    </p>
+
+                    <h2 id="artworks-title">
+                        Artworks
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-submit">
+
+                    + Add Artwork
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="admin-artwork-list"
+                class="admin-artwork-list">
+
+                <p class="admin-message">
+                    Loading artworks...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Exhibitions
+        ================================================== -->
+
+        <section
+            class="admin-section"
+            aria-labelledby="exhibitions-title">
+
+            <div class="admin-section-header">
+
+                <div>
+
+                    <p class="admin-eyebrow">
+                        Exhibitions
+                    </p>
+
+                    <h2 id="exhibitions-title">
+                        Exhibitions
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="admin-submit">
+
+                    + New Exhibition
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="admin-exhibition-list"
+                class="admin-exhibition-list">
+
+                <p class="admin-message">
+                    Loading exhibitions...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             Dashboard Status
+        ================================================== -->
+
+        <p
+            id="dashboard-message"
+            class="admin-message"
+            aria-live="polite">
+        </p>
 
     </main>
 
 
+    <!-- =====================================================
+         Supabase
+    ====================================================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script src="./supabase-test.js"></script>
+
     <script src="./admin-dashboard.js"></script>
 
 </body>
+
 </html>
