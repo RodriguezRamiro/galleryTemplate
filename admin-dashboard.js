@@ -117,7 +117,7 @@ async function loadDashboardArtworks() {
    Render Artwork List
 ===================================================== */
 
-function renderDashboardArtworks(arworks) {
+function renderDashboardArtworks(artworks) {
 
     if (!artworkList.length) {
 
