@@ -63,7 +63,7 @@ async function loadDashboardArtworks() {
 
     const { data, error } =
         await window.supabaseClient
-            .form("artworks")
+            .from("artworks")
             .select(`
             id,
             catalog_number,
