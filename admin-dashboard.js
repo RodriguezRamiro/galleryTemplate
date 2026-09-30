@@ -5,7 +5,7 @@ const dashboardMessage =
 
 const artworkList = document.querySelector("#admin-artwork-list");
 
-const artworkoCount = document.querySelector("artwork-count");
+const artworkCount = document.querySelector("artwork-count");
 
 const featuredCount = document.querySelector("#featured-count");
 
@@ -65,26 +65,28 @@ async function loadDashboardArtworks() {
         await window.supabaseClient
             .from("artworks")
             .select(`
-            id,
-            catalog_number,
-            title,
-            image_url,
-            medium,
-            dimensions,
-            description,
-            exhibition_id,
-            sort_order,
-            published,
-            featured,
-            purchase_url
-        `)
-        .order("sort_order", {
-            ascending: true
-        });
+                id,
+                catalog_number,
+                title,
+                image_url,
+                medium,
+                year,
+                dimensions,
+                description,
+                exhibition_id,
+                sort_order,
+                published,
+                featured,
+                purchase_url
+            `)
+            .order("sort_order", {
+                ascending: true
+            });
+
 
     if (error) {
 
-        console.error (
+        console.error(
             "Unable to load dashboard artworks:",
             error
         );
@@ -95,21 +97,24 @@ async function loadDashboardArtworks() {
         return;
     }
 
+
     console.log(
         "Dashboard artworks loaded:",
         data
     );
 
-    artworkoCount.textCount =
+
+    artworkCount.textContent =
         data.length;
+
 
     featuredCount.textContent =
         data.filter(
-            artwork => artwork.featuredCount
+            artwork => artwork.featured
         ).length;
 
-    renderDashboardArtworks(data);
 
+    renderDashboardArtworks(data);
 }
 
 
