@@ -5,7 +5,7 @@ const dashboardMessage =
 
 const artworkList = document.querySelector("#admin-artwork-list");
 
-const artworkCount = document.querySelector("artwork-count");
+const artworkCount = document.querySelector("#artwork-count");
 
 const featuredCount = document.querySelector("#featured-count");
 
@@ -124,9 +124,9 @@ async function loadDashboardArtworks() {
 
 function renderDashboardArtworks(artworks) {
 
-    if (!artworkList.length) {
+    if (!artworkList) {
 
-        artworkList.innerHtml = `
+        artworkList.innerHTML = `
             <p class="admin-message">
                 No artworks found.
             </p>
