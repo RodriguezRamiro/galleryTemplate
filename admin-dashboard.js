@@ -124,7 +124,33 @@ async function loadDashboardArtworks() {
 
 async function loadDashboardExhibition() {
 
-    
+    const { data, error } =
+        await window.supabaseClient
+            .from("exhibitions")
+            .selec(`
+                id,
+                title,
+                descritpion,
+                status,
+                sort_order,
+                created_at
+            `)
+            .order("sort_order", {
+                ascending: true
+            });
+
+        if (error) {
+
+            console.error(
+                "Unable to load dashbaord exhibitions:",
+                error
+            );
+
+            dashboardMessage.textContent =
+                "Unable to load exhibitions.";
+
+            return;
+        }
 }
 
 
