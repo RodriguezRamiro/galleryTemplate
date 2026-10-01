@@ -151,8 +151,31 @@ async function loadDashboardExhibition() {
 
             return;
         }
+
+        console.log(
+            "Dashboard exhibitions loaded:",
+            data
+        );
+
+        const exhibitionCount =
+            document.querySelector("#exhibition-count");
+
+        exhibitionCount.textContent =
+            data.length;
+
+        renderDashboardExhibitions(data);
 }
 
+
+/* =====================================================
+   Render Exhibition List
+===================================================== */
+
+
+function renderDashboardExhibitions(exhibitions) {
+
+    
+}
 
 /* =====================================================
    Render Artwork List
