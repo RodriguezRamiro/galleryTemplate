@@ -195,7 +195,30 @@ function renderDashboardExhibitions(exhibitions) {
                 return;
         }
 
-        
+        exhibitionsList.innerHTML =
+            exhibitions.map(exhibition => `
+            <article class="admin-exhibition-item">
+
+            <div class="admin-exhibition-details">
+
+            <p class="admin-exhibition-details">
+
+            <p class="admin-eyebrow">
+            Exhibition
+            </p>
+
+            <h3>
+                ${exhibition.title}
+            </h3>
+
+            <p>
+                ${exhibition.status}
+            </p>
+
+            </div>
+
+            </article>
+            `).join("");
     }
 }
 
