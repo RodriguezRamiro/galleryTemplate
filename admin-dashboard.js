@@ -129,7 +129,7 @@ async function loadDashboardExhibitions() {
     const { data, error } =
         await window.supabaseClient
             .from("exhibitions")
-            .selec(`
+            .select(`
                 id,
                 title,
                 descritpion,
