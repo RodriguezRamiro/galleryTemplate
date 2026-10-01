@@ -174,7 +174,17 @@ async function loadDashboardExhibition() {
 
 function renderDashboardExhibitions(exhibitions) {
 
-    
+    const exhibitionList =
+        document.querySelector("#admin-exhibition-list");
+
+    if (!exhibitionList) {
+
+        console.error(
+            "exhibition list element was not found."
+        );
+
+        return;
+    }
 }
 
 /* =====================================================
