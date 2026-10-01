@@ -53,6 +53,8 @@ async function verifyDashboardSession() {
     );
 
     await loadDashboardArtworks();
+
+    await loadDashboardExhibitions();
 }
 
 /* =====================================================
@@ -122,7 +124,7 @@ async function loadDashboardArtworks() {
    Load Exhibition Data
 ===================================================== */
 
-async function loadDashboardExhibition() {
+async function loadDashboardExhibitions() {
 
     const { data, error } =
         await window.supabaseClient
