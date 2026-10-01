@@ -184,6 +184,18 @@ function renderDashboardExhibitions(exhibitions) {
         );
 
         return;
+
+        if (!exhibitions.length) {
+
+            exhibitionList.innerHtml = `
+                <p class="admin-message">
+                    No exhibitions found.
+                </p>
+                `;
+                return;
+        }
+
+        
     }
 }
 
