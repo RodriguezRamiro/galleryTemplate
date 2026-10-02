@@ -201,3 +201,26 @@
     resize: vertical;
     min-height: 160px;
 }
+
+
+.admin-form-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 700px) {
+
+    .admin-form-section {
+        padding: 1.25rem;
+    }
+
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-field-full {
+        grid-column: auto;
+    }
+
+}
