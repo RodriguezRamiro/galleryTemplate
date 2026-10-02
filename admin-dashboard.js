@@ -57,6 +57,37 @@ async function verifyDashboardSession() {
     await loadDashboardExhibitions();
 }
 
+
+/* =====================================================
+   Sign Out
+===================================================== */
+
+const singOutButton =
+    document.querySelector("#admin-sign-out");
+
+singOutButton.addEventListener("click",, async () => {
+    singOutButton.disabled = true;
+    singOutButton.textContent = "Signing out...";
+
+    const { error } =
+        await window.supabaseClient.auth.signOut();
+
+    if (error) {
+
+        console.error(
+            "unable to sing out:",
+            error
+        );
+
+        singOutButton.disabled = false;
+        singOutButton.textCOntent =
+            "unable to sing out. Please try again.";
+
+            return;
+    }
+
+    window.location.href = "./admin.html",
+})
 /* =====================================================
    Load Artwork Data
 ===================================================== */
@@ -197,7 +228,7 @@ function renderDashboardExhibitions(exhibitions) {
                 return;
         }
 
-        exhibitionsList.innerHTML =
+        exhibitionList.innerHTML =
             exhibitions.map(exhibition => `
             <article class="admin-exhibition-item">
 
