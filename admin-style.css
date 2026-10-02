@@ -105,3 +105,16 @@
     }
 
 }
+
+/* =====================================================
+   ADMIN ARTWORK CARDS
+===================================================== */
+
+.admin-artwork-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
