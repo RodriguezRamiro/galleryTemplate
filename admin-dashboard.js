@@ -9,6 +9,12 @@ const artworkCount = document.querySelector("#artwork-count");
 
 const featuredCount = document.querySelector("#featured-count");
 
+const addArtworkButton = document.querySelector("#add-artwork-button");
+
+const addArworkPanel = document.querySelector("#add-artwork-panel");
+
+const cancelArtworkButton = document.querySelector("#candel-artwork-button");
+
 
 /* =====================================================
    Dashboard Authentication Check
