@@ -139,3 +139,21 @@
     justify-content: center;
     gap: 0.5rem;
 }
+
+.admin-artwork-details .admin-eyebrow {
+    margin-bottom: 0;
+}
+
+.admin-artwork-details h3 {
+    margin: 0;
+}
+
+.admin-artwork-details p {
+    margin: 0;
+}
+
+.admin-artwork-details p:last-child {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    letter-spacing: 0.03em;
+}
