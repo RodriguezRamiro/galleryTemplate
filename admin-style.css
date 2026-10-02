@@ -191,3 +191,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
+
+.admin-field-full {
+    grid-column: 1 / -1;
+}
+
+.admin-field textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 160px;
+}
