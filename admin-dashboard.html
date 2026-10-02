@@ -150,7 +150,7 @@
 
                 <button
                     type="button"
-                    id="add-arwork-button"
+                    id="add-artwork-button"
                     class="admin-submit">
 
                     + Add Artwork
@@ -171,6 +171,133 @@
             </div>
 
         </section>
+
+        <!-- Add Artwork Panel -->
+<section
+id="add-artwork-panel"
+class="admin-section admin-form-section"
+aria-labelledby="add-artwork-title"
+hidden>
+
+<div class="admin-section-header">
+    <div>
+        <p class="admin-eyebrow">
+            Collection
+        </p>
+
+        <h2 id="add-artwork-title">
+            Add Artwork
+        </h2>
+    </div>
+
+    <button
+        type="button"
+        id="cancel-artwork-button"
+        class="admin-submit">
+        Cancel
+    </button>
+</div>
+
+<form id="add-artwork-form">
+
+    <div class="admin-form-grid">
+
+        <div class="admin-field">
+            <label for="artwork-catalog">
+                Catalog Number
+            </label>
+
+            <input
+                type="text"
+                id="artwork-catalog"
+                required>
+        </div>
+
+        <div class="admin-field">
+            <label for="artwork-title">
+                Title
+            </label>
+
+            <input
+                type="text"
+                id="artwork-title"
+                required>
+        </div>
+
+        <div class="admin-field">
+            <label for="artwork-medium">
+                Medium
+            </label>
+
+            <input
+                type="text"
+                id="artwork-medium">
+        </div>
+
+        <div class="admin-field">
+            <label for="artwork-year">
+                Year
+            </label>
+
+            <input
+                type="number"
+                id="artwork-year">
+        </div>
+
+        <div class="admin-field">
+            <label for="artwork-dimensions">
+                Dimensions
+            </label>
+
+            <input
+                type="text"
+                id="artwork-dimensions"
+                placeholder="16 × 20">
+        </div>
+
+        <div class="admin-field">
+            <label for="artwork-purchase-url">
+                Purchase URL
+            </label>
+
+            <input
+                type="url"
+                id="artwork-purchase-url"
+                placeholder="https://">
+        </div>
+
+        <div class="admin-field admin-field-full">
+            <label for="artwork-description">
+                Description
+            </label>
+
+            <textarea
+                id="artwork-description"
+                rows="6">
+            </textarea>
+        </div>
+
+    </div>
+
+    <div class="admin-form-actions">
+
+        <button
+            type="submit"
+            class="admin-submit">
+            Save Artwork
+        </button>
+
+    </div>
+
+    <p
+        id="add-artwork-message"
+        class="admin-message"
+        aria-live="polite">
+    </p>
+
+</form>
+
+</section>
 
 
         <!-- =================================================
