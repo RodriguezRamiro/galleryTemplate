@@ -65,7 +65,7 @@ async function verifyDashboardSession() {
 const singOutButton =
     document.querySelector("#admin-sign-out");
 
-singOutButton.addEventListener("click",, async () => {
+singOutButton.addEventListener("click", async () => {
     singOutButton.disabled = true;
     singOutButton.textContent = "Signing out...";
 
