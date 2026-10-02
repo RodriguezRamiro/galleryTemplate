@@ -132,7 +132,7 @@ async function loadDashboardExhibitions() {
             .select(`
                 id,
                 title,
-                descritpion,
+                description,
                 status,
                 sort_order,
                 created_at
