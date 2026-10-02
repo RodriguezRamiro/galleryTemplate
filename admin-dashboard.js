@@ -13,7 +13,7 @@ const addArtworkButton = document.querySelector("#add-artwork-button");
 
 const addArtworkPanel = document.querySelector("#add-artwork-panel");
 
-const cancelArtworkButton = document.querySelector("#candel-artwork-button");
+const cancelArtworkButton = document.querySelector("#cancel-artwork-button");
 
 
 /* =====================================================
