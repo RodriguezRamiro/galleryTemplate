@@ -289,3 +289,21 @@ Artist Admin
 → New password
 → updateUser()
 → Password successfully changed
+
+
+10-02-2026
+Add Artwork interface fully behaving on the front end
+without touching the database yet.
+
+Current state
+✅ Authentication
+✅ Dashboard session protection
+✅ Sign Out
+✅ Artwork loading
+✅ Artwork cards
+✅ Exhibition loading
+✅ Add Artwork button
+✅ Add Artwork panel
+✅ Open/close behavior
+✅ Clean console
+✅ No database mutations yet
