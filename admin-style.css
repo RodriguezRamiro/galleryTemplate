@@ -175,3 +175,13 @@
     }
 
 }
+
+/* =====================================================
+   ADD ARTWORK FORM
+===================================================== */
+
+.admin-form-section {
+    background: var(--surface);
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
