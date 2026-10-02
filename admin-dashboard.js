@@ -115,7 +115,7 @@ addArtworkButton.addEventListener("click", () => {
 
 cancelArtworkButton.addEventListener("click", () => {
 
-    addArtworkButton.hidden = true;
+    addArtworkPanel.hidden = true;
 
 });
 
