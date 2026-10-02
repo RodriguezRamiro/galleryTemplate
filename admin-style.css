@@ -132,3 +132,10 @@
     object-fit: cover;
     display: block;
 }
+
+.admin-artwork-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
