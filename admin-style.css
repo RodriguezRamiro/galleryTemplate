@@ -118,3 +118,10 @@
     background: var(--surface);
     border: 1px solid var(--border);
 }
+
+.admin-artwork-image {
+    width: 140px;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--surface-alt);
+}
