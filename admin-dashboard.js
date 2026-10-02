@@ -181,6 +181,16 @@ async function loadDashboardArtworks() {
     renderDashboardArtworks(data);
 }
 
+/* =====================================================
+   Save Artwork
+===================================================== */
+
+const addArtworkForm = document.querySelector("#add-artwork-form");
+
+const addArtworkMessage = document.querySelector("#add-artwork-message");
+
+
+
 
 /* =====================================================
    Load Exhibition Data
