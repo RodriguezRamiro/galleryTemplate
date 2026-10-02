@@ -62,12 +62,13 @@ async function verifyDashboardSession() {
    Sign Out
 ===================================================== */
 
-const singOutButton =
+const signOutButton =
     document.querySelector("#admin-sign-out");
 
-singOutButton.addEventListener("click", async () => {
-    singOutButton.disabled = true;
-    singOutButton.textContent = "Signing out...";
+signOutButton.addEventListener("click", async () => {
+
+    signOutButton.disabled = true;
+    signOutButton.textContent = "Signing out...";
 
     const { error } =
         await window.supabaseClient.auth.signOut();
@@ -75,19 +76,22 @@ singOutButton.addEventListener("click", async () => {
     if (error) {
 
         console.error(
-            "unable to sing out:",
+            "Unable to sign out:",
             error
         );
 
-        singOutButton.disabled = false;
-        singOutButton.textCOntent =
-            "unable to sing out. Please try again.";
+        signOutButton.disabled = false;
+        signOutButton.textContent = "Sign Out";
 
-            return;
+        dashboardMessage.textContent =
+            "Unable to sign out. Please try again.";
+
+        return;
     }
 
-    window.location.href = "./admin.html",
-})
+    window.location.href = "./admin.html";
+});
+
 /* =====================================================
    Load Artwork Data
 ===================================================== */
