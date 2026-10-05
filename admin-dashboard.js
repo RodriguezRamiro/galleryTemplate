@@ -189,7 +189,28 @@ const addArtworkForm = document.querySelector("#add-artwork-form");
 
 const addArtworkMessage = document.querySelector("#add-artwork-message");
 
+addArtworkForm.addEventListener("submit", async (event) => {
 
+    event.predentDefault();
+
+    addArtworkMessage.textContent = "Saving artwork...";
+
+    const catalgoNumber = document.querySelector("#artwork-catalog").value.trim();
+
+    const title = document.querySelector("#artwork-title").value.trim();
+
+    const medium = document.querySelector("#artwork-medium").value.trim();
+
+    const yearValue = document.querySelector("#artwork-year").value.trim();
+
+    const dimensions = document.querySelector("#artwork-dimessnions").value.train();
+
+    const description = document.querySelector("#artwork-description").value.trim();
+
+    const purchaseUrl = document.querySelector("#artwork-purchase-url").value.trim();
+
+    
+})
 
 
 /* =====================================================
