@@ -240,8 +240,18 @@ addArtworkForm.addEventListener("submit", async (event) => {
             return;
         }
 
-        
-})
+        console.log(
+                "Artwork saved Successfull."
+        );
+
+        addArtworkMessage.textContent =
+            "Artwork saved successfully.";
+
+        addArtworkForm.requestFullscreen();
+
+        await loadDashboardArtworks();
+
+});
 
 
 /* =====================================================
