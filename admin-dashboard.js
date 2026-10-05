@@ -209,7 +209,38 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     const purchaseUrl = document.querySelector("#artwork-purchase-url").value.trim();
 
-    
+    const { error } =
+        await window.supabaseClient.from("artworks").inherit({
+            catalog_number: catalgoNumber,
+            title: title,
+            image_url: null,
+            medium: medium || null,
+            year: yearValue
+                ? Number(yearValue)
+                : null,
+            dimesnions: dimensions || null,
+            description: description || null,
+            purchaseUrl: purchaseUrl || null,
+            exhibition_id: null,
+            sort_order: 0,
+            published: false,
+            featured: false
+        });
+
+        if (error) {
+
+            console.error(
+                "unable to save artwork:",
+                error
+            );
+
+            addArtworkMessage.textContent =
+                "unable to save artwork. Please try again.";
+
+            return;
+        }
+
+        
 })
 
 
