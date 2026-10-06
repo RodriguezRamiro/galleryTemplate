@@ -191,11 +191,11 @@ const addArtworkMessage = document.querySelector("#add-artwork-message");
 
 addArtworkForm.addEventListener("submit", async (event) => {
 
-    event.predentDefault();
+    event.preventDefault();
 
     addArtworkMessage.textContent = "Saving artwork...";
 
-    const catalgoNumber = document.querySelector("#artwork-catalog").value.trim();
+    const catalogNumber = document.querySelector("#artwork-catalog").value.trim();
 
     const title = document.querySelector("#artwork-title").value.trim();
 
@@ -203,24 +203,24 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     const yearValue = document.querySelector("#artwork-year").value.trim();
 
-    const dimensions = document.querySelector("#artwork-dimessnions").value.train();
+    const dimensions = document.querySelector("#artwork-dimensions").value.trim();
 
     const description = document.querySelector("#artwork-description").value.trim();
 
     const purchaseUrl = document.querySelector("#artwork-purchase-url").value.trim();
 
     const { error } =
-        await window.supabaseClient.from("artworks").inherit({
-            catalog_number: catalgoNumber,
+        await window.supabaseClient.from("artworks").insert({
+            catalog_number: catalogNumber,
             title: title,
             image_url: null,
             medium: medium || null,
             year: yearValue
                 ? Number(yearValue)
                 : null,
-            dimesnions: dimensions || null,
+            dimensions: dimensions || null,
             description: description || null,
-            purchaseUrl: purchaseUrl || null,
+            purchase_url: purchaseUrl || null,
             exhibition_id: null,
             sort_order: 0,
             published: false,
@@ -247,7 +247,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
         addArtworkMessage.textContent =
             "Artwork saved successfully.";
 
-        addArtworkForm.requestFullscreen();
+        addArtworkForm.reset();
 
         await loadDashboardArtworks();
 
