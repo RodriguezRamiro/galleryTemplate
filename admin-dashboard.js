@@ -185,71 +185,112 @@ async function loadDashboardArtworks() {
    Save Artwork
 ===================================================== */
 
-const addArtworkForm = document.querySelector("#add-artwork-form");
+const addArtworkForm =
+    document.querySelector("#add-artwork-form");
 
-const addArtworkMessage = document.querySelector("#add-artwork-message");
+const addArtworkMessage =
+    document.querySelector("#add-artwork-message");
+
 
 addArtworkForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
-    addArtworkMessage.textContent = "Saving artwork...";
+    addArtworkMessage.textContent =
+        "Saving artwork...";
 
-    const catalogNumber = document.querySelector("#artwork-catalog").value.trim();
 
-    const title = document.querySelector("#artwork-title").value.trim();
+    const catalogNumber =
+        document
+            .querySelector("#artwork-catalog")
+            .value
+            .trim();
 
-    const medium = document.querySelector("#artwork-medium").value.trim();
+    const title =
+        document
+            .querySelector("#artwork-title")
+            .value
+            .trim();
 
-    const yearValue = document.querySelector("#artwork-year").value.trim();
+    const medium =
+        document
+            .querySelector("#artwork-medium")
+            .value
+            .trim();
 
-    const dimensions = document.querySelector("#artwork-dimensions").value.trim();
+    const yearValue =
+        document
+            .querySelector("#artwork-year")
+            .value
+            .trim();
 
-    const description = document.querySelector("#artwork-description").value.trim();
+    const dimensions =
+        document
+            .querySelector("#artwork-dimensions")
+            .value
+            .trim();
 
-    const purchaseUrl = document.querySelector("#artwork-purchase-url").value.trim();
+    const description =
+        document
+            .querySelector("#artwork-description")
+            .value
+            .trim();
+
+    const purchaseUrl =
+        document
+            .querySelector("#artwork-purchase-url")
+            .value
+            .trim();
+
 
     const { error } =
-        await window.supabaseClient.from("artworks").insert({
-            catalog_number: catalogNumber,
-            title: title,
-            image_url: null,
-            medium: medium || null,
-            year: yearValue
-                ? Number(yearValue)
-                : null,
-            dimensions: dimensions || null,
-            description: description || null,
-            purchase_url: purchaseUrl || null,
-            exhibition_id: null,
-            sort_order: 0,
-            published: false,
-            featured: false
-        });
+        await window.supabaseClient
+            .from("artworks")
+            .insert({
+                catalog_number: catalogNumber,
+                title: title,
+                image_url: null,
+                medium: medium || null,
+                year: yearValue
+                    ? Number(yearValue)
+                    : null,
+                dimensions: dimensions || null,
+                description: description || null,
+                purchase_url: purchaseUrl || null,
+                exhibition_id: null,
+                sort_order: 0,
+                published: false,
+                featured: false
+            });
 
-        if (error) {
 
-            console.error(
-                "unable to save artwork:",
-                error
-            );
+    if (error) {
 
-            addArtworkMessage.textContent =
-                "unable to save artwork. Please try again.";
-
-            return;
-        }
-
-        console.log(
-                "Artwork saved Successfull."
+        console.error(
+            "Unable to save artwork:",
+            error
         );
 
         addArtworkMessage.textContent =
-            "Artwork saved successfully.";
+            "Unable to save artwork. Please try again.";
 
-        addArtworkForm.reset();
+        return;
+    }
 
-        await loadDashboardArtworks();
+
+    console.log(
+        "Artwork saved successfully."
+    );
+
+
+    addArtworkMessage.textContent =
+        "Artwork saved successfully.";
+
+
+    addArtworkForm.reset();
+
+
+    await loadDashboardArtworks();
 
 });
 
