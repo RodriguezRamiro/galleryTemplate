@@ -307,3 +307,18 @@ Current state
 ✅ Open/close behavior
 ✅ Clean console
 ✅ No database mutations yet
+
+
+10-07-2026
+
+now proven:
+
+✅ Form collects artwork data
+✅ Supabase authentication permits the write
+✅ RLS permits the authenticated write
+✅ Artwork record is created
+✅ Draft status is preserved
+✅ Authenticated users can read drafts
+✅ Public users remain restricted to published artwork
+✅ Dashboard refreshes and displays the new record
+✅ No console errors
