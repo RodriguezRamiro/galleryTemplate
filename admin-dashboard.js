@@ -203,6 +203,20 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     const imageFile = artworkImage.files[0];
 
+    if (!imageFile) {
+
+        addArtworkMessage.textContent =
+            "Please select and artwok image.";
+
+        return;
+    }
+
+    addArtworkMessage.textContent =
+        "Uploading artwork image...";
+
+        const fileExtension =
+            imageFile.name.split(".").pop();
+
     const catalogNumber =
         document
             .querySelector("#artwork-catalog")
