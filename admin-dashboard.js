@@ -219,7 +219,14 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     const fileName = `${crypto.randumUUID()}.${fileExtension}`;
 
-    
+    const filePath = fileName;
+
+    const { error: uploadError } =
+        await window.supabaseClient
+            .storage
+            .from("artworks")
+            .upload(filePath, imageFile);
+
 
 
     const catalogNumber =
