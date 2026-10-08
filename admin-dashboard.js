@@ -201,6 +201,8 @@ addArtworkForm.addEventListener("submit", async (event) => {
         "Saving artwork...";
 
 
+    const imageFile = artworkImage.files[0];
+
     const catalogNumber =
         document
             .querySelector("#artwork-catalog")
