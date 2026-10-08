@@ -214,8 +214,13 @@ addArtworkForm.addEventListener("submit", async (event) => {
     addArtworkMessage.textContent =
         "Uploading artwork image...";
 
-        const fileExtension =
+    const fileExtension =
             imageFile.name.split(".").pop();
+
+    const fileName = `${crypto.randumUUID()}.${fileExtension}`;
+
+    
+
 
     const catalogNumber =
         document
