@@ -227,7 +227,18 @@ addArtworkForm.addEventListener("submit", async (event) => {
             .from("artworks")
             .upload(filePath, imageFile);
 
+    if (uploadError) {
 
+        console.error(
+                "unable to upload arwork image:",
+                uploadError
+        );
+
+        addArtworkMessage.textContent =
+            "Unable to upload arrwork image. Please try again.";
+
+        return;
+    }
 
     const catalogNumber =
         document
