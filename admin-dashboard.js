@@ -240,6 +240,15 @@ addArtworkForm.addEventListener("submit", async (event) => {
         return;
     }
 
+    const { data: publicUrlData } =
+        window.supabaseClient
+            .storage
+            .from("artworks")
+            .getPublicUrl(filePath);
+
+    const imageUrl =
+        piblicData.publicUrl
+
     const catalogNumber =
         document
             .querySelector("#artwork-catalog")
