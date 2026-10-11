@@ -94,7 +94,35 @@ artworkList.addEventListener("click", async (event) => {
                 "Unable to loadartwork for editng:",
                 error
             );
+
+            addArtworkMessage.textContent =
+                "Unable to load artwork. Please try again.";
+
+            return;
     }
+
+    editingArtworkId = artwork.id;
+
+    document.querySelector("#artwork-catalog").value =
+        artwork.catalog_number || "";
+
+    document.querySelector("#artwork-title").value =
+        artwork.title || "";
+
+    document.querySelector("#artwork-medium").value =
+        artwork.medium || "";
+
+        document.querySelector("#artwork-year").value =
+        artwork.year ?? "";
+
+    document.querySelector("#artwork-dimensions").value =
+        artwork.dimensions || "";
+
+    document.querySelector("#artwork-description").value =
+        artwork.description || "";
+
+    document.querySelector("#artwork-purchase-url").value =
+        artwork.purchase_url || "";
 
 
 })
