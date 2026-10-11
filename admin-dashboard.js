@@ -410,7 +410,7 @@ const artworkData = {
 
     let error;
 
-    if (editingartworkId) {
+    if (editingArtworkId) {
 
         const result =
             await window.supabaseClient
