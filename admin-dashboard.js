@@ -465,7 +465,6 @@ const artworkData = {
 
     // Refresh the dashboard.
     await loadDashboardArtworks();
-    )
 
 });
 
