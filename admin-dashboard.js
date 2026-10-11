@@ -72,19 +72,19 @@ async function verifyDashboardSession() {
 artworkList.addEventListener("click", async (event) => {
 
     const editButton =
-        event.target.closest("edit-artwork-button");
+        event.target.closest(".edit-artwork-button");
 
     if (!editButton) {
         return;
     }
 
-    const artworkId = editButton.dataset.artwokId;
+    const artworkId = editButton.dataset.artworkId;
 
     addArtworkMessage.textContent = "Loading artwork...";
 
     const {data: artwork, error } =
         await window.supabaseClient
-            .form("artowrks")
+            .from("artowrks")
             .select("*")
             .eq("id", artworkId)
             .single();
@@ -126,7 +126,7 @@ artworkList.addEventListener("click", async (event) => {
 
     addArtworkTitle.textContent = "Edit Artwork";
 
-    saveArtworkButton.textContent = "save Changes";
+    saveArtworkButton.textContent = "Save Changes";
 
     addArtworkMessage.textContent =
         "Artwork loaded for editing. Select a new image only if you want to replace it.";
@@ -179,10 +179,6 @@ signOutButton.addEventListener("click", async () => {
    Add Artwork Panel
 ===================================================== */
 
-const addArtworkTitle = document.querySelector("#add-artwork-title");
-
-const saveArtworkButton = addArtworkForm.querySelector('button[type="submit"]');
-
 addArtworkButton.addEventListener("click", () => {
 
     editingArtworkId = null;
@@ -202,6 +198,21 @@ addArtworkButton.addEventListener("click", () => {
 });
 
 cancelArtworkButton.addEventListener("click", () => {
+
+
+const addArtworkForm =
+document.querySelector("#add-artwork-form");
+
+const addArtworkMessage =
+document.querySelector("#add-artwork-message");
+
+const addArtworkTitle =
+document.querySelector("#add-artwork-title");
+
+const saveArtworkButton =
+addArtworkForm.querySelector('button[type="submit"]');
+
+let editingArtworkId = null;
 
     addArtworkPanel.hidden = true;
 
@@ -280,12 +291,6 @@ async function loadDashboardArtworks() {
 /* =====================================================
    Save Artwork
 ===================================================== */
-
-const addArtworkForm =
-    document.querySelector("#add-artwork-form");
-
-const addArtworkMessage =
-    document.querySelector("#add-artwork-message");
 
 
 addArtworkForm.addEventListener("submit", async (event) => {
@@ -617,7 +622,7 @@ function renderDashboardArtworks(artworks) {
                         data-artwork-id="${artwork.id}"
                     >
                     Edit
-                    </buttton>
+                    </button>
 
                 </div>
 
