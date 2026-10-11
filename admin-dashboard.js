@@ -26,6 +26,8 @@ const cancelArtworkButton = document.querySelector("#cancel-artwork-button");
 
 let editingArtworkId = null;
 
+letEditingArtworkImageURl = null
+
 /* =====================================================
    Dashboard Authentication Check
 ===================================================== */
@@ -111,6 +113,8 @@ artworkList.addEventListener("click", async (event) => {
     }
 
     editingArtworkId = artwork.id;
+
+    editingArtworkImageUrl = artwork.image_url;
 
     document.querySelector("#artwork-catalog").value =
         artwork.catalog_number || "";
@@ -223,6 +227,7 @@ addArtworkForm.querySelector('button[type="submit"]');
 
 let editingArtworkId = null;
 
+
     addArtworkPanel.hidden = true;
 
     editingArtworkId = null
@@ -312,13 +317,40 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     const imageFile = artworkImage.files[0];
 
-    if (!imageFile) {
-
-        addArtworkMessage.textContent =
-            "Please select and artwok image.";
-
-        return;
+    // A new artwork must have an image.
+    if (!editingArtworkId && !imageFile) {
+            addArtworkMessage.textContent =
+                "please select an artwork image.";
+            return;
     }
+
+    // Read the form fields.
+    const catalogNumber =
+        document.querySelector("#artwork-catalog").value.trim();
+
+    const title =
+        document.querySelector("#artwork-title").value.trim();
+
+    const medium =
+        document.querySelector("#artwork-medium").value.trim();
+
+    const yearValue =
+        document.querySelector("#artwork-year").value.trim();
+
+    const dimensions =
+        document.querySelector("#artwork-dimensions").value.trim();
+
+    const description =
+        document.querySelector("#artwork-description").value.trim();
+
+    const purchaseUrl =
+        document.querySelector("#artwork-purchase-url").value.trim();
+
+    // Preserve the current image unless replacemne is selected.
+    let imageUrl = editingArtworkImageUrl;
+
+    // Upload an image only when a file has been selected.
+    if (imageFile) {
 
     addArtworkMessage.textContent =
         "Uploading artwork image...";
@@ -339,7 +371,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
     if (uploadError) {
 
         console.error(
-                "unable to upload arwork image:",
+                "Unable to upload arwork image:",
                 uploadError
         );
 
@@ -355,75 +387,55 @@ addArtworkForm.addEventListener("submit", async (event) => {
             .from("artworks")
             .getPublicUrl(filePath);
 
-    const imageUrl =
+    imageUrl =
         publicUrlData.publicUrl
 
-    const catalogNumber =
-        document
-            .querySelector("#artwork-catalog")
-            .value
-            .trim();
+}
 
-    const title =
-        document
-            .querySelector("#artwork-title")
-            .value
-            .trim();
+// Build the editable fields shared by both operations.
 
-    const medium =
-        document
-            .querySelector("#artwork-medium")
-            .value
-            .trim();
+const artworkData = {
+    catalog_number: catalogNumber,
+    title: title,
+    image_url: imageUrl,
+    medium: medium || null,
+    year: yearValue ? Number(yearValue) : null,
+    dimensions: dimensions || null,
+    description: description || null,
+    purchase_url: purchaseUrl || null
+};
 
-    const yearValue =
-        document
-            .querySelector("#artwork-year")
-            .value
-            .trim();
+    // EDIT: update the existing record by its UUID.
+    // ADD: insert a new record with the default dashboard settings.
 
-    const dimensions =
-        document
-            .querySelector("#artwork-dimensions")
-            .value
-            .trim();
+    let error;
 
-    const description =
-        document
-            .querySelector("#artwork-description")
-            .value
-            .trim();
+    if (editingartworkId) {
 
-    const purchaseUrl =
-        document
-            .querySelector("#artwork-purchase-url")
-            .value
-            .trim();
+        const result =
+            await window.supabaseClient
+                .from("artworks")
+                .update(artworkData)
+                .eq("id", editingArtworkId);
 
+        error = result.error;
 
-    const { error } =
-        await window.supabaseClient
-            .from("artworks")
-            .insert({
-                catalog_number: catalogNumber,
-                title: title,
-                image_url: imageUrl,
-                medium: medium || null,
-                year: yearValue
-                    ? Number(yearValue)
-                    : null,
-                dimensions: dimensions || null,
-                description: description || null,
-                purchase_url: purchaseUrl || null,
-                exhibition_id: null,
-                sort_order: 0,
-                published: false,
-                featured: false
-            });
+    } else {
 
+        const result = await window.supabaseClient
+                            from("artworks")
+                            .insert({
+                                ...artworkData,
+                                exhibition_id: null,
+                                sort_order: 0,
+                                published: false,
+                                featured: flase
+                            });
 
-    if (error) {
+                            error = result.error;
+    }
 
+    
         console.error(
             "Unable to save artwork:",
             error
