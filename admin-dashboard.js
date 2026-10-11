@@ -217,7 +217,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
     const fileExtension =
             imageFile.name.split(".").pop();
 
-    const fileName = `${crypto.randumUUID()}.${fileExtension}`;
+    const fileName = `${crypto.randomUUID()}.${fileExtension}`;
 
     const filePath = fileName;
 
