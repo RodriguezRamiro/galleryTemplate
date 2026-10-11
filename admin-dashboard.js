@@ -130,6 +130,14 @@ cancelArtworkButton.addEventListener("click", () => {
 
     addArtworkPanel.hidden = true;
 
+    editingArtworkId = null
+
+    addArtworkForm.reset();
+
+    addArtworkTitle.textContent = "Add Artwork";
+
+    saveArtworkButton.textContent = "Save Artwork"
+
 });
 
 /* =====================================================
