@@ -104,6 +104,10 @@ signOutButton.addEventListener("click", async () => {
    Add Artwork Panel
 ===================================================== */
 
+const addArtworkTitle = document.querySelector("#add-artwork-title");
+
+const saveArtworkButton = addArtworkForm.querySelector('button[type="submit"]');
+
 addArtworkButton.addEventListener("click", () => {
 
     addArtworkPanel.hidden = false;
