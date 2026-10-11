@@ -78,7 +78,13 @@ artworkList.addEventListener("click", async (event) => {
         return;
     }
 
-    
+    const artworkId = editButton.dataset.artwokId;
+
+    addArtworkMessage.textContent = "Loading artwork...";
+
+
+
+
 })
 
 /* =====================================================
