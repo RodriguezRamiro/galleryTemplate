@@ -124,8 +124,21 @@ artworkList.addEventListener("click", async (event) => {
     document.querySelector("#artwork-purchase-url").value =
         artwork.purchase_url || "";
 
+    addArtworkTitle.textContent = "Edit Artwork";
 
-})
+    saveArtworkButton.textContent = "save Changes";
+
+    addArtworkMessage.textContent =
+        "Artwork loaded for editing. Select a new image only if you want to replace it.";
+
+    addArtworkPanel.hidden = false;
+
+    addArtworkPanel.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+    });
+
+});
 
 /* =====================================================
    Sign Out
