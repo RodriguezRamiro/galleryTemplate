@@ -322,3 +322,23 @@ now proven:
 ✅ Public users remain restricted to published artwork
 ✅ Dashboard refreshes and displays the new record
 ✅ No console errors
+
+
+10-10-2026
+
+Confirmation from both the Supabase data
+and the Artist Dashboard.
+
+Image upload test results
+
+Image uploaded to Supabase Storage
+The image_url contains a valid-looking public Storage URL ending in .jpeg.
+
+Database record saved
+The record has its own UUID, catalog number 09, title testImageUpload, and populated image_url field.
+
+Dashboard displays the image
+The image appears on the artwork card alongside the title and metadata.
+
+Dashboard refresh works
+The count increased from 8 to 9 artworks, and the new record appeared in the collection.
