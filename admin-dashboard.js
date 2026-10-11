@@ -455,20 +455,33 @@ function renderDashboardExhibitions(exhibitions) {
 function renderDashboardArtworks(artworks) {
 
     if (!artworkList) {
+        console.error(
+            "Artwork list element was not found."
+        );
+
+        return;
+    }
+
+    if (!artworks || artworks.length === 0) {
+
+
 
         artworkList.innerHTML = `
-            <p class="admin-message">
-                No artworks found.
-            </p>
-            `;
+        <p class="admin-message">
+        No artworks found.
+        </p>
+        `;
 
-            return;
+        return;
+
     }
 
     artworkList.innerHTML =
         artworks.map(artwork => `
 
-            <article class="admin-artwork-item">
+            <article class="admin-artwork-item"
+                     data-artwork-id="${artwork.id}"
+                     >
 
                 <div class="admin-artwork-image">
 
@@ -478,7 +491,6 @@ function renderDashboardArtworks(artworks) {
                     >
 
                 </div>
-
 
                 <div class="admin-artwork-details">
 
@@ -503,6 +515,14 @@ function renderDashboardArtworks(artworks) {
                             ? " · Featured"
                             : ""}
                     </p>
+
+                <button
+                        type="button"
+                        class="admin-submit edit-artwork-button"
+                        data-artwork-id="${artwork.id}"
+                    >
+                    Edit
+                    </buttton>
 
                 </div>
 
