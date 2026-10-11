@@ -14,8 +14,17 @@ const addArtworkButton = document.querySelector("#add-artwork-button");
 
 const addArtworkPanel = document.querySelector("#add-artwork-panel");
 
+const addArtworkForm = document.querySelector("#add-artwork-form");
+
+const addArtworkMessage = document.querySelector("#add-artwork-message");
+
+const addArtworkTitle = document.querySelector("#add-artwork-title");
+
+const saveArtworkButton = addArtworkForm.querySelector('button[type="submit"]');
+
 const cancelArtworkButton = document.querySelector("#cancel-artwork-button");
 
+let editingArtworkId = null;
 
 /* =====================================================
    Dashboard Authentication Check
