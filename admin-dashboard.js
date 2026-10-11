@@ -448,7 +448,9 @@ const artworkData = {
     console.log(
             editingArtworkId
             ? "artwork updated successfully."
-            : "artwork added successfully.";
+            : "artwork added successfully."
+
+    );
 
     addArtworkMessage.textContent = editingArtworkId
             ? "Artwork updated successfully."
