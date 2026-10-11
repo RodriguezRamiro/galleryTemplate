@@ -66,6 +66,22 @@ async function verifyDashboardSession() {
 
 
 /* =====================================================
+   Edit Artwork — Load Existing Data
+===================================================== */
+
+artworkList.addEventListener("click", async (event) => {
+
+    const editButton =
+        event.target.closest("edit-artwork-button");
+
+    if (!editButton) {
+        return;
+    }
+
+    
+})
+
+/* =====================================================
    Sign Out
 ===================================================== */
 
