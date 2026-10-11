@@ -110,6 +110,14 @@ const saveArtworkButton = addArtworkForm.querySelector('button[type="submit"]');
 
 addArtworkButton.addEventListener("click", () => {
 
+    editingArtworkId = null;
+
+    addArtworkForm.reset();
+
+    addArtworkTitle.textContent = "Add Artwork";
+
+    saveArtworkButton.textContent = "Save Artwork";
+
     addArtworkPanel.hidden = false;
 
     addArtworkPanel.scrollIntoView({
