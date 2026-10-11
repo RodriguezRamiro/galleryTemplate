@@ -298,7 +298,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
             .insert({
                 catalog_number: catalogNumber,
                 title: title,
-                image_url: null,
+                image_url: imageUrl,
                 medium: medium || null,
                 year: yearValue
                     ? Number(yearValue)
