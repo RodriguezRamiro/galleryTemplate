@@ -435,32 +435,37 @@ const artworkData = {
                             error = result.error;
     }
 
-    
-        console.error(
-            "Unable to save artwork:",
-            error
-        );
+    // Report database errors without resetting the form.
+    if(error) {
+        console.error("Unable to save artwork:", error);
 
         addArtworkMessage.textContent =
-            "Unable to save artwork. Please try again.";
+            "unable to save artwork. Please try again.";
 
         return;
     }
 
-
     console.log(
-        "Artwork saved successfully."
-    );
+            editingArtworkId
+            ? "artwork updated successfully."
+            : "artwork added successfully.";
 
+    addArtworkMessage.textContent = editingArtworkId
+            ? "Artwork updated successfully."
+            : "Artwork added successfully.";
 
-    addArtworkMessage.textContent =
-        "Artwork saved successfully.";
-
+    // Reset the form to add Artwork mode.
+    editingArtworkId = null;
+    editingArtworkImageUrl = null;
 
     addArtworkForm.reset();
 
+    addArtworkTitle.textContent = "Add Artwork";
+    saveArtworkButton.textContent = "Save Artwork";
 
+    // Refresh the dashboard.
     await loadDashboardArtworks();
+    )
 
 });
 
