@@ -82,7 +82,19 @@ artworkList.addEventListener("click", async (event) => {
 
     addArtworkMessage.textContent = "Loading artwork...";
 
+    const {data: artwork, error } =
+        await window.supabaseClient
+            .form("artowrks")
+            .select("*")
+            .eq("id", artworkId)
+            .single();
 
+    if (error) {
+            console.error(
+                "Unable to loadartwork for editng:",
+                error
+            );
+    }
 
 
 })
