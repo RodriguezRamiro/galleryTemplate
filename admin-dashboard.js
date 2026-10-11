@@ -247,7 +247,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
             .getPublicUrl(filePath);
 
     const imageUrl =
-        piblicData.publicUrl
+        publicUrlData.publicUrl
 
     const catalogNumber =
         document
