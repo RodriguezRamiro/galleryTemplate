@@ -91,9 +91,9 @@ artworkList.addEventListener("click", async (event) => {
 
     addArtworkMessage.textContent = "Loading artwork...";
 
-    const {data: artwork, error } =
+    const { data: artwork, error } =
         await window.supabaseClient
-            .from("artowrks")
+            .from("artworks")
             .select("*")
             .eq("id", artworkId)
             .single();
