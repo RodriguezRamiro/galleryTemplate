@@ -342,3 +342,13 @@ The image appears on the artwork card alongside the title and metadata.
 
 Dashboard refresh works
 The count increased from 8 to 9 artworks, and the new record appeared in the collection.
+
+
+10-12-2026
+Authentication: The dashboard session is valid.
+
+Artwork editing: artwork updated successfully. confirms the edit handler completed successfully.
+Publishing: Artwork published successfully. confirms the database updated the artwork's published field to true.
+
+Unpublishing: Arwork unpublished successfully. confirms the artwork was returned to draft status. The misspelling of “Artwork” in that log is cosmetic.
+Dashboard refresh: Each operation reloads the artwork list, which continues to show all 10 records.
