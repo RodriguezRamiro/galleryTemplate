@@ -680,6 +680,8 @@ artworkList.addEventListener("click", async (event) => {
         return;
     }
 
+    const artworkId = publishButton.dataset.artworkId
+
     const currentlyPublished =
         publishButton.dataset.published === "true";
 
