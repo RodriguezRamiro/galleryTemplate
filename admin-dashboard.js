@@ -668,6 +668,20 @@ function renderDashboardArtworks(artworks) {
 }
 
 /* =====================================================
+   Toggle Artwork Publication
+===================================================== */
+
+artworkList.addEventListener("click", async (event) => {
+
+    const publishButton =
+        event.target.closest(".toggle-published-button");
+
+    if (!publishButton) {
+        return;
+    }
+})
+
+/* =====================================================
    Initialize Dashboard
 ===================================================== */
 
