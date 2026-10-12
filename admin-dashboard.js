@@ -706,10 +706,24 @@ artworkList.addEventListener("click", async (event) => {
         dashboardMessage.textContent =
                 "Unable to update publication status. Please try again.";
 
-        await
+        await loadDashboardArtworks();
+        return;
     }
 
-})
+    console.log(
+        nextPublishedState
+            ? "Artwork published successfully."
+            : "Arwork unpublished successfully."
+    )
+
+    dashboardMessage.textContent =
+        nextPublishedState
+            ? "Artwork published successfully."
+            : "Artwork returned to draft.";
+
+    await loadDashboardArtworks();
+
+});
 
 /* =====================================================
    Initialize Dashboard
