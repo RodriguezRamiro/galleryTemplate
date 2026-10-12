@@ -690,7 +690,7 @@ artworkList.addEventListener("click", async (event) => {
 
     const { error } =
         await window.supabaseClient
-            .from("atworks")
+            .from("artworks")
             .update({
                 published: nextPublishedState
             })
