@@ -687,7 +687,28 @@ artworkList.addEventListener("click", async (event) => {
 
     publishButton.textContent =
         nextPublishedState ? "Publishing..." : "Unpublishing...";
-        
+
+    const { error } =
+        await window.supabaseClient
+            .from("atworks")
+            .update({
+                published: nextPublishedState
+            })
+            .eq("id", artworkId);
+
+    if (error) {
+
+            console.error(
+                "Unable to update artwork publication status:",
+                error
+            );
+
+        dashboardMessage.textContent =
+                "Unable to update publication status. Please try again.";
+
+        await
+    }
+
 })
 
 /* =====================================================
