@@ -679,6 +679,15 @@ artworkList.addEventListener("click", async (event) => {
     if (!publishButton) {
         return;
     }
+
+    const currentlyPublished =
+        publishButton.dataset.published === "true";
+
+    const nextPublishedState = !currentlyPublished;
+
+    publishButton.textContent =
+        nextPublishedState ? "Publishing..." : "Unpublishing...";
+        
 })
 
 /* =====================================================
