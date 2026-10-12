@@ -651,6 +651,15 @@ function renderDashboardArtworks(artworks) {
                     Edit
                     </button>
 
+                    <button
+                    type="button"
+                    class="admin-submit toggle-published-button"
+                    data-artwork-id="${artwork.id}"
+                    data-published="${artwork.published}"
+                >
+                    ${artwork.published ? "Unpublish" : "Publish"}
+                </button>
+
                 </div>
 
             </article>
