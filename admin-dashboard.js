@@ -185,9 +185,26 @@ artworkList.addEventListener("click", async (event) => {
     deleteButton.disabled = true;
     deleteButton.textContent = "deleting...";
 
-    dashboardMessage.textCOntent = "Deleting artwork...";
+    dashboardMessage.textContent = "Deleting artwork...";
 
+    try {
 
+        // First, retrieve the image URL for storage cleanUp.
+        const {data: arwork, error: fetchError } =
+            await window.supabaseClient
+                .from("Artworks")
+                .select("image_url")
+                .eq("id", artowkrId)
+                .single();
+
+        if (fetchError) {
+            console.error(
+                "Unable to retrieve artwork before deletion:",
+                fetchError
+            );
+             
+        }
+    }
 
 })
 
