@@ -178,7 +178,16 @@ artworkList.addEventListener("click", async (event) => {
         `Are you sure yuou want to permanently delete "${artworkTitle}"?. /n This action cannot be undone.`
     );
 
-    
+    if (!confirmed) {
+        return;
+    }
+
+    deleteButton.disabled = true;
+    deleteButton.textContent = "deleting...";
+
+    dashboardMessage.textCOntent = "Deleting artwork...";
+
+
 
 })
 
