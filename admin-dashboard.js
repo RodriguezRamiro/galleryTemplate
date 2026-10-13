@@ -821,7 +821,7 @@ function renderDashboardArtworks(artworks) {
 
                 <button
                         type="button"
-                        class=admin-submit delete-artwork-button"
+                        class="admin-submit delete-artwork-button"
                         data-artwork-id="${artworks.id}"
                 >
                         Delete
