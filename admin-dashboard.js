@@ -652,6 +652,14 @@ function renderDashboardArtworks(artworks) {
                     ${artwork.published ? "Unpublish" : "Publish"}
                 </button>
 
+                <button
+                        type="button"
+                        class=admin-submit delete-artwork-button"
+                        data-artwork-id="${artworks.id}"
+                >
+                        Delete
+                </button>
+
                 </div>
 
             </article>
