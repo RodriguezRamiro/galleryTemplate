@@ -455,6 +455,8 @@ const artworkData = {
     addArtworkTitle.textContent = "Add Artwork";
     saveArtworkButton.textContent = "Save Artwork";
 
+    addArtworkPanel.hidden = true;
+
     // Refresh the dashboard.
     await loadDashboardArtworks();
 
