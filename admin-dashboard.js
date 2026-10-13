@@ -165,6 +165,16 @@ artworkList.addEventListener("click", async (event) => {
     if (!deleteButton) {
         return;
     }
+
+    const artworkId = deleteButton.dataset.artworkId;
+
+    const artworkCard = deleteButton.closeset(".admin-artwork-item");
+
+    const artworkTitle = artworkCard?.querySelector("h3")?.textContent.trim()
+                        || "this artwork";
+
+    // Confirm before Permanently deleting anything.
+
 })
 
 /* =====================================================
