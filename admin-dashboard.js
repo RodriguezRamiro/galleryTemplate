@@ -174,6 +174,11 @@ artworkList.addEventListener("click", async (event) => {
                         || "this artwork";
 
     // Confirm before Permanently deleting anything.
+    const confirmed = window.confirm(
+        `Are you sure yuou want to permanently delete "${artworkTitle}"?. /n This action cannot be undone.`
+    );
+
+    
 
 })
 
