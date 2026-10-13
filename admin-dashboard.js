@@ -202,7 +202,28 @@ artworkList.addEventListener("click", async (event) => {
                 "Unable to retrieve artwork before deletion:",
                 fetchError
             );
-             
+
+            dashboardMessage.textContent = "Unable to delete artwork. Please try again.";
+
+            await loadDashboardArtworks();
+            return;
+        }
+
+        // Delete the database record.
+        const { error: deleteError } =
+            await window.supabaseClient
+                .from("artworks")
+                .delete()
+                .eq("id", artworkId);
+
+        if (deleteError) {
+            console.error(
+                "Unable to delete artwork record:",
+                deleteError
+            );
+
+            dashboardMessage.textContent =
+                "Unable to delete artwork. Please try again.";
         }
     }
 
