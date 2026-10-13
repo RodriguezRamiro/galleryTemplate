@@ -289,6 +289,29 @@ artworkList.addEventListener("click", async (event) => {
         // Refresh the dashboard regardless of the image clean up.
 
         await loadDashboardArtworks()
+
+        if (imageCleanupFailed) {
+
+            dashboardMessage.textContent =
+            "Artwork deleted, but its image could not be removed from storage. Check the console.";
+        } else {
+
+            dashboardMessage.textCOntent =
+                "Artowrk deleted Successfully.";
+
+                console.log("Artwork deleted Successfully.");
+        }
+    } catch (error ) {
+
+        console.error(
+            "unexpected error while deleting artwork:",
+            error
+        );
+
+        dashboardMessage.textContent =
+            "An unexpected Error occorude while deleting the artowkr. Check the console.";
+
+            await loadDashboardArtworks()
     }
 
 })
