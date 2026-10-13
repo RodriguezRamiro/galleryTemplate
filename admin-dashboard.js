@@ -154,6 +154,20 @@ artworkList.addEventListener("click", async (event) => {
 });
 
 /* =====================================================
+    Delete Artwork
+===================================================== */
+
+artworkList.addEventListener("click", async (event) => {
+
+    const deleteButton =
+        event.target.closest(".delete-artwork-button");
+
+    if (!deleteButton) {
+        return;
+    }
+})
+
+/* =====================================================
    Sign Out
 ===================================================== */
 
