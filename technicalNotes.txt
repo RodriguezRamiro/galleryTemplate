@@ -352,3 +352,16 @@ Publishing: Artwork published successfully. confirms the database updated the ar
 
 Unpublishing: Arwork unpublished successfully. confirms the artwork was returned to draft status. The misspelling of “Artwork” in that log is cosmetic.
 Dashboard refresh: Each operation reloads the artwork list, which continues to show all 10 records.
+
+10/13/2026
+
+Admin Dashboard Progress.
+
+Add Artwork panel opens correctly
+Cancel closes and resets the form
+Artwork image uploads successfully
+New artwork saves to Supabase
+Form closes after a successful save
+Existing artwork loads into Edit mode
+Edits save without creating duplicate records
+Publish and Unpublish work on the public gallery
