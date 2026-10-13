@@ -224,7 +224,71 @@ artworkList.addEventListener("click", async (event) => {
 
             dashboardMessage.textContent =
                 "Unable to delete artwork. Please try again.";
+
+            await loadDashboardArtworks();
+            return;
         }
+
+        // If the image belongs to the public supabase storage
+        // bucket, attempt to remove the file as well.
+
+        let imageCleanupFailed = false;
+        const imageUrl = arwork.image_url;
+
+        if(imageUrl) {
+
+            try {
+
+                const parsedUrl = new URL(imageUrl);
+
+                const storagePrefix =
+                    "/storage/v1/object/public/artworks/";
+
+            if (
+                parsedUrl.hostName ===
+                    "sgsenlnkfpfvgewhqgxn.supabase.co" &&
+                    parsedUrl.pathname.startsWith(storagePrefix)
+            ) {
+
+                const storagePath = decodedURIComponent(
+                    parsedUrlpathname.slice(
+                        storagePrefix.length
+                    )
+                );
+
+                if (storagePath) {
+
+                    const { error: storageError } =
+                        await window.supabaseClient
+                            .storage
+                            .from("artworks")
+                            .remove([storagePath]);
+
+                    if (storageError) {
+                        console.error(
+                                "artworks record was deleted, but its image could not be removed:",
+                                    storageError
+                        );
+
+                        imageCleanupFailed = true;
+                    }
+                }
+            }
+
+            } catch (storageError) {
+
+                console.error(
+                        "Artwork record was deleted but image cleanup failed:",
+                        storageError
+                );
+
+                imageCleanupFailed = true;
+            }
+        }
+
+        // Refresh the dashboard regardless of the image clean up.
+
+        await loadDashboardArtworks()
     }
 
 })
