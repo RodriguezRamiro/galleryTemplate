@@ -216,7 +216,7 @@ addArtworkButton.addEventListener("click", () => {
 // Close the panel and reset the form.
 cancelArtworkButton.addEventListener("click", () => {
 
-addArtworkPanel.hidden = ture;
+addArtworkPanel.hidden = true;
 
 editingArtworkId = null;
 editingArtworkImageUrl = null;
