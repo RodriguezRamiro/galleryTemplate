@@ -153,8 +153,9 @@ artworkList.addEventListener("click", async (event) => {
 
 });
 
+
 /* =====================================================
-    Delete Artwork
+   Delete Artwork
 ===================================================== */
 
 artworkList.addEventListener("click", async (event) => {
@@ -168,14 +169,16 @@ artworkList.addEventListener("click", async (event) => {
 
     const artworkId = deleteButton.dataset.artworkId;
 
-    const artworkCard = deleteButton.closeset(".admin-artwork-item");
+    const artworkCard =
+        deleteButton.closest(".admin-artwork-item");
 
-    const artworkTitle = artworkCard?.querySelector("h3")?.textContent.trim()
-                        || "this artwork";
+    const artworkTitle =
+        artworkCard?.querySelector("h3")?.textContent.trim()
+        || "this artwork";
 
-    // Confirm before Permanently deleting anything.
+    // Confirm before permanently deleting anything.
     const confirmed = window.confirm(
-        `Are you sure yuou want to permanently delete "${artworkTitle}"?. /n This action cannot be undone.`
+        `Are you sure you want to permanently delete "${artworkTitle}"? This action cannot be undone.`
     );
 
     if (!confirmed) {
@@ -183,18 +186,18 @@ artworkList.addEventListener("click", async (event) => {
     }
 
     deleteButton.disabled = true;
-    deleteButton.textContent = "deleting...";
+    deleteButton.textContent = "Deleting...";
 
     dashboardMessage.textContent = "Deleting artwork...";
 
     try {
 
-        // First, retrieve the image URL for storage cleanUp.
-        const {data: arwork, error: fetchError } =
+        // Retrieve the image URL before deleting the record.
+        const { data: artwork, error: fetchError } =
             await window.supabaseClient
-                .from("Artworks")
+                .from("artworks")
                 .select("image_url")
-                .eq("id", artowkrId)
+                .eq("id", artworkId)
                 .single();
 
         if (fetchError) {
@@ -203,7 +206,8 @@ artworkList.addEventListener("click", async (event) => {
                 fetchError
             );
 
-            dashboardMessage.textContent = "Unable to delete artwork. Please try again.";
+            dashboardMessage.textContent =
+                "Unable to delete artwork. Please try again.";
 
             await loadDashboardArtworks();
             return;
@@ -229,13 +233,12 @@ artworkList.addEventListener("click", async (event) => {
             return;
         }
 
-        // If the image belongs to the public supabase storage
-        // bucket, attempt to remove the file as well.
-
+        // Attempt to remove the image if it belongs to our bucket.
         let imageCleanupFailed = false;
-        const imageUrl = arwork.image_url;
 
-        if(imageUrl) {
+        const imageUrl = artwork.image_url;
+
+        if (imageUrl) {
 
             try {
 
@@ -244,77 +247,78 @@ artworkList.addEventListener("click", async (event) => {
                 const storagePrefix =
                     "/storage/v1/object/public/artworks/";
 
-            if (
-                parsedUrl.hostName ===
-                    "sgsenlnkfpfvgewhqgxn.supabase.co" &&
+                if (
+                    parsedUrl.hostname ===
+                        "sgsenlnkfpfvgewhqgxn.supabase.co" &&
                     parsedUrl.pathname.startsWith(storagePrefix)
-            ) {
+                ) {
 
-                const storagePath = decodedURIComponent(
-                    parsedUrlpathname.slice(
-                        storagePrefix.length
-                    )
-                );
+                    const storagePath = decodeURIComponent(
+                        parsedUrl.pathname.slice(
+                            storagePrefix.length
+                        )
+                    );
 
-                if (storagePath) {
+                    if (storagePath) {
 
-                    const { error: storageError } =
-                        await window.supabaseClient
-                            .storage
-                            .from("artworks")
-                            .remove([storagePath]);
+                        const { error: storageError } =
+                            await window.supabaseClient
+                                .storage
+                                .from("artworks")
+                                .remove([storagePath]);
 
-                    if (storageError) {
-                        console.error(
-                                "artworks record was deleted, but its image could not be removed:",
-                                    storageError
-                        );
+                        if (storageError) {
+                            console.error(
+                                "Artwork was deleted, but its image could not be removed:",
+                                storageError
+                            );
 
-                        imageCleanupFailed = true;
+                            imageCleanupFailed = true;
+                        }
                     }
                 }
-            }
 
             } catch (storageError) {
 
                 console.error(
-                        "Artwork record was deleted but image cleanup failed:",
-                        storageError
+                    "Artwork was deleted, but image cleanup failed:",
+                    storageError
                 );
 
                 imageCleanupFailed = true;
             }
         }
 
-        // Refresh the dashboard regardless of the image clean up.
-
-        await loadDashboardArtworks()
+        // Refresh the dashboard.
+        await loadDashboardArtworks();
 
         if (imageCleanupFailed) {
 
             dashboardMessage.textContent =
-            "Artwork deleted, but its image could not be removed from storage. Check the console.";
+                "Artwork deleted, but its image could not be removed from storage. Check the console.";
+
         } else {
 
-            dashboardMessage.textCOntent =
-                "Artowrk deleted Successfully.";
+            dashboardMessage.textContent =
+                "Artwork deleted successfully.";
 
-                console.log("Artwork deleted Successfully.");
+            console.log("Artwork deleted successfully.");
         }
-    } catch (error ) {
+
+    } catch (error) {
 
         console.error(
-            "unexpected error while deleting artwork:",
+            "Unexpected error while deleting artwork:",
             error
         );
 
         dashboardMessage.textContent =
-            "An unexpected Error occorude while deleting the artowkr. Check the console.";
+            "An unexpected error occurred while deleting artwork. Check the console.";
 
-            await loadDashboardArtworks()
+        await loadDashboardArtworks();
     }
 
-})
+});
 
 /* =====================================================
    Sign Out
