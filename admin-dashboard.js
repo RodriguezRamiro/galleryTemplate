@@ -26,7 +26,7 @@ const cancelArtworkButton = document.querySelector("#cancel-artwork-button");
 
 let editingArtworkId = null;
 
-letEditingArtworkImageUrl = null
+let editingArtworkImageUrl = null
 
 /* =====================================================
    Dashboard Authentication Check
@@ -216,31 +216,17 @@ addArtworkButton.addEventListener("click", () => {
 // Close the panel and reset the form.
 cancelArtworkButton.addEventListener("click", () => {
 
+addArtworkPanel.hidden = ture;
 
-const addArtworkForm =
-document.querySelector("#add-artwork-form");
+editingArtworkId = null;
+editingArtworkImageUrl = null;
 
-const addArtworkMessage =
-document.querySelector("#add-artwork-message");
+addArtworkForm.reset();
 
-const addArtworkTitle =
-document.querySelector("#add-artwork-title");
+addArtworkMessage.textContent = "";
 
-const saveArtworkButton =
-addArtworkForm.querySelector('button[type="submit"]');
-
-let editingArtworkId = null;
-
-
-    addArtworkPanel.hidden = true;
-
-    editingArtworkId = null
-
-    addArtworkForm.reset();
-
-    addArtworkTitle.textContent = "Add Artwork";
-
-    saveArtworkButton.textContent = "Save Artwork"
+addArtworkTitle.textContent = "Add Artwork";
+saveArtworkButton.textContent = "Save Artwork";
 
 });
 
