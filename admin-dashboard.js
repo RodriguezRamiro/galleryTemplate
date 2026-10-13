@@ -419,7 +419,7 @@ const artworkData = {
                                 exhibition_id: null,
                                 sort_order: 0,
                                 published: false,
-                                featured: flase
+                                featured: false
                             });
 
                             error = result.error;
