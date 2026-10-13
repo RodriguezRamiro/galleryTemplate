@@ -413,7 +413,7 @@ const artworkData = {
     } else {
 
         const result = await window.supabaseClient
-                            from("artworks")
+                            .from("artworks")
                             .insert({
                                 ...artworkData,
                                 exhibition_id: null,
