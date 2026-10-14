@@ -271,6 +271,7 @@ artworkList.addEventListener("click", async (event) => {
                                 .remove([storagePath]);
                                 console.log("Storage removal result:", {
                                     storagePath,
+                                    removedFiles,
                                     storageError
                                 });
 
