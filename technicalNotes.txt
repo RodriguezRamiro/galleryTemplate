@@ -365,3 +365,12 @@ Form closes after a successful save
 Existing artwork loads into Edit mode
 Edits save without creating duplicate records
 Publish and Unpublish work on the public gallery
+
+10-14-2026
+
+Artwork management workflow now supports:
+Creating artwork records and uploading images.
+Editing existing artwork and replacing its image.
+Publishing and unpublishing artwork.
+Deleting artwork records and their associated Storage images.
+Refreshing the dashboard list and counts after changes.
