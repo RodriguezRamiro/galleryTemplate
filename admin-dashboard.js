@@ -237,6 +237,7 @@ artworkList.addEventListener("click", async (event) => {
         let imageCleanupFailed = false;
 
         const imageUrl = artwork.image_url;
+        console.log("Image URL for cleanup:", imageUrl);
 
         if (imageUrl) {
 
@@ -251,13 +252,15 @@ artworkList.addEventListener("click", async (event) => {
                     parsedUrl.hostname ===
                         "sgsenlnkfpfvgewhqgxn.supabase.co" &&
                     parsedUrl.pathname.startsWith(storagePrefix)
-                ) {
+                    ) {
+                        console.log("Storage URL matched. Preparing to remove image.");
 
-                    const storagePath = decodeURIComponent(
-                        parsedUrl.pathname.slice(
-                            storagePrefix.length
-                        )
-                    );
+                        const storagePath = decodeURIComponent(
+                            parsedUrl.pathname.slice(
+                                storagePrefix.length
+                                )
+                                );
+                                console.log("Storage path to remove:", storagePath);
 
                     if (storagePath) {
 
@@ -266,6 +269,10 @@ artworkList.addEventListener("click", async (event) => {
                                 .storage
                                 .from("artworks")
                                 .remove([storagePath]);
+                                console.log("Storage removal result:", {
+                                    storagePath,
+                                    storageError
+                                });
 
                         if (storageError) {
                             console.error(
