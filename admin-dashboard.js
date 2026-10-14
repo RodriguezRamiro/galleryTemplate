@@ -264,12 +264,14 @@ artworkList.addEventListener("click", async (event) => {
 
                     if (storagePath) {
 
-                        const { error: storageError } =
+                        const {
+                            data: removedFiles,
+                            error: storageError } =
                             await window.supabaseClient
                                 .storage
                                 .from("artworks")
                                 .remove([storagePath]);
-                                console.log("Storage removal result:", {
+                                console.log("Storage removal response:", {
                                     storagePath,
                                     removedFiles,
                                     storageError
