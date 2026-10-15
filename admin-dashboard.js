@@ -706,7 +706,9 @@ function renderDashboardExhibitions(exhibitions) {
         );
 
         return;
+    }
 
+    // Handle an empty exhibition list.
         if (!exhibitions.length) {
 
             exhibitionList.innerHTML = `
@@ -717,13 +719,12 @@ function renderDashboardExhibitions(exhibitions) {
                 return;
         }
 
+    // Render the existing exhibitions.
         exhibitionList.innerHTML =
             exhibitions.map(exhibition => `
             <article class="admin-exhibition-item">
 
             <div class="admin-exhibition-details">
-
-            <p class="admin-exhibition-details">
 
             <p class="admin-eyebrow">
             Exhibition
