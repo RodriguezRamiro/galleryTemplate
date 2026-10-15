@@ -443,6 +443,15 @@ cancelExhibitionButton.addEventListener("click", () => {
 
 
 /* =====================================================
+   Save Exhibition
+===================================================== */
+
+addExhibitionForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+})
+
+/* =====================================================
    Load Artwork Data
 ===================================================== */
 
