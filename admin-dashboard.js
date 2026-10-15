@@ -38,7 +38,7 @@ const addExhibitionPanel = document.querySelector("#add-exhibition-panel");
 
 const cancelExhibitionButton = document.querySelector("#cancel-exhibition-button");
 
-const addExhibitionForm = docuemnt.querySleector("#add-exhibition-form");
+const addExhibitionForm = document.querySleector("#add-exhibition-form");
 
 
 
