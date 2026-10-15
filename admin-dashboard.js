@@ -29,6 +29,20 @@ let editingArtworkId = null;
 let editingArtworkImageUrl = null
 
 /* =====================================================
+   Exhibition Form Elements
+===================================================== */
+
+const addExhibitionButton = document.querySelector("#add-exhibition-button");
+
+const addExhibitionPanel = document.querySelector("#add-exhibition-panel");
+
+const cancelExhibitionButton = document.querySelector("#cancel-exhibition-button");
+
+const addExhibitionForm = docuemnt.querySleector("#add-exhibition-form");
+
+
+
+/* =====================================================
    Dashboard Authentication Check
 ===================================================== */
 
