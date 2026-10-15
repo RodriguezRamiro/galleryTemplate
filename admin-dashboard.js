@@ -434,6 +434,12 @@ addExhibitionButton.addEventListener("click", () => {
     document.querySelector("#exhibition-title").focus();
 });
 
+cancelExhibitionButton.addEventListener("click", () => {
+
+    addExhibitionPanel.hidden = true;
+
+    addExhibitionForm.reset();
+});
 
 
 /* =====================================================
