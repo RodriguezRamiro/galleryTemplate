@@ -709,7 +709,7 @@ function renderDashboardExhibitions(exhibitions) {
 
         if (!exhibitions.length) {
 
-            exhibitionList.innerHtml = `
+            exhibitionList.innerHTML = `
                 <p class="admin-message">
                     No exhibitions found.
                 </p>
