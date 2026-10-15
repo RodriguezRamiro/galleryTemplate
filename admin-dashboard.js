@@ -422,6 +422,21 @@ saveArtworkButton.textContent = "Save Artwork";
 });
 
 /* =====================================================
+   Open and Close Exhibition Form
+===================================================== */
+
+addExhibitionButton.addEventListener("click", () => {
+
+    addExhibitionPanel.hidden = false;
+
+    addExhibitionForm.reset();
+
+    document.querySelector("#exhibition-title").focus();
+});
+
+
+
+/* =====================================================
    Load Artwork Data
 ===================================================== */
 
