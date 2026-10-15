@@ -359,6 +359,94 @@ hidden>
         </section>
 
 
+<!-- New Exhibition Panel -->
+
+<section
+id="add-exhibition-panel"
+class="admin-section admin-form-section"
+aria-labelledby="add-exhibition-title"
+hidden>
+
+<div class="admin-section-header">
+
+    <div>
+
+        <p class="admin-eyebrow">
+            Exhibitions
+        </p>
+
+        <h2 id="add-exhibition-title">
+            New Exhibition
+        </h2>
+
+    </div>
+
+    <button
+        type="button"
+        id="cancel-exhibition-button"
+        class="admin-submit">
+
+        Cancel
+
+    </button>
+
+</div>
+
+<form id="add-exhibition-form">
+
+    <div class="admin-form-grid">
+
+        <div class="admin-field admin-field-full">
+
+            <label for="exhibition-title">
+                Exhibition Title
+            </label>
+
+            <input
+                type="text"
+                id="exhibition-title"
+                required>
+
+        </div>
+
+        <div class="admin-field admin-field-full">
+
+            <label for="exhibition-description">
+                Curatorial Description
+            </label>
+
+            <textarea
+                id="exhibition-description"
+                rows="6"
+                placeholder="Introduce the theme or story behind this exhibition..."></textarea>
+
+        </div>
+
+    </div>
+
+    <div class="admin-form-actions">
+
+        <button
+            type="submit"
+            class="admin-submit">
+
+            Save Exhibition
+
+        </button>
+
+    </div>
+
+    <p
+        id="add-exhibition-message"
+        class="admin-message"
+        aria-live="polite">
+    </p>
+
+</form>
+
+</section>
+
+
         <!-- =================================================
              Dashboard Status
         ================================================== -->
