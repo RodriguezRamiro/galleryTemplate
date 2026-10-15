@@ -743,8 +743,6 @@ function renderDashboardExhibitions(exhibitions) {
             </article>
             `).join("");
     }
-}
-
 /* =====================================================
    Render Artwork List
 ===================================================== */
