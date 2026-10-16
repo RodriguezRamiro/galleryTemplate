@@ -521,7 +521,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
         dashboardMessage.textContent =
             "Exhibition created successfully.";
-        } catch (error {
+        } catch (error) {
             console.error(
                 "Unable to save exhibition:",
                 error
