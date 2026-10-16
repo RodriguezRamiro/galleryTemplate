@@ -506,15 +506,36 @@ addExhibitionForm.addEventListener("submit", async (event) => {
                     sort_order: nextSortOrder
                 });
 
-            
-    }
+        if (insertError) {
+            throw insertError;
+        }
 
+        console.log("Exhibition created successfully.");
 
+        // Refresh the exhibition list and count.
+        await loadDashboardExhibitions()
 
+        // Close and reset the form.
+        addExhibitionForm.reset();
+        addExhibitionPanel.hidden = true;
 
+        dashboardMessage.textContent =
+            "Exhibition created successfully.";
+        } catch (error {
+            console.error(
+                "Unable to save exhibition:",
+                error
+            );
 
+            exhibitionMessage.textContent =
+                "Unable to save exhibition. Please try again.";
+        } finally {
 
-})
+            saveButton.disabled = false;
+            saveButton.textContent = "Save Exhibition";
+        }
+
+});
 
 /* =====================================================
    Load Artwork Data
