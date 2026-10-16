@@ -457,8 +457,19 @@ addExhibitionForm.addEventListener("submit", async (event) => {
     const saveButton = addExhibitionForm.querySelecotr('button[type="submit"]');
 
     // Validate the required title.
+    if (!exhibitionTitle) {
+
+        exhibitionMessage.textContent =
+            "Please enter an exhibition title.";
+
+        document.querySelector("#exhibition-title").focus();
+
+        return;
+    }
 
     
+
+
 })
 
 /* =====================================================
