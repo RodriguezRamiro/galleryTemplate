@@ -467,7 +467,14 @@ addExhibitionForm.addEventListener("submit", async (event) => {
         return;
     }
 
+    saveButton.disabled = true;
+    saveButton.textContent = "Saving Exhibition...";
+
+    exhibitionMessage.textContent = "Saving Exhibition...";
+
     
+
+
 
 
 })
