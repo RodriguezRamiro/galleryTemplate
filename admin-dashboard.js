@@ -454,7 +454,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     const exhibitionDescription = document.querySelector("#add-exhibition-message");
 
-    const saveButton = addExhibitionForm.querySelecorr('button[type="submit"]');
+    const saveButton = addExhibitionForm.querySelector('button[type="submit"]');
 
     // Validate the required title.
     if (!exhibitionTitle) {
