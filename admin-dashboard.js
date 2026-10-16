@@ -449,6 +449,16 @@ cancelExhibitionButton.addEventListener("click", () => {
 addExhibitionForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
+
+    const exhibitionTitle = document.querySelector("#exhibition-title").value.trim();
+
+    const exhibitionDescription = document.querySelector("#add-exhibition-message");
+
+    const saveButton = addExhibitionForm.querySelecotr('button[type="submit"]');
+
+    // Validate the required title.
+
+    
 })
 
 /* =====================================================
