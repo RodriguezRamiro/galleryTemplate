@@ -474,7 +474,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     try {
 
-        // Find the hieghes existing display order.
+        // Find the hieghest existing display order.
         const {
             data: existingExhibitions,
             error: orderError
@@ -489,6 +489,11 @@ addExhibitionForm.addEventListener("submit", async (event) => {
         if (orderError) {
             throw orderError;
         }
+
+        const nextSortOrder =
+            existingExhibitions.length > 0
+                ? existingExhibitions[0].sort_order + 1
+                : 1;
     }
 
 
