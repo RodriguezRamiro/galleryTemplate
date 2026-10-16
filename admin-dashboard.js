@@ -472,7 +472,26 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     exhibitionMessage.textContent = "Saving Exhibition...";
 
-    
+    try {
+
+        // Find the hieghes existing display order.
+        const {
+            data: existingExhibitions,
+            error: orderError
+        } = await window.supabaseClient
+            .from("exhibitions")
+            .select("sort_order")
+            .order("sort_order", {
+                ascending: false
+            })
+            .limit(1);
+
+        if (orderError) {
+            throw orderError;
+        }
+    }
+
+
 
 
 
