@@ -435,7 +435,7 @@ addExhibitionButton.addEventListener("click", () => {
     addExhibitionForm.reset();
 
     // Restore the form heading and button label.
-    doxument.querySelector("#add-exhibition-title").textContent = "New exhibition";
+    document.querySelector("#add-exhibition-title").textContent = "New exhibition";
 
     addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Exhibition";
 
@@ -449,7 +449,7 @@ cancelExhibitionButton.addEventListener("click", () => {
 
     // Clear any active editing state.
     editingExhibitionId = null;
-    
+
     //Reset and Close Form.
     addExhibitionForm.reset();
 
