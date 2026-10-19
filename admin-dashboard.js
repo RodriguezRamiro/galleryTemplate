@@ -429,18 +429,37 @@ saveArtworkButton.textContent = "Save Artwork";
 
 addExhibitionButton.addEventListener("click", () => {
 
-    addExhibitionPanel.hidden = false;
+    // Reset the form to create a new exhibition.
+    editingExhibitionId = null;
 
     addExhibitionForm.reset();
+
+    // Restore the form heading and button label.
+    doxument.querySelector("#add-exhibition-title").textContent = "New exhibition";
+
+    addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Exhibition";
+
+    // Open the form.
+    addExhibitionPanel.hidden = false;
 
     document.querySelector("#exhibition-title").focus();
 });
 
 cancelExhibitionButton.addEventListener("click", () => {
 
+    // Clear any active editing state.
+    editingExhibitionId = null;
+    
+    //Reset and Close Form.
+    addExhibitionForm.reset();
+
     addExhibitionPanel.hidden = true;
 
-    addExhibitionForm.reset();
+    // Restore the default form heading and button label.
+    document.querySelector("#add-exhibition-title").textContent = "New Exhibition";
+
+    addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Exhibition";
+
 });
 
 
