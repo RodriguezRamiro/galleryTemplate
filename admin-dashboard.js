@@ -792,7 +792,7 @@ async function loadDashboardExhibitions() {
             .order("sort_order", {
                 ascending: true
             });
-            console.log("Exhibition query data:" data);
+            console.log("Exhibition query data:", data);
             console.log("Exhibition query error:", error);
 
         if (error) {
