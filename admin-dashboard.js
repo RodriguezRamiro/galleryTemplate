@@ -452,7 +452,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     const exhibitionTitle = document.querySelector("#exhibition-title").value.trim();
 
-    const exhibitionDescription = document.querySelector("#add-exhibition-message");
+    const exhibitionDescription = document.querySelector("#exihibition-description").value.trim();
 
     const exhibitionMessage = document.querySelector("#add-exhibition-message");
 
@@ -792,8 +792,7 @@ async function loadDashboardExhibitions() {
             .order("sort_order", {
                 ascending: true
             });
-            console.log("Exhibition query data:", data);
-            console.log("Exhibition query error:", error);
+
 
         if (error) {
 
