@@ -40,6 +40,8 @@ const cancelExhibitionButton = document.querySelector("#cancel-exhibition-button
 
 const addExhibitionForm = document.querySelector("#add-exhibition-form");
 
+let editingExhibitionId = null;
+
 
 
 /* =====================================================
