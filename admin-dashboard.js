@@ -854,28 +854,50 @@ function renderDashboardExhibitions(exhibitions) {
 
     // Render the existing exhibitions.
         exhibitionList.innerHTML =
-            exhibitions.map(exhibition => `
+            exhibitions.map(exhibition => {
+
+                const description =
+                    exhibition.description?.trim();
+
+                const hasDescription =
+                    description && description !== "{}";
+
+                    const status =
+                        exhibition.status === "published"
+                            ? "Published"
+                            : "Draft";
+
+                    return `
             <article class="admin-exhibition-item">
 
             <div class="admin-exhibition-details">
 
             <p class="admin-eyebrow">
-            Exhibition
+            Exhibition · Order ${exhibition.sort_order}
             </p>
 
             <h3>
                 ${exhibition.title}
             </h3>
 
-            <p>
-                ${exhibition.status}
+            <p class="admin-exhibition-status">
+                Status: ${status}
+            </p>
+
+            <p class="admin-exhibition-description">
+                ${ hasDescription
+                        ? description
+                        : "No curatorial desciption added yet."
+                    }
             </p>
 
             </div>
 
             </article>
-            `).join("");
-    }
+            `;
+                }).join("");
+
+                
 /* =====================================================
    Render Artwork List
 ===================================================== */
