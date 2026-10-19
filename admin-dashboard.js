@@ -452,7 +452,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     const exhibitionTitle = document.querySelector("#exhibition-title").value.trim();
 
-    const exhibitionDescription = document.querySelector("#exihibition-description").value.trim();
+    const exhibitionDescription = document.querySelector("#exhibition-description").value.trim();
 
     const exhibitionMessage = document.querySelector("#add-exhibition-message");
 
