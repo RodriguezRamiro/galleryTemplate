@@ -897,7 +897,7 @@ function renderDashboardExhibitions(exhibitions) {
             `;
                 }).join("");
 
-                
+}
 /* =====================================================
    Render Artwork List
 ===================================================== */
