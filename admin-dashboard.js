@@ -975,11 +975,11 @@ document.querySelector("#admin-exhibition-list")
                     : exhibition.description || "";
 
             // Update the form heading and submit button.
-            document.querySelector("#add-exhibition-title").textContent = "edit Exhibition";
+            document.querySelector("#add-exhibition-title").textContent = "Edit Exhibition";
 
             addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Changes";
 
-            
+
 
         }
 
