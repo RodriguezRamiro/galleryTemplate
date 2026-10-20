@@ -930,6 +930,21 @@ function renderDashboardExhibitions(exhibitions) {
 }).join("");
 
 }
+
+/* =====================================================
+   Load Exhibition for Editing
+===================================================== */
+
+document.querySelector("#admin-exhibition-list")
+    .addEventListener("click", async (event) => {
+
+        const editButton =
+            event.target.closest(".edit-exhibition-button");
+
+        //
+
+    })
+
 /* =====================================================
    Render Artwork List
 ===================================================== */
