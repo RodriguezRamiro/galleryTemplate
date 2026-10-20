@@ -969,6 +969,18 @@ document.querySelector("#admin-exhibition-list")
             // Load the existing details.
             document.querySelector("#exhibition-title").value = exhibition.title;
 
+            document.querySelector("#exhibition-description").value =
+                exhibition.description === "{}"
+                    ? ""
+                    : exhibition.description || "";
+
+            // Update the form heading and submit button.
+            document.querySelector("#add-exhibition-title").textContent = "edit Exhibition";
+
+            addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Changes";
+
+            
+
         }
 
 
