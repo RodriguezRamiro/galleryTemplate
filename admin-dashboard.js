@@ -946,6 +946,26 @@ document.querySelector("#admin-exhibition-list")
             return;
         }
 
+        const exhibitionId = editButton.dataset.exhibitionId;
+
+        try {
+
+            const {
+                dat: exhibition,
+                error
+            } = await window.supabaseClient
+                .from("exhibition")
+                .select("id, title, description, status, sort_order")
+                .eq("id", exhibitionID)
+                .single();
+
+            if (error) {
+                throw error;
+            }
+
+            
+        }
+
 
 
     })
