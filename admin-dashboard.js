@@ -941,7 +941,12 @@ document.querySelector("#admin-exhibition-list")
         const editButton =
             event.target.closest(".edit-exhibition-button");
 
-        //
+        // Ignore clicks that arent on an Edit button
+        if(!editButton) {
+            return;
+        }
+
+
 
     })
 
