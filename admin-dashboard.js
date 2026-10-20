@@ -951,7 +951,7 @@ document.querySelector("#admin-exhibition-list")
         try {
 
             const {
-                dat: exhibition,
+                data: exhibition,
                 error
             } = await window.supabaseClient
                 .from("exhibition")
@@ -963,7 +963,12 @@ document.querySelector("#admin-exhibition-list")
                 throw error;
             }
 
-            
+            // Store the ID of the exhibition being Edited.
+            editingExhibitionId = exhibition.id;
+
+            // Load the existing details.
+            document.querySelector("#exhibition-title").value = exhibition.title;
+
         }
 
 
