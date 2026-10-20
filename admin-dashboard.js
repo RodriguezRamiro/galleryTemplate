@@ -856,7 +856,7 @@ function renderDashboardExhibitions(exhibitions) {
     if (!exhibitionList) {
 
         console.error(
-            "exhibition list element was not found."
+            "Exhibition list element was not found."
         );
 
         return;
@@ -912,11 +912,22 @@ function renderDashboardExhibitions(exhibitions) {
                     }
             </p>
 
+            <div class="admin-exhibition-actions">
+
+                    <button
+                        type="button"
+                        class="admin-submit edit-exhibition-button"
+                        data-exhibition-id="${exhibition.id}"
+                        >
+                        Edit Exhibition
+                    </button>
+
+                </div>
             </div>
 
-            </article>
-            `;
-                }).join("");
+        </article>
+    `;
+}).join("");
 
 }
 /* =====================================================
