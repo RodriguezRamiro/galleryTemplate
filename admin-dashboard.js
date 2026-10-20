@@ -979,6 +979,14 @@ document.querySelector("#admin-exhibition-list")
 
             addExhibitionForm.querySelector('button[type="submit"]').textContent = "Save Changes";
 
+            // Open the form and bring it to view
+            addExhibitionPanel.hidden = false;
+
+            addExhibitionPanel.scrollIntoview({
+                behavior: "smooth",
+                block: "start"
+            });
+
 
 
         }
