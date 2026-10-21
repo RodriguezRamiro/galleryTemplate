@@ -566,7 +566,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
         await loadDashboardExhibitions();
 
         // Reset the form and editing state.
-        addExhibitionPanel.reset();
+        addExhibitionForm.reset();
         editingExhibitionId = null
         addExhibitionPanel.hidden = true;
 
