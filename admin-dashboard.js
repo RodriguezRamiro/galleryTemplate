@@ -954,7 +954,7 @@ document.querySelector("#admin-exhibition-list")
                 data: exhibition,
                 error
             } = await window.supabaseClient
-                .from("exhibition")
+                .from("exhibitions")
                 .select("id, title, description, status, sort_order")
                 .eq("id", exhibitionId)
                 .single();
