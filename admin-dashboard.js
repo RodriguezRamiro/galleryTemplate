@@ -509,8 +509,28 @@ addExhibitionForm.addEventListener("submit", async (event) => {
                     })
                     .eq("id", editingExhibitionId);
 
-            
+            if(updateError) {
+                throw updateError;
+            }
 
+            console.log("Exhibition updated successfully.");
+
+            dashboardMessage.textContent =
+                "Exhibition updated successfully.";
+
+        } else {
+
+            // Find the highest existing display order.
+            const {
+                data: exhistingExhibitions,
+                error: orderError
+            } = await window.supabaseClient
+                .from("exhibitions")
+                .select("sort_order")
+                .order("sort_order", {
+                    ascending: false
+                })
+                .limit(1);
         }
 
         // Find the hieghest existing display order.
