@@ -987,7 +987,7 @@ document.querySelector("#admin-exhibition-list")
                 block: "start"
             });
 
-            document.querySelector("#exhibitiob-title").focus();
+            document.querySelector("#exhibition-title").focus();
 
             document.querySelector("#add-exhibition-message").textContent = "Exhibition loaded for editing.";
 
