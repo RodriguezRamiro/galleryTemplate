@@ -982,7 +982,7 @@ document.querySelector("#admin-exhibition-list")
             // Open the form and bring it to view
             addExhibitionPanel.hidden = false;
 
-            addExhibitionPanel.scrollIntoview({
+            addExhibitionPanel.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
