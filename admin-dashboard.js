@@ -987,13 +987,21 @@ document.querySelector("#admin-exhibition-list")
                 block: "start"
             });
 
+            document.querySelector("#exhibitiob-title").focus();
 
+            document.querySelector("#add-exhibition-message").textContent = "Exhibition loaded for editing.";
 
+        } catch (error) {
+
+            console.error(
+                "Unable to load exhibition for editing:",
+                error
+            );
+
+            dashboardMessage.textContent =
+                "Unable to load Exhibition for editing.";
         }
-
-
-
-    })
+    });
 
 /* =====================================================
    Render Artwork List
