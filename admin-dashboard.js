@@ -497,6 +497,22 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
     try {
 
+        // Editing an Exhisitng Exhibition
+        if(editingExhibitionId) {
+
+            const { error: updateError } =
+                await window.supabaseClient
+                    .from("exhibitions")
+                    .update({
+                        title: exhibitionTitle,
+                        description: exhibitionDescription || null
+                    })
+                    .eq("id", editingExhibitionId);
+
+            
+
+        }
+
         // Find the hieghest existing display order.
         const {
             data: existingExhibitions,
