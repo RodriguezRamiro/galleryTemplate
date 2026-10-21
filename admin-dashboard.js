@@ -531,6 +531,26 @@ addExhibitionForm.addEventListener("submit", async (event) => {
                     ascending: false
                 })
                 .limit(1);
+
+            if (orderError) {
+                throw orderError;
+            }
+
+            const nextSortOrder =
+                existingExhibitions.length > 0
+                    ? existingExhibitions[0].sort_order + 1
+                    : 1;
+
+            // Create a new exhibition as an unpublished draft.
+            const { error: insertError } =
+            await window.supabaseClient
+                .from("exhibitions")
+                .insert({
+                    title: exhibitionTitle,
+                    description: exhibitionDescription || null,
+                    status: "draft",
+                    sort_order: nextSortOrder
+                });
         }
 
         // Find the hieghest existing display order.
