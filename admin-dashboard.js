@@ -551,71 +551,53 @@ addExhibitionForm.addEventListener("submit", async (event) => {
                     status: "draft",
                     sort_order: nextSortOrder
                 });
-        }
-
-        // Find the hieghest existing display order.
-        const {
-            data: existingExhibitions,
-            error: orderError
-        } = await window.supabaseClient
-            .from("exhibitions")
-            .select("sort_order")
-            .order("sort_order", {
-                ascending: false
-            })
-            .limit(1);
-
-        if (orderError) {
-            throw orderError;
-        }
-
-        const nextSortOrder =
-            existingExhibitions.length > 0
-                ? existingExhibitions[0].sort_order + 1
-                : 1;
-
-        // Create the exhibition as an unpublished draft.
-        const { error: insertError } =
-            await window.supabaseClient
-                .from("exhibitions")
-                .insert({
-                    title: exhibitionTitle,
-                    description: exhibitionDescription || null,
-                    status: "draft",
-                    sort_order: nextSortOrder
-                });
 
         if (insertError) {
             throw insertError;
         }
 
-        console.log("Exhibition created successfully.");
-
-        // Refresh the exhibition list and count.
-        await loadDashboardExhibitions()
-
-        // Close and reset the form.
-        addExhibitionForm.reset();
-        addExhibitionPanel.hidden = true;
+        console.log("Exhibition created successfully");
 
         dashboardMessage.textContent =
             "Exhibition created successfully.";
-        } catch (error) {
-            console.error(
-                "Unable to save exhibition:",
-                error
-            );
-
-            exhibitionMessage.textContent =
-                "Unable to save exhibition. Please try again.";
-        } finally {
-
-            saveButton.disabled = false;
-            saveButton.textContent = "Save Exhibition";
         }
 
-});
+        // Refresh the exhibition list and count.
+        await loadDashboardExhibitions();
 
+        // Reset the form and editing state.
+        addExhibitionPanel.reset();
+        editingExhibitionId = null
+        addExhibitionPanel.hidden = true;
+
+        document.querySelector("#add-exhibtiob-title").textContent = "New Exhibition";
+
+        saveButton.textContent = "Save Exhibition";
+
+        exhibitionMessage.textContent = "";
+
+    } catch (error) {
+
+        console.error(
+            "Unable to save exhibition:",
+            error
+        );
+
+        exhibitionMessage.textContent =
+            "Unable to save exhibitiob. Please try again."
+
+    } finally {
+
+        saveButton.disabled = false;
+
+        // Restore the correct label if saving failed
+        saveButton.textContent =
+            editingExhibitionId
+                ? "Save Changes"
+                : "Save Exhibition";
+    }
+
+    });
 /* =====================================================
    Load Artwork Data
 ===================================================== */
