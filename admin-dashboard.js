@@ -570,7 +570,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
         editingExhibitionId = null
         addExhibitionPanel.hidden = true;
 
-        document.querySelector("#add-exhibtion-title").textContent = "New Exhibition";
+        document.querySelector("#add-exhibition-title").textContent = "New Exhibition";
 
         saveButton.textContent = "Save Exhibition";
 
