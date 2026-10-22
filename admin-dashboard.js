@@ -961,8 +961,17 @@ function renderDashboardExhibitions(exhibitions) {
                         Edit Exhibition
                     </button>
 
+                    <button
+                        type="button"
+                        class="admin-submit toggle-exhibition-status-button"
+                        data-exhibition-id="${exhibition.id}"
+                        data-exhibition-status="${exhibition.status}"
+                    >
+                        ${publicationAction}
+                    </button>
 
                 </div>
+
             </div>
 
         </article>
