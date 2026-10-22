@@ -882,6 +882,12 @@ async function loadDashboardExhibitions() {
 
 
 /* =====================================================
+   Toggle Exhibition Publication Status
+===================================================== */
+next stage publish and unpublish connected to supabase
+
+
+/* =====================================================
    Render Exhibition List
 ===================================================== */
 
