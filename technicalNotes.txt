@@ -374,3 +374,13 @@ Editing existing artwork and replacing its image.
 Publishing and unpublishing artwork.
 Deleting artwork records and their associated Storage images.
 Refreshing the dashboard list and counts after changes.
+
+01-22-2026
+
+Current stage includes:
+Working exhibition creation and editing workflow.
+saves new record as drafts, assings display order and handles empty descriptions.
+Editing exhibitions loads existing data and updates the correct database row without creating
+duplicates
+Form reset and cacellation, resets the editing state and restores the new exhibition labels.
+
