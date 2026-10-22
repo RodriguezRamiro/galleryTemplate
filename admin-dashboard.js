@@ -522,7 +522,7 @@ addExhibitionForm.addEventListener("submit", async (event) => {
 
             // Find the highest existing display order.
             const {
-                data: exhistingExhibitions,
+                data: existingExhibitions,
                 error: orderError
             } = await window.supabaseClient
                 .from("exhibitions")
