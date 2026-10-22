@@ -921,12 +921,13 @@ function renderDashboardExhibitions(exhibitions) {
                 const hasDescription =
                     description && description !== "{}";
 
-                    const status =
-                        exhibition.status === "published"
-                            ? "Published"
-                            : "Draft";
+                const isPublished = exhibition.status === "published";
 
-                    return `
+                const status = isPublished ? "Published" : "Draft";
+
+                const publicationAction = isPublished ? "Unpublish" : "Publish";
+
+            return `
             <article class="admin-exhibition-item">
 
             <div class="admin-exhibition-details">
@@ -959,6 +960,7 @@ function renderDashboardExhibitions(exhibitions) {
                         >
                         Edit Exhibition
                     </button>
+
 
                 </div>
             </div>
