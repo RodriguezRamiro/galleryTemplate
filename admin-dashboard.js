@@ -896,7 +896,20 @@ document.querySelector("#admin-exhibition-list")
             return;
         }
 
-        
+        const exhibitionId =
+            statusButton.dataset.exhibitionId;
+
+        const currentStatus =
+            statusButton.dataset.exhibitionStatus;
+
+        const nextStatus =
+            currentStatus === "published"
+                ? "draft"
+                : "published";
+
+
+
+
     })
 
 /* =====================================================
