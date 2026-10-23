@@ -932,7 +932,10 @@ document.querySelector("#admin-exhibition-list")
                 // Refresh the list to display the new status and button.
                 await loadDashboardExhibitions();
 
-                
+                dashboardMessage.textContent =
+                    nextStatus === "published"
+                        ? "Exhibition published successfully."
+                        : "Exhibition unpublished successfully.";
         }
 
 
