@@ -907,6 +907,29 @@ document.querySelector("#admin-exhibition-list")
                 ? "draft"
                 : "published";
 
+        // Prevent repeated clicks while the update is running.
+        statusButton.disabled = true;
+
+        try {
+
+            const { error } =
+                await window.supabaseClient
+                    .from("exhibitions")
+                    .update({
+                            staus: nextStatus
+                    })
+                    .eq("id", exhibitionId);
+
+                if (error) {
+                    throw error;
+                }
+
+                console.log(
+                    "Exhibition status updated:",
+                    nextStatus
+                );
+        }
+
 
 
 
