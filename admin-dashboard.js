@@ -892,6 +892,10 @@ document.querySelector("#admin-exhibition-list")
             event.target.closest(".toggle-exhibition-status-button");
 
         // Ignore clicks that arent on a Publish/Unpublish button.
+        if (!statusButton) {
+            return;
+        }
+
         
     })
 
