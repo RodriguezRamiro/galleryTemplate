@@ -945,13 +945,11 @@ document.querySelector("#admin-exhibition-list")
 
             dashboardMessage.textContent = "Unable to update exhibition status. Please try again.";
 
-            
+            // Allow another attempt if the update faails.
+            statusButton.disabled = false;
         }
 
-
-
-
-    })
+    });
 
 /* =====================================================
    Render Exhibition List
