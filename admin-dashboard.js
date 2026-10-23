@@ -928,6 +928,11 @@ document.querySelector("#admin-exhibition-list")
                     "Exhibition status updated:",
                     nextStatus
                 );
+
+                // Refresh the list to display the new status and button.
+                await loadDashboardExhibitions();
+
+                
         }
 
 
