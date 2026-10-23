@@ -916,7 +916,7 @@ document.querySelector("#admin-exhibition-list")
                 await window.supabaseClient
                     .from("exhibitions")
                     .update({
-                            staus: nextStatus
+                            status: nextStatus
                     })
                     .eq("id", exhibitionId);
 
