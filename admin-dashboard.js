@@ -936,6 +936,16 @@ document.querySelector("#admin-exhibition-list")
                     nextStatus === "published"
                         ? "Exhibition published successfully."
                         : "Exhibition unpublished successfully.";
+        } catch (error) {
+
+            console.error(
+                    "Unable to update exhibition status:",
+                    error
+            );
+
+            dashboardMessage.textContent = "Unable to update exhibition status. Please try again.";
+
+            
         }
 
 
