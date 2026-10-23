@@ -884,8 +884,16 @@ async function loadDashboardExhibitions() {
 /* =====================================================
    Toggle Exhibition Publication Status
 ===================================================== */
-next stage publish and unpublish connected to supabase
 
+document.querySelector("#admin-exhibition-list")
+    .addEventListener("click", async (event) => {
+
+        const statusButton =
+            event.target.closest(".toggle-exhibition-status-button");
+
+        // Ignore clicks that arent on a Publish/Unpublish button.
+        
+    })
 
 /* =====================================================
    Render Exhibition List
