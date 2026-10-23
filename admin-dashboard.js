@@ -881,6 +881,17 @@ async function loadDashboardExhibitions() {
 }
 
 
+
+
+/* =====================================================
+   Load Exhibitions into Artwork Form
+===================================================== */
+
+// assinging artwork to their respective exhibitions.
+
+
+
+
 /* =====================================================
    Toggle Exhibition Publication Status
 ===================================================== */
