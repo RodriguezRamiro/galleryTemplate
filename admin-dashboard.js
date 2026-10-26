@@ -904,6 +904,31 @@ async function loadArtworkExhibitionOptions() {
             .order("sort_order", {
                 ascending: true
             });
+
+    if (error) {
+        console.error(
+            "Unable to load exhibition options:",
+            error
+        );
+        return;
+    }
+
+    // Keep the default option and clear any previous options.
+    exhibitionSelect.innerHTML = '<option value="">No Exhibition</option>';
+
+    exhibitions.forEach((exhibition) => {
+
+        const option = document.createElement("option");
+
+        option.value = exhibition.id;
+        option.textContnet =
+            exhibition.status === "published"
+            ? exhibition.title
+            : `${exhibition.title} (Draft)`;
+
+        exhibitionSelect.appendChild(option);
+    });
+    
 }
 
 
