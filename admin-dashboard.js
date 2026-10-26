@@ -89,6 +89,8 @@ async function verifyDashboardSession() {
     await loadDashboardArtworks();
 
     await loadDashboardExhibitions();
+
+    await loadArtworkExhibitionOptions()
 }
 
 
@@ -928,7 +930,7 @@ async function loadArtworkExhibitionOptions() {
 
         exhibitionSelect.appendChild(option);
     });
-    
+
 }
 
 
