@@ -887,8 +887,24 @@ async function loadDashboardExhibitions() {
    Load Exhibitions into Artwork Form
 ===================================================== */
 
-// assinging artwork to their respective exhibitions.
+async function loadArtworkExhibitionOptions() {
 
+    const exhibitionSelect =
+        document.querySelector("#artwork-exhibition");
+
+    if (!exhibitionSelect) {
+        console.error("Artwork exhibition dropdown was not found.");
+        return;
+    }
+
+    const { data: exhibitions, error } =
+        await window.supabaseClient
+            .from("exhibitions")
+            .select("id, title, status, sort_order")
+            .order("sort_order", {
+                ascending: true
+            });
+}
 
 
 
