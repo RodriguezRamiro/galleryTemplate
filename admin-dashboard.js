@@ -155,6 +155,9 @@ artworkList.addEventListener("click", async (event) => {
     document.querySelector("#artwork-purchase-url").value =
         artwork.purchase_url || "";
 
+    document.querySelector("#artwork-exhibition").value =
+        artwork.exhibition_id || "";
+
     addArtworkTitle.textContent = "Edit Artwork";
 
     saveArtworkButton.textContent = "Save Changes";
