@@ -925,7 +925,7 @@ async function loadArtworkExhibitionOptions() {
         const option = document.createElement("option");
 
         option.value = exhibition.id;
-        option.textContnet =
+        option.textContent =
             exhibition.status === "published"
             ? exhibition.title
             : `${exhibition.title} (Draft)`;
