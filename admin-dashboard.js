@@ -709,8 +709,9 @@ addArtworkForm.addEventListener("submit", async (event) => {
     const purchaseUrl =
         document.querySelector("#artwork-purchase-url").value.trim();
 
-        const exhibitionId =
+    const exhibitionId =
         document.querySelector("#artwork-exhibition").value || null;
+        console.log("Selected exhibition ID:", exhibitionId);
 
     // Preserve the current image unless replacemne is selected.
     let imageUrl = editingArtworkImageUrl;
