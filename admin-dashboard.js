@@ -906,7 +906,7 @@ async function loadArtworkExhibitionOptions() {
             .order("sort_order", {
                 ascending: true
             });
-            console.log("exhibition data:", data);
+            console.log("Exhibition data:", exhibitions);
             console.log("Query error:", error);
 
     if (error) {
