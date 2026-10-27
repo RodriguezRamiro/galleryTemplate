@@ -790,7 +790,6 @@ const artworkData = {
                             .from("artworks")
                             .insert({
                                 ...artworkData,
-                                exhibition_id: null,
                                 sort_order: 0,
                                 published: false,
                                 featured: false
