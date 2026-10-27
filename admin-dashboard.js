@@ -706,6 +706,9 @@ addArtworkForm.addEventListener("submit", async (event) => {
     const purchaseUrl =
         document.querySelector("#artwork-purchase-url").value.trim();
 
+        const exhibitionId =
+        document.querySelector("#artwork-exhibition").value || null;
+
     // Preserve the current image unless replacemne is selected.
     let imageUrl = editingArtworkImageUrl;
 
@@ -758,6 +761,7 @@ const artworkData = {
     catalog_number: catalogNumber,
     title: title,
     image_url: imageUrl,
+    exhibition_id: exhibitionId,
     medium: medium || null,
     year: yearValue ? Number(yearValue) : null,
     dimensions: dimensions || null,
@@ -925,6 +929,7 @@ async function loadArtworkExhibitionOptions() {
         const option = document.createElement("option");
 
         option.value = exhibition.id;
+
         option.textContent =
             exhibition.status === "published"
             ? exhibition.title
