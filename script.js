@@ -1657,6 +1657,17 @@ async function initializeExperience() {
 
     }
 
+    const databaseExhibitions =
+        await SupabaseGallery.loadExhibitions();
+
+    if (databaseExhibitions) {
+
+        console.log(
+                "Published exhibitions available to gallery:",
+                databaseExhibitions
+        )
+    }
+
 
 
 }
