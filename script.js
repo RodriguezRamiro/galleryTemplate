@@ -144,6 +144,7 @@ const SupabaseGallery = {
 
                 return data.map(artwork => ({
 
+                    id: artwork.id,
                     catalog: artwork.catalog_number,
                     title: artwork.title,
                     image: artwork.image_url,
@@ -151,7 +152,11 @@ const SupabaseGallery = {
                     year: String(artwork.year),
                     dimensions: artwork.dimensions,
                     description: artwork.description,
-                    purchaseUrl: artwork.purchase_url
+                    purchaseUrl: artwork.purchase_url,
+                    exhibition_id: artwork.exhibition_id,
+                    sort_order: artwork.sort_order,
+                    published: artwork.published,
+                    featured: artwork.featured
                 }));
         }
     };
