@@ -408,10 +408,15 @@ function renderCurrentExhibiton(exhibitions) {
     const description = section.querySelector(".section-header > p:not(.eyebrow)");
 
     if (title) {
-        title.textContent = exhibition .title;
+        title.textContent = exhibition.title;
     }
 
-    
+    if (description) {
+        description.textContent = exhibition.description || "";
+        description.hidden = !exhibition.description;
+    }
+
+
 }
 
 
