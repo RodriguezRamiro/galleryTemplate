@@ -158,6 +158,30 @@ const SupabaseGallery = {
                     published: artwork.published,
                     featured: artwork.featured
                 }));
+        },
+
+        async loadExhibition() {
+
+            const { data, error } = await window.supabaseClient
+                .from("exhibitions")
+                .select(`
+                    id,
+                    title,
+                    description,
+                    status,
+                    sort_order
+                `)
+                .eq("status", "published")
+                .order("sort_order", { ascending: true });
+
+            if (error) {
+                console.error("Supabase exhibition load failed:", error);
+                return null;
+            }
+
+            console.log("gallery exhibitions loaded from Supabase:", data);
+
+            return data;
         }
     };
 
