@@ -387,6 +387,23 @@ function renderFeaturedArtwork() {
     }
 }
 
+
+/* =====================================================
+   EXHIBITION RENDERING
+===================================================== */
+
+function renderCurrentExhibiton(exhibitions) {
+
+    const section = document.querySelector(".exhibition");
+
+    if(!section || !exhibitions.length) {
+        return;
+
+    }
+    
+}
+
+
 /* =====================================================
    Collections Rendering
 ===================================================== */
