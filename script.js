@@ -400,6 +400,17 @@ function renderCurrentExhibiton(exhibitions) {
         return;
 
     }
+
+    const exhibition = exhibitions[0];
+
+    const title = section.querySelector("#exhibition-title");
+
+    const description = section.querySelector(".section-header > p:not(.eyebrow)");
+
+    if (title) {
+        title.textContent = exhibition .title;
+    }
+
     
 }
 
