@@ -160,7 +160,7 @@ const SupabaseGallery = {
                 }));
         },
 
-        async loadExhibition() {
+        async loadExhibitions() {
 
             const { data, error } = await window.supabaseClient
                 .from("exhibitions")
