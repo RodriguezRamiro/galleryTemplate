@@ -449,9 +449,15 @@ function renderExhibitionNavigations() {
 
         const link = document.createElement("a")
 
-        
+        link.href = `?exhibition=${encodeURIComponent(exhibition.id)}`;
 
-    })
+        link.textContent = exhibition.title;
+
+        item.appendChild(link);
+
+        dropdown.appendChild(item);
+
+    });
 }
 
 
