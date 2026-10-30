@@ -458,6 +458,21 @@ function renderExhibitionNavigations() {
         dropdown.appendChild(item);
 
     });
+
+    const archiveItem = document.createElement("li");
+
+    archiveItem.className = "view-all-exhibitions";
+
+    const archiveLink = document.createElement("a");
+
+    archiveLink.href = "./exhibitions.html";
+
+    archiveLink.textContent = "View All Exhibitions →";
+
+    archiveItem.appendChild(archiveLink);
+
+    dropdown.appendChild(archiveItem);
+
 }
 
 
