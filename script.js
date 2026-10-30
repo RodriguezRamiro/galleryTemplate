@@ -295,7 +295,11 @@ const Gallery = {
 
     artworks: ArtworkData,
 
+    exhibitions: [],
+
     current: 0,
+
+    selectedExhibtion: null,
 
     get published() {
         return this.artworks.filter(
