@@ -897,6 +897,109 @@ margin-bottom: var(--space-sm);
 
 
 /* ==========================================
+   EXHIBITION NAVIGATION DROPDOWN
+========================================== */
+
+.nav-dropdown {
+
+    position: relative;
+
+}
+
+.nav-dropdown-toggle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    color: var(--text-light);
+
+    font-size: .95rem;
+
+    cursor: pointer;
+
+    transition: color var(--transition);
+
+}
+
+.nav-dropdown-toggle:hover {
+
+    color: var(--accent);
+
+}
+
+.nav-dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 1rem);
+
+    left: 0;
+
+    min-width: 240px;
+
+    padding: .75rem 0;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+
+    z-index: 1000;
+
+}
+
+.nav-dropdown-menu[hidden] {
+
+    display: none;
+
+}
+
+.nav-dropdown-menu li {
+
+    list-style: none;
+
+}
+
+.nav-dropdown-menu a {
+
+    display: block;
+
+    padding: .7rem 1.25rem;
+
+    color: var(--text-light);
+
+    font-size: .9rem;
+
+    transition:
+        color var(--transition),
+        background-color var(--transition);
+
+}
+
+.nav-dropdown-menu a:hover {
+
+    color: var(--accent);
+
+    background-color: rgba(0, 0, 0, .04);
+
+}
+
+.nav-dropdown-menu .view-all-exhibitions {
+
+    margin-top: .5rem;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+/* ==========================================
    MOBILE TOGGLE
 
    Hidden until smaller viewports.
