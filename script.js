@@ -127,6 +127,8 @@ const SupabaseGallery = {
                 medium,
                 year,
                 dimensions,
+                description,
+                purchase_url,
                 exhibition_id,
                 sort_order,
                 published,
