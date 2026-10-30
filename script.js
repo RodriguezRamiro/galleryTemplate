@@ -1698,7 +1698,9 @@ async function initializeExperience() {
         console.log(
                 "Published exhibitions available to gallery:",
                 databaseExhibitions
-        )
+        );
+
+        renderCurrentExhibiton(databaseExhibitions);
     }
 
 
