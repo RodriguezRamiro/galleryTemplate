@@ -392,7 +392,7 @@ function renderFeaturedArtwork() {
    EXHIBITION RENDERING
 ===================================================== */
 
-function renderCurrentExhibiton(exhibitions) {
+function renderCurrentExhibition(exhibitions) {
 
     const section = document.querySelector(".exhibition");
 
@@ -1700,7 +1700,7 @@ async function initializeExperience() {
                 databaseExhibitions
         );
 
-        renderCurrentExhibiton(databaseExhibitions);
+        renderCurrentExhibition(databaseExhibitions);
     }
 
 
