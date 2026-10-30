@@ -427,6 +427,23 @@ function renderCurrentExhibition(exhibitions) {
 
 
 /* =====================================================
+   EXHIBITION NAVIGATION
+===================================================== */
+
+function renderExhibitionNavigations() {
+
+    const dropdown = document.querySelector("#exhibition-dropdown"
+    );
+
+    if (!dropdown) {
+        return;
+    }
+
+    dropdown.HTML = "";
+}
+
+
+/* =====================================================
    Collections Rendering
 ===================================================== */
 
