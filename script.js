@@ -440,6 +440,18 @@ function renderExhibitionNavigations() {
     }
 
     dropdown.HTML = "";
+
+    const exhibitions = Gallery.exhibitions.slice(0, 5);
+
+    exhibitions.forEach(exhibition => {
+
+        const item = document.createElement("li");
+
+        const link = document.createElement("a")
+
+        
+
+    })
 }
 
 
