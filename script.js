@@ -1745,6 +1745,8 @@ async function initializeExperience() {
 
     initializeNavigation();
 
+    initializeExhibitionDropdown();
+
     initializeHeader();
 
     initializeReveal();
