@@ -541,7 +541,12 @@ function selectExhibitionFromURL() {
         item => item.id === exhibitionId
     );
 
+    Gallery.selectedExhibition = exhibition || null;
 
+    console.log(
+        "Selected exhibition from URL:",
+        Gallery.selectedExhibition
+    );
 }
 
 /* =====================================================
