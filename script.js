@@ -485,6 +485,10 @@ function initializeExhibitionDropdown() {
         "#exhibition-dropdown"
     );
 
+    if (!toggle || !dropdown) {
+        return;
+    }
+
 toggle.addEventListener("click", () => {
 
     const isExpanded =
