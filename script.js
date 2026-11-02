@@ -430,7 +430,7 @@ function renderCurrentExhibition(exhibitions) {
    EXHIBITION NAVIGATION
 ===================================================== */
 
-function renderExhibitionNavigations() {
+function renderExhibitionNavigation() {
 
     const dropdown = document.querySelector("#exhibition-dropdown"
     );
@@ -1760,7 +1760,7 @@ async function initializeExperience() {
 
         renderCurrentExhibition(Gallery.exhibitions);
 
-        renderExhibitionsNavigation();
+        renderExhibitionNavigation();
     }
 
 
