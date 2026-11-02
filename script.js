@@ -482,7 +482,14 @@ toggle.addEventListener("click", () => {
 
     const nextState = !isExpanded;
 
+    toggle.setAttribute(
+        "aria-expanded",
+        String(nextState)
+    );
+
     
+
+
 })
 
 /* =====================================================
