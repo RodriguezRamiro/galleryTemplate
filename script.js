@@ -476,7 +476,15 @@ function renderExhibitionNavigation() {
 }
 
 function initializeExhibitionDropdown() {
-    
+
+    const toggle = document.querySelector(
+        ".nav-dropdown-toggle"
+    );
+
+    const dropdown = document.querySelector(
+        "#exhibition-dropdown"
+    );
+
 toggle.addEventListener("click", () => {
 
     const isExpanded =
