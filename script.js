@@ -324,6 +324,19 @@ const Gallery = {
         return [...this.published]
         .filter(artwork => artwork !== featured)
         .sort((a, b) => b.sort_order - a.sort_order);
+    },
+
+    get exhibitionArtworks() {
+
+        if (!this.selectedExhibition) {
+            return [];
+        }
+
+        return this.published
+            .filter(artwork =>
+                artwork.exhibition_id === this.selectedExhibition.id
+                )
+                .sort((a, b) => a.sort_order - b.sort_order);
     }
 
 };
