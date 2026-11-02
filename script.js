@@ -528,10 +528,20 @@ function selectExhibitionFromURL() {
 
     const params = new URLSearchParams(
         window.location.search
-
     );
 
-    
+    const exhibitionId = params.get("exhibition");
+
+    if (!exhibitionId) {
+        Gallery.selectedExhibition = null;
+        return;
+    }
+
+    const exhibition = Gallery.exhibitions.find(
+        item => item.id === exhibitionId
+    );
+
+
 }
 
 /* =====================================================
