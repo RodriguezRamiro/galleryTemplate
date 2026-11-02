@@ -475,6 +475,8 @@ function renderExhibitionNavigation() {
 
 }
 
+function initializeExhibitionDropdown() {
+    
 toggle.addEventListener("click", () => {
 
     const isExpanded =
@@ -487,11 +489,10 @@ toggle.addEventListener("click", () => {
         String(nextState)
     );
 
-    
-
+    dropdown.hidden = !nextState;
 
 })
-
+}
 /* =====================================================
    Collections Rendering
 ===================================================== */
