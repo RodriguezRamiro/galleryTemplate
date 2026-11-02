@@ -301,7 +301,7 @@ const Gallery = {
 
     current: 0,
 
-    selectedExhibtion: null,
+    selectedExhibition: null,
 
     get published() {
         return this.artworks.filter(
@@ -505,6 +505,7 @@ toggle.addEventListener("click", () => {
 
 })
 }
+
 /* =====================================================
    Collections Rendering
 ===================================================== */
