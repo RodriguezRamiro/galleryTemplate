@@ -475,7 +475,15 @@ function renderExhibitionNavigation() {
 
 }
 
+toggle.addEventListener("click", () => {
 
+    const isExpanded =
+        toggle.getAttribute("aria-expanded") === "true";
+
+    const nextState = !isExpanded;
+
+    
+})
 
 /* =====================================================
    Collections Rendering
