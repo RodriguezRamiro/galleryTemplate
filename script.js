@@ -439,7 +439,7 @@ function renderExhibitionNavigation() {
         return;
     }
 
-    dropdown.HTML = "";
+    dropdown.innerHTML = "";
 
     const exhibitions = Gallery.exhibitions.slice(0, 5);
 
@@ -474,6 +474,7 @@ function renderExhibitionNavigation() {
     dropdown.appendChild(archiveItem);
 
 }
+
 
 
 /* =====================================================
