@@ -525,6 +525,12 @@ toggle.addEventListener("click", () => {
 ===================================================== */
 
 function selectExhibitionFromURL() {
+
+    const params = new URLSearchParams(
+        window.location.search
+
+    );
+
     
 }
 
