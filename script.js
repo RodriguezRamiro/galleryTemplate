@@ -633,6 +633,21 @@ function renderCollection() {
         });
 }
 
+
+
+/* =====================================================
+   EXHIBITION ARTWORK RENDERING
+===================================================== */
+
+function renderExhibitionArtworks() {
+
+    const grid = document.querySelector(".exhibtion-grid");
+
+    if (!grid) {
+        return;
+    }
+}
+
 /* =====================================================
    USER PREFERENCES
 ===================================================== */
