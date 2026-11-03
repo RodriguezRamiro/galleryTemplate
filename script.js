@@ -664,6 +664,21 @@ function renderExhibitionArtworks() {
         card.dataset.dimensions = artwork.dimensions;
         card.dataset.description = artwork.description;
 
+        card.innerHTML = `
+            <figure>
+            <span class="catalog-number">${artwork.catalog}</span>
+
+            <img
+                src="${artwork.image}"
+                alt="$artwork.ttile} - symbolic oil painting"
+                loading="lazy"
+            >
+            </figure>
+
+            <div class="artwork-capttion">
+
+                <h3>${artwork.title}</h3>
+
     })
 }
 
