@@ -646,6 +646,14 @@ function renderExhibitionArtworks() {
     if (!grid) {
         return;
     }
+
+    const artworks = Gallery.exhibitionArtworks;
+
+    grid.innerHTML = "";
+
+    artworks.forEach(artwork => {
+        
+    })
 }
 
 /* =====================================================
