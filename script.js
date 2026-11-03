@@ -652,7 +652,18 @@ function renderExhibitionArtworks() {
     grid.innerHTML = "";
 
     artworks.forEach(artwork => {
-        
+
+        const card = docuemnt.createElement("article");
+
+        card.className = "artwork-card artwork-entry";
+
+        card.dataset.catalog = artwork.catalog;
+        card.dataset.title = artwork.title;
+        card.dataset.medium = artwork.medium;
+        card.dataset.year = artwork.year;
+        card.dataset.dimensions = artwork.dimensions;
+        card.dataset.description = artwork.description;
+
     })
 }
 
