@@ -675,7 +675,7 @@ function renderExhibitionArtworks() {
             >
             </figure>
 
-            <div class="artwork-capttion">
+            <div class="artwork-caption">
 
                 <h3>${artwork.title}</h3>
 
@@ -685,7 +685,7 @@ function renderExhibitionArtworks() {
 
                 <p class="dimensions">${artwork.dimensions}</p>
 
-                <div classa="artwork-actions">
+                <div class="artwork-actions">
 
                     <button
                         type="button"
