@@ -1927,6 +1927,8 @@ async function initializeExperience() {
         renderExhibitionNavigation();
 
         selectedExhibitionFromURL();
+
+        renderExhibitionArtworks();
     }
 
 
