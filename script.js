@@ -679,6 +679,43 @@ function renderExhibitionArtworks() {
 
                 <h3>${artwork.title}</h3>
 
+                <p class="medium">${artwork.medium}</p>
+
+                <p class="year">${artwork.year}</p>
+
+                <p class="dimensions">${artwork.dimensions}</p>
+
+                <div classa="artwork-actions">
+
+                    <button
+                        type="button"
+                        class="text-link observe-work"
+                    >
+                        Observe →
+                    </button>
+
+                    <a
+                        href="${artwork.purchaseUrl}"
+                        class="text-link purchase-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Purchase →
+                    </a>
+
+                    </div>
+
+                    <div class="viewer-inquery">
+                        <href="#inquiery" class="text-link inquiry-link">
+                        Own This Piece
+                        </a>
+                    </div>
+
+                </div>
+
+                `;
+
     })
 }
 
