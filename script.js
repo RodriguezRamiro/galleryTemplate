@@ -716,6 +716,8 @@ function renderExhibitionArtworks() {
 
                 `;
 
+                grid.appendChild(card);
+
     })
 }
 
