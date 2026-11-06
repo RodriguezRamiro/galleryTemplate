@@ -524,7 +524,7 @@ toggle.addEventListener("click", () => {
    SELECT EXHIBITION FROM URL
 ===================================================== */
 
-function selectedExhibitionFromURL() {
+function selectExhibitionFromURL() {
 
     const params = new URLSearchParams(
         window.location.search
@@ -1926,7 +1926,7 @@ async function initializeExperience() {
 
         renderExhibitionNavigation();
 
-        selectedExhibitionFromURL();
+        selectExhibitionFromURL();
 
         renderExhibitionArtworks();
     }
