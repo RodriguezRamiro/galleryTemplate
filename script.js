@@ -706,8 +706,8 @@ function renderExhibitionArtworks() {
 
                     </div>
 
-                    <div class="viewer-inquery">
-                        <href="#inquiery" class="text-link inquiry-link">
+                    <div class="viewer-inquiry">
+                        <a href="#inquiry" class="text-link inquiry-link">
                         Own This Piece
                         </a>
                     </div>
@@ -718,7 +718,7 @@ function renderExhibitionArtworks() {
 
                 grid.appendChild(card);
 
-    })
+    });
 }
 
 /* =====================================================
