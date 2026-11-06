@@ -670,7 +670,7 @@ function renderExhibitionArtworks() {
 
             <img
                 src="${artwork.image}"
-                alt="$artwork.title} - symbolic oil painting"
+                alt="${artwork.title} - symbolic oil painting"
                 loading="lazy"
             >
             </figure>
