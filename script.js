@@ -641,7 +641,7 @@ function renderCollection() {
 
 function renderExhibitionArtworks() {
 
-    const grid = document.querySelector(".exhibtion-grid");
+    const grid = document.querySelector(".exhibition-grid");
 
     if (!grid) {
         return;
@@ -653,7 +653,7 @@ function renderExhibitionArtworks() {
 
     artworks.forEach(artwork => {
 
-        const card = docuemnt.createElement("article");
+        const card = document.createElement("article");
 
         card.className = "artwork-card artwork-entry";
 
@@ -670,7 +670,7 @@ function renderExhibitionArtworks() {
 
             <img
                 src="${artwork.image}"
-                alt="$artwork.ttile} - symbolic oil painting"
+                alt="$artwork.title} - symbolic oil painting"
                 loading="lazy"
             >
             </figure>
