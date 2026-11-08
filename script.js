@@ -533,7 +533,8 @@ function selectExhibitionFromURL() {
     const exhibitionId = params.get("exhibition");
 
     if (!exhibitionId) {
-        Gallery.selectedExhibition = null;
+        Gallery.selectedExhibition =
+            Gallery.exhibitions[0] || null;
         return;
     }
 
@@ -541,7 +542,7 @@ function selectExhibitionFromURL() {
         item => item.id === exhibitionId
     );
 
-    Gallery.selectedExhibition = exhibition || null;
+    Gallery.selectedExhibition = exhibition || Gallery.exhibitions[0] || null;
 
     console.log(
         "Selected exhibition from URL:",
