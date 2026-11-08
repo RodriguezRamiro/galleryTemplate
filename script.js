@@ -1923,11 +1923,12 @@ async function initializeExperience() {
                 Gallery.exhibitions
         );
 
+        selectExhibitionFromURL();
+
         renderCurrentExhibition(Gallery.exhibitions);
 
         renderExhibitionNavigation();
 
-        selectExhibitionFromURL();
 
         renderExhibitionArtworks();
     }
