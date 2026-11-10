@@ -1045,9 +1045,16 @@ function initializeReveal() {
 
     elements.forEach(element => {
 
+        // DOnt observe elements already revealed.
+        If (element.classList.contains("visibile")) {
+            return;
+        }
+
         element.classList.add(
             "reveal"
         );
+
+        revealObserver.observe(element);
 
     });
 
