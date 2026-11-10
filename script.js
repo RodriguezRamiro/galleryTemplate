@@ -632,6 +632,8 @@ function renderCollection() {
         grid.appendChild(card);
 
         });
+
+        initializeReveal();
 }
 
 
@@ -1046,7 +1048,7 @@ function initializeReveal() {
     elements.forEach(element => {
 
         // DOnt observe elements already revealed.
-        If (element.classList.contains("visibile")) {
+        if (element.classList.contains("visibile")) {
             return;
         }
 
