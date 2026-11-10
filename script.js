@@ -1350,8 +1350,9 @@ const Exhibition = {
 
     preloadAdjacentImages() {
 
-        const total =
-            Gallery.artworks.length;
+        const artworks = Gallery.published;
+
+        const total = artworks.length;
 
             if (total < 2 ) {
                 return;
@@ -1376,22 +1377,20 @@ const Exhibition = {
             %
             total;
 
-            [next, previous].forEach(index => {
+            const indices = new Set([next, previous]);
 
-                const image =
-                    Gallery.artworks[index]
-                    ?.querySelector("img");
+            indices.forEach(index => {
 
-                if (!image) {
+                const artwork = artworks[index];
+
+                if (!artwork?.image) {
                     return;
                 }
 
                 const preload =
                     new Image();
 
-                preload.src =
-                    image.currentSrc ||
-                    image.src;
+                preload.src = artwork.image;
             });
     },
 
