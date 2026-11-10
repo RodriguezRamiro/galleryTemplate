@@ -992,7 +992,6 @@ let revealObserver = null;
 function initializeReveal() {
 
     const elements =
-
         document.querySelectorAll(
 
             `section,
@@ -1030,6 +1029,18 @@ function initializeReveal() {
         });
 
         return
+    }
+
+    // Create the observer only once.
+    if (!revealObserver) {
+
+        revealObserver = new IntersectionObserver(
+            revealEntries,
+            {
+                threshold: 0.15,
+                rootMargin: "0px 0px -80px 0px"
+            }
+        );
     }
 
     elements.forEach(element => {
