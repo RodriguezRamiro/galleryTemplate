@@ -1184,19 +1184,17 @@ const Exhibition = {
 
     open(index) {
 
-        if (!UI.viewer) return;
+        const artworks = Gallery.published;
 
-        if (!Gallery.artworks.length) {
+        if (!UI.viewer || !artworks.length){
+
             return;
         }
 
-        if (
-
-            index < 0 ||
-            index >= Gallery.artworks.length
-        ) {
+        if (index < 0 || index >= artworks.length) {
             return;
         }
+
 
         this.current = index;
 
@@ -1267,14 +1265,14 @@ const Exhibition = {
 
     next() {
 
-        if (!Gallery.artworks.length) {
+        const total = Gallery.published.length;
+
+        if (!total) {
             return;
         }
 
         this.current =
-            (this.current + 1)
-        %
-        Gallery.artworks.length;
+            (this.current + 1) % total
 
         this.populate();
 
@@ -1287,7 +1285,9 @@ const Exhibition = {
 
     previous() {
 
-        if (!Gallery.artworks.length) {
+        const total = Gallery.published.length;
+
+        if (!total) {
             return;
         }
 
@@ -1297,12 +1297,8 @@ const Exhibition = {
                 -
                 1
                 +
-                Gallery.artworks.length
-        )
-
-        %
-
-        Gallery.artworks.length;
+                total
+        ) % total;
 
         this.populate();
 
