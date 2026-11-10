@@ -987,6 +987,8 @@ function updateHeader(){
    receive immediate visibility.
 ===================================================== */
 
+let revealObserver = null;
+
 function initializeReveal() {
 
     const elements =
