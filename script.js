@@ -1468,9 +1468,17 @@ function initializeViewer() {
         .querySelectorAll(".observe-work")
         .forEach(trigger => {
 
-            trigger.addEventListener(
+            document.addEventListener(
                 "click",
                 event => {
+
+                const trigger = event.target.closest(
+                        ".observe-work, .artwork-entry img"
+                );
+
+                if (!trigger) {
+                    return;
+                }
 
                     event.preventDefault();
                     event.stopPropagation();
