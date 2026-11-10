@@ -1780,14 +1780,11 @@ function populateInquiryForm() {
     }
 
     const artwork =
-        Gallery.artworks[Exhibition.current];
+        Gallery.published[Exhibition.current];
 
-    if (!artwork) {
-        return;
-    }
 
     UI.artworkField.value =
-        artwork.dataset.title || "";
+        artwork?.title || "";
 }
 
 /* =====================================================
