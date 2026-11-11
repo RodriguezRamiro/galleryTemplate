@@ -303,6 +303,8 @@ const Gallery = {
 
     selectedExhibition: null,
 
+    isExhibitinoView: false,
+
     get published() {
         return this.artworks.filter(
             artwork => artwork.catalog !== "000"
