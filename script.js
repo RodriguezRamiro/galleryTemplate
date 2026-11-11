@@ -303,7 +303,7 @@ const Gallery = {
 
     selectedExhibition: null,
 
-    isExhibitinoView: false,
+    isExhibitionView: false,
 
     get published() {
         return this.artworks.filter(
@@ -539,9 +539,16 @@ function selectExhibitionFromURL() {
 
     const exhibitionId = params.get("exhibition");
 
+    // Default landing page:
+    // Show the first exhibitions information,
+    // donot filter the collection.
+
     if (!exhibitionId) {
         Gallery.selectedExhibition =
             Gallery.exhibitions[0] || null;
+
+        Gallery.isExhibitionView = false;
+
         return;
     }
 
@@ -549,7 +556,19 @@ function selectExhibitionFromURL() {
         item => item.id === exhibitionId
     );
 
-    Gallery.selectedExhibition = exhibition || Gallery.exhibitions[0] || null;
+    if (exhibition) {
+
+        Gallery.selectedExhibition = exhibition
+
+        Gallery.isExhibitionView = true;
+
+    } else {
+
+        Gallery.selectedExhibition =
+            Gallery.exhibitions[0] || null;
+
+        Gallery.isExhibitionView = false;
+    }
 
     console.log(
         "Selected exhibition from URL:",
