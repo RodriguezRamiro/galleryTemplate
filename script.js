@@ -1977,8 +1977,10 @@ async function initializeExperience() {
 
         renderExhibitionNavigation();
 
+        renderFeaturedArtwork();
 
-        renderExhibitionArtworks();
+        renderCollection();
+
     }
 
 
