@@ -319,7 +319,7 @@ const Gallery = {
         }
 
 
-        // The default landing page uses the newwest published artwork.
+        // The default landing page uses the newest published artwork.
         return [...this.published].sort(
             (a,b) => b.sort_order - a.sort_order
         )[0] || null;
