@@ -313,15 +313,16 @@ const Gallery = {
 
     get latest() {
 
-        const artworks = this.published;
-
-        if(!artworks.length) {
-            return null;
+        // A specifically selected exhibition uses its lead artwork.
+        if(this.isExhibitionView) {
+            return this.exhibitionArtworks[0] || null;
         }
 
-        return [...artworks].sort(
+
+        // The default landing page uses the newwest published artwork.
+        return [...this.published].sort(
             (a,b) => b.sort_order - a.sort_order
-        )[0];
+        )[0] || null;
 
     },
 
