@@ -316,10 +316,11 @@ const Gallery = {
         if(!artworks.length) {
             return null;
         }
+
+        return [...artworks].sort(
+            (a,b) => b.sort_order - a.sort_order
+        )[0];
         
-        return published.find(
-            artwork => artwork.featured
-        ) || published[published.length - 1] || null;
     },
 
 
