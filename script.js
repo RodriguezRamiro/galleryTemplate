@@ -310,7 +310,13 @@ const Gallery = {
     },
 
     get latest() {
-        const published = this.published;
+
+        const artworks = this.published;
+
+        if(!artworks.length) {
+            return null;
+        }
+        
         return published.find(
             artwork => artwork.featured
         ) || published[published.length - 1] || null;
