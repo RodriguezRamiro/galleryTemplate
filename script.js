@@ -320,17 +320,14 @@ const Gallery = {
         return [...artworks].sort(
             (a,b) => b.sort_order - a.sort_order
         )[0];
-        
+
     },
 
 
     get collection() {
 
-        const featured = this.latest;
-
-        return [...this.published]
-        .filter(artwork => artwork !== featured)
-        .sort((a, b) => b.sort_order - a.sort_order);
+        return [...this.published].sort(
+            (a, b) => b.sort_order - a.sort_order);
     },
 
     get exhibitionArtworks() {
