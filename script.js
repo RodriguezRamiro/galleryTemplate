@@ -422,12 +422,12 @@ function renderCurrentExhibition(exhibitions) {
 
     const section = document.querySelector(".exhibition");
 
-    if(!section || !exhibitions.length) {
+    if(!section || !Gallery.selectedExhibition) {
         return;
 
     }
 
-    const exhibition = exhibitions[0];
+    const exhibition = Gallery.selectedExhibition;
 
     const title = section.querySelector("#exhibition-title");
 
