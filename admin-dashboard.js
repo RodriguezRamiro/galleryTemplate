@@ -629,7 +629,7 @@ async function loadDashboardArtworks() {
                 created_at
             `)
             .order("sort_order", {
-                ascending: true
+                ascending: false
             });
 
 
