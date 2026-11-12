@@ -1152,6 +1152,9 @@ document.querySelector("#admin-exhibition-list")
             // Store the ID of the exhibition being Edited.
             editingExhibitionId = exhibition.id;
 
+            // Show Delete only when editin an existing exhibition.
+            deleteExhibitionButton.hidden = false;
+
             // Load the existing details.
             document.querySelector("#exhibition-title").value = exhibition.title;
 
