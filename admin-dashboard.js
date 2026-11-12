@@ -625,7 +625,7 @@ async function loadDashboardArtworks() {
                 sort_order,
                 published,
                 featured,
-                purchase_url
+                purchase_url,
                 created_at
             `)
             .order("sort_order", {
