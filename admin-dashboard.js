@@ -439,6 +439,8 @@ addExhibitionButton.addEventListener("click", () => {
     // Reset the form to create a new exhibition.
     editingExhibitionId = null;
 
+    deleteExhibitionButton.hidden = true;
+
     addExhibitionForm.reset();
 
     // Restore the form heading and button label.
@@ -456,6 +458,8 @@ cancelExhibitionButton.addEventListener("click", () => {
 
     // Clear any active editing state.
     editingExhibitionId = null;
+
+    deleteExhibitionButton.hidden = true;
 
     //Reset and Close Form.
     addExhibitionForm.reset();
