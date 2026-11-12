@@ -1,6 +1,6 @@
 /* //galleryTemplate/admin-dashboard.js */
 
-const dashboardMessage = document.querySelector(".admin-message");
+const dashboardMessage = document.querySelector("#admin-message");
 
 const artworkImage = document.querySelector("#artwork-image");
 
