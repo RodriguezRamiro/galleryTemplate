@@ -1075,7 +1075,13 @@ deleteExhibitionButton.addEventListener("click", async () => {
         // Hide the Delete button.
         deleteExhibitionButton.hidden = true;
 
+        // restore the default form heading and button label.
+        document.querySelector("#add-exhibition-title").textContent =
+            "New Exhibition";
+
         
+
+
     }
 })
 
