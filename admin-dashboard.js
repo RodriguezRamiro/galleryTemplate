@@ -1086,6 +1086,12 @@ deleteExhibitionButton.addEventListener("click", async () => {
         await loadDashboardExhibitions();
         await loadArtworkExhibitionOptions();
 
+        // Report success.
+        dashboardMessage.textContent =
+            "Exhibition deleted successfully. its artwork has been preserved and unassigned.";
+
+        
+
 
 
     }
