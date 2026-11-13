@@ -1075,12 +1075,16 @@ deleteExhibitionButton.addEventListener("click", async () => {
         // Hide the Delete button.
         deleteExhibitionButton.hidden = true;
 
-        // restore the default form heading and button label.
+        // Restore the default form heading and button label.
         document.querySelector("#add-exhibition-title").textContent =
             "New Exhibition";
 
         addExhibitionForm.querySelector('button[type="submit"]').textContent =
-            "Save Exhibition"; 
+            "Save Exhibition";
+
+        // Refresh the exhibition list and artwork assignment options.
+        await loadDashboardExhibitions();
+        await loadArtworkExhibitionOptions();
 
 
 
