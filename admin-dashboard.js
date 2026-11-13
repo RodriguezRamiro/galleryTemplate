@@ -1079,7 +1079,9 @@ deleteExhibitionButton.addEventListener("click", async () => {
         document.querySelector("#add-exhibition-title").textContent =
             "New Exhibition";
 
-        
+        addExhibitionForm.querySelector('button[type="submit"]').textContent =
+            "Save Exhibition"; 
+
 
 
     }
