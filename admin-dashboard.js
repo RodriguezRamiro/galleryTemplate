@@ -1022,6 +1022,39 @@ document.querySelector("#admin-exhibition-list")
 
     });
 
+
+/* =====================================================
+   DELETE EXHIBITION
+===================================================== */
+
+deleteExhibitionButton.addEventListener("click", async () => {
+
+    // Only allow deletion when editing an existing exhibiton.
+    if (!editingExhibitionId) {
+        return;
+    }
+
+    const exhibitionTitle =
+        document.querySelector("#exhibition-title").value.trim()
+        || "this exhibition";
+
+    // Confirm deletion before proceeding.
+    const confirmed = window.confirm(
+        `Are you sure you want to delete "${exhibitionTitle}"?\n\n` +
+        "Any artwork assinged to this exhibition will be preserved," +
+        "but will no longer belong to an exhibition.\n\n" +
+        "This action cannot be undone."
+    );
+
+    if(!confirmed) {
+        return;
+    }
+
+    // Prevent repeated clicks while deletion is processing.
+
+
+})
+
 /* =====================================================
    Render Exhibition List
 ===================================================== */
