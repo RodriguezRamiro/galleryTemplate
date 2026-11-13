@@ -1053,8 +1053,16 @@ deleteExhibitionButton.addEventListener("click", async () => {
     // Prevent repeated clicks while deletion is processing.
     deleteExhibitionButton.disabled = true;
     deleteExhibitionButton.textContent = "Deleting...";
-    
 
+    try {
+
+        const { error } = await window.supabaseClient
+            .from("exhibitions")
+            .delete()
+            .eq("id", editingExhibitionId);
+
+            
+    }
 })
 
 /* =====================================================
