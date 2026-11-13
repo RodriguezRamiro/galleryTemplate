@@ -1061,7 +1061,12 @@ deleteExhibitionButton.addEventListener("click", async () => {
             .delete()
             .eq("id", editingExhibitionId);
 
-            
+        if (error) {
+            throw error;
+        }
+
+        // Clear the editing state.
+        editingExhibitionId = null;
     }
 })
 
