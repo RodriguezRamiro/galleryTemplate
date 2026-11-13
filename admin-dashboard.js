@@ -1051,7 +1051,9 @@ deleteExhibitionButton.addEventListener("click", async () => {
     }
 
     // Prevent repeated clicks while deletion is processing.
-
+    deleteExhibitionButton.disabled = true;
+    deleteExhibitionButton.textContent = "Deleting...";
+    
 
 })
 
