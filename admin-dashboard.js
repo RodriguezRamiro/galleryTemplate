@@ -1071,6 +1071,11 @@ deleteExhibitionButton.addEventListener("click", async () => {
         // Reset and close the exhibition form.
         addExhibitionForm.reset();
         addExhibitionPanel.hidden = true;
+
+        // Hide the Delete button.
+        deleteExhibitionButton.hidden = true;
+
+        
     }
 })
 
