@@ -1088,9 +1088,9 @@ deleteExhibitionButton.addEventListener("click", async () => {
 
         // Report success.
         dashboardMessage.textContent =
-            "Exhibition deleted successfully. its artwork has been preserved and unassigned.";
+            "Exhibition deleted successfully. Its artwork has been preserved and unassigned.";
 
-        
+        document.querySelector("#add-exhibition-message").textContent = "";
 
 
 
