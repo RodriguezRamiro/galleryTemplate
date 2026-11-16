@@ -1092,6 +1092,9 @@ deleteExhibitionButton.addEventListener("click", async () => {
 
         document.querySelector("#add-exhibition-message").textContent = "";
 
+    } catch ( error ) {
+        
+    } finally {}
 
 
     }
