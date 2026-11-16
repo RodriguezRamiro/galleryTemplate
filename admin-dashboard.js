@@ -1099,12 +1099,13 @@ deleteExhibitionButton.addEventListener("click", async () => {
             `Unable to delete Exhibition: ${error.message}`;
     } finally {
 
-        
+        // Restore the Delete Button
+        deleteExhibitionButton.disabled = false;
+        deleteExhibitionButton.textContent = "Delete Exhibition";
     }
 
+});
 
-    }
-})
 
 /* =====================================================
    Render Exhibition List
