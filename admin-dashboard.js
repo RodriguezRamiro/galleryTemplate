@@ -1093,8 +1093,14 @@ deleteExhibitionButton.addEventListener("click", async () => {
         document.querySelector("#add-exhibition-message").textContent = "";
 
     } catch ( error ) {
+        console.error("Error deleting exhibition:", error);
+
+        dashboardMessage.textContent =
+            `Unable to delete Exhibition: ${error.message}`;
+    } finally {
+
         
-    } finally {}
+    }
 
 
     }
