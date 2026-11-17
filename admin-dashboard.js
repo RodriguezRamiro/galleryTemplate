@@ -390,6 +390,18 @@ signOutButton.addEventListener("click", async () => {
 });
 
 
+const existingNumbers = data
+    .map(artwork =>
+        Number.parseInt(artwork.catalog_number, 10)
+    )
+    .filter(number =>
+        Number.isInteger(number) && number > 0
+    );
+
+    
+
+
+
 /* =====================================================
    Add Artwork Panel
 ===================================================== */
