@@ -396,6 +396,11 @@ signOutButton.addEventListener("click", async () => {
 
 async function generateNextCatalogNumber(){
 
+    const { data, error } =
+        await window.supabaseClient
+            .from("artworks")
+            .select("catalog_number");
+
 const existingNumbers = data
     .map(artwork =>
         Number.parseInt(artwork.catalog_number, 10)
