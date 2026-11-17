@@ -406,7 +406,12 @@ async function generateNextCatalogNumber(){
         console.error(
             "Unble to generate catalog number:",
             error
-        )
+        );
+
+        addArtworkMessage.textContent =
+            "Unable to generate catalog number. Please enter one manually.";
+
+        return;
     }
 
 const existingNumbers = data
