@@ -401,6 +401,14 @@ async function generateNextCatalogNumber(){
             .from("artworks")
             .select("catalog_number");
 
+    if (error) {
+
+        console.error(
+            "Unble to generate catalog number:",
+            error
+        )
+    }
+
 const existingNumbers = data
     .map(artwork =>
         Number.parseInt(artwork.catalog_number, 10)
