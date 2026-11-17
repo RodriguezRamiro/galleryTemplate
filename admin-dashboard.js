@@ -390,6 +390,12 @@ signOutButton.addEventListener("click", async () => {
 });
 
 
+/* =====================================================
+   Generate Next Catalog Number
+===================================================== */
+
+async function generateNextCatalogNumber(){
+
 const existingNumbers = data
     .map(artwork =>
         Number.parseInt(artwork.catalog_number, 10)
@@ -402,7 +408,13 @@ const existingNumbers = data
         ? Math.max(...existingNumbers)
         : 0;
 
+    const nextNumber = highestNumber + 1
 
+    artworkCatalog.value =
+        String(nextNumber).padStart(3, "0");
+
+
+    }
 
 /* =====================================================
    Add Artwork Panel
