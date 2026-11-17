@@ -398,7 +398,9 @@ const existingNumbers = data
         Number.isInteger(number) && number > 0
     );
 
-    
+    const highestNumber = existingNumbers.length
+        ? Math.max(...existingNumbers)
+        : 0;
 
 
 
