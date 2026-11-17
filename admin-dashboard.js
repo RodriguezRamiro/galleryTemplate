@@ -4,6 +4,8 @@ const dashboardMessage = document.querySelector("#dashboard-message");
 
 const artworkImage = document.querySelector("#artwork-image");
 
+const artworkCatalog = document.querySelector("#artwork-catalog");
+
 const artworkList = document.querySelector("#admin-artwork-list");
 
 const artworkCount = document.querySelector("#artwork-count");
