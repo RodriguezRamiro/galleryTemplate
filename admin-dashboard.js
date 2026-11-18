@@ -737,13 +737,16 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
     // A new artwork must have an image.
     if (!editingArtworkId && !imageFile) {
-            addArtworkMessage.textContent =
-                "please select an artwork image.";
+
+        addArtworkMessage.textContent =
+            "please select an artwork image.";
+
             return;
     }
 
-    // Read the form fields.
-    const catalogNumber =
+    // Read and validate vcatalog number.
+
+    let catalogNumber =
         document.querySelector("#artwork-catalog").value.trim();
 
     const title =
