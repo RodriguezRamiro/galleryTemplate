@@ -767,7 +767,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
             "Checking catalog Number...";
 
     const {
-        data: exhistingArtworks,
+        data: existingArtworks,
         error: catalogCheckError
     } = await window.supabaseClient
         .from("artworks")
@@ -787,8 +787,19 @@ addArtworkForm.addEventListener("submit", async (event) => {
     }
 
     const numericCatalogNumber =
-        Number(catalogNumber);;
+        Number(catalogNumber);
 
+    const duplicateArtwork =
+        existingArtworks.some(artwork => {
+
+            const existingNumber =
+                Number.parseInt(artwork.catalog_number, 10);
+
+            return (
+                existingNumber === numericCatalogNumber &&
+                artwork.id !== editingArtworkId
+            );
+        });
 
     const title =
         document.querySelector("#artwork-title").value.trim();
