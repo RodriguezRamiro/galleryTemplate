@@ -810,7 +810,7 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
         }
 
-        // 
+        // Read the remaining form fields.
 
     const title =
         document.querySelector("#artwork-title").value.trim();
@@ -884,13 +884,23 @@ addArtworkForm.addEventListener("submit", async (event) => {
 
 const artworkData = {
     catalog_number: catalogNumber,
+
+    sort_order: numericCatalogNumber,
+
     title: title,
+
     image_url: imageUrl,
+
     exhibition_id: exhibitionId,
+
     medium: medium || null,
+
     year: yearValue ? Number(yearValue) : null,
+
     dimensions: dimensions || null,
+
     description: description || null,
+    
     purchase_url: purchaseUrl || null
 };
 
