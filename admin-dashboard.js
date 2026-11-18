@@ -438,7 +438,7 @@ const existingNumbers = data
    Add Artwork Panel
 ===================================================== */
 
-addArtworkButton.addEventListener("click", () => {
+addArtworkButton.addEventListener("click", async () => {
 
     editingArtworkId = null;
     editingArtworkImageUrl = null
