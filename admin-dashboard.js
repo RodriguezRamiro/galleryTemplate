@@ -762,7 +762,9 @@ addArtworkForm.addEventListener("submit", async (event) => {
     catalogNumber =
         String(Number(catalogNumber)).padStart(3, "0");
 
-
+    // Check for duplicate catalog numbers.
+    addArtworkMessage.textContent =
+            "Checking catalog Number...";
 
     const title =
         document.querySelector("#artwork-title").value.trim();
