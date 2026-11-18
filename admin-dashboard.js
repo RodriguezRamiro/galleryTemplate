@@ -759,6 +759,10 @@ addArtworkForm.addEventListener("submit", async (event) => {
             }
 
     // Standirize the number to three digits.
+    catalogNumber =
+        String(Number(catalogNumber)).padStart(3, "0");
+
+
 
     const title =
         document.querySelector("#artwork-title").value.trim();
