@@ -900,7 +900,7 @@ const artworkData = {
     dimensions: dimensions || null,
 
     description: description || null,
-    
+
     purchase_url: purchaseUrl || null
 };
 
@@ -925,7 +925,6 @@ const artworkData = {
                             .from("artworks")
                             .insert({
                                 ...artworkData,
-                                sort_order: 0,
                                 published: false,
                                 featured: false
                             });
