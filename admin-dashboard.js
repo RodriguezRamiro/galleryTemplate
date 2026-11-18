@@ -453,6 +453,8 @@ addArtworkButton.addEventListener("click", async () => {
 
     addArtworkPanel.hidden = false;
 
+    await generateNextCatalogNumber();
+
     addArtworkPanel.scrollIntoView({
         behavior: "smooth",
         block: "start"
