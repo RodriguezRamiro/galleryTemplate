@@ -744,10 +744,16 @@ addArtworkForm.addEventListener("submit", async (event) => {
             return;
     }
 
-    // Read and validate vcatalog number.
+    // Read and validate catalog number.
 
     let catalogNumber =
         document.querySelector("#artwork-catalog").value.trim();
+
+        if (!/^\d{1,3}$/.test(catalogNumber) ||
+            Number(catalogNumber) < 1) {
+
+
+            }
 
     const title =
         document.querySelector("#artwork-title").value.trim();
