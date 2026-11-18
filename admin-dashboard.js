@@ -955,11 +955,13 @@ const artworkData = {
 
     // Reset the form to add Artwork mode.
     editingArtworkId = null;
+
     editingArtworkImageUrl = null;
 
     addArtworkForm.reset();
 
     addArtworkTitle.textContent = "Add Artwork";
+    
     saveArtworkButton.textContent = "Save Artwork";
 
     addArtworkPanel.hidden = true;
