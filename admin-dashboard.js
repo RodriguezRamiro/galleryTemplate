@@ -779,6 +779,11 @@ addArtworkForm.addEventListener("submit", async (event) => {
             "Unable to verify catalog number:",
             catalogCheckError
         );
+
+        addArtworkMessage.textContent =
+            "Unable to verify catalog number. Please try again.";
+
+            return;
     }
 
 
