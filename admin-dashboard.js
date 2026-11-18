@@ -769,9 +769,18 @@ addArtworkForm.addEventListener("submit", async (event) => {
     const {
         data: exhistingArtworks,
         error: catalogCheckError
-    }= await window.supabaseClient
+    } = await window.supabaseClient
         .from("artworks")
         .select("id, catalog_number");
+
+    if (catalogCheckError) {
+
+        console.error(
+            "Unable to verify catalog number:",
+            catalogCheckError
+        );
+    }
+
 
     const title =
         document.querySelector("#artwork-title").value.trim();
