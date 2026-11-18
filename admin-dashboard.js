@@ -801,6 +801,17 @@ addArtworkForm.addEventListener("submit", async (event) => {
             );
         });
 
+        if (duplicateArtwork) {
+
+            addArtworkMessage.textContent =
+                "This catalog number is already assinged to another artwork.";
+
+            return;
+
+        }
+
+        // 
+
     const title =
         document.querySelector("#artwork-title").value.trim();
 
