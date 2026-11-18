@@ -752,8 +752,13 @@ addArtworkForm.addEventListener("submit", async (event) => {
         if (!/^\d{1,3}$/.test(catalogNumber) ||
             Number(catalogNumber) < 1) {
 
+            addArtworkMessage.textContent =
+                "Enter a valid catalog number between 001 and 999."
 
+                return;
             }
+
+    // Standirize the number to three digits.
 
     const title =
         document.querySelector("#artwork-title").value.trim();
