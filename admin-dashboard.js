@@ -783,8 +783,11 @@ addArtworkForm.addEventListener("submit", async (event) => {
         addArtworkMessage.textContent =
             "Unable to verify catalog number. Please try again.";
 
-            return;
+        return;
     }
+
+    const numericCatalogNumber =
+        Number(catalogNumber);;
 
 
     const title =
