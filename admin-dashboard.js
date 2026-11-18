@@ -766,6 +766,13 @@ addArtworkForm.addEventListener("submit", async (event) => {
     addArtworkMessage.textContent =
             "Checking catalog Number...";
 
+    const {
+        data: exhistingArtworks,
+        error: catalogCheckError
+    }= await window.supabaseClient
+        .from("artworks")
+        .select("id, catalog_number");
+
     const title =
         document.querySelector("#artwork-title").value.trim();
 
