@@ -393,3 +393,14 @@ Newest artwork appears first in the admin dashboard.
 Exhibition ordering remains based on creation sequence.
 Exhibition editing works.
 Exhibition deletion implemented and confirmed working. preserving assinged artwork and images."
+
+
+11-18-2026
+Automatic numbering:
+New artwork receives the next available catalog number.
+
+Sequence synchronization:
+Changing a catalog number updates sort_order and moves the artwork accordingly.
+
+Duplicate prevention:
+The dashboard rejects a catalog number already assigned to another artwork.
