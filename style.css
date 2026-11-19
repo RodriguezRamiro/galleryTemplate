@@ -58,18 +58,18 @@
     /* Colors */
 
     /* Museum Wall */
-    --bg: #edede9;
+    --bg: #2FEBDD;
 
-    /* Natural Linen */
-    --surface: #f5ebe0;
+    /* Soft Ivory */
+    --surface: #FAF6EE;
 
-    /* Gallery Stone */
-    --surface-alt: #e3d5ca;
+    /* Aged Limestone */
+    --surface-alt: #E5D9C8;
 
-    /* Charcoal Ink */
-    --text: #31263e;
+    /* Deep Walnut Ink */
+    --text: #342B27;
 
-    /* Soft Graphite */
+    /* Muted Graphite */
     --text-light: #6b625d;
 
     /* Oil Pigment */
