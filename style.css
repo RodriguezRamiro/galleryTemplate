@@ -1329,21 +1329,33 @@ margin-bottom: var(--space-sm);
 }
 
 
+/*
+    Arrival Featured Image
+*/
+
+.arrival-layout .featured-piece {
+
+    width: 100%;
+
+    max-width: 440px;
+
+    margin-inline: auto;
+
+}
 
 .arrival-layout .artwork-image {
 
     width: 100%;
 
-    max-width: 400px;
-
     aspect-ratio: 4 / 5;
 
-    margin-inline: auto;
-
-    overflow: hidden;
-
-    background: var(--surface);
 }
+
+
+
+/*
+    Featured Artwork Details
+*/
 
 .arrival-layout .artwork-image img {
 
@@ -1355,20 +1367,7 @@ margin-bottom: var(--space-sm);
 
     object-fit: contain;
 
-}
-
-
-/*
-    Featured Artwork Details
-*/
-
-.arrival-layout .artwork-details {
-
-    max-width: 400px;
-
-    margin-inline: auto;
-
-    padding-top: var(--space-md);
+    transition: transform 900ms ease;
 
 }
 
@@ -1385,6 +1384,8 @@ margin-bottom: var(--space-sm);
 
 
 /*
+    Artowrork Interaction
+    
     The painting should feel alive,
     never animated.
 */
