@@ -1137,6 +1137,17 @@ margin-bottom: var(--space-sm);
     line-height: 1.9;
 
 }
+/*
+    Prevent the general Container spacing
+    from pushing the featred artwork down.
+*/
+
+.arrival-layout > .featured-work {
+
+    margin-top: 0;
+
+    min-width: 0;
+}
 
 
 /* ==========================================
