@@ -1044,6 +1044,46 @@ margin-bottom: var(--space-sm);
     border-color: var(--border);
 }
 
+/* Menu Icon */
+
+.menu-icon {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 20px;
+}
+
+.menu-icon span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: currentColor;
+
+    transition:
+        width 300ms ease,
+        transform 300ms ease;
+}
+
+.menu-icon span:nth-child(2) {
+
+    width: 70%;
+}
+
+.menu-toggle:hover .menu-icon span:nth-child(2) {
+
+    width: 100%;
+}
+
 
 
 
