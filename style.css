@@ -1076,9 +1076,28 @@ margin-bottom: var(--space-sm);
     display: flex;
 
     align-items: center;
-    
+
     padding-block: var(--space-xxl);
 
+}
+
+/* Arrival Editorial Layout */
+
+.arrival-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, .85fr)
+        minmax(0, 1.15fr);
+
+    align-items: center;
+
+    gap: calmp(
+        3rem,
+        7vw,
+        8rem
+    );
 }
 
 /*
