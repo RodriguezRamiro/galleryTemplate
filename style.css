@@ -1093,7 +1093,7 @@ margin-bottom: var(--space-sm);
         minmax(0, .85fr)
         minmax(0, 1.15fr);
 
-    align-items: center;
+    align-items: start;
 
     gap: clamp(
         3rem,
