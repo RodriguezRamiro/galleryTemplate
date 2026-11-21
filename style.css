@@ -1344,6 +1344,21 @@ margin-bottom: var(--space-sm);
 }
 
 
+/*
+    Featured Artwork Details
+*/
+
+.featured-piece .artwork-details {
+
+    padding-top: var(--space-md);
+}
+
+.featured-piece .artists-statement {
+
+    margin: var(--space-md) 0;
+}
+
+
 
 /*
     The painting should feel alive,
