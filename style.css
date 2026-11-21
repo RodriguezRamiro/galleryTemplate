@@ -1095,7 +1095,7 @@ margin-bottom: var(--space-sm);
 
     align-items: center;
 
-    gap: calmp(
+    gap: clamp(
         3rem,
         7vw,
         8rem
@@ -1365,6 +1365,8 @@ margin-bottom: var(--space-sm);
 
     height: 100%;
 
+    max-width: 100%;
+
     object-fit: contain;
 
     transition: transform 900ms ease;
@@ -1376,7 +1378,7 @@ margin-bottom: var(--space-sm);
     padding-top: var(--space-md);
 }
 
-.featured-piece .artists-statement {
+.featured-piece .artist-statement {
 
     margin: var(--space-md) 0;
 }
@@ -1385,7 +1387,7 @@ margin-bottom: var(--space-sm);
 
 /*
     Artowrork Interaction
-    
+
     The painting should feel alive,
     never animated.
 */
