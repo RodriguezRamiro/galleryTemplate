@@ -1081,7 +1081,9 @@ margin-bottom: var(--space-sm);
 
 }
 
-/* Arrival Editorial Layout */
+/*
+    Arrival Editorial Layout
+*/
 
 .arrival-layout {
 
@@ -1101,17 +1103,15 @@ margin-bottom: var(--space-sm);
 }
 
 /*
-    Offset the fixed navigatoin while
-    preserving the feeling of openess.
-
+    Studio Introduction
 */
 
 
 .arrival-content {
 
-    max-width: 52rem;
+    max-width: 34rem;
 
-    padding-top:6rem;
+    padding-top: 6rem;
 
 }
 
