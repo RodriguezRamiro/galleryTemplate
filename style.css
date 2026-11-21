@@ -1076,6 +1076,8 @@ margin-bottom: var(--space-sm);
     display: flex;
 
     align-items: center;
+    
+    padding-block: var(--space-xxl);
 
 }
 
