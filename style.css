@@ -1077,7 +1077,7 @@ margin-bottom: var(--space-sm);
 
     align-items: center;
 
-    padding-block: var(--space-xxl);
+    padding-block: clamp(6rem, 10vh, 8rem);
 
 }
 
@@ -1111,8 +1111,6 @@ margin-bottom: var(--space-sm);
 
     max-width: 34rem;
 
-    padding-top: 6rem;
-
 }
 
 
@@ -1143,10 +1141,14 @@ margin-bottom: var(--space-sm);
 */
 
 .arrival-layout > .featured-work {
+    display: flex;
+
+    justify-content: center;
+
+    min-width: 0;
 
     margin-top: 0;
 
-    min-width: 0;
 }
 
 
@@ -1328,7 +1330,24 @@ margin-bottom: var(--space-sm);
 
 
 
-.artwork-image img {
+.arrival-layout .artwork-image {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    aspect-ratio: 4 / 5;
+
+    margin-inline: auto;
+
+    overflow: hidden;
+
+    background: var(--surface);
+}
+
+.arrival-layout .artwork-image img {
+
+    display: block;
 
     width: 100%;
 
@@ -1336,17 +1355,22 @@ margin-bottom: var(--space-sm);
 
     object-fit: contain;
 
-    transition:
-
-        transform 900ms ease,
-
-        filter var(--transition-slow);
 }
 
 
 /*
     Featured Artwork Details
 */
+
+.arrival-layout .artwork-details {
+
+    max-width: 400px;
+
+    margin-inline: auto;
+
+    padding-top: var(--space-md);
+
+}
 
 .featured-piece .artwork-details {
 
@@ -2754,6 +2778,15 @@ margin-bottom: var(--space-sm);
     /* ------------------------------
        Layout
     ------------------------------ */
+
+    .arrival-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-lg);
+
+        max-width: 48rem;
+    }
 
 
     .featured-piece,
