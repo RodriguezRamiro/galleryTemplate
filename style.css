@@ -2880,11 +2880,15 @@ margin-bottom: var(--space-sm);
 
     }
 
-    .arrival,
+    .arrival {
+
+        padding-block: 7rem 4rem;
+
+    }
+
     .inquiry {
 
-        padding-block:
-            calc(var(--space-xl) * 1.15);
+        padding-block: calc(var(--space-xl) * 1.15);
 
     }
 
