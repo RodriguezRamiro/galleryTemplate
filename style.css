@@ -1151,6 +1151,21 @@ margin-bottom: var(--space-sm);
 }
 
 
+/* ==========================================
+   EDITORIAL THEME ICON
+========================================== */
+
+.theme-icon {
+
+    position: relative;
+
+    display: block;
+
+    width: 21px;
+
+    height: 21px;
+}
+
 
 /* =====================================================
    ARRIVAL / HERO
