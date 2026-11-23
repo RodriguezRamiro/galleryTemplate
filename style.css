@@ -1191,6 +1191,21 @@ margin-bottom: var(--space-sm);
         transform 350ms ease;
 }
 
+/* Default: ligth theme, show moon */
+
+.theme-icon .sun-icon {
+
+    opacity: 0;
+
+    transform: rotate(45-deg) scale(.7);
+}
+
+.theme-icon {
+
+    opacity: 1;
+
+    transform: rotate(0) scale(1);
+}
 
 /* =====================================================
    ARRIVAL / HERO
