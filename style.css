@@ -1207,6 +1207,24 @@ margin-bottom: var(--space-sm);
     transform: rotate(0) scale(1);
 }
 
+/* Dark theme, show sun */
+
+html[data-theme="dark"] .theme-icon .sun-icon {
+
+    opacity: 1;
+
+    transform: rotate(0) scale(1);
+}
+
+html[data-theme="dark"] .theme-icon .moon-icon {
+
+    opacity: 0;
+
+    transform: rotate(45deg) scale(.7);
+}
+
+
+
 /* =====================================================
    ARRIVAL / HERO
 
