@@ -1166,6 +1166,31 @@ margin-bottom: var(--space-sm);
     height: 21px;
 }
 
+.theme-icon svg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.3;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    transition:
+        opacity 350ms ease,
+        transform 350ms ease;
+}
+
 
 /* =====================================================
    ARRIVAL / HERO
