@@ -829,11 +829,6 @@ function applyTheme(theme) {
         return;
     }
 
-    UI.themeToggle.textContent =
-    theme === "dark"
-    ? "*"
-    : "🌙";
-
     UI.themeToggle.setAttribute(
         "aria-label",
 
