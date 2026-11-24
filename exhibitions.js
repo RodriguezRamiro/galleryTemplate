@@ -1,0 +1,17 @@
+/* //galleryTemplate/exhibitions.js */
+
+/* =====================================================
+   EXHIBITION DATA
+
+   Loads published exhibitions from Supabase.
+===================================================== */
+
+async function loadPublishedExhibitions() {
+
+    const { data, error } = await window.supabaseClient
+        .from("exhibitions")
+        .select("id, title, description, status, sort_order")
+        .eq("status", "published")
+        .order("sort_order", { ascending: false });
+
+}
