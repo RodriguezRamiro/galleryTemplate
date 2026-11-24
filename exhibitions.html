@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exhibition Archive | Craftmancer Studios</title>
+
+    <meta
+        name="description"
+        content="Explore the curated exhibition archive of Craftmancer Studios, featuring symbolic oil paintings and visual compositions."
+    >
+
+    <meta name="theme-color" content="#edede9">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link rel="icon" href="./assets/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+
+    <header class="site-header">
+
+        <nav
+            class="navigation container"
+            aria-label="Primary Navigation"
+        >
+
+            <a href="./index.html" class="logo">
+                Craftmancer Studios
+            </a>
+
+            <ul
+                class="nav-links"
+                id="primary-navigation"
+            >
+
+                <li>
+                    <a href="./index.html#collection">
+                        Collection
+                    </a>
+                </li>
+
+                <li class="nav-dropdown">
+
+                    <button
+                        type="button"
+                        class="nav-dropdown-toggle"
+                        aria-expanded="false"
+                        aria-controls="exhibition-dropdown"
+                    >
+                        Exhibitions
+                        <span aria-hidden="true">⌄</span>
+                    </button>
+
+                    <ul
+                        class="nav-dropdown-menu"
+                        id="exhibition-dropdown"
+                        hidden
+                    >
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="./index.html#inquiry">
+                        Inquiry
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navigation-actions">
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                >
+
+                    <span class="menu-icon" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+
+                </button>
+
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                >
+
+                    <span class="theme-icon" aria-hidden="true">
+
+                        <svg
+                            class="sun-icon"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+
+                            <circle cx="12" cy="12" r="4" />
+
+                            <path d="
+                                M12 2V4
+                                M12 20V22
+                                M4.93 4.93L6.34 6.34
+                                M17.66 17.66L19.07 19.07
+                                M2 12H4
+                                M20 12H22
+                                M4.93 19.07L6.34 17.66
+                                M17.66 6.34L19.07 4.93
+                            "/>
+
+                        </svg>
+
+                        <svg
+                            class="moon-icon"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+
+                            <path d="
+                                M20.5 15.5
+                                A8.5 8.5 0 0 1 8.5 3.5
+                                A8.5 8.5 0 1 0 20.5 15.5Z
+                            "/>
+
+                        </svg>
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="exhibition-archive">
+
+        <!-- Archive Introduction -->
+
+        <section
+            class="archive-intro"
+            aria-labelledby="archive-title"
+        >
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    Craftmancer Studios
+                </p>
+
+                <h1 id="archive-title">
+                    The Exhibition Archive
+                </h1>
+
+                <p class="archive-intro-text">
+                    A collection of curated exhibitions,
+                    each presenting a distinct body of work
+                    from the studio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Exhibition -->
+
+        <section
+            class="archive-featured-section"
+            aria-labelledby="featured-exhibition-heading"
+        >
+
+            <div class="container">
+
+                <div
+                    class="archive-featured"
+                    id="featured-exhibition"
+                >
+
+                    <!-- Generated by exhibitions.js -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Previous Exhibitions -->
+
+        <section
+            class="archive-collection"
+            aria-labelledby="archive-collection-title"
+        >
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        From the Studio
+                    </p>
+
+                    <h2 id="archive-collection-title">
+                        Previous Exhibitions
+                    </h2>
+
+                </header>
+
+                <div
+                    class="archive-grid"
+                    id="archive-grid"
+                >
+
+                    <!-- Generated by exhibitions.js -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div class="footer-main">
+
+                <h2 class="footer-logo">
+                    Craftmancer Studios
+                </h2>
+
+                <p class="footer-copy">
+                    Selected works available by private inquiry
+                </p>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <a
+                    href="mailto:craftmancer@gmail.com"
+                    class="footer-email"
+                >
+                    <i class="fa-regular fa-envelope"></i>
+                    craftmancer@gmail.com
+                </a>
+
+                <a
+                    href="https://instagram.com/craftmancerstudios"
+                    class="footer-social"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+
+            </div>
+
+
+            <div class="footer-signature">
+
+                <p class="engineering">
+                    IVI Creative Engineering
+                </p>
+
+                <p class="edition">
+                    Curated • 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Dependencies -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="./supabase-test.js"></script>
+
+    <script src="./exhibitions.js"></script>
+
+</body>
+
+</html>
