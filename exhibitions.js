@@ -14,4 +14,13 @@ async function loadPublishedExhibitions() {
         .eq("status", "published")
         .order("sort_order", { ascending: false });
 
+    if (error) {
+
+        console.error(
+                "unable to load published exhibitions:",
+                error
+        );
+
+        return [];
+    }
 }
