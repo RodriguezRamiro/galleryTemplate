@@ -23,4 +23,11 @@ async function loadPublishedExhibitions() {
 
         return [];
     }
+
+    console.log(
+        "published exhibitions loadded:",
+        data
+    )
+
+    return data;
 }
