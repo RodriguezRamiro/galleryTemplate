@@ -31,3 +31,11 @@ async function loadPublishedExhibitions() {
 
     return data;
 }
+
+
+
+/* =====================================================
+   TEMPORARY DATA LOADER TEST
+===================================================== */
+
+loadPublishedExhibitions();
