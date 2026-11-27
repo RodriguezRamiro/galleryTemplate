@@ -25,7 +25,7 @@ async function loadPublishedExhibitions() {
     }
 
     console.log(
-        "Published exhibitions loadded:",
+        "Published exhibitions loaded:",
         data
     )
 
