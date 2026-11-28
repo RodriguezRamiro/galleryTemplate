@@ -51,7 +51,7 @@ async function loadPublishedExhibitionArtworks(){
         .select(`
             id,
             title,
-            imague_url,
+            image_url,
             exhibition_id,
             sort_order
             `)
