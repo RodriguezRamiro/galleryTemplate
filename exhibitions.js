@@ -17,7 +17,7 @@ async function loadPublishedExhibitions() {
     if (error) {
 
         console.error(
-                "unable to load published exhibitions:",
+                "Unable to load published exhibitions:",
                 error
         );
 
