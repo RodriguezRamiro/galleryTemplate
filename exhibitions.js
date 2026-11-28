@@ -62,9 +62,20 @@ async function loadPublishedExhibitionArtoworks(){
             .not("exhibition_id", "is", null)
             .order("sort_order", {ascending: false });
 
-    if()
+    if (error) {
 
-    console.log()
+        console.error(
+            "Unable to load exhibition artwork:",
+            error
+        );
 
-    return
+        return [];
+    }
+
+    console.log(
+        "Published exhibition artwork loaded:",
+        data
+    );
+
+    return data;
 }
