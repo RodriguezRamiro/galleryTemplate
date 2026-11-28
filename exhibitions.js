@@ -70,3 +70,15 @@ async function loadPublishedExhibitionArtworks(){
 
     return data;
 }
+
+
+/* =====================================================
+   ARCHIVE INITIALIZATION
+
+   Loads the data required by the exhibition archive.
+===================================================== */
+
+async function initializeExxhibitionArchive() {
+
+
+}
