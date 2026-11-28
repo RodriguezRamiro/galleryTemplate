@@ -34,8 +34,26 @@ async function loadPublishedExhibitions() {
 
 
 
+// /* =====================================================
+//    TEMPORARY DATA LOADER TEST
+// ===================================================== */
+
+// loadPublishedExhibitions();
+
+
 /* =====================================================
-   TEMPORARY DATA LOADER TEST
+   EXHIBITION ARTWORK
+
+   Loads published artwork assigned to exhibitions.
 ===================================================== */
 
-loadPublishedExhibitions();
+async function loadPublishedExhibitionArtoworks(){
+
+    const {}
+
+    if()
+
+    console.log()
+
+    return
+}
