@@ -49,7 +49,18 @@ async function loadPublishedExhibitions() {
 
 async function loadPublishedExhibitionArtoworks(){
 
-    const {}
+    const { data, error } = await window.supabaseClient
+        .from("artworks")
+        .select(`
+            id,
+            title,
+            imague_url,
+            exhibition_id,
+            sort_order
+            `)
+            .eq("published", true)
+            .not("exhibition_id", "is", null)
+            .order("sort_order", {ascending: false });
 
     if()
 
