@@ -110,5 +110,24 @@ async function initializeExhibitionArchive() {
 
 function renderFeaturedExhibition(exhibition, artwork) {
 
-    
+    const featuredContainer =
+        document.querySelector("#featured-exhibition");
+
+    if (!featuredContainer) {
+
+        console.error(
+            "Featured exhibition container not found."
+        );
+
+        return;
+    }
+
+    if (!exhibition || !artwork) {
+
+        console.warn(
+            "Featured exhibition or representative artwork is missing."
+        );
+
+        return
+    }
 }
