@@ -78,7 +78,7 @@ async function loadPublishedExhibitionArtworks(){
    Loads the data required by the exhibition archive.
 ===================================================== */
 
-async function initializeExxhibitionArchive() {
+async function initializeExhibitionArchive() {
 
     const [
         exhibitions,
@@ -90,8 +90,16 @@ async function initializeExxhibitionArchive() {
 
     ]);
 
-    
-    ]
-
+    console.log(
+            "Exhibition archive data ready:",
+            {
+                exhibitions,
+                artworks
+            }
+    );
 
 }
+
+// Test the combined initialization
+
+initializeExhibitionArchive();
