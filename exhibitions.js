@@ -32,6 +32,11 @@ async function loadPublishedExhibitions() {
     return data;
 }
 
+// /* =====================================================
+//    TEMPORARY DATA LOADER TEST
+// ===================================================== */
+
+// loadPublishedExhibitions();
 
 /* =====================================================
    EXHIBITION ARTWORK
@@ -39,7 +44,7 @@ async function loadPublishedExhibitions() {
    Loads published artwork assigned to exhibitions.
 ===================================================== */
 
-async function loadPublishedExhibitionArtoworks(){
+async function loadPublishedExhibitionArtworks(){
 
     const { data, error } = await window.supabaseClient
         .from("artworks")
@@ -73,8 +78,10 @@ async function loadPublishedExhibitionArtoworks(){
 }
 
 
+
+
 /* =====================================================
-   TEMPORARY DATA LOADER TEST
+   TEMPORARY ARTWORK LOADER TEST
 ===================================================== */
 
-loadPublishedExhibitions();
+loadPublishedExhibitionArtworks();
