@@ -100,6 +100,15 @@ async function initializeExhibitionArchive() {
 
 }
 
-// Test the combined initialization
 
-initializeExhibitionArchive();
+
+/* =====================================================
+   FEATURED EXHIBITION
+
+   Renders the leading published exhibition.
+===================================================== */
+
+function renderFeaturedExhibition(exhibition, artwork) {
+
+    
+}
