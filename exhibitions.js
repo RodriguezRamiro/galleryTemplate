@@ -80,5 +80,18 @@ async function loadPublishedExhibitionArtworks(){
 
 async function initializeExxhibitionArchive() {
 
+    const [
+        exhibitions,
+        artworks
+    ] = await Promise.all([
+        loadPublishedExhibitions(),
+
+        loadPublishedExhibitionArtworks()
+
+    ]);
+
+    
+    ]
+
 
 }
