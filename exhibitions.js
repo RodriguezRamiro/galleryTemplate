@@ -32,12 +32,6 @@ async function loadPublishedExhibitions() {
     return data;
 }
 
-// /* =====================================================
-//    TEMPORARY DATA LOADER TEST
-// ===================================================== */
-
-// loadPublishedExhibitions();
-
 /* =====================================================
    EXHIBITION ARTWORK
 
@@ -76,12 +70,3 @@ async function loadPublishedExhibitionArtworks(){
 
     return data;
 }
-
-
-
-
-/* =====================================================
-   TEMPORARY ARTWORK LOADER TEST
-===================================================== */
-
-loadPublishedExhibitionArtworks();
